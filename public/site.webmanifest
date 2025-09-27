@@ -1,0 +1,31 @@
+{
+  "name": "Clyra Studios - WordPress Rescue & Rebuild Specialists",
+  "short_name": "Clyra Studios",
+  "description": "Transform broken websites into lead-generating assets. WordPress rescue, migration, SEO optimization, and automation for SMBs.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/thumbnail.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/thumbnail.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/thumbnail.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

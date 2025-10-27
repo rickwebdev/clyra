@@ -81,7 +81,7 @@ const structuredData = {
     "width": 1200,
     "height": 630
   },
-  "image": "https://clyrastudios.com/thumbnail.png",
+  "image": "https://clyrastudios.com/images/thumbnail.png",
   "foundingDate": "2024",
   "founder": {
     "@type": "Person",
@@ -225,7 +225,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <head>
         <link rel="canonical" href="https://clyrastudios.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="Clyra Studios" />
         <meta name="robots" content="index, follow" />
@@ -274,11 +274,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Clyra Studios" />
         
-        {/* Favicon and Icons */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/thumbnail.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/thumbnail.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/thumbnail.png" />
+        {/* Favicon - Next.js automatically serves /public/favicon.ico */}
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" content="#000000" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="min-h-screen antialiased">
@@ -301,6 +299,51 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-CC56KCXVC7');
+          `}
+        </Script>
+        
+        {/* Mobile Viewport Height Fix */}
+        <Script id="mobile-viewport-fix" strategy="afterInteractive">
+          {`
+            // Use requestAnimationFrame to ensure DOM is ready
+            requestAnimationFrame(function() {
+              function setViewportHeight() {
+                const vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', vh + 'px');
+                
+                // Safari QR code specific fix
+                if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+                  // Detect if opened via QR code (no referrer and specific Safari behavior)
+                  const isQRCodeAccess = !document.referrer && window.performance.navigation.type === 0;
+                  
+                  if (isQRCodeAccess || window.innerHeight < window.screen.height * 0.9) {
+                    // Force Safari to recalculate viewport
+                    document.documentElement.style.height = window.innerHeight + 'px';
+                    document.body.style.height = window.innerHeight + 'px';
+                    
+                    // Add small delay and recalculate
+                    setTimeout(() => {
+                      const heroSection = document.querySelector('.hero-section');
+                      if (heroSection) {
+                        heroSection.style.minHeight = window.innerHeight + 'px';
+                        heroSection.style.height = window.innerHeight + 'px';
+                      }
+                    }, 100);
+                  }
+                }
+              }
+
+              setViewportHeight();
+              window.addEventListener('resize', setViewportHeight);
+              window.addEventListener('orientationchange', setViewportHeight);
+              
+              // Additional Safari QR code detection
+              if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+                window.addEventListener('load', () => {
+                  setTimeout(setViewportHeight, 200);
+                });
+              }
+            });
           `}
         </Script>
         <ScrollEffects />

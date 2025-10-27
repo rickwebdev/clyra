@@ -185,7 +185,7 @@ export default function HomePage() {
                   Get Free Site Audit
                   <span className="btn-arrow">→</span>
                 </Link>
-                <Link href="/contact" className="btn btn-secondary btn-large">
+                <Link href="/strategy-call" className="btn btn-secondary btn-large">
                   Book Strategy Call
                 </Link>
               </div>
@@ -442,7 +442,7 @@ export default function HomePage() {
                   Get Free Site Audit
                   <span className="btn-arrow">→</span>
                 </Link>
-                <Link href="/contact" className="btn btn-secondary btn-large">
+                <Link href="/strategy-call" className="btn btn-secondary btn-large">
                   Book Strategy Call
                 </Link>
                 <Link href="/case-studies" className="btn btn-secondary btn-large">

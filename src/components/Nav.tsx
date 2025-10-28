@@ -44,6 +44,11 @@ export default function Nav() {
               </Link>
             </li>
           ))}
+          <li className="nav-phone">
+            <a href="tel:+16466322070" className="phone-number">
+              +1 (646) 632-2070
+            </a>
+          </li>
         </ul>
         
         <button 
@@ -78,6 +83,11 @@ export default function Nav() {
             >
               Book a call
             </Link>
+          </li>
+          <li className="mobile-phone">
+            <a href="tel:+16466322070" className="mobile-phone-number">
+              +1 (646) 632-2070
+            </a>
           </li>
         </ul>
       </div>

@@ -375,6 +375,11 @@ export default function WordPressMechanicPage() {
 
         {/* Common Issues Section */}
         <section id="diagnosis" className="section">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball issues-ball-1"></div>
+            <div className="section-floating-ball issues-ball-2"></div>
+            <div className="section-floating-ball issues-ball-3"></div>
+          </div>
           <div className="container">
             <div className="section-header">
               <h2 className="section-title">We're the WordPress Mechanics.</h2>
@@ -404,6 +409,11 @@ export default function WordPressMechanicPage() {
 
         {/* Process Section */}
         <section className="section bg-dark">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball process-ball-1"></div>
+            <div className="section-floating-ball process-ball-2"></div>
+            <div className="section-floating-ball process-ball-3"></div>
+          </div>
           <div className="container">
             <div className="section-header">
               <h2 className="section-title">Fast, Simple, and Secure Fixes</h2>
@@ -439,6 +449,11 @@ export default function WordPressMechanicPage() {
 
         {/* Why Choose Us Section */}
         <section className="section">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball credibility-ball-1"></div>
+            <div className="section-floating-ball credibility-ball-2"></div>
+            <div className="section-floating-ball credibility-ball-3"></div>
+          </div>
           <div className="container">
             <div className="section-header">
               <h2 className="section-title">Real Experts. Real Results.</h2>
@@ -502,6 +517,11 @@ export default function WordPressMechanicPage() {
 
         {/* Add-On Services Section */}
         <section className="section bg-dark">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball services-ball-1"></div>
+            <div className="section-floating-ball services-ball-2"></div>
+            <div className="section-floating-ball services-ball-3"></div>
+          </div>
           <div className="container">
             <div className="section-header">
               <h2 className="section-title">Beyond Repairs — Keep Your Site Running Smoothly</h2>
@@ -531,6 +551,11 @@ export default function WordPressMechanicPage() {
 
         {/* Priority Form Section */}
         <section id="priority-form" className="section cta-section">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball priority-ball-1"></div>
+            <div className="section-floating-ball priority-ball-2"></div>
+            <div className="section-floating-ball priority-ball-3"></div>
+          </div>
           <div className="container">
             <div className="cta-content">
               <h2 className="cta-title">Get Back Online Before You Lose Another Sale</h2>
@@ -544,6 +569,11 @@ export default function WordPressMechanicPage() {
 
         {/* FAQ Section */}
         <section className="section">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball faq-ball-1"></div>
+            <div className="section-floating-ball faq-ball-2"></div>
+            <div className="section-floating-ball faq-ball-3"></div>
+          </div>
           <div className="container">
             <div className="section-header">
               <h2 className="section-title">Quick Answers</h2>
@@ -569,6 +599,11 @@ export default function WordPressMechanicPage() {
 
         {/* Final CTA Section */}
         <section className="section cta-section bg-primary">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball final-cta-ball-1"></div>
+            <div className="section-floating-ball final-cta-ball-2"></div>
+            <div className="section-floating-ball final-cta-ball-3"></div>
+          </div>
           <div className="container">
             <div className="cta-content">
               <h2 className="cta-title">Your Site Could Be Fixed Today.</h2>

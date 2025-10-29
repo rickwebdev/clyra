@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Nav from "@/components/Nav";
+import InlineRotatingText from "@/components/InlineRotatingText";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
 import CrossfadeVideo from "@/components/CrossfadeVideo";
@@ -168,25 +169,26 @@ export default function HomePage() {
               {/* Hero Headlines - Order 1 */}
               <div className="hero-headlines">
                 <h1 className="hero-title">
-                  <span className="title-line">Own your website.</span>
-                  <span className="title-line highlight">Scale your business.</span>
+                  <span className="title-line">Build. Scale. Create.</span>
+                  <span className="title-line highlight">Full-Service Digital Studio for Ambitious Brands.</span>
+                  <span className="rotate-wrap">
+                    <span className="rotate-label">Build with </span>
+                    <InlineRotatingText phrases={["WordPress","Next.js","Shopify","Contentful","Sanity","WooCommerce"]} />
+                  </span>
                 </h1>
                 <p className="hero-description">
-             We transform websites into lead-generating assets. <br/>Our studio specializes in custom WordPress development, seamless <br />migrations from Wix and Squarespace, and SEO-focused rebuilds <br />that deliver performance, security, and growth.</p>
-                
-                {/* Hook Line */}
-                <p className="hero-hook">
-                From urgent fixes to full rebuilds, we turn websites into lead-generating assets.                </p>
+                  We design, develop, and launch high-performance websites — then power them with SEO, automation, and creative content built to grow your business.
+                </p>
               </div>
 
               {/* CTA Buttons - Order 2 on mobile */}
               <div className="hero-actions">
-                <Link href="/site-audit" className="btn btn-primary btn-large">
-                  Get Free Site Audit
+                <Link href="/strategy-call" className="btn btn-primary btn-large">
+                  Book a Strategy Call
                   <span className="btn-arrow">→</span>
                 </Link>
-                <Link href="/strategy-call" className="btn btn-secondary btn-large">
-                  Book Strategy Call
+                <Link href="/services" className="btn btn-secondary btn-large">
+                  View Services
                 </Link>
               </div>
 
@@ -229,7 +231,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Services Section with Advanced Grid */}
+        {/* Core Services: What We Build & Create */}
         <section className="services-section">
           <div className="section-floating-elements">
             <div className="section-floating-ball services-ball-1"></div>
@@ -238,60 +240,67 @@ export default function HomePage() {
           </div>
           <div className="container">
             <div className="section-header slide-in-right">
-              <h2 className="section-title">WordPress Solutions That <span className="transform-word">Transform</span> Your Business</h2>
-              <p className="section-description">
-                We don't just build websites - we rescue broken sites, migrate platforms seamlessly, 
-                and optimize for growth. Here's how we help SMBs turn their web presence into a competitive advantage.
-              </p>
+              <h2 className="section-title">What We Build & Create</h2>
+              <p className="section-description">Three pillars that match how we deliver outcomes.</p>
             </div>
             
-                    <div className="services-grid">
-                      {services.map((service, index) => {
-                        // Bottom 2 cards come from bottom corners, top 2 from left/center
-                        const animationClass = index === 0 ? 'float-in-left' : 
-                                             index === 1 ? 'float-in-center' : 
-                                             index === 2 ? 'float-in-bottom-left' : 'float-in-bottom-right';
-                        return (
-                        <div key={service.id} className={`service-card ${animationClass}`}>
-                  <div className="service-image">
-                    <div className="service-icon">
-                      <GradientIcon icon={service.icon} size="xl" className="primary" />
-                    </div>
-                  </div>
-                  <div className="service-content">
-                    <h3 className="service-title">{service.title}</h3>
-                    <div className="pain-solution">
-                      <div className="pain-point">
-                        <GradientIcon icon={faTimesCircle} size="sm" className="danger" />
-                        <span className="pain-text">{service.pain}</span>
-                      </div>
-                      <div className="solution-point">
-                        <GradientIcon icon={faCheckCircle} size="sm" className="success" />
-                        <span className="solution-text">{service.solution}</span>
-                      </div>
-                    </div>
-                    <p className="service-description">{service.description}</p>
-                    <ul className="service-features">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="feature-item">
-                          <GradientIcon icon={faCheck} size="sm" className="success" />
-                          {feature}
-          </li>
-                      ))}
-                    </ul>
-                    <Link href={service.ctaLink as string} className="service-cta">
-                      {service.cta}
-                      <span className="link-arrow">→</span>
-                    </Link>
+            <div className="services-grid">
+              <div className="service-card float-in-left">
+                <div className="service-image">
+                  <div className="service-icon">
+                    <GradientIcon icon={faLaptopCode} size="xl" className="primary" />
                   </div>
                 </div>
-                );
-              })}
+                <div className="service-content">
+                  <h3 className="service-title">Web Development</h3>
+                  <ul className="service-features">
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> WordPress, Next.js, Headless CMS (Contentful, Sanity, Strapi)</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Shopify & WooCommerce</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Hosting, performance, automation integration</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Rescue, redesigns, migrations</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="service-card float-in-center">
+                <div className="service-image">
+                  <div className="service-icon">
+                    <GradientIcon icon={faSearchPlus} size="xl" className="primary" />
+                  </div>
+                </div>
+                <div className="service-content">
+                  <h3 className="service-title">Marketing Systems</h3>
+                  <ul className="service-features">
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> SEO & content optimization</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Analytics dashboards & funnel tracking</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> AI automation, chatbots, CRM integration</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Google Ads, retargeting & funnels</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="service-card float-in-bottom-right">
+                <div className="service-image">
+                  <div className="service-icon">
+                    <GradientIcon icon={faPaintBrush} size="xl" className="primary" />
+                  </div>
+                </div>
+                <div className="service-content">
+                  <h3 className="service-title">Creative Production</h3>
+                  <ul className="service-features">
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Video, motion graphics, 3D product animation</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Brand identity and UX</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Audio & post-production</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Content strategy & storytelling</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="service-cta" style={{marginTop:'1rem'}}>
+              <Link href="/services" className="service-cta">Explore All Services <span className="link-arrow">→</span></Link>
             </div>
           </div>
         </section>
 
-        {/* Case Studies Section */}
+        {/* Featured Offer — Growth Website System */}
         <section className="case-studies-section">
           <div className="section-floating-elements">
             <div className="section-floating-ball case-studies-ball-1"></div>
@@ -300,63 +309,79 @@ export default function HomePage() {
           </div>
           <div className="container">
             <div className="section-header slide-in-right">
-              <h2 className="section-title">How We Transform Your Web Presence</h2>
-              <p className="section-description">
-                From emergency rescues to strategic rebuilds, here are the core ways we help SMBs 
-                turn their web presence into a competitive advantage that drives real business results.
-              </p>
+              <h2 className="section-title">The Growth Website System</h2>
+              <p className="section-description">Our signature all-in-one program combining design, SEO, and automation into a single, scalable system.</p>
+              <div className="service-cta" style={{marginTop:'1rem'}}>
+                <Link href="/growth-website-system" className="service-cta">Learn More <span className="link-arrow">→</span></Link>
+              </div>
             </div>
             
+          </div>
+        </section>
+
+        {/* Industries We Serve */}
+        <section className="case-studies-section">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball case-studies-ball-1"></div>
+            <div className="section-floating-ball case-studies-ball-2"></div>
+            <div className="section-floating-ball case-studies-ball-3"></div>
+          </div>
+          <div className="container">
+            <div className="section-header slide-in-right">
+              <h2 className="section-title">Industries We Serve</h2>
+              <p className="section-description">Focused expertise for small and mid-size businesses.</p>
+            </div>
             <div className="case-studies-grid">
-              {servicePillars.map((pillar, index) => {
-                // Alternate between left and right floating animations for 2x2 grid
-                const animationClass = index % 2 === 0 ? 'float-in-left' : 'float-in-right';
-                return (
-                        <div key={index} className={`case-study-card ${animationClass}`}>
-                          <div className="case-study-image">
-                            <Image 
-                              src={pillar.image} 
-                              alt={`${pillar.title} service`}
-                              className="case-study-img"
-                              width={400}
-                              height={300}
-                              priority={index < 2}
-                              placeholder="blur"
-                              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                            />
-                          </div>
+              {[
+                "Therapists & Coaches",
+                "Local Service Businesses",
+                "Restaurants & Hospitality",
+                "Law Firms & Agencies",
+                "eCommerce & Product Brands",
+                "Creative Professionals",
+              ].map((name, idx) => (
+                <div key={name} className={`case-study-card ${idx % 2 === 0 ? 'float-in-left' : 'float-in-right'}`}>
                   <div className="case-study-content">
                     <div className="case-study-header">
-                      <h3 className="case-study-title">{pillar.title}</h3>
+                      <h3 className="case-study-title">{name}</h3>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Portfolio Strip */}
+        <section className="case-studies-section">
+          <div className="container">
+            <div className="section-header slide-in-right">
+              <h2 className="section-title">Recent Projects & Studio Highlights</h2>
+              <p className="section-description">Web, Motion, Branding — selected work and in-progress explorations.</p>
+            </div>
+            <div className="case-studies-grid">
+              {["Web", "Motion", "Branding"].map((cat, idx) => (
+                <div key={cat} className={`case-study-card ${idx % 2 === 0 ? 'float-in-left' : 'float-in-right'}`}>
+                  <div className="case-study-content">
+                    <div className="case-study-header">
+                      <h3 className="case-study-title">{cat}</h3>
                       <div className="case-study-meta">
-                        <span className="timeframe">{pillar.timeframe}</span>
+                        <span className="timeframe">Highlight</span>
                       </div>
                     </div>
                     <div className="case-study-story">
                       <div className="problem-solution">
-                        <div className="problem">
-                          <div className="problem-label">
-                            <GradientIcon icon={faTimesCircle} size="sm" className="danger" />
-                            <span>Problem:</span>
-                          </div>
-                          <span className="problem-text">{pillar.problem}</span>
-                        </div>
                         <div className="solution">
                           <div className="solution-label">
-                            <GradientIcon icon={faCheckCircle} size="sm" className="success" />
-                            <span>Our Approach:</span>
+                            <span>Overview:</span>
                           </div>
-                          <span className="solution-text">{pillar.solution}</span>
+                          <span className="solution-text">Coming soon</span>
                         </div>
                       </div>
                     </div>
-                    <Link href="/contact" className="case-study-link">
-                      Discuss Your Project
-                    </Link>
                   </div>
                 </div>
-                );
-              })}
+              ))}
             </div>
           </div>
         </section>
@@ -423,7 +448,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Strip */}
         <section className="cta-section">
           <div className="section-floating-elements">
             <div className="section-floating-ball cta-ball-1"></div>
@@ -432,21 +457,15 @@ export default function HomePage() {
           </div>
           <div className="container">
             <div className="cta-content" data-aos="fade-up">
-              <h2 className="cta-title">Stop letting your website hold back your business.</h2>
-              <p className="cta-description">
-                Get a free site audit to see exactly what's broken and how we can fix it. 
-                Join 100+ SMBs who've transformed their web presence with our WordPress rescue and rebuild services.
-              </p>
+              <h2 className="cta-title">Ready to grow your business online? Let’s build something powerful together.</h2>
+              <p className="cta-description"></p>
               <div className="cta-actions">
-                <Link href="/site-audit" className="btn btn-primary btn-large">
-                  Get Free Site Audit
+                <Link href="/strategy-call" className="btn btn-primary btn-large">
+                  Book a Free Strategy Call
                   <span className="btn-arrow">→</span>
                 </Link>
-                <Link href="/strategy-call" className="btn btn-secondary btn-large">
-                  Book Strategy Call
-                </Link>
-                <Link href="/case-studies" className="btn btn-secondary btn-large">
-                  View Case Studies
+                <Link href="/growth-website-system" className="btn btn-secondary btn-large">
+                  View Growth System
                 </Link>
               </div>
             </div>

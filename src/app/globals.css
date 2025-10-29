@@ -5757,6 +5757,10 @@ p {
   border: 2px solid #fff;
 }
 
+.wordpress-mechanic-page .cta-buttons .btn-white .gradient-icon {
+  color: #1e40af !important;
+}
+
 .wordpress-mechanic-page .cta-buttons .btn-white:hover {
   background: #f8fafc;
   transform: translateY(-2px);
@@ -5769,6 +5773,10 @@ p {
   border: 2px solid #fff;
 }
 
+.wordpress-mechanic-page .cta-buttons .btn-outline-white .gradient-icon {
+  color: #fff !important;
+}
+
 .wordpress-mechanic-page .cta-buttons .btn-outline-white:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
@@ -5779,6 +5787,69 @@ p {
   color: #D1D5DB;
   font-size: 1rem;
   font-style: italic;
+  margin: 0;
+}
+
+/* Services Grid */
+.wordpress-mechanic-page .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.wordpress-mechanic-page .service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.wordpress-mechanic-page .service-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.wordpress-mechanic-page .service-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  border-radius: 12px;
+  font-size: 1.5rem;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.wordpress-mechanic-page .service-card:hover .service-icon {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.wordpress-mechanic-page .service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.wordpress-mechanic-page .service-description {
+  color: #D1D5DB;
+  line-height: 1.6;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -5925,10 +5996,14 @@ p {
   }
   
   .wordpress-mechanic-page .issues-grid,
-  .wordpress-mechanic-page .credibility-grid,
-  .wordpress-mechanic-page .services-grid {
+  .wordpress-mechanic-page .credibility-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .wordpress-mechanic-page .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .wordpress-mechanic-page .process-timeline {

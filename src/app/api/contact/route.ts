@@ -14,6 +14,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Debug: Log environment variables (remove in production)
+    console.log('Environment check:', {
+      EMAIL_USER: process.env.EMAIL_USER ? 'Set' : 'Not set',
+      EMAIL_PASS: process.env.EMAIL_PASS ? 'Set' : 'Not set',
+      NODE_ENV: process.env.NODE_ENV
+    });
+
     // Check if email credentials are configured
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
       console.log('Email credentials not configured, using fallback');

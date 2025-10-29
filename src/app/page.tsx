@@ -193,7 +193,7 @@ export default function HomePage() {
                 className="hero-layout"
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'minmax(180px, 300px) 1fr',
+                  gridTemplateColumns: 'minmax(250px, 400px) 1fr',
                   columnGap: '4rem',
                   rowGap: '1.25rem',
                   alignItems: 'center',

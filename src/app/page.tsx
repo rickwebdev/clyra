@@ -256,24 +256,16 @@ export default function HomePage() {
                     </p>
                   </div>
                   {/* CTA Buttons */}
-                  <div className="hero-actions" style={{ marginTop: '1.5rem', justifyContent: 'flex-start', gap: '1rem' }}>
-                    <Link href="/book" className="btn btn-primary">
+                  <div className="hero-actions" style={{ marginTop: '1.25rem', justifyContent: 'flex-start', gap: '0.75rem' }}>
+                    <Link href="/book" className="btn btn-primary btn-compact">
                       Book a Free Strategy Call
                       <span className="btn-arrow">→</span>
                     </Link>
-                    <Link href="/growth-website-system" className="btn btn-secondary">
+                    <Link href="/growth-website-system" className="btn btn-secondary btn-compact">
                       View Growth Website System
                     </Link>
                   </div>
-                  {/* Link Strip */}
-                  <div className="hero-links" style={{ marginTop: '0.75rem' }}>
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-                      <Link href="/growth-website-system" className="hover:text-white transition-colors">Growth Website System</Link>
-                      <Link href="/wordpress-mechanic" className="hover:text-white transition-colors">WordPress Mechanic</Link>
-                      <Link href="/redesign-migration" className="hover:text-white transition-colors">Redesign & Migration</Link>
-                      <Link href="/wordpress-studio" className="hover:text-white transition-colors">WordPress Studio</Link>
-                    </div>
-                  </div>
+                  {/* Link Strip removed per design refinement */}
                 </div>
               </div>
                {/* Trust pills and metrics removed for a cleaner, more compact hero */}

@@ -6499,3 +6499,10 @@ p {
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
+
+/* Compact CTA buttons scoped to homepage hero only */
+.hero-section .btn-compact {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  border-radius: 0.9rem;
+}

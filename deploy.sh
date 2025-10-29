@@ -9,6 +9,6 @@ git push origin main
 
 # Deploy to server
 echo "🔄 Deploying to server..."
-ssh root@159.65.45.45 "cd /home/n30m0rph/web/clyrastudios.com/nodejs && git pull origin main && /root/.nvm/versions/node/v18.20.8/bin/node /root/.nvm/versions/node/v18.20.8/lib/node_modules/npm/bin/npm-cli.js run build && pkill -f 'next start' && nohup /root/.nvm/versions/node/v18.20.8/bin/npm start > app.log 2>&1 &"
+ssh root@159.65.45.45 "cd /home/n30m0rph/web/clyrastudios.com/nodejs && git pull origin main && source /root/.nvm/nvm.sh && nvm use 18 && npm run build && pkill -f 'next start' && nohup npm start > app.log 2>&1 &"
 
 echo "✅ Deployment complete!"

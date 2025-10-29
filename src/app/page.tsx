@@ -256,7 +256,7 @@ export default function HomePage() {
                     </p>
                   </div>
                   {/* CTA Buttons */}
-                  <div className="hero-actions" style={{ marginTop: '1rem', justifyContent: 'flex-start', gap: '0.75rem' }}>
+                  <div className="hero-actions" style={{ marginTop: '0.5rem', justifyContent: 'flex-start', gap: '0.75rem' }}>
                     <Link href="/book" className="btn btn-primary btn-compact">
                       Book a Free Strategy Call
                       <span className="btn-arrow">→</span>

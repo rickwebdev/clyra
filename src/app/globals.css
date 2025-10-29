@@ -5920,7 +5920,7 @@ p {
 
 .location-page .hero-actions {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -5978,8 +5978,29 @@ p {
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
+.location-page .btn-white .gradient-icon {
+  color: #1e40af !important;
+}
+
 .location-page .btn .gradient-icon {
   font-size: 1rem;
+}
+
+.location-page .cta-note {
+  color: #fff;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.location-page .cta-buttons {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .location-page .issues-grid {
@@ -6035,7 +6056,7 @@ p {
 
 .locations-page .hero-actions {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -6093,8 +6114,21 @@ p {
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
+.locations-page .btn-white .gradient-icon {
+  color: #1e40af !important;
+}
+
 .locations-page .btn .gradient-icon {
   font-size: 1rem;
+}
+
+.locations-page .cta-buttons {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .locations-page .hero-content {
@@ -6131,7 +6165,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 3rem 0;
+  margin: 4rem 0;
 }
 
 .locations-page .location-card {
@@ -6219,6 +6253,19 @@ p {
   background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
 }
 
+/* Locations page section spacing */
+.locations-page .section {
+  padding: 6rem 0;
+}
+
+.locations-page .section.bg-dark {
+  background: #000;
+}
+
+.locations-page .section.bg-primary {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+
 /* Mobile Responsive for Location Pages */
 @media (max-width: 768px) {
   .location-page .hero-actions,
@@ -6239,6 +6286,10 @@ p {
   }
 
   .location-page .section {
+    padding: 4rem 0;
+  }
+
+  .locations-page .section {
     padding: 4rem 0;
   }
 }

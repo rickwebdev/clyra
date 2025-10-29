@@ -41,26 +41,30 @@ export default function ContactForm({ formId = "priority-form", className = "" }
 
     try {
       // Send email via API
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          website: '',
-          issue: ''
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
         });
-      } else {
-        throw new Error('Failed to send email');
-      }
+
+        const responseData = await response.json();
+        console.log('API Response:', responseData);
+
+        if (response.ok) {
+          setSubmitStatus('success');
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            website: '',
+            issue: ''
+          });
+        } else {
+          console.error('API Error:', responseData);
+          throw new Error(responseData.error || 'Failed to send email');
+        }
     } catch (error) {
       console.error('Error sending email:', error);
       setSubmitStatus('error');

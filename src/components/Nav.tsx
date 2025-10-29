@@ -15,7 +15,6 @@ const links = [
       { href: "/wordpress-mechanic", label: "WordPress Mechanic" },
     ]
   },
-  { href: "/wordpress-repair", label: "WordPress Repair" },
   { href: "/strategy-call", label: "Strategy Call" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },

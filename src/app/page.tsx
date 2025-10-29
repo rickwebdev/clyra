@@ -18,7 +18,13 @@ import {
   faSearchPlus,
   faPaintBrush,
   faCogs,
-  faLeaf
+  faLeaf,
+  faHeart,
+  faStore,
+  faUtensils,
+  faGavel,
+  faShoppingCart,
+  faPalette
 } from '@fortawesome/free-solid-svg-icons';
 
 const services = [
@@ -385,17 +391,20 @@ export default function HomePage() {
             </div>
             <div className="case-studies-grid">
               {[
-                "Therapists & Coaches",
-                "Local Service Businesses",
-                "Restaurants & Hospitality",
-                "Law Firms & Agencies",
-                "eCommerce & Product Brands",
-                "Creative Professionals",
-              ].map((name, idx) => (
-                <div key={name} className={`case-study-card ${idx % 2 === 0 ? 'float-in-left' : 'float-in-right'}`}>
+                { name: "Therapists & Coaches", icon: faHeart },
+                { name: "Local Service Businesses", icon: faStore },
+                { name: "Restaurants & Hospitality", icon: faUtensils },
+                { name: "Law Firms & Agencies", icon: faGavel },
+                { name: "eCommerce & Product Brands", icon: faShoppingCart },
+                { name: "Creative Professionals", icon: faPalette },
+              ].map((item, idx) => (
+                <div key={item.name} className={`case-study-card ${idx % 2 === 0 ? 'float-in-left' : 'float-in-right'}`}>
                   <div className="case-study-content">
                     <div className="case-study-header">
-                      <h3 className="case-study-title">{name}</h3>
+                      <div className="industry-icon">
+                        <GradientIcon icon={item.icon} size="lg" className="primary" />
+                      </div>
+                      <h3 className="case-study-title">{item.name}</h3>
                     </div>
                   </div>
                 </div>

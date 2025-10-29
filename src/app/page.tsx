@@ -193,8 +193,8 @@ export default function HomePage() {
                 className="hero-layout"
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'minmax(300px, 460px) 1fr',
-                  columnGap: '4rem',
+                  gridTemplateColumns: 'minmax(220px, 340px) 1fr',
+                  columnGap: '5rem',
                   rowGap: '1.25rem',
                   alignItems: 'center',
                   minHeight: '75vh',
@@ -204,7 +204,7 @@ export default function HomePage() {
                 {/* Left Media Pane */}
                 <div className="hero-media-pane" style={{ justifySelf: 'start' }}>
                   <div className="device-frame" style={{
-                    width: 'clamp(260px, 24vw, 420px)',
+                    width: 'clamp(220px, 18vw, 320px)',
                     aspectRatio: '1 / 2',
                     background: 'linear-gradient(145deg, #1a1a1a, #2a2a2a)',
                     borderRadius: '24px',

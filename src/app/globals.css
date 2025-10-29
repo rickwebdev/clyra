@@ -6499,3 +6499,8 @@ p {
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
+
+/* Prevent "Modern Businesses" from wrapping */
+.hero-section .hero-title .title-line.highlight {
+  white-space: nowrap;
+}

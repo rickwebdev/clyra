@@ -174,15 +174,15 @@ export default function HomePage() {
               <div className="floating-element element-3"></div>
             </div>
           </div>
-          <div className="hero-container" style={{ width: '100%', maxWidth: 'none', paddingLeft: '2vw', paddingRight: '2vw' }}>
+          <div className="hero-container" style={{ width: '100%', maxWidth: 'none', paddingLeft: '1.5vw', paddingRight: '1.5vw' }}>
             <div className="hero-content" style={{ width: '100%' }}>
               {/* Hero Content - Split Layout */}
-              <div className="hero-content-split flex flex-col lg:flex-row items-start gap-5 lg:gap-6" style={{ minHeight: '75vh' }}>
+              <div className="hero-content-split flex flex-col lg:flex-row items-start gap-4 lg:gap-5" style={{ minHeight: '75vh' }}>
                 {/* Left Media Pane */}
-                <div className="hero-media-pane w-full lg:w-[30%] flex justify-center lg:justify-start">
+                <div className="hero-media-pane w-full lg:w-[25%] flex justify-center lg:justify-start">
                   <div className="device-frame" style={{
-                    width: '240px',
-                    height: '480px',
+                    width: '230px',
+                    height: '460px',
                     background: 'linear-gradient(145deg, #1a1a1a, #2a2a2a)',
                     borderRadius: '24px',
                     padding: '8px',
@@ -213,7 +213,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content Pane */}
-                <div className="hero-content-pane w-full lg:w-[70%] flex flex-col justify-between text-left" style={{ height: '480px' }}>
+                <div className="hero-content-pane w-full lg:w-[75%] flex flex-col justify-between text-left" style={{ height: '460px' }}>
                   <div className="hero-headlines text-left">
                     <h1 className="hero-title" style={{ maxWidth: 'none' }}>
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>

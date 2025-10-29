@@ -174,15 +174,15 @@ export default function HomePage() {
               <div className="floating-element element-3"></div>
             </div>
           </div>
-          <div className="container" style={{ width: '100%', maxWidth: 'none', paddingLeft: '3vw', paddingRight: '3vw' }}>
-            <div className="hero-content">
+          <div className="container" style={{ width: '100%', maxWidth: 'none', paddingLeft: '2vw', paddingRight: '2vw' }}>
+            <div className="hero-content" style={{ width: '100%' }}>
               {/* Hero Content - Split Layout */}
-              <div className="hero-content-split flex flex-col lg:flex-row items-start gap-6 lg:gap-8" style={{ minHeight: '75vh' }}>
+              <div className="hero-content-split flex flex-col lg:flex-row items-start gap-5 lg:gap-6" style={{ minHeight: '75vh' }}>
                 {/* Left Media Pane */}
-                <div className="hero-media-pane w-full lg:w-[35%] flex justify-center lg:justify-start">
+                <div className="hero-media-pane w-full lg:w-[30%] flex justify-center lg:justify-start">
                   <div className="device-frame" style={{
-                    width: '260px',
-                    height: '520px',
+                    width: '240px',
+                    height: '480px',
                     background: 'linear-gradient(145deg, #1a1a1a, #2a2a2a)',
                     borderRadius: '24px',
                     padding: '8px',
@@ -198,7 +198,6 @@ export default function HomePage() {
                       overflow: 'hidden',
                       position: 'relative'
                     }}>
-                      {/* Dummy autoplay video (muted, loop, playsinline) */}
                       <video
                         src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
                         muted
@@ -214,13 +213,12 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content Pane */}
-                <div className="hero-content-pane w-full lg:w-[65%] flex flex-col justify-between text-left" style={{ height: '520px' }}>
+                <div className="hero-content-pane w-full lg:w-[70%] flex flex-col justify-between text-left" style={{ height: '480px' }}>
                   <div className="hero-headlines text-left">
-                    <h1 className="hero-title">
+                    <h1 className="hero-title" style={{ maxWidth: 'none' }}>
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>
                       <span className="title-line highlight">Full-Service Web & AI Studio for Modern Businesses.</span>
                     </h1>
-                    {/* Rotating line below H1 */}
                     <div className="rotate-wrap" style={{ marginTop: '0.25rem' }}>
                       <span className="rotate-label text-gray-400 mr-2">Build with</span>
                       <InlineRotatingText
@@ -228,12 +226,10 @@ export default function HomePage() {
                         className="text-lg sm:text-xl"
                       />
                     </div>
-                    {/* Subhead */}
                     <p className="hero-description" style={{ marginTop: '0.5rem' }}>
                       We design, develop, and automate high-performance websites with SEO, AI systems, and creative content built to grow your business.
                     </p>
                   </div>
-                  {/* CTA Buttons */}
                   <div className="hero-actions" style={{ marginTop: '1rem' }}>
                     <Link href="/book" className="btn btn-primary btn-large">
                       Book a Free Strategy Call
@@ -243,7 +239,6 @@ export default function HomePage() {
                       View Growth Website System
                     </Link>
                   </div>
-                  {/* Link Strip */}
                   <div className="hero-links" style={{ marginTop: '0.75rem' }}>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-400">
                       <Link href="/growth-website-system" className="hover:text-white transition-colors">Growth Website System</Link>

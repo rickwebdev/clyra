@@ -740,6 +740,30 @@ p {
   animation: slideInUp 1s ease-out 0.4s forwards;
 }
 
+/* Hero layout slide-in animations */
+.hero-media-pane.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1.2s ease-out;
+}
+
+.hero-media-pane.slide-in-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-content-pane.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1.2s ease-out;
+}
+
+.hero-content-pane.slide-in-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 .hero-actions {
   display: flex;
   justify-content: center;

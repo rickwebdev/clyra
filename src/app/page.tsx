@@ -197,7 +197,7 @@ export default function HomePage() {
                 }}
               >
                 {/* Left Media Pane */}
-                <div className="hero-media-pane" style={{ justifySelf: 'start', marginRight: '1rem' }}>
+                <div className="hero-media-pane slide-in-left" style={{ justifySelf: 'start', marginRight: '1rem' }}>
                   <div className="device-frame" style={{
                     width: 'clamp(220px, 18vw, 320px)',
                     aspectRatio: '1 / 2',
@@ -231,7 +231,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content Pane */}
-                <div className="hero-content-pane" style={{ alignSelf: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '75vh' }}>
+                <div className="hero-content-pane slide-in-right" style={{ alignSelf: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '75vh' }}>
                   <div className="hero-headlines text-left">
                     <h1 className="hero-title" style={{ maxWidth: 'none' }}>
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>

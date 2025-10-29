@@ -221,10 +221,32 @@ export default function ScrollEffects() {
       });
     };
 
+    // Initialize slide-in animations
+    const initSlideIn = () => {
+      const slideElements = document.querySelectorAll('.slide-in-right, .slide-in-left');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            element.classList.add('animate');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -20px 0px'
+      });
+
+      slideElements.forEach((element) => {
+        observer.observe(element);
+      });
+    };
+
     // Initialize all effects with a small delay to ensure DOM is ready
     const initTimeout = setTimeout(() => {
       initAOS();
       initBounceUp();
+      initSlideIn();
       const cleanupParallax = initParallax();
       const cleanupNavbar = initNavbarScroll();
       initRevealAnimations();

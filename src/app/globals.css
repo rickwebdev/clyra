@@ -4873,7 +4873,7 @@ p {
 
 /* Section Styling - Borrow from theme */
 .wordpress-mechanic-page .section {
-  padding: 8rem 0;
+  padding: 4rem 0;
   position: relative;
   z-index: 1;
 }
@@ -5133,7 +5133,7 @@ p {
 
 .wordpress-mechanic-page .section-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   position: relative;
   z-index: 2;
 }
@@ -5234,8 +5234,8 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   position: relative;
   z-index: 2;
   max-width: 1200px;
@@ -5540,7 +5540,7 @@ p {
 /* Priority Form */
 .wordpress-mechanic-page .priority-form {
   max-width: 600px;
-  margin: 2rem auto 0;
+  margin: 1.5rem auto 0;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
@@ -5795,7 +5795,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin: 3rem 0;
+  margin: 2rem 0;
   position: relative;
   z-index: 2;
 }

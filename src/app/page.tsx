@@ -194,7 +194,7 @@ export default function HomePage() {
                 style={{
                   display: 'grid',
                   gridTemplateColumns: 'minmax(180px, 25%) 1fr',
-                  columnGap: '2.5rem',
+                  columnGap: '4rem',
                   rowGap: '1.25rem',
                   alignItems: 'center',
                   minHeight: '75vh',

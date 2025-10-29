@@ -188,13 +188,24 @@ export default function HomePage() {
             }}
           >
             <div className="hero-content" style={{ width: '100%' }}>
-              {/* Hero Content - Split Layout */}
-              <div className="hero-content-split flex flex-col lg:flex-row items-start gap-4 lg:gap-5" style={{ minHeight: '75vh', width: '100%' }}>
+              {/* Hero Content - Grid Layout (25% / 75%) */}
+              <div
+                className="hero-layout"
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'minmax(180px, 25%) 1fr',
+                  columnGap: '2.5rem',
+                  rowGap: '1.25rem',
+                  alignItems: 'center',
+                  minHeight: '75vh',
+                  width: '100%'
+                }}
+              >
                 {/* Left Media Pane */}
-                <div className="hero-media-pane flex justify-center lg:justify-start" style={{ flex: '0 0 200px' }}>
+                <div className="hero-media-pane" style={{ justifySelf: 'start' }}>
                   <div className="device-frame" style={{
-                    width: '200px',
-                    height: '400px',
+                    width: '220px',
+                    height: '440px',
                     background: 'linear-gradient(145deg, #1a1a1a, #2a2a2a)',
                     borderRadius: '24px',
                     padding: '8px',
@@ -225,12 +236,13 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content Pane */}
-                <div className="hero-content-pane flex-1 flex flex-col justify-between text-left" style={{ height: '400px' }}>
+                <div className="hero-content-pane" style={{ alignSelf: 'center' }}>
                   <div className="hero-headlines text-left">
-                    <h1 className="hero-title" style={{ maxWidth: 'none', width: '100%' }}>
+                    <h1 className="hero-title" style={{ maxWidth: 'none' }}>
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>
                       <span className="title-line highlight">Full-Service Web & AI Studio for Modern Businesses.</span>
                     </h1>
+                    {/* Rotating line below H1 */}
                     <div className="rotate-wrap" style={{ marginTop: '0.25rem' }}>
                       <span className="rotate-label text-gray-400 mr-2">Build with</span>
                       <InlineRotatingText
@@ -238,10 +250,12 @@ export default function HomePage() {
                         className="text-lg sm:text-xl"
                       />
                     </div>
+                    {/* Subhead */}
                     <p className="hero-description" style={{ marginTop: '0.5rem' }}>
                       We design, develop, and automate high-performance websites with SEO, AI systems, and creative content built to grow your business.
                     </p>
                   </div>
+                  {/* CTA Buttons */}
                   <div className="hero-actions" style={{ marginTop: '1rem' }}>
                     <Link href="/book" className="btn btn-primary btn-large">
                       Book a Free Strategy Call
@@ -251,6 +265,7 @@ export default function HomePage() {
                       View Growth Website System
                     </Link>
                   </div>
+                  {/* Link Strip */}
                   <div className="hero-links" style={{ marginTop: '0.75rem' }}>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-400">
                       <Link href="/growth-website-system" className="hover:text-white transition-colors">Growth Website System</Link>
@@ -262,6 +277,16 @@ export default function HomePage() {
                 </div>
               </div>
 
+              {/* Mobile stack fallback via CSS */}
+              <style jsx>{`
+                @media (max-width: 1024px) {
+                  .hero-layout {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                  }
+                  .hero-media-pane { justify-self: center; }
+                }
+              `}</style>
               {/* Trust pills and metrics removed for a cleaner, more compact hero */}
             </div>
           </div>

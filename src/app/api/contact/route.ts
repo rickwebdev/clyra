@@ -14,6 +14,25 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check if email credentials are configured
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.log('Email credentials not configured, using fallback');
+      // Fallback: Log the form data and return success
+      console.log('Form submission received:', {
+        name,
+        email,
+        phone,
+        website,
+        issue,
+        timestamp: new Date().toISOString()
+      });
+      
+      return NextResponse.json(
+        { message: 'Form received (email not configured)' },
+        { status: 200 }
+      );
+    }
+
     // Create transporter (using Gmail as example - you can change this)
     const transporter = nodemailer.createTransporter({
       service: 'gmail',
@@ -22,6 +41,9 @@ export async function POST(request: NextRequest) {
         pass: process.env.EMAIL_PASS, // Your app password
       },
     });
+
+    // Test connection
+    await transporter.verify();
 
     // Email content
     const mailOptions = {
@@ -50,8 +72,14 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     console.error('Error sending email:', error);
+    console.error('Error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined,
+      emailUser: process.env.EMAIL_USER ? 'Set' : 'Not set',
+      emailPass: process.env.EMAIL_PASS ? 'Set' : 'Not set'
+    });
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: 'Failed to send email', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }

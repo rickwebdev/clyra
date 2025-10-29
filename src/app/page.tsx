@@ -341,18 +341,18 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="service-cta" style={{marginTop:'1rem'}}>
+            {/* <div className="service-cta" style={{marginTop:'1rem'}}>
               <Link href="/services" className="service-cta">Explore All Services <span className="link-arrow">→</span></Link>
-            </div>
+            </div> */}
           </div>
         </section>
 
-        {/* Featured Offer — Growth Website System */}
-        <section className="case-studies-section">
+        {/* Featured Offer — Growth Website System (landing-style) */}
+        <section className="case-studies-section growth-section">
           <div className="section-floating-elements">
-            <div className="section-floating-ball case-studies-ball-1"></div>
-            <div className="section-floating-ball case-studies-ball-2"></div>
-            <div className="section-floating-ball case-studies-ball-3"></div>
+            <div className="section-floating-ball growth-ball-1"></div>
+            <div className="section-floating-ball growth-ball-2"></div>
+            <div className="section-floating-ball growth-ball-3"></div>
           </div>
           <div className="container">
             <div className="section-header slide-in-right">

@@ -1379,6 +1379,48 @@ p {
   position: relative;
 }
 
+/* Home: Growth Website System section styled like landing page (blue with white floaters) */
+.growth-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #1d4ed8 100%);
+}
+.growth-section .section-floating-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.growth-section .section-floating-ball {
+  position: absolute;
+  border-radius: 50%;
+  backdrop-filter: blur(12px);
+  animation: sectionFloat 10s ease-in-out infinite;
+  opacity: 0.35;
+}
+.growth-section .growth-ball-1 {
+  width: 140px;
+  height: 140px;
+  top: 10%;
+  left: 4%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+}
+.growth-section .growth-ball-2 {
+  width: 110px;
+  height: 110px;
+  bottom: 18%;
+  right: 8%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.45), rgba(255,255,255,0.08));
+  animation-delay: 2s;
+}
+.growth-section .growth-ball-3 {
+  width: 90px;
+  height: 90px;
+  top: 55%;
+  left: 18%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), rgba(255,255,255,0.07));
+  animation-delay: 4s;
+}
+
 .case-studies-section .container {
   position: relative;
   z-index: 2;

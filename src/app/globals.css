@@ -1472,9 +1472,17 @@ p {
 
 /* Industries section styling - complements blue growth section above */
 .industries-section {
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+  background: linear-gradient(135deg, #1e293b 0%, #334155 25%, #475569 50%, #334155 75%, #1e293b 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
   position: relative;
   overflow: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .industries-section .section-floating-elements {
@@ -1530,12 +1538,13 @@ p {
 
 /* Enhanced industry cards */
 .industries-section .case-study-card {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
   backdrop-filter: blur(20px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .industries-section .case-study-card::before {
@@ -1555,9 +1564,9 @@ p {
 
 .industries-section .case-study-card:hover {
   transform: translateY(-8px) scale(1.02);
-  background: rgba(255, 255, 255, 0.12) !important;
-  border-color: rgba(6, 182, 212, 0.3) !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(6, 182, 212, 0.2);
+  background: rgba(0, 0, 0, 0.8) !important;
+  border-color: rgba(6, 182, 212, 0.4) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(6, 182, 212, 0.3), 0 0 20px rgba(6, 182, 212, 0.2);
 }
 
 .industries-section .case-study-title {
@@ -1577,13 +1586,15 @@ p {
 }
 
 .industries-section .industry-icon svg {
-  filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.3));
+  filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.4));
   transition: all 0.3s ease;
+  color: #06b6d4 !important;
 }
 
 .industries-section .case-study-card:hover .industry-icon svg {
   transform: scale(1.1) rotate(5deg);
-  filter: drop-shadow(0 6px 12px rgba(6, 182, 212, 0.5));
+  filter: drop-shadow(0 6px 12px rgba(6, 182, 212, 0.6));
+  color: #22d3ee !important;
 }
 
 .case-studies-grid {

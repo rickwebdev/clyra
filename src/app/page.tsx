@@ -225,7 +225,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content Pane */}
-                <div className="hero-content-pane flex-1 flex flex-col justify-between text-left" style={{ height: '400px', minWidth: 0 }}>
+                <div className="hero-content-pane flex-1 flex flex-col justify-between text-left" style={{ height: '400px' }}>
                   <div className="hero-headlines text-left">
                     <h1 className="hero-title" style={{ maxWidth: 'none', width: '100%' }}>
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>

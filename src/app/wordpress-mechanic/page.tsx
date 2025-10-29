@@ -446,11 +446,6 @@ export default function WordPressMechanicPage() {
                       {step.time}
                     </div>
                   </div>
-                  {index < processSteps.length - 1 && (
-                    <div className="step-arrow">
-                      <GradientIcon icon={faArrowRight} size="md" className="primary" />
-                    </div>
-                  )}
                 </div>
               ))}
             </div>

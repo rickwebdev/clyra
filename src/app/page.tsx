@@ -158,6 +158,16 @@ export default function HomePage() {
           <div className="hero-background">
             <CrossfadeVideo />
             <div className="hero-overlay"></div>
+            {/* Extra overlay to improve readability of hero image without changing global CSS */}
+            <div
+              aria-hidden
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.85) 100%)',
+                zIndex: 2
+              }}
+            />
             <div className="floating-elements">
               <div className="floating-element element-1"></div>
               <div className="floating-element element-2"></div>
@@ -167,16 +177,23 @@ export default function HomePage() {
           <div className="container">
             <div className="hero-content">
               {/* Hero Headlines - Order 1 */}
-              <div className="hero-headlines">
+              <div className="hero-headlines text-center lg:text-left">
                 <h1 className="hero-title">
-                  <span className="title-line">Build. Scale. Create.</span>
-                  <span className="title-line highlight">Full-Service Digital Studio for Ambitious Brands.</span>
-                  <span className="rotate-wrap">
-                    <span className="rotate-label">Build with </span>
-                    <InlineRotatingText phrases={["WordPress","Next.js","Shopify","Contentful","Sanity","WooCommerce"]} />
-                  </span>
+                  <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>
+                  <span className="title-line highlight">Full-Service Web & AI Studio for Modern Businesses.</span>
                 </h1>
-                <p className="hero-description">
+
+                {/* Rotating line below H1 */}
+                <div className="rotate-wrap" style={{ marginTop: '0.5rem' }}>
+                  <span className="rotate-label text-gray-400 mr-2">Build with</span>
+                  <InlineRotatingText
+                    phrases={["WordPress","Next.js","Shopify","Sanity","Contentful","WooCommerce"]}
+                    className="text-lg sm:text-xl"
+                  />
+                </div>
+
+                {/* Subhead */}
+                <p className="hero-description" style={{ marginTop: '0.75rem' }}>
                   We design, develop, and launch high-performance websites — then power them with SEO, automation, and creative content built to grow your business.
                 </p>
               </div>
@@ -184,49 +201,15 @@ export default function HomePage() {
               {/* CTA Buttons - Order 2 on mobile */}
               <div className="hero-actions">
                 <Link href="/strategy-call" className="btn btn-primary btn-large">
-                  Book a Strategy Call
+                  Book a Free Strategy Call
                   <span className="btn-arrow">→</span>
                 </Link>
-                <Link href="/services" className="btn btn-secondary btn-large">
-                  View Services
+                <Link href="/growth-website-system" className="btn btn-secondary btn-large">
+                  View Growth Website System
                 </Link>
               </div>
 
-              {/* Trust Stats - Order 3 on mobile */}
-              <div className="hero-stats">
-                <div className="stat">
-                  <span className="stat-number">100+</span>
-                  <span className="stat-label">SMBs Rescued</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">24hr</span>
-                  <span className="stat-label">Emergency Response</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">100%</span>
-                  <span className="stat-label">Site Ownership</span>
-                </div>
-              </div>
-              
-              {/* Trust Signals - Order 4 on mobile */}
-              <div className="trust-signals">
-                <div className="trust-item">
-                  <GradientIcon icon={faBolt} size="sm" className="primary" />
-                  <span className="trust-text">3x Faster</span>
-                </div>
-                <div className="trust-item">
-                  <GradientIcon icon={faShieldAlt} size="sm" className="warning" />
-                  <span className="trust-text">24hr Fix</span>
-                </div>
-                <div className="trust-item">
-                  <GradientIcon icon={faSearch} size="sm" className="primary" />
-                  <span className="trust-text">Local SEO</span>
-                </div>
-                <div className="trust-item">
-                  <GradientIcon icon={faLaptopCode} size="sm" className="success" />
-                  <span className="trust-text">Mobile-First</span>
-                </div>
-              </div>
+              {/* Trust pills and metrics removed for a cleaner, more compact hero */}
             </div>
           </div>
         </section>

@@ -48,7 +48,10 @@ export default function InlineRotatingText({
               opacity: i === index ? 1 : 0,
               transform: i === index ? "translateY(0)" : "translateY(0.5em)",
             }}
-            className="bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent"
+            className={`${i % 2 === 0
+              ? "bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400"
+              : "bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400"
+            } bg-clip-text text-transparent`}
           >
             {p}
           </span>

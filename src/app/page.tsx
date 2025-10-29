@@ -204,8 +204,8 @@ export default function HomePage() {
                 {/* Left Media Pane */}
                 <div className="hero-media-pane" style={{ justifySelf: 'start' }}>
                   <div className="device-frame" style={{
-                    width: '220px',
-                    height: '440px',
+                    width: 'clamp(260px, 24vw, 420px)',
+                    aspectRatio: '1 / 2',
                     background: 'linear-gradient(145deg, #1a1a1a, #2a2a2a)',
                     borderRadius: '24px',
                     padding: '8px',

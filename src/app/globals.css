@@ -6498,5 +6498,4 @@ p {
   font-size: clamp(2.25rem, 5.2vw, 4rem);
   letter-spacing: -0.02em;
   line-height: 1.1;
-  white-space: nowrap;
 }

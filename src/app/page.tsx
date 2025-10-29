@@ -194,7 +194,7 @@ export default function HomePage() {
                 style={{
                   display: 'grid',
                   gridTemplateColumns: 'minmax(220px, 340px) 1fr',
-                  columnGap: '5rem',
+                  columnGap: '6rem',
                   rowGap: '1.25rem',
                   alignItems: 'center',
                   minHeight: '75vh',
@@ -202,7 +202,7 @@ export default function HomePage() {
                 }}
               >
                 {/* Left Media Pane */}
-                <div className="hero-media-pane" style={{ justifySelf: 'start' }}>
+                <div className="hero-media-pane" style={{ justifySelf: 'start', marginRight: '1rem' }}>
                   <div className="device-frame" style={{
                     width: 'clamp(220px, 18vw, 320px)',
                     aspectRatio: '1 / 2',

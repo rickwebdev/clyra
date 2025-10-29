@@ -359,7 +359,7 @@ export default function HomePage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">The Growth Website System</h2>
               <p className="section-description">Our signature all-in-one program combining design, SEO, and automation into a single, scalable system.</p>
-              <div className="service-cta" style={{marginTop:'1rem'}}>
+              <div className="service-cta">
                 <Link href="/growth-website-system" className="btn btn-primary btn-compact">
                   <span className="cta-icon"><GradientIcon icon={faLeaf} size="sm" className="primary" /></span>
                   <span>Learn More</span>

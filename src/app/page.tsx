@@ -244,7 +244,7 @@ export default function HomePage() {
                     </h1>
                     {/* Rotating line below H1 */}
                     <div className="rotate-wrap" style={{ marginTop: '0.25rem' }}>
-                      <span className="rotate-label text-gray-400 mr-2">Build with</span>
+                      <span className="rotate-label text-gray-400 mr-2 text-lg sm:text-xl">Build with</span>
                       <InlineRotatingText
                         phrases={["WordPress","Next.js","Shopify","Sanity","Contentful","WooCommerce"]}
                         className="text-lg sm:text-xl"

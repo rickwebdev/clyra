@@ -174,7 +174,7 @@ export default function HomePage() {
               <div className="floating-element element-3"></div>
             </div>
           </div>
-          <div className="container" style={{ width: '100%', maxWidth: 'none', paddingLeft: '2vw', paddingRight: '2vw' }}>
+          <div className="hero-container" style={{ width: '100%', maxWidth: 'none', paddingLeft: '2vw', paddingRight: '2vw' }}>
             <div className="hero-content" style={{ width: '100%' }}>
               {/* Hero Content - Split Layout */}
               <div className="hero-content-split flex flex-col lg:flex-row items-start gap-5 lg:gap-6" style={{ minHeight: '75vh' }}>

@@ -276,18 +276,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-
-              {/* Mobile stack fallback via CSS */}
-              <style jsx>{`
-                @media (max-width: 1024px) {
-                  .hero-layout {
-                    display: grid;
-                    grid-template-columns: 1fr;
-                  }
-                  .hero-media-pane { justify-self: center; }
-                }
-              `}</style>
-              {/* Trust pills and metrics removed for a cleaner, more compact hero */}
+               {/* Trust pills and metrics removed for a cleaner, more compact hero */}
             </div>
           </div>
         </section>

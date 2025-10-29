@@ -97,7 +97,7 @@ const structuredData = {
     "contactType": "customer service",
     "areaServed": "US",
     "availableLanguage": "English",
-    "email": "rickthewebdev@gmail.com"
+    "email": "rick@clyrastudios.com"
   },
   "sameAs": [
     "https://twitter.com/clyrastudios",

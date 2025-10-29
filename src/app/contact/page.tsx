@@ -92,7 +92,7 @@ export default function ContactPage() {
                     Have a detailed project? Send us an email with your requirements.
                   </p>
                   <a 
-                    href="mailto:rickthewebdev@gmail.com" 
+                    href="mailto:rick@clyrastudios.com" 
                     className="contact-option-cta"
                   >
                     <GradientIcon icon={faEnvelope} size="sm" className="mr-2" />

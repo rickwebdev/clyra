@@ -121,10 +121,10 @@ export default function ThanksNotAFitPage() {
             <div className="flex items-center justify-center gap-2 text-blue-400">
               <GradientIcon icon={faEnvelope} size="sm" />
               <a 
-                href="mailto:hello@clyrastudios.com" 
+                href="mailto:rick@clyrastudios.com" 
                 className="hover:text-blue-300 transition-colors"
               >
-                hello@clyrastudios.com
+                rick@clyrastudios.com
               </a>
             </div>
           </div>

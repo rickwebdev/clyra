@@ -183,18 +183,18 @@ export default function HomePage() {
               marginLeft: '-50vw',
               marginRight: '-50vw',
               width: '100vw',
-              paddingLeft: '1.5vw',
-              paddingRight: '1.5vw'
+              paddingLeft: '1vw',
+              paddingRight: '1vw'
             }}
           >
             <div className="hero-content" style={{ width: '100%' }}>
               {/* Hero Content - Split Layout */}
-              <div className="hero-content-split flex flex-col lg:flex-row items-start gap-4 lg:gap-5" style={{ minHeight: '75vh' }}>
+              <div className="hero-content-split flex flex-col lg:flex-row items-start gap-4 lg:gap-5" style={{ minHeight: '75vh', width: '100%' }}>
                 {/* Left Media Pane */}
-                <div className="hero-media-pane w-full lg:w-[20%] flex justify-center lg:justify-start">
+                <div className="hero-media-pane flex justify-center lg:justify-start" style={{ flex: '0 0 200px' }}>
                   <div className="device-frame" style={{
-                    width: '210px',
-                    height: '420px',
+                    width: '200px',
+                    height: '400px',
                     background: 'linear-gradient(145deg, #1a1a1a, #2a2a2a)',
                     borderRadius: '24px',
                     padding: '8px',
@@ -225,9 +225,9 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content Pane */}
-                <div className="hero-content-pane w-full lg:w-[80%] flex flex-col justify-between text-left" style={{ height: '420px' }}>
+                <div className="hero-content-pane flex-1 flex flex-col justify-between text-left" style={{ height: '400px', minWidth: 0 }}>
                   <div className="hero-headlines text-left">
-                    <h1 className="hero-title" style={{ maxWidth: 'none' }}>
+                    <h1 className="hero-title" style={{ maxWidth: 'none', width: '100%' }}>
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>
                       <span className="title-line highlight">Full-Service Web & AI Studio for Modern Businesses.</span>
                     </h1>

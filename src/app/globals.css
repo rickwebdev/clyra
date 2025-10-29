@@ -1445,11 +1445,11 @@ p {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem; /* tighter gap */
-  border-radius: 20px; /* slightly less pill-like */
-  padding: 0.625rem 1.25rem !important; /* smaller padding */
+  gap: 0.5rem; /* slightly more gap */
+  border-radius: 24px; /* more pill-like */
+  padding: 0.875rem 1.75rem !important; /* bigger padding */
   font-weight: 600 !important;
-  font-size: 0.875rem !important; /* smaller text */
+  font-size: 1rem !important; /* bigger text */
 }
 .growth-section .btn:hover {
   background: #f8fafc !important;
@@ -1461,8 +1461,8 @@ p {
 .growth-section .btn .cta-icon svg {
   filter: none;
   color: #1e40af !important;
-  width: 14px !important; /* smaller icon */
-  height: 14px !important;
+  width: 16px !important; /* bigger icon */
+  height: 16px !important;
 }
 
 .case-studies-section .container {

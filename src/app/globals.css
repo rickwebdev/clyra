@@ -5854,6 +5854,28 @@ p {
 }
 
 /* Location Pages Styling */
+.location-logo-header {
+  background: #000;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.location-logo {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.location-logo .logo-image {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+
+.location-logo:hover .logo-image {
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+}
+
 .location-page .hero-section {
   background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
   padding: 6rem 0;
@@ -5900,6 +5922,62 @@ p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.location-page .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.location-page .btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.location-page .btn-primary:hover {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.location-page .btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.location-page .btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.location-page .btn-white {
+  background: #fff;
+  color: #1e40af;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.location-page .btn-white:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.location-page .btn .gradient-icon {
+  font-size: 1rem;
 }
 
 .location-page .issues-grid {
@@ -5953,6 +6031,70 @@ p {
   overflow: hidden;
 }
 
+.locations-page .hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.locations-page .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-page .btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.locations-page .btn-primary:hover {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.locations-page .btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.locations-page .btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.locations-page .btn-white {
+  background: #fff;
+  color: #1e40af;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.locations-page .btn-white:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.locations-page .btn .gradient-icon {
+  font-size: 1rem;
+}
+
 .locations-page .hero-content {
   max-width: 800px;
   margin: 0 auto;
@@ -6003,6 +6145,29 @@ p {
   border-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-4px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.locations-page .location-card .btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+.locations-page .location-card .btn:hover {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .locations-page .location-header {

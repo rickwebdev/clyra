@@ -155,6 +155,15 @@ export default function CityPage({ params }: { params: { 'city-slug': string } }
 
   return (
     <main className="location-page">
+      {/* Logo Header */}
+      <div className="location-logo-header">
+        <div className="container">
+          <Link href="/" className="location-logo">
+            <img src="/images/clyra_logo.png" alt="Clyra Studios" className="logo-image" />
+          </Link>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container">

@@ -50,7 +50,13 @@ export async function POST(request: NextRequest) {
     });
 
     // Test connection
-    await transporter.verify();
+    try {
+      await transporter.verify();
+      console.log('Email connection verified successfully');
+    } catch (verifyError) {
+      console.error('Email connection verification failed:', verifyError);
+      throw verifyError;
+    }
 
     // Email content
     const mailOptions = {

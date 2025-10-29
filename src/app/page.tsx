@@ -154,7 +154,7 @@ export default function HomePage() {
       
       <main>
         {/* Hero Section with Video Background */}
-        <section className="hero-section">
+        <section className="hero-section home-hero">
           <div className="hero-background">
             <CrossfadeVideo />
             <div className="hero-overlay"></div>

@@ -6517,3 +6517,9 @@ p {
   padding-left: 0;
   padding-right: 0;
 }
+
+/* Homepage-only override: remove auto-centering margins on hero description */
+.home-hero .hero-description {
+  margin-left: 0;
+  margin-right: 0;
+}

@@ -372,11 +372,11 @@ export default function HomePage() {
         </section>
 
         {/* Industries We Serve */}
-        <section className="case-studies-section">
+        <section className="case-studies-section industries-section">
           <div className="section-floating-elements">
-            <div className="section-floating-ball case-studies-ball-1"></div>
-            <div className="section-floating-ball case-studies-ball-2"></div>
-            <div className="section-floating-ball case-studies-ball-3"></div>
+            <div className="section-floating-ball industries-ball-1"></div>
+            <div className="section-floating-ball industries-ball-2"></div>
+            <div className="section-floating-ball industries-ball-3"></div>
           </div>
           <div className="container">
             <div className="section-header slide-in-right">

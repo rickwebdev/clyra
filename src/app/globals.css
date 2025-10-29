@@ -1573,22 +1573,44 @@ p {
   color: #ffffff !important;
   font-weight: 600 !important;
   font-size: 1.1rem !important;
-  text-align: center;
+  text-align: left;
   position: relative;
   z-index: 2;
-  margin-top: 0.75rem;
+  margin: 0;
+  flex: 1;
+}
+
+.industries-section .case-study-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .industries-section .industry-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(34, 211, 238, 0.1));
+  border-radius: 12px;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  transition: all 0.3s ease;
 }
 
 .industries-section .industry-icon svg {
   filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.4));
   transition: all 0.3s ease;
   color: #06b6d4 !important;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.industries-section .case-study-card:hover .industry-icon {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.3), rgba(34, 211, 238, 0.2));
+  border-color: rgba(6, 182, 212, 0.5);
+  transform: scale(1.05);
 }
 
 .industries-section .case-study-card:hover .industry-icon svg {

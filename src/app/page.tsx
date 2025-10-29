@@ -402,7 +402,7 @@ export default function HomePage() {
                   <div className="case-study-content">
                     <div className="case-study-header">
                       <div className="industry-icon">
-                        <GradientIcon icon={item.icon} size="lg" className="primary" />
+                        <GradientIcon icon={item.icon} size="2x" className="primary" />
                       </div>
                       <h3 className="case-study-title">{item.name}</h3>
                     </div>

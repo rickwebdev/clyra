@@ -1,6 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+export async function GET() {
+  return NextResponse.json({
+    EMAIL_USER: process.env.EMAIL_USER ? 'Set' : 'Not set',
+    EMAIL_PASS: process.env.EMAIL_PASS ? 'Set' : 'Not set',
+    SMTP_HOST: process.env.SMTP_HOST || 'mail.clyrastudios.com',
+    SMTP_PORT: process.env.SMTP_PORT || '587',
+    SMTP_SECURE: process.env.SMTP_SECURE || 'false',
+    NODE_ENV: process.env.NODE_ENV
+  });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();

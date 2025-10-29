@@ -7006,3 +7006,125 @@ p {
     justify-content: center !important;
   }
 }
+
+/* Mobile Section Animations - Float Up on Scroll */
+@media (max-width: 768px) {
+  /* Only apply animations to sections that have animation classes - don't hide all sections by default */
+  .section.slide-in-left,
+  .section.slide-in-right,
+  .section.float-in-left,
+  .section.float-in-right,
+  .section.float-in-center,
+  .section.float-in-bottom-left,
+  .section.float-in-bottom-right {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .section.slide-in-left.animate,
+  .section.slide-in-right.animate,
+  .section.float-in-left.animate,
+  .section.float-in-right.animate,
+  .section.float-in-center.animate,
+  .section.float-in-bottom-left.animate,
+  .section.float-in-bottom-right.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Override specific desktop animations on mobile */
+  .hero-media-pane.slide-in-left,
+  .hero-content-pane.slide-in-right,
+  .service-card.slide-in-top-left,
+  .service-card.slide-in-top-right,
+  .service-card.slide-in-bottom-left,
+  .service-card.slide-in-bottom-right,
+  .float-in-left,
+  .float-in-right,
+  .float-in-center,
+  .float-in-bottom-left,
+  .float-in-bottom-right,
+  .slide-in-right,
+  .slide-in-left {
+    opacity: 0;
+    transform: translateY(50px) !important;
+    transition: all 0.8s ease-out;
+  }
+  
+  .hero-media-pane.slide-in-left.animate,
+  .hero-content-pane.slide-in-right.animate,
+  .service-card.slide-in-top-left.animate,
+  .service-card.slide-in-top-right.animate,
+  .service-card.slide-in-bottom-left.animate,
+  .service-card.slide-in-bottom-right.animate,
+  .float-in-left.animate,
+  .float-in-right.animate,
+  .float-in-center.animate,
+  .float-in-bottom-left.animate,
+  .float-in-bottom-right.animate,
+  .slide-in-right.animate,
+  .slide-in-left.animate {
+    opacity: 1;
+    transform: translateY(0) !important;
+  }
+  
+  /* Only animate content elements within animated sections */
+  .section.animate .section-header,
+  .section.animate .section-title,
+  .section.animate .section-description,
+  .section.animate .section-content,
+  .section.animate .grid,
+  .section.animate .card,
+  .section.animate .testimonial,
+  .section.animate .faq-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .section.animate .section-header.animate,
+  .section.animate .section-title.animate,
+  .section.animate .section-description.animate,
+  .section.animate .section-content.animate,
+  .section.animate .grid.animate,
+  .section.animate .card.animate,
+  .section.animate .testimonial.animate,
+  .section.animate .faq-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Stagger animations for better mobile experience */
+  .section.animate .section-header.animate {
+    transition-delay: 0.1s;
+  }
+  
+  .section.animate .section-title.animate {
+    transition-delay: 0.2s;
+  }
+  
+  .section.animate .section-description.animate {
+    transition-delay: 0.3s;
+  }
+  
+  .section.animate .section-content.animate {
+    transition-delay: 0.4s;
+  }
+  
+  .section.animate .grid.animate > *:nth-child(1) {
+    transition-delay: 0.5s;
+  }
+  
+  .section.animate .grid.animate > *:nth-child(2) {
+    transition-delay: 0.6s;
+  }
+  
+  .section.animate .grid.animate > *:nth-child(3) {
+    transition-delay: 0.7s;
+  }
+  
+  .section.animate .grid.animate > *:nth-child(4) {
+    transition-delay: 0.8s;
+  }
+}

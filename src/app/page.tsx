@@ -243,20 +243,20 @@ export default function HomePage() {
                       <span className="title-line highlight">Full-Service Web & AI Studio for Modern&nbsp;Businesses.</span>
                     </h1>
                     {/* Rotating line below H1 */}
-                    <div className="rotate-wrap" style={{ marginTop: '0.25rem' }}>
-                      <span className="rotate-label text-gray-400 mr-2 text-lg sm:text-xl">Build with</span>
+                    <div className="rotate-wrap" style={{ marginTop: '0.5rem' }}>
+                      <span className="rotate-label text-gray-400 mr-2 text-xl sm:text-2xl">Build with</span>
                       <InlineRotatingText
                         phrases={["WordPress","Next.js","Shopify","Sanity","Contentful","WooCommerce","OpenAI","Grok","Claude"]}
-                        className="text-lg sm:text-xl"
+                        className="text-xl sm:text-2xl"
                       />
                     </div>
                     {/* Subhead */}
-                    <p className="hero-description" style={{ marginTop: '0.5rem' }}>
+                    <p className="hero-description" style={{ marginTop: '0.75rem' }}>
                       We design, develop, and automate high-performance websites with SEO, AI systems, and creative content built to grow your business.
                     </p>
                   </div>
                   {/* CTA Buttons */}
-                  <div className="hero-actions" style={{ marginTop: '1.25rem', justifyContent: 'flex-start', gap: '0.75rem' }}>
+                  <div className="hero-actions" style={{ marginTop: '1rem', justifyContent: 'flex-start', gap: '0.75rem' }}>
                     <Link href="/book" className="btn btn-primary btn-compact">
                       Book a Free Strategy Call
                       <span className="btn-arrow">→</span>

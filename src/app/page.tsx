@@ -174,19 +174,7 @@ export default function HomePage() {
               <div className="floating-element element-3"></div>
             </div>
           </div>
-          <div
-            className="hero-container"
-            style={{
-              position: 'relative',
-              left: '50%',
-              right: '50%',
-              marginLeft: '-50vw',
-              marginRight: '-50vw',
-              width: '100vw',
-              paddingLeft: '1vw',
-              paddingRight: '1vw'
-            }}
-          >
+          <div className="hero-container hero-full-bleed">
             <div className="hero-content" style={{ width: '100%' }}>
               {/* Hero Content - Grid Layout (25% / 75%) */}
               <div
@@ -194,7 +182,7 @@ export default function HomePage() {
                 style={{
                   display: 'grid',
                   gridTemplateColumns: 'minmax(220px, 340px) 1fr',
-                  columnGap: '6rem',
+                  columnGap: '8rem',
                   rowGap: '1.25rem',
                   alignItems: 'center',
                   minHeight: '75vh',

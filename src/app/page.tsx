@@ -193,7 +193,7 @@ export default function HomePage() {
                 className="hero-layout"
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'minmax(250px, 400px) 1fr',
+                  gridTemplateColumns: 'minmax(300px, 460px) 1fr',
                   columnGap: '4rem',
                   rowGap: '1.25rem',
                   alignItems: 'center',
@@ -252,11 +252,11 @@ export default function HomePage() {
                     </div>
                     {/* Subhead */}
                     <p className="hero-description" style={{ marginTop: '0.75rem' }}>
-                      We design, develop, and automate high-performance websites with SEO, AI systems, and creative content built to grow your business.
+                      We design, develop, and automate high-performance websites with SEO, AI systems, and creative content built to <br/>grow your business.
                     </p>
                   </div>
                   {/* CTA Buttons */}
-                  <div className="hero-actions" style={{ marginTop: '0.5rem', justifyContent: 'flex-start', gap: '0.75rem' }}>
+                  <div className="hero-actions" style={{ justifyContent: 'flex-start', gap: '0.75rem' }}>
                     <Link href="/book" className="btn btn-primary btn-compact">
                       Book a Free Strategy Call
                       <span className="btn-arrow">→</span>

@@ -5,9 +5,27 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
-  { href: "/services", label: "Services" },
-  { href: "/comparisons", label: "WordPress vs" },
-  { href: "/migrations", label: "Migrations" },
+  { 
+    href: "/services", 
+    label: "Services",
+    submenu: [
+      { href: "/wordpress-studio", label: "WordPress Studio" },
+      { href: "/growth-website-system", label: "Growth Website System" },
+      { href: "/redesign-migration", label: "Redesign & Migration" },
+      { href: "/wordpress-mechanic", label: "WordPress Mechanic" },
+    ]
+  },
+  { 
+    href: "/wordpress-repair", 
+    label: "WordPress Repair",
+    submenu: [
+      { href: "/wordpress-repair/locations", label: "All Locations" },
+      { href: "/wordpress-repair/new-york-ny", label: "New York" },
+      { href: "/wordpress-repair/los-angeles-ca", label: "Los Angeles" },
+      { href: "/wordpress-repair/chicago-il", label: "Chicago" },
+    ]
+  },
+  { href: "/strategy-call", label: "Strategy Call" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -15,9 +33,14 @@ const links = [
 export default function Nav() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const toggleDropdown = (label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
   };
 
   return (
@@ -35,13 +58,39 @@ export default function Nav() {
         
         <ul className="nav-links">
           {links.map((link) => (
-            <li key={link.href}>
-              <Link 
-                href={link.href}
-                className={`nav-link ${pathname === link.href ? 'active' : ''}`}
-              >
-                {link.label}
-              </Link>
+            <li key={link.href} className="nav-item">
+              {link.submenu ? (
+                <div className="dropdown-container">
+                  <button
+                    className={`nav-link dropdown-trigger ${pathname.startsWith(link.href) ? 'active' : ''}`}
+                    onClick={() => toggleDropdown(link.label)}
+                    onMouseEnter={() => setActiveDropdown(link.label)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    {link.label}
+                    <span className="dropdown-arrow">▼</span>
+                  </button>
+                  <ul className={`dropdown-menu ${activeDropdown === link.label ? 'active' : ''}`}>
+                    {link.submenu.map((subLink) => (
+                      <li key={subLink.href}>
+                        <Link 
+                          href={subLink.href}
+                          className={`dropdown-link ${pathname === subLink.href ? 'active' : ''}`}
+                        >
+                          {subLink.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <Link 
+                  href={link.href}
+                  className={`nav-link ${pathname === link.href ? 'active' : ''}`}
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
           <li className="nav-phone">
@@ -66,18 +115,42 @@ export default function Nav() {
         <ul className="mobile-menu-links">
           {links.map((link) => (
             <li key={link.href}>
-              <Link 
-                href={link.href}
-                className="mobile-menu-link"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
+              {link.submenu ? (
+                <div className="mobile-dropdown">
+                  <button
+                    className="mobile-menu-link mobile-dropdown-trigger"
+                    onClick={() => toggleDropdown(link.label)}
+                  >
+                    {link.label} {activeDropdown === link.label ? '▲' : '▼'}
+                  </button>
+                  <ul className={`mobile-dropdown-menu ${activeDropdown === link.label ? 'active' : ''}`}>
+                    {link.submenu.map((subLink) => (
+                      <li key={subLink.href}>
+                        <Link 
+                          href={subLink.href}
+                          className="mobile-menu-link mobile-submenu-link"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {subLink.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <Link 
+                  href={link.href}
+                  className="mobile-menu-link"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
           <li>
             <Link 
-              href="/contact" 
+              href="/strategy-call" 
               className="btn btn-primary"
               onClick={() => setMobileMenuOpen(false)}
             >

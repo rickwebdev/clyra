@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 interface InlineRotatingTextProps {
   phrases?: string[];
@@ -14,7 +14,7 @@ export default function InlineRotatingText({
   className = "",
 }: InlineRotatingTextProps) {
   const [index, setIndex] = useState(0);
-  const prefersReducedMotion = useRef(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const longest = useMemo(
     () => phrases.reduce((a, b) => (a.length >= b.length ? a : b), ""),
@@ -24,12 +24,22 @@ export default function InlineRotatingText({
   useEffect(() => {
     if (typeof window !== "undefined") {
       const m = window.matchMedia("(prefers-reduced-motion: reduce)");
-      prefersReducedMotion.current = m.matches;
+      setPrefersReducedMotion(m.matches);
+      
+      const handleChange = (e: MediaQueryListEvent) => {
+        setPrefersReducedMotion(e.matches);
+      };
+      
+      m.addEventListener("change", handleChange);
+      return () => m.removeEventListener("change", handleChange);
     }
-    if (prefersReducedMotion.current) return;
+  }, []);
+
+  useEffect(() => {
+    if (prefersReducedMotion) return;
     const id = setInterval(() => setIndex((p) => (p + 1) % phrases.length), intervalMs);
     return () => clearInterval(id);
-  }, [phrases.length, intervalMs]);
+  }, [phrases.length, intervalMs, prefersReducedMotion]);
 
   return (
     <span className={`relative inline-block ${className}`} aria-live="polite">

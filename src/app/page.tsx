@@ -217,7 +217,7 @@ export default function HomePage() {
                       position: 'relative'
                     }}>
                       <video
-                        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                        src="/videos/hero-video.mp4"
                         muted
                         autoPlay
                         loop

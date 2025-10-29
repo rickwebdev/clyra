@@ -413,8 +413,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Portfolio Strip */}
-        <section className="case-studies-section">
+        {/* Portfolio Strip - Commented out until content is ready */}
+        {/* <section className="case-studies-section">
           <div className="container">
             <div className="section-header slide-in-right">
               <h2 className="section-title">Recent Projects & Studio Highlights</h2>
@@ -445,7 +445,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Testimonials Section */}
         <section className="testimonials-section">

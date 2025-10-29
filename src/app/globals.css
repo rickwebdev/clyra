@@ -763,6 +763,51 @@ p {
   transform: translateX(0);
 }
 
+/* Four corner slide-in animations for service cards */
+.service-card.slide-in-top-left {
+  opacity: 0;
+  transform: translate(-100px, -100px);
+  transition: all 1s ease-out;
+}
+
+.service-card.slide-in-top-left.animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.service-card.slide-in-top-right {
+  opacity: 0;
+  transform: translate(100px, -100px);
+  transition: all 1s ease-out;
+}
+
+.service-card.slide-in-top-right.animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.service-card.slide-in-bottom-left {
+  opacity: 0;
+  transform: translate(-100px, 100px);
+  transition: all 1s ease-out;
+}
+
+.service-card.slide-in-bottom-left.animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.service-card.slide-in-bottom-right {
+  opacity: 0;
+  transform: translate(100px, 100px);
+  transition: all 1s ease-out;
+}
+
+.service-card.slide-in-bottom-right.animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 
 .hero-actions {
   display: flex;

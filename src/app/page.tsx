@@ -282,7 +282,7 @@ export default function HomePage() {
             </div>
             
             <div className="services-grid">
-              <div className="service-card float-in-left">
+              <div className="service-card slide-in-top-left">
                 <div className="service-image">
                   <div className="service-icon">
                     <GradientIcon icon={faLaptopCode} size="xl" className="primary" />
@@ -298,7 +298,7 @@ export default function HomePage() {
                   </ul>
                 </div>
               </div>
-              <div className="service-card float-in-center">
+              <div className="service-card slide-in-top-right">
                 <div className="service-image">
                   <div className="service-icon">
                     <GradientIcon icon={faSearchPlus} size="xl" className="primary" />
@@ -314,7 +314,7 @@ export default function HomePage() {
                   </ul>
                 </div>
               </div>
-              <div className="service-card float-in-bottom-right">
+              <div className="service-card slide-in-bottom-left">
                 <div className="service-image">
                   <div className="service-icon">
                     <GradientIcon icon={faPaintBrush} size="xl" className="primary" />
@@ -331,7 +331,7 @@ export default function HomePage() {
                 </div>
               </div>
               {/* New: AI Automation pillar to fill the fourth grid slot */}
-              <div className="service-card float-in-right">
+              <div className="service-card slide-in-bottom-right">
                 <div className="service-image">
                   <div className="service-icon">
                     <GradientIcon icon={faBolt} size="xl" className="primary" />

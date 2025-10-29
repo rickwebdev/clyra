@@ -223,7 +223,7 @@ export default function ScrollEffects() {
 
     // Initialize slide-in animations
     const initSlideIn = () => {
-      const slideElements = document.querySelectorAll('.slide-in-right, .slide-in-left');
+      const slideElements = document.querySelectorAll('.slide-in-right, .slide-in-left, .slide-in-top-left, .slide-in-top-right, .slide-in-bottom-left, .slide-in-bottom-right');
       
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

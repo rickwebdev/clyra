@@ -246,7 +246,7 @@ export default function HomePage() {
                     <div className="rotate-wrap" style={{ marginTop: '0.25rem' }}>
                       <span className="rotate-label text-gray-400 mr-2 text-lg sm:text-xl">Build with</span>
                       <InlineRotatingText
-                        phrases={["WordPress","Next.js","Shopify","Sanity","Contentful","WooCommerce"]}
+                        phrases={["WordPress","Next.js","Shopify","Sanity","Contentful","WooCommerce","OpenAI","Grok","Claude"]}
                         className="text-lg sm:text-xl"
                       />
                     </div>

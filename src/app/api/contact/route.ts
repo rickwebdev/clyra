@@ -18,6 +18,9 @@ export async function POST(request: NextRequest) {
     console.log('Environment check:', {
       EMAIL_USER: process.env.EMAIL_USER ? 'Set' : 'Not set',
       EMAIL_PASS: process.env.EMAIL_PASS ? 'Set' : 'Not set',
+      SMTP_HOST: process.env.SMTP_HOST || 'mail.clyrastudios.com',
+      SMTP_PORT: process.env.SMTP_PORT || '587',
+      SMTP_SECURE: process.env.SMTP_SECURE || 'false',
       NODE_ENV: process.env.NODE_ENV
     });
 
@@ -40,13 +43,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter (using Gmail as example - you can change this)
+    // Create transporter for custom domain email
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: process.env.SMTP_HOST || 'mail.clyrastudios.com', // Your SMTP server
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
       auth: {
         user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASS, // Your app password
+        pass: process.env.EMAIL_PASS, // Your email password
       },
+      tls: {
+        rejectUnauthorized: false // Sometimes needed for self-signed certificates
+      }
     });
 
     // Test connection

@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// Required for static export
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   return NextResponse.json({
     EMAIL_USER: process.env.EMAIL_USER ? 'Set' : 'Not set',

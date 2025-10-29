@@ -5853,6 +5853,212 @@ p {
   margin: 0;
 }
 
+/* Location Pages Styling */
+.location-page .hero-section {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.location-page .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.location-page .hero-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.location-page .hero-subhead {
+  font-size: 1.5rem;
+  color: #E5E7EB;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.location-page .hero-description {
+  font-size: 1.125rem;
+  color: #D1D5DB;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.location-page .hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.location-page .issues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.location-page .issue-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.location-page .issue-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.location-page .issue-icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  border-radius: 8px;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.location-page .issue-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+/* Locations Hub Styling */
+.locations-page .hero-section {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-page .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.locations-page .hero-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.locations-page .hero-subhead {
+  font-size: 1.25rem;
+  color: #D1D5DB;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.locations-page .hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.locations-page .locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.locations-page .location-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.locations-page .location-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.locations-page .location-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.locations-page .location-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  border-radius: 8px;
+  font-size: 1.25rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.locations-page .location-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.locations-page .location-snippet {
+  color: #D1D5DB;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Mobile Responsive for Location Pages */
+@media (max-width: 768px) {
+  .location-page .hero-actions,
+  .locations-page .hero-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .location-page .issues-grid,
+  .locations-page .locations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .location-page .hero-description,
+  .locations-page .hero-subhead {
+    font-size: 1rem;
+  }
+}
+
 .wordpress-mechanic-page .form-label {
   display: block;
   font-weight: 500;

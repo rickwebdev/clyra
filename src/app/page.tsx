@@ -252,7 +252,7 @@ export default function HomePage() {
                   </div>
                   {/* CTA Buttons */}
                   <div className="hero-actions" style={{ justifyContent: 'flex-start', gap: '0.75rem' }}>
-                    <Link href="/book" className="btn btn-primary btn-compact">
+                    <Link href="/strategy-call" className="btn btn-primary btn-compact">
                       Book a Free Strategy Call
                       <span className="btn-arrow">→</span>
                     </Link>

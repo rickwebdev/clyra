@@ -236,7 +236,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content Pane */}
-                <div className="hero-content-pane" style={{ alignSelf: 'center' }}>
+                <div className="hero-content-pane" style={{ alignSelf: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '75vh' }}>
                   <div className="hero-headlines text-left">
                     <h1 className="hero-title" style={{ maxWidth: 'none' }}>
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>
@@ -256,12 +256,12 @@ export default function HomePage() {
                     </p>
                   </div>
                   {/* CTA Buttons */}
-                  <div className="hero-actions" style={{ marginTop: '1rem' }}>
-                    <Link href="/book" className="btn btn-primary btn-large">
+                  <div className="hero-actions" style={{ marginTop: '1.5rem', justifyContent: 'flex-start', gap: '1rem' }}>
+                    <Link href="/book" className="btn btn-primary">
                       Book a Free Strategy Call
                       <span className="btn-arrow">→</span>
                     </Link>
-                    <Link href="/growth-website-system" className="btn btn-secondary btn-large">
+                    <Link href="/growth-website-system" className="btn btn-secondary">
                       View Growth Website System
                     </Link>
                   </div>

@@ -1,6 +1,3 @@
-"use client";
-
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import GradientIcon from '@/components/GradientIcon';
@@ -132,9 +129,15 @@ const cityData: Record<string, {
   }
 };
 
-export default function CityPage() {
-  const params = useParams();
-  const citySlug = params['city-slug'] as string;
+// Generate static params for all cities
+export async function generateStaticParams() {
+  return Object.keys(cityData).map((slug) => ({
+    'city-slug': slug,
+  }));
+}
+
+export default function CityPage({ params }: { params: { 'city-slug': string } }) {
+  const citySlug = params['city-slug'];
   const city = cityData[citySlug];
 
   if (!city) {

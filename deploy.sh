@@ -9,6 +9,6 @@ git push origin main
 
 # Deploy to server
 echo "🔄 Deploying to server..."
-ssh clyra "cd /home/n30m0rph/web/clyrastudios.com/nodejs && git pull origin main && npm run build && pm2 restart wp-studio"
+ssh root@159.65.45.45 "cd /home/n30m0rph/web/clyrastudios.com/nodejs && git pull origin main && npm run build && pm2 restart wp-studio"
 
 echo "✅ Deployment complete!"

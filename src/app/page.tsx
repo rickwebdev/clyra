@@ -236,9 +236,9 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content Pane */}
-                <div className="hero-content-pane" style={{ alignSelf: 'center' }}>
+                <div className="hero-content-pane" style={{ alignSelf: 'center', flex: '1 1 auto' }}>
                   <div className="hero-headlines text-left">
-                    <h1 className="hero-title" style={{ maxWidth: 'none' }}>
+                    <h1 className="hero-title">
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>
                       <span className="title-line highlight">Full-Service Web & AI Studio for Modern Businesses.</span>
                     </h1>

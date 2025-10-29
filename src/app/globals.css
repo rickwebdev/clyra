@@ -6492,15 +6492,3 @@ p {
     display: none;
   }
 }
-
-/* Homepage hero title sizing override to reduce wrapping */
-.hero-section .hero-title {
-  font-size: clamp(2.25rem, 5.2vw, 4rem);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-/* Prevent "Modern Businesses" from wrapping */
-.hero-section .hero-title .title-line.highlight {
-  white-space: nowrap;
-}

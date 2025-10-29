@@ -238,7 +238,7 @@ export default function HomePage() {
                       <span className="title-line highlight">Full-Service Web & AI Studio for Modern&nbsp;Businesses.</span>
                     </h1>
                     {/* Rotating line below H1 */}
-                    <div className="rotate-wrap" style={{ marginTop: '0.5rem' }}>
+                    <div className="rotate-wrap hero-rotating-text" style={{ marginTop: '0.5rem' }}>
                       <span className="rotate-label text-gray-400 mr-2 text-xl sm:text-2xl">Build with</span>
                       <InlineRotatingText
                         phrases={["WordPress","Next.js","Shopify","Sanity","Contentful","WooCommerce","OpenAI","Grok","Claude"]}

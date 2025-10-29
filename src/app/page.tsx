@@ -323,6 +323,23 @@ export default function HomePage() {
                   </ul>
                 </div>
               </div>
+              {/* New: AI Automation pillar to fill the fourth grid slot */}
+              <div className="service-card float-in-right">
+                <div className="service-image">
+                  <div className="service-icon">
+                    <GradientIcon icon={faBolt} size="xl" className="primary" />
+                  </div>
+                </div>
+                <div className="service-content">
+                  <h3 className="service-title">AI Automation</h3>
+                  <ul className="service-features">
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Lead routing, booking flows, and follow-ups</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Chatbots, assistants, and FAQ deflection</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> CRM + email + ads automations</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Zapier/Make, webhooks, and custom scripts</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div className="service-cta" style={{marginTop:'1rem'}}>
               <Link href="/services" className="service-cta">Explore All Services <span className="link-arrow">→</span></Link>

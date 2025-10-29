@@ -5855,9 +5855,10 @@ p {
 
 /* Location Pages Styling */
 .location-logo-header {
-  background: #000;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  padding: 2rem 0;
+  text-align: center;
+  border-bottom: none;
 }
 
 .location-logo {
@@ -5866,19 +5867,20 @@ p {
 }
 
 .location-logo .logo-image {
-  height: 40px;
+  height: 60px;
   width: auto;
   filter: brightness(0) invert(1);
   transition: all 0.3s ease;
 }
 
 .location-logo:hover .logo-image {
-  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+  filter: brightness(0) invert(1) drop-shadow(0 0 12px rgba(255, 255, 255, 0.3));
+  transform: scale(1.05);
 }
 
 .location-page .hero-section {
   background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-  padding: 6rem 0;
+  padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -5918,7 +5920,7 @@ p {
 
 .location-page .hero-actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -5984,7 +5986,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin: 3rem 0;
+  margin: 4rem 0;
 }
 
 .location-page .issue-card {
@@ -6025,7 +6027,7 @@ p {
 /* Locations Hub Styling */
 .locations-page .hero-section {
   background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-  padding: 6rem 0;
+  padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -6033,7 +6035,7 @@ p {
 
 .locations-page .hero-actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -6204,6 +6206,19 @@ p {
   font-size: 1rem;
 }
 
+/* Add more spacing between sections */
+.location-page .section {
+  padding: 6rem 0;
+}
+
+.location-page .section.bg-dark {
+  background: #000;
+}
+
+.location-page .section.bg-primary {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+
 /* Mobile Responsive for Location Pages */
 @media (max-width: 768px) {
   .location-page .hero-actions,
@@ -6211,16 +6226,20 @@ p {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .location-page .issues-grid,
   .locations-page .locations-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .location-page .hero-description,
   .locations-page .hero-subhead {
     font-size: 1rem;
+  }
+
+  .location-page .section {
+    padding: 4rem 0;
   }
 }
 

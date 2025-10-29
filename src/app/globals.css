@@ -1431,6 +1431,13 @@ p {
 }
 
 /* White CTA button variant inside growth section - styled like reference */
+.growth-section .service-cta {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin-top: 1.5rem !important;
+}
+
 .growth-section .btn {
   background: #ffffff !important;
   color: #1e40af !important; /* darker blue text */
@@ -1443,7 +1450,6 @@ p {
   padding: 0.625rem 1.25rem !important; /* smaller padding */
   font-weight: 600 !important;
   font-size: 0.875rem !important; /* smaller text */
-  margin-top: 1.5rem !important; /* add space above */
 }
 .growth-section .btn:hover {
   background: #f8fafc !important;

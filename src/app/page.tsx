@@ -174,12 +174,12 @@ export default function HomePage() {
               <div className="floating-element element-3"></div>
             </div>
           </div>
-          <div className="container">
+          <div className="container" style={{ maxWidth: '1400px' }}>
             <div className="hero-content">
               {/* Hero Content - Split Layout */}
-              <div className="hero-content-split flex flex-col lg:flex-row items-center gap-8 lg:gap-12" style={{ minHeight: '75vh' }}>
+              <div className="hero-content-split flex flex-col lg:flex-row items-start gap-6 lg:gap-8" style={{ minHeight: '75vh' }}>
                 {/* Left Media Pane */}
-                <div className="hero-media-pane w-full lg:w-2/5 flex justify-center lg:justify-start">
+                <div className="hero-media-pane w-full lg:w-[42%] flex justify-center lg:justify-start">
                   <div className="device-frame" style={{
                     width: '280px',
                     height: '560px',
@@ -214,14 +214,14 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content Pane */}
-                <div className="hero-content-pane w-full lg:w-3/5 flex flex-col justify-center text-left">
+                <div className="hero-content-pane w-full lg:w-[58%] flex flex-col justify-between text-left" style={{ height: '560px' }}>
                   <div className="hero-headlines text-left">
                     <h1 className="hero-title">
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>
                       <span className="title-line highlight">Full-Service Web & AI Studio for Modern Businesses.</span>
                     </h1>
                     {/* Rotating line below H1 */}
-                    <div className="rotate-wrap" style={{ marginTop: '0.5rem' }}>
+                    <div className="rotate-wrap" style={{ marginTop: '0.25rem' }}>
                       <span className="rotate-label text-gray-400 mr-2">Build with</span>
                       <InlineRotatingText
                         phrases={["WordPress","Next.js","Shopify","Sanity","Contentful","WooCommerce"]}
@@ -229,12 +229,12 @@ export default function HomePage() {
                       />
                     </div>
                     {/* Subhead */}
-                    <p className="hero-description" style={{ marginTop: '0.75rem' }}>
+                    <p className="hero-description" style={{ marginTop: '0.5rem' }}>
                       We design, develop, and automate high-performance websites with SEO, AI systems, and creative content built to grow your business.
                     </p>
                   </div>
                   {/* CTA Buttons */}
-                  <div className="hero-actions" style={{ marginTop: '1.5rem' }}>
+                  <div className="hero-actions" style={{ marginTop: '1rem' }}>
                     <Link href="/book" className="btn btn-primary btn-large">
                       Book a Free Strategy Call
                       <span className="btn-arrow">→</span>
@@ -244,7 +244,7 @@ export default function HomePage() {
                     </Link>
                   </div>
                   {/* Link Strip */}
-                  <div className="hero-links" style={{ marginTop: '1rem' }}>
+                  <div className="hero-links" style={{ marginTop: '0.75rem' }}>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-400">
                       <Link href="/growth-website-system" className="hover:text-white transition-colors">Growth Website System</Link>
                       <Link href="/wordpress-mechanic" className="hover:text-white transition-colors">WordPress Mechanic</Link>

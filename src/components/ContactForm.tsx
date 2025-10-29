@@ -1,10 +1,8 @@
 "use client";
 
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import GradientIcon from './GradientIcon';
 import { faWrench, faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import { EMAILJS_CONFIG } from '@/lib/emailjs';
 
 interface ContactFormProps {
   formId?: string;
@@ -23,9 +21,16 @@ export default function ContactForm({ formId = "priority-form", className = "" }
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    let value = e.target.value;
+    
+    // Auto-add https:// to website field if missing
+    if (e.target.name === 'website' && value && !value.match(/^https?:\/\//)) {
+      value = `https://${value}`;
+    }
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: value
     });
   };
 
@@ -35,27 +40,16 @@ export default function ContactForm({ formId = "priority-form", className = "" }
     setSubmitStatus('idle');
 
     try {
-      // Check if EmailJS is configured
-      if (EMAILJS_CONFIG.publicKey === 'YOUR_EMAILJS_PUBLIC_KEY') {
-        // Fallback: Open email client with pre-filled content
-        const subject = `WordPress Repair Request from ${formData.name}`;
-        const body = `
-New WordPress Repair Request:
+      // Send email via API
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Website: ${formData.website}
-
-Issue Description:
-${formData.issue}
-
-This request came from the WordPress Mechanic landing page.
-        `;
-        
-        const mailtoLink = `mailto:rick@clyrastudios.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.open(mailtoLink);
-        
+      if (response.ok) {
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -64,46 +58,9 @@ This request came from the WordPress Mechanic landing page.
           website: '',
           issue: ''
         });
-        return;
+      } else {
+        throw new Error('Failed to send email');
       }
-
-      // EmailJS configuration
-      const { serviceId, templateId, publicKey } = EMAILJS_CONFIG;
-
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        website: formData.website,
-        issue: formData.issue,
-        to_email: 'rick@clyrastudios.com',
-        subject: `WordPress Repair Request from ${formData.name}`,
-        message: `
-New WordPress Repair Request:
-
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Website: ${formData.website}
-
-Issue Description:
-${formData.issue}
-
-This request came from the WordPress Mechanic landing page.
-        `
-      };
-
-      // Send email using EmailJS
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        website: '',
-        issue: ''
-      });
     } catch (error) {
       console.error('Error sending email:', error);
       setSubmitStatus('error');
@@ -156,7 +113,7 @@ This request came from the WordPress Mechanic landing page.
               name="website" 
               value={formData.website}
               onChange={handleChange}
-              placeholder="https://yourwebsite.com" 
+              placeholder="yourwebsite.com (https:// will be added automatically)" 
               required 
             />
           </div>

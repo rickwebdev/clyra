@@ -15,16 +15,7 @@ const links = [
       { href: "/wordpress-mechanic", label: "WordPress Mechanic" },
     ]
   },
-  { 
-    href: "/wordpress-repair", 
-    label: "WordPress Repair",
-    submenu: [
-      { href: "/wordpress-repair/locations", label: "All Locations" },
-      { href: "/wordpress-repair/new-york-ny", label: "New York" },
-      { href: "/wordpress-repair/los-angeles-ca", label: "Los Angeles" },
-      { href: "/wordpress-repair/chicago-il", label: "Chicago" },
-    ]
-  },
+  { href: "/wordpress-repair", label: "WordPress Repair" },
   { href: "/strategy-call", label: "Strategy Call" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },

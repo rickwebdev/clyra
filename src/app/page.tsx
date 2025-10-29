@@ -176,37 +176,91 @@ export default function HomePage() {
           </div>
           <div className="container">
             <div className="hero-content">
-              {/* Hero Headlines - Order 1 */}
-              <div className="hero-headlines text-center lg:text-left">
-                <h1 className="hero-title">
-                  <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>
-                  <span className="title-line highlight">Full-Service Web & AI Studio for Modern Businesses.</span>
-                </h1>
-
-                {/* Rotating line below H1 */}
-                <div className="rotate-wrap" style={{ marginTop: '0.5rem' }}>
-                  <span className="rotate-label text-gray-400 mr-2">Build with</span>
-                  <InlineRotatingText
-                    phrases={["WordPress","Next.js","Shopify","Sanity","Contentful","WooCommerce"]}
-                    className="text-lg sm:text-xl"
-                  />
+              {/* Hero Content - Split Layout */}
+              <div className="hero-content-split flex flex-col lg:flex-row items-center gap-8 lg:gap-12" style={{ minHeight: '70vh' }}>
+                {/* Left Media Pane */}
+                <div className="hero-media-pane w-full lg:w-1/2 flex justify-center lg:justify-start">
+                  <div className="device-frame" style={{
+                    width: '320px',
+                    height: '640px',
+                    background: 'linear-gradient(145deg, #1a1a1a, #2a2a2a)',
+                    borderRadius: '24px',
+                    padding: '8px',
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1)',
+                    position: 'relative'
+                  }}>
+                    {/* Device Screen */}
+                    <div className="device-screen" style={{
+                      width: '100%',
+                      height: '100%',
+                      background: '#000',
+                      borderRadius: '16px',
+                      overflow: 'hidden',
+                      position: 'relative'
+                    }}>
+                      {/* Video placeholder - replace with actual video */}
+                      <div className="video-placeholder" style={{
+                        width: '100%',
+                        height: '100%',
+                        background: 'linear-gradient(135deg, #1e3a8a, #3b82f6, #06b6d4)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: 'white',
+                        fontSize: '14px',
+                        textAlign: 'center',
+                        padding: '20px'
+                      }}>
+                        Recent work and studio highlights
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Subhead */}
-                <p className="hero-description" style={{ marginTop: '0.75rem' }}>
-                  We design, develop, and launch high-performance websites — then power them with SEO, automation, and creative content built to grow your business.
-                </p>
-              </div>
+                {/* Right Content Pane */}
+                <div className="hero-content-pane w-full lg:w-1/2 flex flex-col justify-center">
+                  <div className="hero-headlines text-center lg:text-left">
+                    <h1 className="hero-title">
+                      <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>
+                      <span className="title-line highlight">Full-Service Web & AI Studio for Modern Businesses.</span>
+                    </h1>
 
-              {/* CTA Buttons - Order 2 on mobile */}
-              <div className="hero-actions">
-                <Link href="/strategy-call" className="btn btn-primary btn-large">
-                  Book a Free Strategy Call
-                  <span className="btn-arrow">→</span>
-                </Link>
-                <Link href="/growth-website-system" className="btn btn-secondary btn-large">
-                  View Growth Website System
-                </Link>
+                    {/* Rotating line below H1 */}
+                    <div className="rotate-wrap" style={{ marginTop: '0.5rem' }}>
+                      <span className="rotate-label text-gray-400 mr-2">Build with</span>
+                      <InlineRotatingText
+                        phrases={["WordPress","Next.js","Shopify","Sanity","Contentful","WooCommerce"]}
+                        className="text-lg sm:text-xl"
+                      />
+                    </div>
+
+                    {/* Subhead */}
+                    <p className="hero-description" style={{ marginTop: '0.75rem' }}>
+                      We design, develop, and automate high-performance websites with SEO, AI systems, and creative content built to grow your business.
+                    </p>
+                  </div>
+
+                  {/* CTA Buttons */}
+                  <div className="hero-actions" style={{ marginTop: '2rem' }}>
+                    <Link href="/book" className="btn btn-primary btn-large">
+                      Book a Free Strategy Call
+                      <span className="btn-arrow">→</span>
+                    </Link>
+                    <Link href="/growth-website-system" className="btn btn-secondary btn-large">
+                      View Growth Website System
+                    </Link>
+                  </div>
+
+                  {/* Link Strip */}
+                  <div className="hero-links" style={{ marginTop: '1.5rem' }}>
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+                      <Link href="/growth-website-system" className="hover:text-white transition-colors">Growth Website System</Link>
+                      <Link href="/wordpress-mechanic" className="hover:text-white transition-colors">WordPress Mechanic</Link>
+                      <Link href="/redesign-migration" className="hover:text-white transition-colors">Redesign & Migration</Link>
+                      <Link href="/wordpress-studio" className="hover:text-white transition-colors">WordPress Studio</Link>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Trust pills and metrics removed for a cleaner, more compact hero */}

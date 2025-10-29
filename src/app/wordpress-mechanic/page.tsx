@@ -59,6 +59,16 @@ const commonIssues = [
     icon: faRocket,
     title: "Hosting Issues",
     description: "DNS and server misconfigurations"
+  },
+  {
+    icon: faExclamationTriangle,
+    title: "Database Errors",
+    description: "Connection and data corruption issues"
+  },
+  {
+    icon: faCog,
+    title: "Update Failures",
+    description: "WordPress core and plugin update problems"
   }
 ];
 

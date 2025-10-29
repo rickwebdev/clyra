@@ -17,7 +17,8 @@ import {
   faAmbulance,
   faSearchPlus,
   faPaintBrush,
-  faCogs
+  faCogs,
+  faLeaf
 } from '@fortawesome/free-solid-svg-icons';
 
 const services = [
@@ -359,7 +360,11 @@ export default function HomePage() {
               <h2 className="section-title">The Growth Website System</h2>
               <p className="section-description">Our signature all-in-one program combining design, SEO, and automation into a single, scalable system.</p>
               <div className="service-cta" style={{marginTop:'1rem'}}>
-                <Link href="/growth-website-system" className="service-cta">Learn More <span className="link-arrow">→</span></Link>
+                <Link href="/growth-website-system" className="btn btn-primary btn-compact">
+                  <span className="cta-icon"><GradientIcon icon={faLeaf} size="sm" className="primary" /></span>
+                  <span>Learn More</span>
+                  <span className="btn-arrow">→</span>
+                </Link>
               </div>
             </div>
             

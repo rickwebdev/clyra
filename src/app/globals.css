@@ -1394,7 +1394,7 @@ p {
   position: absolute;
   border-radius: 50%;
   backdrop-filter: blur(12px);
-  animation: sectionFloat 10s ease-in-out infinite;
+  animation: floatDrift 28s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
   opacity: 0.35;
 }
 .growth-section .growth-ball-1 {
@@ -1419,6 +1419,35 @@ p {
   left: 18%;
   background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), rgba(255,255,255,0.07));
   animation-delay: 4s;
+}
+
+/* Extra-smooth slow drift for growth section */
+@keyframes floatDrift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  25%  { transform: translate3d(20px, -15px, 0) scale(1.03); }
+  50%  { transform: translate3d(-10px, -25px, 0) scale(0.98); }
+  75%  { transform: translate3d(15px, -10px, 0) scale(1.02); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+/* White CTA button variant inside growth section */
+.growth-section .btn {
+  background: #ffffff !important;
+  color: #1e3a8a !important; /* blue text */
+  border: 1px solid rgba(255,255,255,0.85) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 16px;
+}
+.growth-section .btn:hover {
+  background: #f3f4f6 !important;
+  color: #1e3a8a !important;
+}
+
+.growth-section .btn .cta-icon svg {
+  filter: none;
 }
 
 .case-studies-section .container {

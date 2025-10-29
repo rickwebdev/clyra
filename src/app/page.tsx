@@ -183,18 +183,18 @@ export default function HomePage() {
               marginLeft: '-50vw',
               marginRight: '-50vw',
               width: '100vw',
-              paddingLeft: '1vw',
-              paddingRight: '1vw'
+              paddingLeft: '0',
+              paddingRight: '0'
             }}
           >
             <div className="hero-content" style={{ width: '100%' }}>
-              {/* Hero Content - Grid Layout (25% / 75%) */}
+              {/* Hero Content - Grid Layout (15% / 85%) */}
               <div
                 className="hero-layout"
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'minmax(180px, 25%) 1fr',
-                  columnGap: '2.5rem',
+                  gridTemplateColumns: 'minmax(160px, 15%) 1fr',
+                  columnGap: '2rem',
                   rowGap: '1.25rem',
                   alignItems: 'center',
                   minHeight: '75vh',
@@ -204,8 +204,8 @@ export default function HomePage() {
                 {/* Left Media Pane */}
                 <div className="hero-media-pane" style={{ justifySelf: 'start' }}>
                   <div className="device-frame" style={{
-                    width: '220px',
-                    height: '440px',
+                    width: '200px',
+                    height: '400px',
                     background: 'linear-gradient(145deg, #1a1a1a, #2a2a2a)',
                     borderRadius: '24px',
                     padding: '8px',

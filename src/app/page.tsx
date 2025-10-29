@@ -174,15 +174,15 @@ export default function HomePage() {
               <div className="floating-element element-3"></div>
             </div>
           </div>
-          <div className="container" style={{ maxWidth: '1400px' }}>
+          <div className="container" style={{ maxWidth: '1600px' }}>
             <div className="hero-content">
               {/* Hero Content - Split Layout */}
               <div className="hero-content-split flex flex-col lg:flex-row items-start gap-6 lg:gap-8" style={{ minHeight: '75vh' }}>
                 {/* Left Media Pane */}
-                <div className="hero-media-pane w-full lg:w-[42%] flex justify-center lg:justify-start">
+                <div className="hero-media-pane w-full lg:w-[35%] flex justify-center lg:justify-start">
                   <div className="device-frame" style={{
-                    width: '280px',
-                    height: '560px',
+                    width: '260px',
+                    height: '520px',
                     background: 'linear-gradient(145deg, #1a1a1a, #2a2a2a)',
                     borderRadius: '24px',
                     padding: '8px',
@@ -214,7 +214,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Content Pane */}
-                <div className="hero-content-pane w-full lg:w-[58%] flex flex-col justify-between text-left" style={{ height: '560px' }}>
+                <div className="hero-content-pane w-full lg:w-[65%] flex flex-col justify-between text-left" style={{ height: '520px' }}>
                   <div className="hero-headlines text-left">
                     <h1 className="hero-title">
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>

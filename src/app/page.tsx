@@ -261,7 +261,7 @@ export default function HomePage() {
                   <div className="hero-headlines text-left">
                     <h1 className="hero-title" style={{ maxWidth: 'none' }}>
                       <span className="title-line bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">Build. Scale. Create.</span>
-                      <span className="title-line highlight">Full-Service Web & AI Studio for Modern&nbsp;Businesses.</span>
+                      <span className="title-line highlight">Full-Service Web & <wbr />AI Studio for Modern&nbsp;Businesses.</span>
                     </h1>
                     {/* Rotating line below H1 */}
                     <div className="rotate-wrap hero-rotating-text" style={{ marginTop: '0.5rem' }}>

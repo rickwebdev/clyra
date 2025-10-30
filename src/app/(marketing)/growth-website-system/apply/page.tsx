@@ -7,7 +7,7 @@ import { faArrowLeft, faRocket, faCheckCircle, faUsers } from '@fortawesome/free
 export default function ApplyPage() {
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
+    <div className="min-h-screen bg-black text-white flex flex-col growth-apply-page">
       {/* Top Bar */}
       <header className="py-6 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex justify-center items-center">
@@ -45,7 +45,7 @@ export default function ApplyPage() {
         </div>
 
         {/* Hero Section */}
-        <section className="hero-section py-16">
+        <section className="hero-section py-10">
           <div className="container">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="hero-title mb-6">
@@ -78,7 +78,7 @@ export default function ApplyPage() {
         </section>
 
         {/* Application Form */}
-        <section className="py-16 bg-gradient-to-b from-black to-gray-900">
+        <section className="py-12 bg-gradient-to-b from-black to-gray-900">
           <div className="container">
             <GrowthApplicationForm />
           </div>

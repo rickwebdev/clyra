@@ -7224,6 +7224,21 @@ p {
   }
 }
 
+/* Finer tablet band (820–980px): add breathing room on the right side */
+@media (min-width: 820px) and (max-width: 980px) {
+  .home-hero .hero-container {
+    padding-left: clamp(16px, 2.5vw, 28px);
+    padding-right: clamp(16px, 3vw, 36px);
+  }
+  .home-hero .hero-content-pane {
+    padding-right: 12px;
+  }
+  .home-hero .hero-layout {
+    column-gap: 2.5rem !important;
+    grid-template-columns: minmax(220px, 280px) 1fr !important;
+  }
+}
+
 /* Full-bleed wrapper for homepage hero to remove left indentation safely */
 .hero-full-bleed {
   position: relative;

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import InlineRotatingText from "@/components/InlineRotatingText";
 import Footer from "@/components/Footer";
@@ -26,6 +27,31 @@ import {
   faShoppingCart,
   faPalette
 } from '@fortawesome/free-solid-svg-icons';
+
+export const metadata: Metadata = {
+  title: "Clyra Studios | Web & AI Studio – WordPress, Next.js, Shopify, SEO & Automation",
+  description:
+    "Build. Scale. Create. We design, develop, and automate high‑performance websites using WordPress, Next.js, Shopify, and headless CMS (Sanity, Contentful) paired with SEO and automation.",
+  openGraph: {
+    title: "Clyra Studios | Web & AI Studio – WordPress, Next.js, Shopify, SEO & Automation",
+    description:
+      "High‑performance websites and growth systems for modern businesses. WordPress, Next.js, Shopify, Sanity, Contentful, SEO, automation.",
+    type: "website",
+    images: [
+      { url: "/images/thumbnail.png" }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Clyra Studios | Web & AI Studio",
+    description:
+      "Websites, SEO, and automation for growth. WordPress, Next.js, Shopify, headless CMS.",
+    images: ["/images/thumbnail.png"]
+  },
+  alternates: {
+    canonical: "https://clyrastudios.com/"
+  }
+};
 
 const services = [
   { 

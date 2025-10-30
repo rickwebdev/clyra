@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
+import SiteAuditForm from "@/components/SiteAuditForm";
 import { 
   faSearch, 
   faClock, 
@@ -15,23 +14,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export default function SiteAuditPage() {
-  const router = useRouter();
-
-  useEffect(() => {
-    // Listen for Tally form completion
-    const handleTallyComplete = (event: MessageEvent) => {
-      if (event.data && event.data.type === 'tally-form-completed') {
-        // Redirect to strategy call page after form completion
-        router.push('/strategy-call');
-      }
-    };
-
-    window.addEventListener('message', handleTallyComplete);
-
-    return () => {
-      window.removeEventListener('message', handleTallyComplete);
-    };
-  }, [router]);
 
   return (
     <>
@@ -59,27 +41,10 @@ export default function SiteAuditPage() {
           </div>
         </section>
 
-        {/* Form Section - Mobile First */}
+        {/* Form Section */}
         <section className="audit-form-section">
           <div className="container">
-            <div className="form-header">
-              
-              {/* Tally Form Embed - Full Width */}
-              <div className="full-width-form-container">
-                <iframe 
-                  data-tally-src="https://tally.so/r/wkMgMM" 
-                  width="100%" 
-                  height="1500" 
-                  frameBorder="0" 
-                  marginHeight={0} 
-                  marginWidth={0} 
-                  title="Free Website Analysis"
-                  className="full-width-iframe"
-                  scrolling="no"
-                  suppressHydrationWarning={true}
-                ></iframe>
-              </div>
-            </div>
+            <SiteAuditForm />
           </div>
         </section>
 
@@ -220,8 +185,7 @@ export default function SiteAuditPage() {
       
       <Footer />
       
-      {/* Tally Script */}
-      <script async src="https://tally.so/widgets/embed.js"></script>
+      {/* Removed Tally embed (replaced with custom form) */}
     </>
   );
 }

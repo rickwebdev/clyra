@@ -132,19 +132,44 @@ export default function GrowthApplicationForm({ formId = "growth-application", c
     setSubmitStatus('idle');
 
     try {
+      // Map this multi-section form to the contact API's expected shape
+      const payload = {
+        name: `${formData.firstName} ${formData.lastName}`.trim(),
+        email: formData.email,
+        phone: formData.phone,
+        website: formData.website || formData.companyName || 'N/A',
+        issue: [
+          formData.companyName ? `Company: ${formData.companyName}` : '',
+          formData.industry ? `Industry: ${formData.industry}` : '',
+          formData.budget ? `Budget: ${formData.budget}` : '',
+          formData.timeline ? `Timeline: ${formData.timeline}` : '',
+          formData.currentTraffic ? `Current Traffic: ${formData.currentTraffic}` : '',
+          formData.monthlyLeads ? `Monthly Leads: ${formData.monthlyLeads}` : '',
+          formData.currentIssues.length ? `Current Issues: ${formData.currentIssues.join(', ')}` : '',
+          formData.goals ? `Goals: ${formData.goals}` : '',
+          formData.heardAbout ? `Heard About Us: ${formData.heardAbout}` : '',
+          formData.additionalInfo ? `Additional Info: ${formData.additionalInfo}` : '',
+          `Form Type: growth-application`,
+          `Newsletter Opt-in: ${formData.newsletterOptIn ? 'Yes' : 'No'}`
+        ].filter(Boolean).join('\n'),
+        formType: 'growth-application',
+        newsletterOptIn: formData.newsletterOptIn
+      };
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          formType: 'growth-application',
-          subject: `Growth Website System Application - ${formData.companyName}`
-        }),
+        body: JSON.stringify(payload),
       });
 
-      const responseData = await response.json();
+      let responseData: unknown = {};
+      try {
+        responseData = await response.json();
+      } catch (_) {
+        // no-op: some environments may return empty body on 200
+      }
       console.log('API Response:', responseData);
 
       if (response.ok) {
@@ -169,8 +194,9 @@ export default function GrowthApplicationForm({ formId = "growth-application", c
           newsletterOptIn: false
         });
       } else {
+        const err = (responseData as { error?: string } | undefined)?.error;
         console.error('API Error:', responseData);
-        throw new Error(responseData.error || 'Failed to send application');
+        throw new Error(err || 'Failed to send application');
       }
     } catch (error) {
       console.error('Error sending application:', error);

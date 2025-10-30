@@ -97,14 +97,14 @@ export default function ApplyPage() {
                 className="btn btn-outline-white btn-lg"
               >
                 <GradientIcon icon={faUsers} size="sm" className="white" />
-                Contact Us
+                <span className="ml-2">Contact Us</span>
               </Link>
               <Link 
                 href="/strategy-call" 
-                className="btn btn-white btn-lg"
+                className="btn btn-outline-white btn-lg"
               >
-                <GradientIcon icon={faRocket} size="sm" className="primary" />
-                Book Strategy Call
+                <GradientIcon icon={faRocket} size="sm" className="white" />
+                <span className="ml-2">Book Strategy Call</span>
               </Link>
             </div>
           </div>

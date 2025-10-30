@@ -5807,6 +5807,29 @@ p {
   background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
 }
 
+/* Fix: prevent visible color band between hero and next section on scroll */
+.wordpress-mechanic-page .hero-section {
+  position: relative;
+  background: #000;
+}
+.wordpress-mechanic-page .hero-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px; /* soft fade height */
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 60%, #000 100%);
+  z-index: 1;
+}
+
+/* Ensure the following section paints over any residual gradient */
+.wordpress-mechanic-page .section:first-of-type + .section {
+  position: relative;
+  background: #0a0a0a;
+}
+
 .wordpress-mechanic-page .section-header {
   text-align: center;
   margin-bottom: 2.5rem;

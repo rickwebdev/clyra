@@ -330,15 +330,39 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 100%);
   z-index: 2;
 }
 
 /* Reduce overlay opacity on mobile to show background better */
 @media (max-width: 768px) {
   .hero-overlay {
-    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 100%);
   }
+}
+
+/* Phone frame reflection/glow effect */
+.device-frame {
+  position: relative;
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(0, 0, 0, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.device-frame::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 16px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+  border-radius: 50%;
+  filter: blur(8px);
+  z-index: -1;
 }
 
 .floating-elements {
@@ -658,6 +682,7 @@ p {
 
 .title-line:first-child {
   animation-delay: 0.2s;
+  margin-bottom: -0.5rem; /* Reduce spacing between title lines */
 }
 
 .title-line.highlight {
@@ -811,7 +836,7 @@ p {
 
 .hero-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Left-align on desktop */
   gap: 1.5rem;
   opacity: 0;
   animation: slideInUp 1s ease-out 1s forwards;
@@ -6972,6 +6997,17 @@ p {
 .home-hero .hero-description {
   margin-left: 0;
   margin-right: 0;
+}
+
+/* Homepage hero actions - left align on desktop, center on mobile */
+.home-hero .hero-actions {
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .home-hero .hero-actions {
+    justify-content: center;
+  }
 }
 
 /* Mobile layout fixes for homepage hero */

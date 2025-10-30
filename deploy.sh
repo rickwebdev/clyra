@@ -7,6 +7,14 @@ git commit -m "Deploy update"
 git push origin main
 
 echo "🔄 Deploying to server..."
-ssh root@159.65.45.45 "cd /home/n30m0rph/web/clyrastudios.com/nodejs && git pull origin main && source /root/.nvm/nvm.sh && nvm use 18 && npm ci && npm run build && pm2 restart wp-studio --update-env && pm2 save"
+# Safe reset to avoid merge conflicts from local edits on server
+ssh root@159.65.45.45 "\
+  set -e; \
+  cd /home/n30m0rph/web/clyrastudios.com/nodejs && \
+  git fetch origin main && \
+  git reset --hard origin/main && \
+  source /root/.nvm/nvm.sh && nvm use 18 && \
+  npm ci && npm run build && \
+  pm2 restart wp-studio --update-env && pm2 save"
 
 echo "✅ Deployment complete!"

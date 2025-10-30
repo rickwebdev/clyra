@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import HeroDeviceVideo from "@/components/HeroDeviceVideo";
 import Nav from "@/components/Nav";
 import InlineRotatingText from "@/components/InlineRotatingText";
 import Footer from "@/components/Footer";
@@ -216,15 +217,9 @@ export default function HomePage() {
                       overflow: 'hidden',
                       position: 'relative'
                     }}>
-                      <video
-                        src="/videos/hero-video.mp4"
-                        muted
-                        autoPlay
-                        loop
-                        playsInline
-                        preload="metadata"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        aria-label="Recent work and studio highlights video"
+                      <HeroDeviceVideo
+                        sources={["/videos/hero-video.mp4","/videos/hero-phone-2.mp4"]}
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
@@ -402,7 +397,7 @@ export default function HomePage() {
                   <div className="case-study-content">
                     <div className="case-study-header">
                       <div className="industry-icon">
-                        <GradientIcon icon={item.icon} size="2x" className="primary" />
+                        <GradientIcon icon={item.icon} size="xl" className="primary" />
                       </div>
                       <h3 className="case-study-title">{item.name}</h3>
                     </div>

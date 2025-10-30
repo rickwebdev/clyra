@@ -492,7 +492,7 @@ export default function GrowthApplicationForm({ formId = "growth-application", c
           disabled={isSubmitting}
         >
           <GradientIcon icon={faRocket} size="sm" className="white" />
-          {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
+          <span className="ml-2">{isSubmitting ? 'Submitting Application...' : 'Submit Application'}</span>
         </button>
         
         <p className="form-note">

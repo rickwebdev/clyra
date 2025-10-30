@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
+import CalendlyEmbed from "@/components/CalendlyEmbed";
 import { 
   faClock,
   faCalendarAlt,
@@ -44,15 +45,12 @@ export default function StrategyCallPage() {
             <div className="form-header">
           
               
-              {/* Calendly Widget - Full Width */}
+              {/* Calendly Widget - Lazy with placeholder */}
               <div className="full-width-form-container">
-                <iframe 
-                  src="https://calendly.com/rickthewebdev/30-minute-meeting-clone?embed_domain=localhost&embed_type=Inline"
-                  width="100%" 
-                  height="600" 
-                  frameBorder="0"
-                  className="full-width-iframe"
-                ></iframe>
+                <CalendlyEmbed 
+                  url="https://calendly.com/rickthewebdev/30-minute-meeting-clone?embed_domain=localhost&embed_type=Inline"
+                  height={680}
+                />
               </div>
             </div>
           </div>
@@ -106,7 +104,7 @@ export default function StrategyCallPage() {
               <div className="inner-page-summary-grid">
                 <div className="inner-page-summary-item">
                   <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <GradientIcon icon={faUser} size="2xl" className="text-white" />
+                    <GradientIcon icon={faUser} size="xl" className="text-white" />
                   </div>
                   <h4>Personalized Approach</h4>
                   <p>Every business is unique. We tailor our recommendations to your specific industry and goals.</p>
@@ -114,7 +112,7 @@ export default function StrategyCallPage() {
                 
                 <div className="inner-page-summary-item">
                   <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <GradientIcon icon={faCheckCircle} size="2xl" className="text-white" />
+                    <GradientIcon icon={faCheckCircle} size="xl" className="text-white" />
                   </div>
                   <h4>Proven Results</h4>
                   <p>We've helped businesses increase their online leads by 300%+ and improve site performance significantly.</p>
@@ -122,7 +120,7 @@ export default function StrategyCallPage() {
                 
                 <div className="inner-page-summary-item">
                   <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <GradientIcon icon={faQuoteLeft} size="2xl" className="text-white" />
+                    <GradientIcon icon={faQuoteLeft} size="xl" className="text-white" />
                   </div>
                   <h4>No Pressure</h4>
                   <p>This is a consultation, not a sales call. We'll give you honest advice whether or not we work together.</p>

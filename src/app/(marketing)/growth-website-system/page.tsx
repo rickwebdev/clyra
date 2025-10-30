@@ -349,9 +349,9 @@ export default function GrowthWebsiteSystemPage() {
               <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 group">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/40 to-cyan-500/40 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-110">
-                    <GradientIcon icon={faArrowRight} size="lg" className="text-white sm:hidden" />
-                    <GradientIcon icon={faArrowRight} size="xl" className="text-white hidden sm:block" />
+                <div className="relative w-24 h-24 sm:w-28 sm:h-28 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-110">
+                    <GradientIcon icon={faArrowRight} size="xl" className="text-white sm:hidden" />
+                    <GradientIcon icon={faArrowRight} size="2xl" className="text-white hidden sm:block" />
                   </div>
                 </div>
                 <div className="text-center">
@@ -527,9 +527,9 @@ export default function GrowthWebsiteSystemPage() {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
               <div className="relative bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-3xl p-8 sm:p-12 text-center border border-gray-700/50 shadow-2xl hover:shadow-green-500/20 hover:border-green-500/40 transition-all duration-500 mx-4 sm:mx-0">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 sm:mb-6 shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
-                  <GradientIcon icon={faShieldAlt} size="lg" className="text-white sm:hidden" />
-                  <GradientIcon icon={faShieldAlt} size="xl" className="text-white hidden sm:block" />
+                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 sm:mb-6 shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
+                  <GradientIcon icon={faShieldAlt} size="xl" className="text-white sm:hidden" />
+                  <GradientIcon icon={faShieldAlt} size="2xl" className="text-white hidden sm:block" />
                 </div>
                 <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">Guarantee</h3>
                 <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-6 px-4">

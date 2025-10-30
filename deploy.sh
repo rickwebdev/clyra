@@ -11,10 +11,14 @@ echo "🔄 Deploying to server..."
 ssh root@159.65.45.45 "\
   set -e; \
   cd /home/n30m0rph/web/clyrastudios.com/nodejs && \
+  # Enable maintenance page
+  touch maintenance.flag && \
   git fetch origin main && \
   git reset --hard origin/main && \
   source /root/.nvm/nvm.sh && nvm use 18 && \
   npm ci && npm run build && \
-  pm2 restart wp-studio --update-env && pm2 save"
+  pm2 restart wp-studio --update-env && pm2 save && \
+  # Disable maintenance page
+  rm -f maintenance.flag"
 
 echo "✅ Deployment complete!"

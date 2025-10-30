@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import HeroDeviceVideo from "@/components/HeroDeviceVideo";
 import Nav from "@/components/Nav";
 import InlineRotatingText from "@/components/InlineRotatingText";
 import Footer from "@/components/Footer";
@@ -217,9 +216,15 @@ export default function HomePage() {
                       overflow: 'hidden',
                       position: 'relative'
                     }}>
-                      <HeroDeviceVideo
-                        sources={["/videos/hero-video.mp4","/videos/hero-phone-2.mp4"]}
-                        className="w-full h-full object-cover"
+                      <video
+                        src="/videos/hero-video.mp4"
+                        muted
+                        autoPlay
+                        loop
+                        playsInline
+                        preload="metadata"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        aria-label="Recent work and studio highlights video"
                       />
                     </div>
                   </div>

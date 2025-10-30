@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const links = [
+  const links = [
   { 
     href: "/services", 
     label: "Services",
@@ -12,7 +12,8 @@ const links = [
       { href: "/wordpress-studio", label: "WordPress Studio" },
       { href: "/growth-website-system", label: "Growth Website System" },
       { href: "/redesign-migration", label: "Redesign & Migration" },
-      { href: "/wordpress-mechanic", label: "WordPress Mechanic" },
+        { href: "/wordpress-mechanic", label: "WordPress Mechanic" },
+        { href: "/rfp", label: "Request for Proposal" },
     ]
   },
   { href: "/strategy-call", label: "Strategy Call" },

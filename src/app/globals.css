@@ -7349,6 +7349,30 @@ p {
   .home-hero .hero-description { max-width: 34ch; }
 }
 
+/* RFP/Growth form mobile fixes */
+@media (max-width: 768px) {
+  .growth-application-form {
+    padding: 1rem;
+    margin: 0 0.5rem;
+    border-radius: 12px;
+  }
+  .growth-application-form .form-section { padding: 1rem; }
+  .growth-application-form .form-grid { gap: 0.75rem; }
+  .growth-application-form .form-group label { font-size: 0.95rem; }
+  .growth-application-form input,
+  .growth-application-form select,
+  .growth-application-form textarea {
+    width: 100%;
+    font-size: 16px; /* prevent iOS zoom */
+    min-height: 48px;
+    padding: 0.85rem 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+  }
+  .growth-application-form textarea { min-height: 140px; }
+}
+
 /* Mobile Section Animations - Float Up on Scroll */
 @media (max-width: 768px) {
   /* Only apply animations to sections that have animation classes - don't hide all sections by default */

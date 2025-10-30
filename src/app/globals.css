@@ -7206,6 +7206,24 @@ p {
   border-radius: 0.9rem;
 }
 
+/* Tablet tuning for home hero: reduce gap and tighten columns */
+@media (min-width: 768px) and (max-width: 1100px) {
+  .home-hero .hero-layout {
+    column-gap: 3rem !important;
+    grid-template-columns: minmax(220px, 300px) 1fr !important;
+  }
+  .home-hero .hero-title {
+    font-size: clamp(2.1rem, 4.8vw, 3.3rem) !important;
+    line-height: 1.15;
+  }
+  .home-hero .hero-description {
+    max-width: 52ch;
+  }
+  .home-hero .hero-actions {
+    gap: 0.5rem;
+  }
+}
+
 /* Full-bleed wrapper for homepage hero to remove left indentation safely */
 .hero-full-bleed {
   position: relative;

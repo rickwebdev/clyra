@@ -50,12 +50,14 @@ export default function Nav() {
           {links.map((link) => (
             <li key={link.href} className="nav-item">
               {link.submenu ? (
-                <div className="dropdown-container">
+                <div 
+                  className="dropdown-container"
+                  onMouseEnter={() => setActiveDropdown(link.label)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
                   <button
                     className={`nav-link dropdown-trigger ${pathname.startsWith(link.href) ? 'active' : ''}`}
                     onClick={() => toggleDropdown(link.label)}
-                    onMouseEnter={() => setActiveDropdown(link.label)}
-                    onMouseLeave={() => setActiveDropdown(null)}
                   >
                     {link.label}
                     <span className="dropdown-arrow">▼</span>

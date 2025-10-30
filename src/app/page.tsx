@@ -269,6 +269,7 @@ export default function HomePage() {
                       <InlineRotatingText
                         phrases={["WordPress","Next.js","Shopify","Sanity","Contentful","WooCommerce","OpenAI","Grok","Claude"]}
                         className="text-xl sm:text-2xl"
+                        intervalMs={2800}
                       />
                     </div>
                     {/* Subhead */}

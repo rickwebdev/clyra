@@ -15,7 +15,7 @@ ssh root@159.65.45.45 "\
   git reset --hard origin/main && \
   source /root/.nvm/nvm.sh && nvm use 18 && \
   export NODE_OPTIONS=\"--max_old_space_size=2048\" && \
-  npm ci --omit=dev --no-audit --no-fund || npm install --omit=dev --no-audit --no-fund && \
+  npm install --no-audit --no-fund && \
   npm run build && \
   pm2 restart wp-studio --update-env && pm2 save"
 

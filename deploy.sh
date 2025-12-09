@@ -14,7 +14,8 @@ ssh root@159.65.45.45 "\
   git fetch origin main && \
   git reset --hard origin/main && \
   source /root/.nvm/nvm.sh && nvm use 18 && \
-  npm ci && \
+  rm -rf node_modules .next && \
+  npm install --no-audit --no-fund && \
   npm run build && \
   pm2 restart wp-studio --update-env && pm2 save"
 

@@ -4,7 +4,6 @@ const withMDX = createMDX({ extension: /\.mdx?$/ });
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['ts','tsx','mdx'],
-  typedRoutes: true,
   typescript: {
     ignoreBuildErrors: true,
   },

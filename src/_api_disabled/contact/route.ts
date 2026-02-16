@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// Required for static export
 export const dynamic = 'force-dynamic';
 
 export async function GET() {

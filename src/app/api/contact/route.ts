@@ -1,15 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import sgMail from '@sendgrid/mail';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
   return NextResponse.json({
-    EMAIL_USER: process.env.EMAIL_USER ? 'Set' : 'Not set',
-    EMAIL_PASS: process.env.EMAIL_PASS ? 'Set' : 'Not set',
-    SMTP_HOST: process.env.SMTP_HOST || 'mail.clyrastudios.com',
-    SMTP_PORT: process.env.SMTP_PORT || '587',
-    SMTP_SECURE: process.env.SMTP_SECURE || 'false',
+    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY ? 'Set' : 'Not set',
+    SENDGRID_FROM_EMAIL: process.env.SENDGRID_FROM_EMAIL || 'rick@clyrastudios.com',
     NODE_ENV: process.env.NODE_ENV
   });
 }
@@ -27,19 +24,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Debug: Log environment variables (remove in production)
-    console.log('Environment check:', {
-      EMAIL_USER: process.env.EMAIL_USER ? 'Set' : 'Not set',
-      EMAIL_PASS: process.env.EMAIL_PASS ? 'Set' : 'Not set',
-      SMTP_HOST: process.env.SMTP_HOST || 'mail.clyrastudios.com',
-      SMTP_PORT: process.env.SMTP_PORT || '587',
-      SMTP_SECURE: process.env.SMTP_SECURE || 'false',
-      NODE_ENV: process.env.NODE_ENV
-    });
-
-    // Check if email credentials are configured
-    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-      console.log('Email credentials not configured, using fallback');
+    // Check if SendGrid API key is configured
+    if (!process.env.SENDGRID_API_KEY) {
+      console.log('SendGrid API key not configured, using fallback');
       // Fallback: Log the form data and return success
       console.log('Form submission received:', {
         name,
@@ -56,37 +43,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter for custom domain email
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'mail.clyrastudios.com', // Your SMTP server
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
-      auth: {
-        user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASS, // Your email password
-      },
-      tls: {
-        rejectUnauthorized: false // Sometimes needed for self-signed certificates
-      }
-    });
-
-    // Test connection
-    try {
-      await transporter.verify();
-      console.log('Email connection verified successfully');
-    } catch (verifyError) {
-      console.error('Email connection verification failed:', verifyError);
-      throw verifyError;
-    }
+    // Initialize SendGrid
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     // Email content
     const isGrowth = formType === 'growth-application' || (typeof issue === 'string' && issue.includes('Form Type: growth-application'));
     const isAudit = formType === 'site-audit' || (typeof issue === 'string' && issue.includes('Form Type: site-audit'));
     const isRfp = formType === 'rfp' || (typeof issue === 'string' && issue.includes('Form Type: rfp'));
 
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
+    const fromEmail = process.env.SENDGRID_FROM_EMAIL || 'rick@clyrastudios.com';
+    
+    const msg = {
       to: 'rick@clyrastudios.com',
+      from: fromEmail,
+      replyTo: email,
       subject: isGrowth 
         ? `Growth Website System Application — ${name}`
         : isAudit
@@ -108,8 +78,8 @@ export async function POST(request: NextRequest) {
       `,
     };
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+    // Send email via SendGrid
+    await sgMail.send(msg);
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
@@ -120,8 +90,8 @@ export async function POST(request: NextRequest) {
     console.error('Error details:', {
       message: error instanceof Error ? error.message : 'Unknown error',
       stack: error instanceof Error ? error.stack : undefined,
-      emailUser: process.env.EMAIL_USER ? 'Set' : 'Not set',
-      emailPass: process.env.EMAIL_PASS ? 'Set' : 'Not set'
+      sendgridApiKey: process.env.SENDGRID_API_KEY ? 'Set' : 'Not set',
+      sendgridFromEmail: process.env.SENDGRID_FROM_EMAIL || 'rick@clyrastudios.com'
     });
     return NextResponse.json(
       { error: 'Failed to send email', details: error instanceof Error ? error.message : 'Unknown error' },

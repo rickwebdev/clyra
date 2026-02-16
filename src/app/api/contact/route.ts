@@ -79,7 +79,27 @@ export async function POST(request: NextRequest) {
     };
 
     // Send email via SendGrid
-    await sgMail.send(msg);
+    try {
+      await sgMail.send(msg);
+    } catch (sendgridError: any) {
+      // Handle SendGrid-specific errors
+      console.error('SendGrid error:', sendgridError);
+      if (sendgridError.response) {
+        const { body, statusCode } = sendgridError.response;
+        console.error('SendGrid API response:', { statusCode, body });
+        
+        // Common SendGrid errors
+        if (statusCode === 403) {
+          throw new Error('SendGrid API key is invalid or lacks permissions');
+        }
+        if (statusCode === 400 && body?.errors) {
+          const errorMessages = body.errors.map((e: any) => e.message).join(', ');
+          throw new Error(`SendGrid validation error: ${errorMessages}`);
+        }
+        throw new Error(`SendGrid API error (${statusCode}): ${JSON.stringify(body)}`);
+      }
+      throw sendgridError;
+    }
 
     return NextResponse.json(
       { message: 'Email sent successfully' },

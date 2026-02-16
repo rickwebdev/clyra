@@ -81,19 +81,31 @@ export async function POST(request: NextRequest) {
     // Send email via SendGrid
     try {
       await sgMail.send(msg);
-    } catch (sendgridError: any) {
+    } catch (sendgridError: unknown) {
       // Handle SendGrid-specific errors
       console.error('SendGrid error:', sendgridError);
-      if (sendgridError.response) {
-        const { body, statusCode } = sendgridError.response;
+      
+      // Type guard for SendGrid error response
+      if (
+        sendgridError &&
+        typeof sendgridError === 'object' &&
+        'response' in sendgridError &&
+        sendgridError.response &&
+        typeof sendgridError.response === 'object' &&
+        'body' in sendgridError.response &&
+        'statusCode' in sendgridError.response
+      ) {
+        const response = sendgridError.response as { body: unknown; statusCode: number };
+        const { body, statusCode } = response;
         console.error('SendGrid API response:', { statusCode, body });
         
         // Common SendGrid errors
         if (statusCode === 403) {
           throw new Error('SendGrid API key is invalid or lacks permissions');
         }
-        if (statusCode === 400 && body?.errors) {
-          const errorMessages = body.errors.map((e: any) => e.message).join(', ');
+        if (statusCode === 400 && body && typeof body === 'object' && 'errors' in body) {
+          const errors = (body as { errors: Array<{ message: string }> }).errors;
+          const errorMessages = errors.map((e) => e.message).join(', ');
           throw new Error(`SendGrid validation error: ${errorMessages}`);
         }
         throw new Error(`SendGrid API error (${statusCode}): ${JSON.stringify(body)}`);

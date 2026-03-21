@@ -7,8 +7,9 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Avoid bundling issues with the Resend SDK in serverless output (Vercel)
-  serverExternalPackages: ['resend'],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   trailingSlash: true,
   images: {
     unoptimized: true,

@@ -4,9 +4,11 @@ import { Resend } from 'resend';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
+  const toEmail = process.env.RESEND_TO_EMAIL || 'rick.clyrastudios@gmail.com';
   return NextResponse.json({
     RESEND_API_KEY: process.env.RESEND_API_KEY ? 'Set' : 'Not set',
     RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL || 'rick@clyrastudios.com',
+    RESEND_TO_EMAIL: toEmail,
     NODE_ENV: process.env.NODE_ENV,
   });
 }
@@ -55,6 +57,7 @@ export async function POST(request: NextRequest) {
 
     const fromEmail =
       process.env.RESEND_FROM_EMAIL || 'rick@clyrastudios.com';
+    const toEmail = process.env.RESEND_TO_EMAIL || 'rick.clyrastudios@gmail.com';
 
     const subject = isGrowth
       ? `Growth Website System Application — ${name}`
@@ -79,7 +82,7 @@ export async function POST(request: NextRequest) {
 
     const { error } = await resend.emails.send({
       from: fromEmail,
-      to: 'rick@clyrastudios.com',
+      to: toEmail,
       replyTo: email,
       subject,
       html,
@@ -104,6 +107,8 @@ export async function POST(request: NextRequest) {
       resendApiKey: process.env.RESEND_API_KEY ? 'Set' : 'Not set',
       resendFromEmail:
         process.env.RESEND_FROM_EMAIL || 'rick@clyrastudios.com',
+      resendToEmail:
+        process.env.RESEND_TO_EMAIL || 'rick.clyrastudios@gmail.com',
     });
     return NextResponse.json(
       {

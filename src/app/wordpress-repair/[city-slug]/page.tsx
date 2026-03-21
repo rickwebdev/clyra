@@ -5,11 +5,6 @@ import {
   faWrench, 
   faPhone, 
   faCheckCircle, 
-  faExclamationTriangle,
-  faCog,
-  faShieldAlt,
-  faRocket,
-  faClock
 } from '@fortawesome/free-solid-svg-icons';
 
 // City data with content variations
@@ -459,6 +454,7 @@ export default function CityPage({ params }: { params: { 'city-slug': string } }
       <div className="location-logo-header">
         <div className="container">
           <Link href="/" className="location-logo">
+            {/* eslint-disable-next-line @next/next/no-img-element -- static logo in location template */}
             <img src="/images/clyra_logo.png" alt="Clyra Studios" className="logo-image" />
           </Link>
         </div>

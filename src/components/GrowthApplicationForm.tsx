@@ -167,7 +167,7 @@ export default function GrowthApplicationForm({ formId = "growth-application", c
       let responseData: unknown = {};
       try {
         responseData = await response.json();
-      } catch (_) {
+      } catch {
         // no-op: some environments may return empty body on 200
       }
       console.log('API Response:', responseData);
@@ -208,7 +208,7 @@ export default function GrowthApplicationForm({ formId = "growth-application", c
 
   return (
     <div className={`growth-application-form ${className}`}>
-      <form onSubmit={handleSubmit} className="space-y-8">
+      <form id={formId} onSubmit={handleSubmit} className="space-y-8">
         {/* Personal Information Section */}
         <div className="form-section">
           <h3 className="form-section-title">

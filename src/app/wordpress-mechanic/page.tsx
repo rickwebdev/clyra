@@ -17,7 +17,6 @@ import {
   faExclamationTriangle,
   faCog,
   faChartLine,
-  faLock,
   faQuestionCircle,
   faArrowRight,
   faStar,

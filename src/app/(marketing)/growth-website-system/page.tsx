@@ -7,7 +7,6 @@ import GradientIcon from "@/components/GradientIcon";
 import RotatingHeadline from "@/components/RotatingHeadline";
 import { 
   faCheckCircle,
-  faTimesCircle,
   faChartLine,
   faClock,
   faFileAlt,
@@ -26,7 +25,6 @@ import {
   faQuoteLeft,
   faRocket,
   faExclamationTriangle,
-  faBan,
   faGlobe
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
@@ -140,7 +138,6 @@ function CTAButton({
 }
 
 export default function GrowthWebsiteSystemPage() {
-  const tallyUrl = process.env.NEXT_PUBLIC_TALLY_FORM_URL;
   const isIndexable = process.env.NEXT_PUBLIC_GROWTH_PAGE_INDEXABLE !== "false";
 
   return (

@@ -139,7 +139,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <Footer />
       </>
     );
-  } catch (error) {
+  } catch {
     return (
       <>
         <Nav />

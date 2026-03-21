@@ -75,7 +75,7 @@ export default function ContactForm({ formId = "priority-form", className = "" }
 
   return (
     <div className={`priority-form ${className}`}>
-      <form onSubmit={handleSubmit}>
+      <form id={formId} onSubmit={handleSubmit}>
         <div className="form-grid">
           <div className="form-group">
             <label htmlFor="name">Name *</label>

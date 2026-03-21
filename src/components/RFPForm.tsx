@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import GradientIcon from './GradientIcon';
-import { faFileAlt, faPaperPlane, faExclamationTriangle, faBriefcase, faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faPaperPlane, faExclamationTriangle, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 export default function RFPForm() {
   const [formData, setFormData] = useState({
@@ -92,7 +92,7 @@ export default function RFPForm() {
         projectType: '', scope: '', budget: '', timeline: '', goals: '', successCriteria: '', heardAbout: '',
         newsletterOptIn: false
       });
-    } catch (_) {
+    } catch {
       setStatus('error');
     } finally {
       setIsSubmitting(false);

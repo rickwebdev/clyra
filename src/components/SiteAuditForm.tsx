@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import GradientIcon from './GradientIcon';
-import { faSearch, faCheckCircle, faExclamationTriangle, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 export default function SiteAuditForm() {
   const [formData, setFormData] = useState({
@@ -116,7 +116,7 @@ export default function SiteAuditForm() {
         firstName: '', lastName: '', email: '', phone: '', companyName: '', website: '', industry: '',
         budget: '', timeline: '', currentIssues: [], goals: '', heardAbout: '', additionalInfo: '', newsletterOptIn: false
       });
-    } catch (e) {
+    } catch {
       setStatus('error');
     } finally {
       setIsSubmitting(false);

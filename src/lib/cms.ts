@@ -5,7 +5,8 @@ export async function getPosts() {
   return [];
 }
 
-export async function getPost(_slug: string) {
+export async function getPost(slug: string) {
+  void slug;
   // now: read from /content/blog
   // later: fetch from WPGraphQL
   return null;

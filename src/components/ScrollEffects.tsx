@@ -247,8 +247,8 @@ export default function ScrollEffects() {
       initAOS();
       initBounceUp();
       initSlideIn();
-      const cleanupParallax = initParallax();
-      const cleanupNavbar = initNavbarScroll();
+      initParallax();
+      initNavbarScroll();
       initRevealAnimations();
       initSectionBallInteractions();
     }, 100);

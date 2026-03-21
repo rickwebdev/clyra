@@ -33,6 +33,7 @@ export default function LocationsPage() {
       <div className="location-logo-header">
         <div className="container">
           <Link href="/" className="location-logo">
+            {/* eslint-disable-next-line @next/next/no-img-element -- static logo */}
             <img src="/images/clyra_logo.png" alt="Clyra Studios" className="logo-image" />
           </Link>
         </div>

@@ -4,7 +4,6 @@ import GradientIcon from "@/components/GradientIcon";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
 import { 
   faClock,
-  faCalendarAlt,
   faCheckCircle,
   faQuoteLeft,
   faUser,

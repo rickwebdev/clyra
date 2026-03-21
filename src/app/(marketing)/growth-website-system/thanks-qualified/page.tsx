@@ -2,7 +2,7 @@
 import Link from "next/link";
 import MinimalLandingLayout from "../_components/MinimalLandingLayout";
 import GradientIcon from "@/components/GradientIcon";
-import { faCheckCircle, faCalendarAlt, faGlobe, faCogs, faBullseye } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt, faGlobe, faCogs, faBullseye } from '@fortawesome/free-solid-svg-icons';
 
 // CTA Button Component with Analytics
 function CTAButton({ 

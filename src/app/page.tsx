@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import InlineRotatingText from "@/components/InlineRotatingText";
@@ -8,17 +7,11 @@ import GradientIcon from "@/components/GradientIcon";
 import CrossfadeVideo from "@/components/CrossfadeVideo";
 import { 
   faBolt, 
-  faShieldAlt, 
-  faCheckCircle,
-  faTimesCircle,
   faCheck,
-  faSearch,
   faQuoteLeft,
   faLaptopCode,
-  faAmbulance,
   faSearchPlus,
   faPaintBrush,
-  faCogs,
   faLeaf,
   faHeart,
   faStore,
@@ -52,88 +45,6 @@ export const metadata: Metadata = {
     canonical: "https://clyrastudios.com/"
   }
 };
-
-const services = [
-  { 
-    id: "websites-platforms", 
-    title: "Websites & Platforms", 
-    description: "From emergency rescues to custom builds, we transform broken or outdated websites into fast, secure, lead-generating assets that scale with your business.",
-    pain: "Site holding back your growth?",
-    solution: "WordPress that actually converts",
-    features: ["Emergency Rescues", "Platform Migrations", "Custom Development", "Performance Optimization"],
-    cta: "Rescue My Site",
-    ctaLink: "/contact?service=rescue",
-    icon: faAmbulance
-  },
-  { 
-    id: "seo-ai-discovery", 
-    title: "SEO & AI Discovery", 
-    description: "Get found on Google and AI search engines. We optimize your WordPress site for traditional SEO plus next-gen AEO (AI Engine Optimization) for ChatGPT and Perplexity.",
-    pain: "Invisible on search engines?",
-    solution: "SEO that works in 2024+",
-    features: ["Technical SEO", "Core Web Vitals", "AEO Optimization", "Local Search"],
-    cta: "Get SEO Audit",
-    ctaLink: "/site-audit",
-    icon: faSearchPlus
-  },
-  { 
-    id: "automation-marketing", 
-    title: "Automation & Marketing Systems", 
-    description: "Stop manual work. We connect your WordPress site to the tools that power your business - CRMs, booking systems, email marketing, and more.",
-    pain: "Manual processes eating your time?",
-    solution: "Automation that saves hours",
-    features: ["CRM Integration", "Booking Systems", "Email Marketing", "Lead Generation"],
-    cta: "Automate My Workflow",
-    ctaLink: "/services#automation",
-    icon: faCogs
-  },
-  { 
-    id: "creative-content", 
-    title: "Creative & Content", 
-    description: "Turn visitors into customers. We design conversion-focused experiences and content strategies that speak to your audience and drive results.",
-    pain: "Visitors not converting?",
-    solution: "Design that drives business",
-    features: ["UX/UI Design", "Conversion Optimization", "Content Strategy", "Brand Development"],
-    cta: "Improve Conversions",
-    ctaLink: "/services#creative",
-    icon: faPaintBrush
-  },
-];
-
-const servicePillars = [
-  {
-    title: "Website Rescue & Recovery",
-    problem: "Site hacked, broken, or holding back your business?",
-    solution: "Emergency response, security fixes, and complete rebuilds",
-    expectedResult: "24-hour rescue response, bulletproof security, 300% faster performance",
-    timeframe: "1-3 weeks",
-    image: "/images/cards/E-commerce Migration Success.png"
-  },
-  {
-    title: "Platform Migration Services",
-    problem: "Stuck on Wix, Squarespace, or outdated platform?",
-    solution: "Seamless WordPress migration with SEO preservation",
-    expectedResult: "Zero downtime, improved rankings, full site ownership",
-    timeframe: "2-4 weeks",
-    image: "/images/cards/Security Breach Recovery.png"
-  },
-  {
-    title: "SEO & Growth Optimization",
-    problem: "Invisible on Google or losing to competitors?",
-    solution: "Technical SEO + AEO optimization for modern search",
-    expectedResult: "Page 4 to page 1 rankings, 250% traffic increase, AI search visibility",
-    timeframe: "4-8 weeks",
-    image: "/images/cards/SEO Performance Boost.png"
-  },
-  {
-    title: "Startup Launch Sites",
-    problem: "Need a professional website live fast to validate an idea or pitch investors?",
-    solution: "Launch-ready WordPress builds with tracking, SEO, and upgrade paths",
-    expectedResult: "Professional site in 1-2 weeks, investor-ready presentation, growth foundation",
-    timeframe: "1-2 weeks",
-    image: "/images/cards/startup website.png"
-  }
-];
 
 const testimonials = [
   {

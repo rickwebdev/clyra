@@ -6,7 +6,6 @@ import GradientIcon from "@/components/GradientIcon";
 import SiteAuditForm from "@/components/SiteAuditForm";
 import { 
   faSearch, 
-  faClock, 
   faCheckCircle,
   faChartLine,
   faShieldAlt,

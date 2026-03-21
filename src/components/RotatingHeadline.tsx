@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 const PHRASES = [
   "Clients",
@@ -12,12 +12,6 @@ const PHRASES = [
 
 export default function RotatingHeadline() {
   const [i, setI] = useState(0);
-
-  // Reserve width based on longest phrase (prevents layout shift)
-  const maxLen = useMemo(
-    () => Math.max(...PHRASES.map((p) => p.length)),
-    []
-  );
 
   useEffect(() => {
     const id = setInterval(

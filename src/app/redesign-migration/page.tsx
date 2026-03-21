@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
 import { 
   faBolt, 
-  faTimesCircle,
   faCheck,
   faSearch,
   faPaintBrush,
@@ -19,8 +18,7 @@ import {
   faClock,
   faEyeSlash,
   faLock,
-  faChartBar,
-  faTachometerAlt
+  faChartBar
 } from '@fortawesome/free-solid-svg-icons';
 
 const problems = [

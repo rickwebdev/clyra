@@ -5,14 +5,10 @@ import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
 import CrossfadeVideo from "@/components/CrossfadeVideo";
 import { 
-  faBolt, 
-  faShieldAlt, 
   faCheckCircle,
   faTimesCircle,
   faCheck,
-  faSearch,
   faQuoteLeft,
-  faLaptopCode,
   faAmbulance,
   faSearchPlus,
   faPaintBrush,

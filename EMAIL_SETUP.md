@@ -1,40 +1,31 @@
-# Email Setup Guide
+# Email setup (contact forms)
 
-## Server-Side Email Configuration
+Forms POST to `/api/contact/`. The API sends mail with **[Resend](https://resend.com/)** (transactional). Your **mailbox** (Google Workspace, Fastmail, etc.) is separate—you verify a domain (or use Resend’s test sender) in Resend for the **from** address.
 
-The contact form now sends emails directly through your server instead of opening the user's email client.
+## Local development
 
-### Setup Steps
+Create `.env.local` in the project root:
 
-1. **Create `.env.local` file** in your project root with:
 ```
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
+RESEND_API_KEY=re_xxx...
+RESEND_FROM_EMAIL=Clyra Studios <notifications@yourdomain.com>
 ```
 
-2. **For Gmail users:**
-   - Enable 2-factor authentication on your Google account
-   - Go to Google Account Settings > Security > App Passwords
-   - Generate a new app password for "Mail"
-   - Use this app password (not your regular password) as `EMAIL_PASS`
+Restart `npm run dev` after changing env vars.
 
-3. **For other email providers:**
-   - Update the `service` in `/src/app/api/contact/route.ts`
-   - Common services: 'gmail', 'outlook', 'yahoo', 'hotmail'
-   - Or use SMTP configuration with host, port, etc.
+- **API key:** [Resend → API Keys](https://resend.com/api-keys).
+- **From address:** Must use an address on a [verified domain](https://resend.com/docs/dashboard/domains/introduction), or Resend’s onboarding domain for testing (see Resend docs).
 
-### How It Works
+`RESEND_FROM_EMAIL` can be a plain email or `Name <email@domain.com>`.
 
-- User fills out the form
-- Form data is sent to `/api/contact` endpoint
-- Server sends formatted email to `rick@clyrastudios.com`
-- User sees success/error message
-- No email client required for users
+Quick check: open `GET /api/contact/` in the browser—it reports whether `RESEND_API_KEY` is loaded (useful for debugging; consider removing or locking down that handler on a public site).
 
-### Benefits
+## Production (Netlify / Vercel)
 
-- ✅ Professional form experience
-- ✅ No email client dependency
-- ✅ Formatted HTML emails
-- ✅ Server-side validation
-- ✅ Better user experience
+Add **`RESEND_API_KEY`** and **`RESEND_FROM_EMAIL`** in the host’s environment variables. Remove old **`SENDGRID_*`** variables if they are still set.
+
+If the key is missing, the API still returns **200** with `Form received (email not configured)`—so the UI can look “successful” with no email.
+
+## Legacy
+
+Older SendGrid and nodemailer-based code paths are no longer used; the active route is `src/app/api/contact/route.ts` (Resend).

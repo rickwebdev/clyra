@@ -41,7 +41,7 @@ export default function ContactForm({ formId = "priority-form", className = "" }
 
     try {
       // Send email via API
-        const response = await fetch('/api/contact', {
+        const response = await fetch('/api/contact/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import sgMail from '@sendgrid/mail';
+import { Resend } from 'resend';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
   return NextResponse.json({
-    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY ? 'Set' : 'Not set',
-    SENDGRID_FROM_EMAIL: process.env.SENDGRID_FROM_EMAIL || 'rick@clyrastudios.com',
-    NODE_ENV: process.env.NODE_ENV
+    RESEND_API_KEY: process.env.RESEND_API_KEY ? 'Set' : 'Not set',
+    RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL || 'rick@clyrastudios.com',
+    NODE_ENV: process.env.NODE_ENV,
   });
 }
 
@@ -16,7 +16,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { name, email, phone, website, issue, formType, newsletterOptIn } = body;
 
-    // Validate required fields
     if (!name || !email || !website || !issue) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -24,47 +23,48 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check if SendGrid API key is configured
-    if (!process.env.SENDGRID_API_KEY) {
-      console.log('SendGrid API key not configured, using fallback');
-      // Fallback: Log the form data and return success
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.log('Resend API key not configured, using fallback');
       console.log('Form submission received:', {
         name,
         email,
         phone,
         website,
         issue,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       });
-      
+
       return NextResponse.json(
         { message: 'Form received (email not configured)' },
         { status: 200 }
       );
     }
 
-    // Initialize SendGrid
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    const resend = new Resend(apiKey);
 
-    // Email content
-    const isGrowth = formType === 'growth-application' || (typeof issue === 'string' && issue.includes('Form Type: growth-application'));
-    const isAudit = formType === 'site-audit' || (typeof issue === 'string' && issue.includes('Form Type: site-audit'));
-    const isRfp = formType === 'rfp' || (typeof issue === 'string' && issue.includes('Form Type: rfp'));
+    const isGrowth =
+      formType === 'growth-application' ||
+      (typeof issue === 'string' && issue.includes('Form Type: growth-application'));
+    const isAudit =
+      formType === 'site-audit' ||
+      (typeof issue === 'string' && issue.includes('Form Type: site-audit'));
+    const isRfp =
+      formType === 'rfp' ||
+      (typeof issue === 'string' && issue.includes('Form Type: rfp'));
 
-    const fromEmail = process.env.SENDGRID_FROM_EMAIL || 'rick@clyrastudios.com';
-    
-    const msg = {
-      to: 'rick@clyrastudios.com',
-      from: fromEmail,
-      replyTo: email,
-      subject: isGrowth 
-        ? `Growth Website System Application — ${name}`
-        : isAudit
+    const fromEmail =
+      process.env.RESEND_FROM_EMAIL || 'rick@clyrastudios.com';
+
+    const subject = isGrowth
+      ? `Growth Website System Application — ${name}`
+      : isAudit
         ? `Site Audit Request — ${name}`
         : isRfp
-        ? `RFP Request — ${name}`
-        : `WordPress Repair Request — ${name}`,
-      html: `
+          ? `RFP Request — ${name}`
+          : `WordPress Repair Request — ${name}`;
+
+    const html = `
         <h2>${isGrowth ? 'New Growth Website System Application' : isAudit ? 'New Site Audit Request' : isRfp ? 'New Request for Proposal' : 'New WordPress Repair Request'}</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
@@ -75,42 +75,21 @@ export async function POST(request: NextRequest) {
         <p>${issue.replace(/\n/g, '<br>')}</p>
         <hr>
         <p><em>This request came from the ${isGrowth ? 'Growth Website System apply page' : isAudit ? 'Site Audit page' : isRfp ? 'RFP page' : 'WordPress Mechanic landing page'}.</em></p>
-      `,
-    };
+      `;
 
-    // Send email via SendGrid
-    try {
-      await sgMail.send(msg);
-    } catch (sendgridError: unknown) {
-      // Handle SendGrid-specific errors
-      console.error('SendGrid error:', sendgridError);
-      
-      // Type guard for SendGrid error response
-      if (
-        sendgridError &&
-        typeof sendgridError === 'object' &&
-        'response' in sendgridError &&
-        sendgridError.response &&
-        typeof sendgridError.response === 'object' &&
-        'body' in sendgridError.response &&
-        'statusCode' in sendgridError.response
-      ) {
-        const response = sendgridError.response as { body: unknown; statusCode: number };
-        const { body, statusCode } = response;
-        console.error('SendGrid API response:', { statusCode, body });
-        
-        // Common SendGrid errors
-        if (statusCode === 403) {
-          throw new Error('SendGrid API key is invalid or lacks permissions');
-        }
-        if (statusCode === 400 && body && typeof body === 'object' && 'errors' in body) {
-          const errors = (body as { errors: Array<{ message: string }> }).errors;
-          const errorMessages = errors.map((e) => e.message).join(', ');
-          throw new Error(`SendGrid validation error: ${errorMessages}`);
-        }
-        throw new Error(`SendGrid API error (${statusCode}): ${JSON.stringify(body)}`);
-      }
-      throw sendgridError;
+    const { error } = await resend.emails.send({
+      from: fromEmail,
+      to: 'rick@clyrastudios.com',
+      replyTo: email,
+      subject,
+      html,
+    });
+
+    if (error) {
+      console.error('Resend error:', error);
+      throw new Error(
+        error.message || `Resend API error (${error.name})`
+      );
     }
 
     return NextResponse.json(
@@ -122,11 +101,15 @@ export async function POST(request: NextRequest) {
     console.error('Error details:', {
       message: error instanceof Error ? error.message : 'Unknown error',
       stack: error instanceof Error ? error.stack : undefined,
-      sendgridApiKey: process.env.SENDGRID_API_KEY ? 'Set' : 'Not set',
-      sendgridFromEmail: process.env.SENDGRID_FROM_EMAIL || 'rick@clyrastudios.com'
+      resendApiKey: process.env.RESEND_API_KEY ? 'Set' : 'Not set',
+      resendFromEmail:
+        process.env.RESEND_FROM_EMAIL || 'rick@clyrastudios.com',
     });
     return NextResponse.json(
-      { error: 'Failed to send email', details: error instanceof Error ? error.message : 'Unknown error' },
+      {
+        error: 'Failed to send email',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
       { status: 500 }
     );
   }

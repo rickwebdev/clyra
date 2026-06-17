@@ -3429,6 +3429,120 @@ p {
   margin-top: 2rem;
 }
 
+/* Builder vs owned-site comparison chart */
+.builder-comparison {
+  margin: 2.5rem 0 0;
+}
+
+.bc-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.875rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.bc-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+}
+
+.bc-row:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bc-cell {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 1.1rem 1.25rem;
+  color: #d4d6db;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.bc-cell:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bc-head .bc-cell {
+  flex-direction: column;
+  gap: 0.25rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.bc-subtle {
+  display: block;
+  color: #a1a1a6;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.bc-criteria {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.bc-builder {
+  color: #a1a1a6;
+}
+
+.bc-clyra-col {
+  background: rgba(59, 130, 246, 0.07);
+}
+
+.bc-head .bc-clyra-col {
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.bc-note {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  line-height: 1.55;
+}
+
+.bc-guides {
+  text-align: center;
+  margin-top: 1rem;
+  color: #a1a1a6;
+  font-size: 0.95rem;
+}
+
+.bc-guides a {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.bc-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .bc-table {
+    overflow-x: auto;
+  }
+
+  .bc-row {
+    grid-template-columns: 9rem 1fr 1fr;
+    min-width: 34rem;
+  }
+
+  .bc-cell {
+    font-size: 0.9rem;
+    padding: 0.9rem 1rem;
+  }
+}
+
 .performance-stats {
   display: flex;
   flex-wrap: wrap;

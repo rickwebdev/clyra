@@ -7,6 +7,7 @@ import GradientIcon from "@/components/GradientIcon";
 import { 
   faBolt, 
   faCheck,
+  faXmark,
   faSearch,
   faPaintBrush,
   faCogs,
@@ -78,6 +79,44 @@ const solutions = [
     features: ["Zero-downtime migration", "SEO preservation", "Full ownership", "Scalable architecture"],
     cta: "Start Migration",
     ctaLink: "/contact?service=migration"
+  }
+];
+
+const comparison = [
+  {
+    criteria: "Design freedom",
+    builder: "Locked to template ranges",
+    clyra: "Fully custom, built around your brand"
+  },
+  {
+    criteria: "Custom functionality",
+    builder: "Limited to available apps/widgets",
+    clyra: "Any feature or integration you need"
+  },
+  {
+    criteria: "Performance & Core Web Vitals",
+    builder: "Often slow, bloated markup",
+    clyra: "90+ mobile scores, clean code"
+  },
+  {
+    criteria: "SEO control",
+    builder: "Restricted, plugin-dependent",
+    clyra: "Full control over structure & metadata"
+  },
+  {
+    criteria: "Ownership & portability",
+    builder: "Locked in — hard to export or move",
+    clyra: "100% yours — export and host anywhere"
+  },
+  {
+    criteria: "Building it yourself",
+    builder: "DIY, but you hit a wall fast",
+    clyra: "Done for you, then easy to manage"
+  },
+  {
+    criteria: "Long-term cost",
+    builder: "Rising monthly subscriptions",
+    clyra: "One-time build, own your hosting"
   }
 ];
 
@@ -163,8 +202,8 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Wix & Webflow Redesign + Migration Services | Clyra Studios — High-Performance Web Development",
-  description: "Clyra Studios transforms Wix and Webflow sites into fast, SEO-optimized, high-performance websites. Fix, redesign, or migrate your site with clean code and modern UX.",
+  title: "Wix, Squarespace & Webflow Redesign + Migration Services | Clyra Studios — High-Performance Web Development",
+  description: "Clyra Studios transforms Wix, Squarespace, and Webflow sites into fast, SEO-optimized, high-performance websites you own. Fix, redesign, or migrate with clean code and modern UX.",
   keywords: "wix website redesign, webflow redesign service, wix to wordpress migration, website optimization service, custom web development agency, performance web design company, SEO website rebuild, wix optimization, webflow migration, website performance audit, conversion optimization, custom website design",
   authors: [{ name: "Clyra Studios" }],
   creator: "Clyra Studios",
@@ -179,8 +218,8 @@ export const metadata: Metadata = {
     canonical: '/redesign-migration',
   },
   openGraph: {
-    title: "Wix & Webflow Redesign + Migration Services | Clyra Studios",
-    description: "Transform your Wix or Webflow site into a high-performance website you actually own. Fast, SEO-optimized, and built to convert.",
+    title: "Wix, Squarespace & Webflow Redesign + Migration Services | Clyra Studios",
+    description: "Transform your Wix, Squarespace, or Webflow site into a high-performance website you actually own. Fast, SEO-optimized, and built to convert.",
     url: 'https://clyrastudios.com/redesign-migration',
     siteName: 'Clyra Studios',
     images: [
@@ -188,7 +227,7 @@ export const metadata: Metadata = {
         url: '/images/thumbnail.png',
         width: 1200,
         height: 630,
-        alt: 'Clyra Studios - Wix & Webflow Redesign Services',
+        alt: 'Clyra Studios - Wix, Squarespace & Webflow Redesign Services',
       },
     ],
     locale: 'en_US',
@@ -196,8 +235,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Wix & Webflow Redesign + Migration Services | Clyra Studios',
-    description: 'Transform your Wix or Webflow site into a high-performance website you actually own. Fast, SEO-optimized, and built to convert.',
+    title: 'Wix, Squarespace & Webflow Redesign + Migration Services | Clyra Studios',
+    description: 'Transform your Wix, Squarespace, or Webflow site into a high-performance website you actually own. Fast, SEO-optimized, and built to convert.',
     images: ['/images/thumbnail.png'],
     creator: '@clyrastudios',
     site: '@clyrastudios',
@@ -315,7 +354,7 @@ export default function RedesignMigrationPage() {
             <div className="hero-content">
               <div className="hero-headlines">
                 <h1 className="hero-title">
-                  <span className="title-line">Transform Your Wix or Webflow Site into a</span>
+                  <span className="title-line">Transform Your Wix, Squarespace, or Webflow Site into a</span>
                   <span className="title-line highlight">High-Performance Website You Actually Own</span>
                 </h1>
                 <p className="hero-description">
@@ -463,6 +502,61 @@ export default function RedesignMigrationPage() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Comparison Section */}
+        <section className="services-section">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball services-ball-1"></div>
+            <div className="section-floating-ball services-ball-2"></div>
+            <div className="section-floating-ball services-ball-3"></div>
+          </div>
+          <div className="container">
+            <div className="section-header slide-in-right">
+              <h2 className="section-title">Outgrowing Your Website Builder?</h2>
+              <p className="section-description">
+                You started on Wix, Squarespace, or Webflow — maybe even tried to build it yourself — and hit a wall on design, functionality, or ownership. Here&apos;s how a site we build and you own compares to staying on a drag-and-drop builder.
+              </p>
+            </div>
+
+            <div className="builder-comparison">
+              <div className="bc-table">
+                <div className="bc-row bc-head">
+                  <div className="bc-cell bc-criteria">What matters</div>
+                  <div className="bc-cell">DIY Website Builders<span className="bc-subtle">Wix · Squarespace · Webflow</span></div>
+                  <div className="bc-cell bc-clyra-col">A Clyra-Built Site<span className="bc-subtle">WordPress or headless (Sanity, Contentful)</span></div>
+                </div>
+                {comparison.map((row, index) => (
+                  <div key={index} className="bc-row">
+                    <div className="bc-cell bc-criteria">{row.criteria}</div>
+                    <div className="bc-cell bc-builder">
+                      <GradientIcon icon={faXmark} size="sm" className="danger" />
+                      <span>{row.builder}</span>
+                    </div>
+                    <div className="bc-cell bc-clyra-col">
+                      <GradientIcon icon={faCheck} size="sm" className="success" />
+                      <span>{row.clyra}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="bc-note">
+                Not sure whether WordPress or a headless build is right for you? That&apos;s exactly what we figure out together on a free review — based on how you want to grow, not a one-size-fits-all template.
+              </p>
+              <p className="bc-guides">
+                Platform-specific guides:{" "}
+                <Link href="/wix-to-wordpress">Wix → WordPress</Link>,{" "}
+                <Link href="/squarespace-to-wordpress">Squarespace → WordPress</Link>,{" "}
+                <Link href="/webflow-to-wordpress">Webflow → WordPress</Link>
+              </p>
+              <div className="bc-actions">
+                <Link href="/site-audit" className="btn btn-primary btn-large">
+                  Get Free Website Review
+                  <span className="btn-arrow">→</span>
+                </Link>
+              </div>
             </div>
           </div>
         </section>

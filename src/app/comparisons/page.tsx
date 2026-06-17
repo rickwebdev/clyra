@@ -44,7 +44,7 @@ export default function ComparisonsPage() {
                   <li className="inner-page-feature-item">Lower costs long-term — WordPress hosting starts at $3/month vs Wix's premium plans at $23+/month</li>
                 </ul>
                 <p className="inner-page-card-note">
-                  <strong>Ready to escape Wix?</strong> <Link href="/migrations#wix" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our seamless WordPress migrations from Wix</Link> preserve your SEO, improve performance, and give you complete site ownership.
+                  <strong>Ready to escape Wix?</strong> <Link href="/wix-to-wordpress" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our seamless WordPress migrations from Wix</Link> preserve your SEO, improve performance, and give you complete site ownership.
                 </p>
               </div>
 
@@ -61,7 +61,7 @@ export default function ComparisonsPage() {
                   <li className="inner-page-feature-item">True ownership — export your content and move anywhere vs being locked into Squarespace forever</li>
                 </ul>
                 <p className="inner-page-card-note">
-                  <strong>Outgrowing Squarespace?</strong> <Link href="/migrations#squarespace" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our WordPress migrations from Squarespace</Link> maintain your design while adding unlimited growth potential.
+                  <strong>Outgrowing Squarespace?</strong> <Link href="/squarespace-to-wordpress" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our WordPress migrations from Squarespace</Link> maintain your design while adding unlimited growth potential.
                 </p>
               </div>
 
@@ -78,7 +78,7 @@ export default function ComparisonsPage() {
                   <li className="inner-page-feature-item">Content marketing powerhouse — built-in blog, SEO tools, and content workflows vs Webflow's design-focused approach</li>
                 </ul>
                 <p className="inner-page-card-note">
-                  <strong>Need better content management?</strong> <Link href="/migrations#webflow" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our WordPress migrations from Webflow</Link> preserve your design while adding powerful content marketing capabilities.
+                  <strong>Need better content management?</strong> <Link href="/webflow-to-wordpress" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our WordPress migrations from Webflow</Link> preserve your design while adding powerful content marketing capabilities.
                 </p>
               </div>
 

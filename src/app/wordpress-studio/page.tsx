@@ -1,10 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
 import CrossfadeVideo from "@/components/CrossfadeVideo";
-import { 
+import {
   faCheckCircle,
   faTimesCircle,
   faCheck,
@@ -14,6 +15,22 @@ import {
   faPaintBrush,
   faCogs
 } from '@fortawesome/free-solid-svg-icons';
+
+export const metadata: Metadata = {
+  title: "WordPress Studio | Websites, SEO & Digital Growth | Clyra Studios",
+  description:
+    "Clyra WordPress Studio builds, rescues, migrates, and optimizes websites as part of broader digital growth systems — SEO, analytics, AI, and automation included.",
+  alternates: {
+    canonical: "/wordpress-studio",
+  },
+  openGraph: {
+    title: "WordPress Studio | Clyra Studios",
+    description:
+      "Website builds, rescues, migrations, SEO, and connected growth systems for modern businesses.",
+    url: "https://clyrastudios.com/wordpress-studio",
+    type: "website",
+  },
+};
 
 const services = [
   { 
@@ -46,7 +63,7 @@ const services = [
     solution: "Automation that saves hours",
     features: ["CRM Integration", "Booking Systems", "Email Marketing", "Lead Generation"],
     cta: "Automate My Workflow",
-    ctaLink: "/services#automation",
+    ctaLink: "/ai-business-systems",
     icon: faCogs
   },
   { 

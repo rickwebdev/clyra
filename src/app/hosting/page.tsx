@@ -1,16 +1,30 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
-import { 
-  faCheckCircle, 
-  faTimesCircle, 
-  faRocket, 
-  faShieldAlt, 
-  faHeadset, 
+import {
+  faCheckCircle,
+  faTimesCircle,
+  faRocket,
+  faShieldAlt,
+  faHeadset,
   faLock,
   faChartLine,
   faCog
 } from '@fortawesome/free-solid-svg-icons';
+
+export const metadata: Metadata = {
+  title: "Managed WordPress Hosting Comparison | Clyra Studios",
+  description:
+    "Compare managed WordPress hosting options for performance, support, and reliability. Supporting guidance for Clyra clients — not a standalone hosting reseller page.",
+  alternates: {
+    canonical: "/hosting",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function HostingPage() {
   return (

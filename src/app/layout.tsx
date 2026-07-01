@@ -9,9 +9,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
 export const metadata: Metadata = {
-  title: "Clyra Studios — WordPress Rescue & Rebuild Specialists for SMBs",
-  description: "Transform broken websites into lead-generating assets. WordPress rescue, migration, SEO optimization, and automation for restaurants, therapists, law firms, and SMBs. 24-hour emergency response.",
-  keywords: "WordPress rescue, WordPress migration, WordPress SEO, WordPress security, Squarespace to WordPress, Wix to WordPress, WordPress agency, Core Web Vitals optimization, WordPress rebuild, WordPress automation, WordPress hosting, WordPress maintenance",
+  title: "Clyra Studios | Digital Growth Systems — Websites, Analytics & AI",
+  description: "Clyra Studios helps businesses build, improve, automate, measure, and grow digital platforms. Websites, analytics dashboards, AI systems, and automation for small and mid-size businesses.",
+  keywords: "digital growth systems, website development, WordPress, analytics dashboards, AI automation, business process automation, SEO, Looker Studio, GA4, marketing automation",
   authors: [{ name: "Clyra Studios" }],
   creator: "Clyra Studios",
   publisher: "Clyra Studios",
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Clyra Studios — WordPress Rescue & Rebuild Specialists for SMBs",
-    description: "Transform broken websites into lead-generating assets. WordPress rescue, migration, SEO optimization, and automation for restaurants, therapists, law firms, and SMBs. 24-hour emergency response.",
+    title: "Clyra Studios | Digital Growth Systems — Websites, Analytics & AI",
+    description: "Build, improve, automate, measure, and grow digital platforms. Websites, analytics, AI systems, and automation for modern businesses.",
     url: 'https://clyrastudios.com',
     siteName: 'Clyra Studios',
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: '/images/thumbnail.png',
         width: 1200,
         height: 630,
-        alt: 'Clyra Studios - WordPress Rescue & Rebuild Specialists',
+        alt: 'Clyra Studios - Digital Growth Systems',
       },
     ],
     locale: 'en_US',
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Clyra Studios — WordPress Rescue & Rebuild Specialists for SMBs',
-    description: 'Transform broken websites into lead-generating assets. WordPress rescue, migration, SEO optimization, and automation for restaurants, therapists, law firms, and SMBs.',
+    title: 'Clyra Studios | Digital Growth Systems',
+    description: 'Build, improve, automate, measure, and grow digital platforms for modern businesses.',
     images: ['/images/thumbnail.png'],
     creator: '@clyrastudios',
     site: '@clyrastudios',

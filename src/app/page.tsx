@@ -22,24 +22,22 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: "Clyra Studios | Web & AI Studio – WordPress, Next.js, Shopify, SEO & Automation",
+  title: "Clyra Studios | Digital Growth Systems — Websites, Analytics & AI",
   description:
-    "Build. Scale. Create. We design, develop, and automate high‑performance websites using WordPress, Next.js, Shopify, and headless CMS (Sanity, Contentful) paired with SEO and automation.",
+    "Clyra Studios helps businesses build, improve, automate, measure, and grow digital platforms — websites, analytics dashboards, AI systems, and automation.",
   openGraph: {
-    title: "Clyra Studios | Web & AI Studio – WordPress, Next.js, Shopify, SEO & Automation",
+    title: "Clyra Studios | Digital Growth Systems — Websites, Analytics & AI",
     description:
-      "High‑performance websites and growth systems for modern businesses. WordPress, Next.js, Shopify, Sanity, Contentful, SEO, automation.",
+      "Build, improve, automate, measure, and grow digital platforms. Websites, analytics, AI systems, and automation for modern businesses.",
     type: "website",
-    images: [
-      { url: "/images/thumbnail.png" }
-    ]
+    images: [{ url: "/images/thumbnail.png" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clyra Studios | Web & AI Studio",
+    title: "Clyra Studios | Digital Growth Systems",
     description:
-      "Websites, SEO, and automation for growth. WordPress, Next.js, Shopify, headless CMS.",
-    images: ["/images/thumbnail.png"]
+      "Websites, analytics, AI systems, and automation for businesses that need connected digital growth.",
+    images: ["/images/thumbnail.png"],
   },
   alternates: {
     canonical: "https://clyrastudios.com/"

@@ -1,6 +1,23 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "WordPress vs Wix, Squarespace, Webflow & Shopify | Clyra Studios",
+  description:
+    "Compare WordPress vs Wix, Squarespace, Webflow, and Shopify for control, SEO, cost, and long-term growth. Platform comparison guide for business owners.",
+  alternates: {
+    canonical: "/comparisons",
+  },
+  openGraph: {
+    title: "WordPress vs Wix, Squarespace, Webflow & Shopify | Clyra Studios",
+    description:
+      "Platform comparison guide for business owners evaluating WordPress against popular website builders.",
+    url: "https://clyrastudios.com/comparisons",
+    type: "website",
+  },
+};
 
 export default function ComparisonsPage() {
   return (

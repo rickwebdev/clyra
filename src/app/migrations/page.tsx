@@ -1,6 +1,23 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "WordPress Migration Services | Clyra Studios",
+  description:
+    "Migrate from Wix, Squarespace, Webflow, Shopify, or legacy CMS to WordPress without losing SEO, content, or design. Seamless migration services with redirect preservation.",
+  alternates: {
+    canonical: "/migrations",
+  },
+  openGraph: {
+    title: "WordPress Migration Services | Clyra Studios",
+    description:
+      "Seamless website migrations to WordPress from Wix, Squarespace, Webflow, Shopify, and custom CMS platforms.",
+    url: "https://clyrastudios.com/migrations",
+    type: "website",
+  },
+};
 
 export default function MigrationsPage() {
   return (
@@ -18,7 +35,11 @@ export default function MigrationsPage() {
             <div className="inner-page-header">
               <h1 className="inner-page-title">WordPress Migration Services</h1>
               <p className="inner-page-subtitle">
-                Migrate your website to WordPress without losing SEO rankings, content, or design. We specialize in seamless migrations from Wix, Squarespace, Shopify, and Webflow — preserving your visibility while giving you full ownership and future-ready performance.
+                Migrate your website to WordPress without losing SEO rankings, content, or design. We specialize in seamless migrations from Wix, Squarespace, Shopify, and Webflow — preserving your visibility while giving you full ownership and future-ready performance. See also our{" "}
+                <Link href="/redesign-migration" className="underline" style={{ color: "#60a5fa" }}>
+                  redesign &amp; migration overview
+                </Link>
+                .
               </p>
             </div>
           </div>
@@ -45,7 +66,12 @@ export default function MigrationsPage() {
                   <li className="inner-page-feature-item">Full code ownership & control</li>
                 </ul>
                 <p className="inner-page-card-note">
-                  <strong>Ready to escape platform lock-in?</strong> <Link href="/contact?service=wix-squarespace" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Get your free Wix/Squarespace migration plan</Link>
+                  <strong>Ready to escape platform lock-in?</strong>{" "}
+                  <Link href="/wix-to-wordpress" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Wix → WordPress</Link>
+                  {" · "}
+                  <Link href="/squarespace-to-wordpress" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Squarespace → WordPress</Link>
+                  {" · "}
+                  <Link href="/contact?service=wix-squarespace" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Get a migration plan</Link>
                 </p>
               </div>
 
@@ -61,7 +87,10 @@ export default function MigrationsPage() {
                   <li className="inner-page-feature-item">Lower ongoing costs</li>
                 </ul>
                 <p className="inner-page-card-note">
-                  <strong>Need better content management?</strong> <Link href="/contact?service=webflow" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Get your free Webflow migration plan</Link>
+                  <strong>Need better content management?</strong>{" "}
+                  <Link href="/webflow-to-wordpress" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Webflow → WordPress</Link>
+                  {" · "}
+                  <Link href="/contact?service=webflow" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Get a migration plan</Link>
                 </p>
               </div>
 

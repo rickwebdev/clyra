@@ -4,18 +4,60 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-  const links = [
-  { 
-    href: "/services", 
+type SubmenuItem = {
+  href: string;
+  label: string;
+  group?: string;
+};
+
+type NavLink = {
+  href: string;
+  label: string;
+  submenu?: SubmenuItem[];
+};
+
+const links: NavLink[] = [
+  {
+    href: "/services",
     label: "Services",
     submenu: [
-      { href: "/wordpress-studio", label: "WordPress Studio" },
-      { href: "/growth-website-system", label: "Growth Website System" },
-      { href: "/redesign-migration", label: "Redesign & Migration" },
-        { href: "/wordpress-mechanic", label: "WordPress Mechanic" },
-        { href: "/google-analytics-looker-studio-dashboards", label: "Analytics & Looker Studio Dashboards" },
-        { href: "/rfp", label: "Request for Proposal" },
-    ]
+      {
+        group: "Websites & Growth",
+        href: "/wordpress-studio",
+        label: "WordPress Studio",
+      },
+      {
+        group: "Websites & Growth",
+        href: "/growth-website-system",
+        label: "Growth Website System",
+      },
+      {
+        group: "Websites & Growth",
+        href: "/redesign-migration",
+        label: "Redesign & Migration",
+      },
+      {
+        group: "Websites & Growth",
+        href: "/migrations",
+        label: "Migration Services",
+      },
+      {
+        group: "Websites & Growth",
+        href: "/wordpress-mechanic",
+        label: "Website Rescue",
+      },
+      {
+        group: "Analytics & Measurement",
+        href: "/google-analytics-looker-studio-dashboards",
+        label: "Analytics Dashboards",
+      },
+      {
+        group: "Analytics & Measurement",
+        href: "/site-audit",
+        label: "Website Audit",
+      },
+      { group: "Proposals", href: "/rfp", label: "Request for Proposal" },
+    ],
   },
   {
     href: "/ai-business-systems",
@@ -26,13 +68,52 @@ import { useState } from "react";
       { href: "/ai-creative-automation", label: "AI Creative Automation" },
       { href: "/ai-marketing-automation", label: "AI Marketing Automation" },
       { href: "/business-process-automation", label: "Business Process Automation" },
-      { href: "/fractional-digital-systems-consultant", label: "Fractional Digital Systems Consultant" },
-    ]
+      {
+        href: "/fractional-digital-systems-consultant",
+        label: "Fractional Digital Systems Consultant",
+      },
+    ],
+  },
+  {
+    href: "/case-studies",
+    label: "Resources",
+    submenu: [
+      { href: "/case-studies", label: "Selected Work" },
+      { href: "/blog", label: "Blog" },
+      { href: "/comparisons", label: "Platform Comparisons" },
+    ],
   },
   { href: "/strategy-call", label: "Strategy Call" },
-  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
+
+function renderSubmenuItems(
+  submenu: SubmenuItem[],
+  pathname: string,
+  onNavigate?: () => void,
+  linkClassName = "dropdown-link",
+) {
+  return submenu.map((subLink, index) => {
+    const prev = submenu[index - 1];
+    const showGroup =
+      subLink.group && subLink.group !== prev?.group;
+
+    return (
+      <li key={subLink.href}>
+        {showGroup && (
+          <span className="dropdown-group-label">{subLink.group}</span>
+        )}
+        <Link
+          href={subLink.href}
+          className={`${linkClassName} ${pathname === subLink.href ? "active" : ""}`}
+          onClick={onNavigate}
+        >
+          {subLink.label}
+        </Link>
+      </li>
+    );
+  });
+}
 
 export default function Nav() {
   const pathname = usePathname();
@@ -47,6 +128,13 @@ export default function Nav() {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
+  const isLinkActive = (link: NavLink) => {
+    if (pathname === link.href) return true;
+    if (link.submenu?.some((item) => pathname === item.href)) return true;
+    if (link.href !== "/" && pathname.startsWith(link.href)) return true;
+    return false;
+  };
+
   return (
     <nav className="nav">
       <div className="nav-content">
@@ -59,40 +147,33 @@ export default function Nav() {
             className="logo-image"
           />
         </Link>
-        
+
         <ul className="nav-links">
           {links.map((link) => (
             <li key={link.href} className="nav-item">
               {link.submenu ? (
-                <div 
+                <div
                   className="dropdown-container"
                   onMouseEnter={() => setActiveDropdown(link.label)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <button
-                    className={`nav-link dropdown-trigger ${pathname.startsWith(link.href) ? 'active' : ''}`}
+                    className={`nav-link dropdown-trigger ${isLinkActive(link) ? "active" : ""}`}
                     onClick={() => toggleDropdown(link.label)}
                   >
                     {link.label}
                     <span className="dropdown-arrow">▼</span>
                   </button>
-                  <ul className={`dropdown-menu ${activeDropdown === link.label ? 'active' : ''}`}>
-                    {link.submenu.map((subLink) => (
-                      <li key={subLink.href}>
-                        <Link 
-                          href={subLink.href}
-                          className={`dropdown-link ${pathname === subLink.href ? 'active' : ''}`}
-                        >
-                          {subLink.label}
-                        </Link>
-                      </li>
-                    ))}
+                  <ul
+                    className={`dropdown-menu ${activeDropdown === link.label ? "active" : ""}`}
+                  >
+                    {renderSubmenuItems(link.submenu, pathname)}
                   </ul>
                 </div>
               ) : (
-                <Link 
+                <Link
                   href={link.href}
-                  className={`nav-link ${pathname === link.href ? 'active' : ''}`}
+                  className={`nav-link ${pathname === link.href ? "active" : ""}`}
                 >
                   {link.label}
                 </Link>
@@ -105,9 +186,9 @@ export default function Nav() {
             </a>
           </li>
         </ul>
-        
-        <button 
-          className={`mobile-menu-btn ${mobileMenuOpen ? 'active' : ''}`}
+
+        <button
+          className={`mobile-menu-btn ${mobileMenuOpen ? "active" : ""}`}
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
@@ -116,8 +197,8 @@ export default function Nav() {
           <span></span>
         </button>
       </div>
-      
-      <div className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`}>
+
+      <div className={`mobile-menu ${mobileMenuOpen ? "active" : ""}`}>
         <ul className="mobile-menu-links">
           {links.map((link) => (
             <li key={link.href}>
@@ -127,24 +208,21 @@ export default function Nav() {
                     className="mobile-menu-link mobile-dropdown-trigger"
                     onClick={() => toggleDropdown(link.label)}
                   >
-                    {link.label} {activeDropdown === link.label ? '▲' : '▼'}
+                    {link.label} {activeDropdown === link.label ? "▲" : "▼"}
                   </button>
-                  <ul className={`mobile-dropdown-menu ${activeDropdown === link.label ? 'active' : ''}`}>
-                    {link.submenu.map((subLink) => (
-                      <li key={subLink.href}>
-                        <Link 
-                          href={subLink.href}
-                          className="mobile-menu-link mobile-submenu-link"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {subLink.label}
-                        </Link>
-                      </li>
-                    ))}
+                  <ul
+                    className={`mobile-dropdown-menu ${activeDropdown === link.label ? "active" : ""}`}
+                  >
+                    {renderSubmenuItems(
+                      link.submenu,
+                      pathname,
+                      () => setMobileMenuOpen(false),
+                      "mobile-menu-link mobile-submenu-link",
+                    )}
                   </ul>
                 </div>
               ) : (
-                <Link 
+                <Link
                   href={link.href}
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
@@ -155,8 +233,8 @@ export default function Nav() {
             </li>
           ))}
           <li>
-            <Link 
-              href="/strategy-call" 
+            <Link
+              href="/strategy-call"
               className="btn btn-primary"
               onClick={() => setMobileMenuOpen(false)}
             >

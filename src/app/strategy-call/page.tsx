@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
-import { 
+import {
   faClock,
   faCheckCircle,
   faQuoteLeft,
@@ -10,6 +11,22 @@ import {
   faMapPin,
   faPhone
 } from '@fortawesome/free-solid-svg-icons';
+
+export const metadata: Metadata = {
+  title: "Book a Strategy Call | Clyra Studios",
+  description:
+    "Book a free strategy call with Clyra Studios to discuss websites, analytics, AI systems, automation, or your broader digital growth roadmap.",
+  alternates: {
+    canonical: "/strategy-call",
+  },
+  openGraph: {
+    title: "Book a Strategy Call | Clyra Studios",
+    description:
+      "Discuss your digital platform goals with Clyra Studios — websites, analytics, AI, and automation.",
+    url: "https://clyrastudios.com/strategy-call",
+    type: "website",
+  },
+};
 
 export default function StrategyCallPage() {
   return (

@@ -2535,9 +2535,37 @@ p {
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   margin-bottom: 3rem;
+}
+
+.dropdown-group-label {
+  display: block;
+  padding: 0.65rem 1rem 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.dropdown-menu li:first-child .dropdown-group-label {
+  padding-top: 0.35rem;
+}
+
+.mobile-dropdown-menu .dropdown-group-label {
+  padding-left: 1.25rem;
+  color: #9ca3af;
+}
+
+.services-cluster-section {
+  margin-bottom: 4rem;
+}
+
+.services-cluster-section:last-of-type {
+  margin-bottom: 2rem;
 }
 
 .footer-section h3 {

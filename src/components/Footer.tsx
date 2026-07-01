@@ -8,31 +8,94 @@ export default function Footer() {
           <div className="footer-section">
             <h3>Clyra Studios</h3>
             <p className="text-muted">
-              Premium WordPress builds, migrations, and growth systems.
+              Digital growth systems for businesses that need to build, improve,
+              automate, measure, and grow their digital platforms.
             </p>
           </div>
-          
+
           <div className="footer-section">
-            <h3>Services</h3>
+            <h3>Websites &amp; Growth</h3>
             <ul>
-              <li><Link href="/services#custom-builds">Custom Builds</Link></li>
-              <li><Link href="/services#rescues">Rescues & Fixes</Link></li>
-              <li><Link href="/migrations">Migrations</Link></li>
-              <li><Link href="/services#seo">SEO & Core Web Vitals</Link></li>
-              <li><Link href="/services#ux">UX & CRO</Link></li>
+              <li>
+                <Link href="/wordpress-studio">WordPress Studio</Link>
+              </li>
+              <li>
+                <Link href="/growth-website-system">Growth Website System</Link>
+              </li>
+              <li>
+                <Link href="/redesign-migration">Redesign &amp; Migration</Link>
+              </li>
+              <li>
+                <Link href="/migrations">Migration Services</Link>
+              </li>
+              <li>
+                <Link href="/wordpress-mechanic">Website Rescue</Link>
+              </li>
             </ul>
           </div>
-          
+
+          <div className="footer-section">
+            <h3>Analytics &amp; AI</h3>
+            <ul>
+              <li>
+                <Link href="/google-analytics-looker-studio-dashboards">
+                  Analytics Dashboards
+                </Link>
+              </li>
+              <li>
+                <Link href="/site-audit">Website Audit</Link>
+              </li>
+              <li>
+                <Link href="/ai-business-systems">AI Business Systems</Link>
+              </li>
+              <li>
+                <Link href="/ai-content-automation">AI Content Growth</Link>
+              </li>
+              <li>
+                <Link href="/business-process-automation">
+                  Process Automation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           <div className="footer-section">
             <h3>Company</h3>
             <ul>
-              <li><Link href="/comparisons">WordPress vs</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
+              <li>
+                <Link href="/services">All Services</Link>
+              </li>
+              <li>
+                <Link href="/case-studies">Selected Work</Link>
+              </li>
+              <li>
+                <Link href="/comparisons">Platform Comparisons</Link>
+              </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link href="/strategy-call">Strategy Call</Link>
+              </li>
+              <li>
+                <Link href="/rfp">Request for Proposal</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
+              <li>
+                <a
+                  href="https://rickthewebdev.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Founder Portfolio
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
           © {new Date().getFullYear()} Clyra Studios
         </div>

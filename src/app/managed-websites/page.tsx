@@ -10,7 +10,6 @@ import {
   faBroom,
   faCar,
   faCheck,
-  faFan,
   faGavel,
   faHardHat,
   faLeaf,
@@ -23,6 +22,7 @@ import {
   faStore,
   faTriangleExclamation,
   faUtensils,
+  faWind,
   faWrench,
   faChartLine,
   faHeadset,
@@ -142,7 +142,7 @@ const plans = [
 const industries = [
   { name: "Plumbers", icon: faWrench },
   { name: "Electricians", icon: faBolt },
-  { name: "HVAC", icon: faFan },
+  { name: "HVAC", icon: faWind },
   { name: "Contractors", icon: faHardHat },
   { name: "Landscapers", icon: faLeaf },
   { name: "Restaurants", icon: faUtensils },
@@ -535,7 +535,12 @@ export default function ManagedWebsitesPage() {
           </div>
         </section>
 
-        <section className="services-section">
+        <section className="case-studies-section industries-section managed-industries-section">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball industries-ball-1"></div>
+            <div className="section-floating-ball industries-ball-2"></div>
+            <div className="section-floating-ball industries-ball-3"></div>
+          </div>
           <div className="container">
             <div className="section-header slide-in-right">
               <h2 className="section-title">
@@ -546,20 +551,16 @@ export default function ManagedWebsitesPage() {
                 healthcare, legal, and professional practices.
               </p>
             </div>
-            <div className="case-studies-grid industries-grid-managed">
+            <div className="managed-industries-grid">
               {industries.map((industry, idx) => (
                 <div
                   key={industry.name}
-                  className={`case-study-card ${idx % 2 === 0 ? "float-in-left" : "float-in-right"}`}
+                  className={`managed-industry-card ${idx % 2 === 0 ? "float-in-left" : "float-in-right"}`}
                 >
-                  <div className="case-study-content">
-                    <div className="case-study-header">
-                      <div className="industry-icon">
-                        <GradientIcon icon={industry.icon} size="lg" className="primary" />
-                      </div>
-                      <h3 className="case-study-title">{industry.name}</h3>
-                    </div>
+                  <div className="managed-industry-icon">
+                    <GradientIcon icon={industry.icon} size="lg" className="primary" />
                   </div>
+                  <h3 className="managed-industry-title">{industry.name}</h3>
                 </div>
               ))}
             </div>

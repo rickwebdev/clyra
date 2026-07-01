@@ -1,13 +1,15 @@
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
-import { 
-  faPhone, 
-  faCalendarAlt, 
+import {
+  faPhone,
+  faCalendarAlt,
   faEnvelope,
   faClock,
-  faCheckCircle
-} from '@fortawesome/free-solid-svg-icons';
+  faCheckCircle,
+  faFileAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function ContactPage() {
   return (
@@ -99,6 +101,38 @@ export default function ContactPage() {
                     Email Us
                   </a>
                 </div>
+              </div>
+
+              {/* RFP CTA */}
+              <div className="inner-page-cta-section">
+                <h3 className="inner-page-cta-title">
+                  Have a Defined Project Scope?
+                </h3>
+                <p className="inner-page-cta-description">
+                  For website builds, redesigns, migrations, AI systems, or
+                  multi-channel campaigns — submit a request for proposal with
+                  your goals, timeline, and budget. We respond within 24 hours
+                  with a clear plan and next steps.
+                </p>
+                <div className="inner-page-cta-actions">
+                  <Link href="/rfp" className="btn btn-primary btn-large">
+                    <GradientIcon icon={faFileAlt} size="sm" className="mr-2" />
+                    Submit an RFP
+                    <span className="btn-arrow">→</span>
+                  </Link>
+                </div>
+                <p className="inner-page-cta-note">
+                  Prefer a quick conversation first?{" "}
+                  <a
+                    href="https://calendly.com/rickthewebdev/30-minute-meeting-clone"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 underline"
+                  >
+                    Book a strategy call
+                  </a>{" "}
+                  instead.
+                </p>
               </div>
 
               {/* What to Expect */}

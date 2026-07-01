@@ -47,7 +47,7 @@ const workCategories = [
   {
     title: "Founder Experience",
     description:
-      "Additional project history and technical depth from founder Rick DeMarco — separate from Clyra Studios client engagements. Enterprise and agency work referenced here was completed through founder experience, not implied as Clyra agency portfolio.",
+      "Additional project history and technical depth from founder Rick Owadally — separate from Clyra Studios client engagements. Enterprise and agency work referenced here was completed through founder experience, not implied as Clyra agency portfolio.",
     items: [
       "WordPress, Next.js, and headless CMS builds",
       "E-commerce and migration projects",

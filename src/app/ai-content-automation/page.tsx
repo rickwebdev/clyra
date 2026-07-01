@@ -149,6 +149,33 @@ const benefits = [
   "Reuse content across blogs, FAQs, email, and social",
 ];
 
+const humanControl = [
+  {
+    icon: faShieldHalved,
+    iconClass: "success",
+    title: "You Stay in Control",
+    description:
+      "Every draft is created for your review before anything goes live. The system generates — you decide. Nothing publishes automatically unless you explicitly approve it.",
+    highlight: "Drafts in. Human decision out.",
+  },
+  {
+    icon: faBrain,
+    iconClass: "primary",
+    title: "Supports Your Expertise, Doesn't Replace It",
+    description:
+      "AI generates the structure and first draft. You bring the judgment, accuracy, and context that makes content worth publishing. The system accelerates production — your voice and expertise remain the filter.",
+    highlight: "Speed up production, not decision-making.",
+  },
+  {
+    icon: faUsers,
+    iconClass: "warning",
+    title: "Quality, Accuracy, Brand Voice",
+    description:
+      "The goal is to reduce blank-page friction, not to eliminate editorial standards. Review time is shorter because the draft is already structured — but it is still your judgment that makes it publishable.",
+    highlight: "Faster to publish. Never bypassed.",
+  },
+];
+
 const useCases = [
   {
     icon: faSearch,
@@ -642,11 +669,11 @@ export default function AIContentAutomationPage() {
         </section>
 
         {/* Human Control Section */}
-        <section className="testimonials-section">
+        <section className="case-studies-section">
           <div className="section-floating-elements">
-            <div className="section-floating-ball testimonials-ball-1"></div>
-            <div className="section-floating-ball testimonials-ball-2"></div>
-            <div className="section-floating-ball testimonials-ball-3"></div>
+            <div className="section-floating-ball case-studies-ball-1"></div>
+            <div className="section-floating-ball case-studies-ball-2"></div>
+            <div className="section-floating-ball case-studies-ball-3"></div>
           </div>
           <div className="container">
             <div className="section-header slide-in-right">
@@ -656,81 +683,30 @@ export default function AIContentAutomationPage() {
               </h2>
               <p className="section-description">
                 This is not fully automated spam publishing. It is a
-                human-reviewed content workflow.
+                human-reviewed content workflow — built to support your
+                expertise, not replace it.
               </p>
             </div>
 
-            <div className="testimonials-grid">
-              <div className="testimonial-card float-in-left">
-                <div className="testimonial-content">
-                  <div className="feature-icon">
+            <div className="human-control-grid">
+              {humanControl.map((item, index) => (
+                <div key={index} className="human-control-card">
+                  <div className="human-control-card-header">
                     <GradientIcon
-                      icon={faShieldHalved}
+                      icon={item.icon}
                       size="lg"
-                      className="success"
+                      className={item.iconClass}
                     />
+                    <h3 className="human-control-card-title">{item.title}</h3>
                   </div>
-                  <h3 className="testimonial-quote">You Stay in Control</h3>
-                  <p className="testimonial-author">
-                    <span className="author-name">
-                      Every draft is created for your review before anything
-                      goes live. The system generates — you decide. Nothing
-                      publishes automatically unless you explicitly approve it.
-                    </span>
-                    <span className="company-name">
-                      Drafts in. Human decision out.
-                    </span>
+                  <p className="human-control-card-description">
+                    {item.description}
                   </p>
-                </div>
-              </div>
-
-              <div className="testimonial-card float-in-center">
-                <div className="testimonial-content">
-                  <div className="feature-icon">
-                    <GradientIcon icon={faBrain} size="lg" className="primary" />
+                  <div className="impact-badge">
+                    <span className="impact-text">{item.highlight}</span>
                   </div>
-                  <h3 className="testimonial-quote">
-                    Supports Your Expertise, Doesn&apos;t Replace It
-                  </h3>
-                  <p className="testimonial-author">
-                    <span className="author-name">
-                      AI generates the structure and first draft. You bring the
-                      judgment, accuracy, and context that makes content worth
-                      publishing. The system accelerates production — your voice
-                      and expertise remain the filter.
-                    </span>
-                    <span className="company-name">
-                      Speed up production, not decision-making.
-                    </span>
-                  </p>
                 </div>
-              </div>
-
-              <div className="testimonial-card float-in-right">
-                <div className="testimonial-content">
-                  <div className="feature-icon">
-                    <GradientIcon
-                      icon={faUsers}
-                      size="lg"
-                      className="warning"
-                    />
-                  </div>
-                  <h3 className="testimonial-quote">
-                    Quality, Accuracy, Brand Voice
-                  </h3>
-                  <p className="testimonial-author">
-                    <span className="author-name">
-                      The goal is to reduce blank-page friction, not to
-                      eliminate editorial standards. Review time is shorter
-                      because the draft is already structured — but it is still
-                      your judgment that makes it publishable.
-                    </span>
-                    <span className="company-name">
-                      Faster to publish. Never bypassed.
-                    </span>
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

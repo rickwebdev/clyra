@@ -3774,9 +3774,24 @@ p {
   margin-bottom: 2rem;
 }
 
-.inner-page-card .service-icon {
-  margin-right: 1rem;
-  margin-bottom: 2rem;
+.inner-page-section-icon {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(6, 182, 212, 0.2));
+  border: 1px solid rgba(77, 160, 255, 0.25);
+}
+
+.inner-page-section-icon .gradient-icon {
+  font-size: 1.25rem;
+  color: #93c5fd;
+  background: none;
+  -webkit-text-fill-color: #93c5fd;
+  filter: none;
 }
 
 /* Calendly Widget Styling */
@@ -3899,13 +3914,22 @@ p {
   .inner-page-card .flex.items-start {
     margin-bottom: 1.5rem;
   }
-  
+
+  .inner-page-section-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .inner-page-section-icon .gradient-icon {
+    font-size: 1.125rem;
+  }
+
   .inner-page-card .service-icon {
     width: 60px;
     height: 60px;
     margin: 0 auto 2rem auto; /* Center on mobile with bottom margin */
   }
-  
+
   .inner-page-card .service-icon .gradient-icon {
     font-size: 1.5rem;
   }

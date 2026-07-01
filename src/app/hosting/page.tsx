@@ -54,9 +54,9 @@ export default function HostingPage() {
               
               {/* WordPress-First Architecture */}
               <div className="inner-page-card mb-8" data-aos="fade-up">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="service-icon">
-                    <GradientIcon icon={faRocket} size="xl" className="primary" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="inner-page-section-icon">
+                    <GradientIcon icon={faRocket} size="lg" />
                   </div>
                   <div>
                     <h2 className="inner-page-card-title">1. WordPress-First Architecture & Optimization</h2>
@@ -113,9 +113,9 @@ export default function HostingPage() {
 
               {/* Pricing Comparison */}
               <div className="inner-page-card mb-8" data-aos="fade-up" data-aos-delay="100">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="service-icon">
-                    <GradientIcon icon={faChartLine} size="xl" className="primary" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="inner-page-section-icon">
+                    <GradientIcon icon={faChartLine} size="lg" />
                   </div>
                   <div>
                     <h2 className="inner-page-card-title">2. Transparent Pricing & Better Value</h2>
@@ -158,9 +158,9 @@ export default function HostingPage() {
 
               {/* Reliability & Performance */}
               <div className="inner-page-card mb-8" data-aos="fade-up" data-aos-delay="200">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="service-icon">
-                    <GradientIcon icon={faShieldAlt} size="xl" className="primary" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="inner-page-section-icon">
+                    <GradientIcon icon={faShieldAlt} size="lg" />
                   </div>
                   <div>
                     <h2 className="inner-page-card-title">3. Reliability, Uptime & Performance</h2>
@@ -194,9 +194,9 @@ export default function HostingPage() {
 
               {/* Support Comparison */}
               <div className="inner-page-card mb-8" data-aos="fade-up" data-aos-delay="300">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="service-icon">
-                    <GradientIcon icon={faHeadset} size="xl" className="primary" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="inner-page-section-icon">
+                    <GradientIcon icon={faHeadset} size="lg" />
                   </div>
                   <div>
                     <h2 className="inner-page-card-title">4. Superior Support & Expertise for WordPress</h2>
@@ -253,9 +253,9 @@ export default function HostingPage() {
 
               {/* Freedom & Control */}
               <div className="inner-page-card mb-8" data-aos="fade-up" data-aos-delay="400">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="service-icon">
-                    <GradientIcon icon={faLock} size="xl" className="primary" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="inner-page-section-icon">
+                    <GradientIcon icon={faLock} size="lg" />
                   </div>
                   <div>
                     <h2 className="inner-page-card-title">5. Freedom, Ownership & Control</h2>
@@ -293,9 +293,9 @@ export default function HostingPage() {
 
               {/* Potential Objections */}
               <div className="inner-page-card mb-8" data-aos="fade-up" data-aos-delay="500">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="service-icon">
-                    <GradientIcon icon={faCog} size="xl" className="primary" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="inner-page-section-icon">
+                    <GradientIcon icon={faCog} size="lg" />
                   </div>
                   <div>
                     <h2 className="inner-page-card-title">Potential Objections & Caveats</h2>

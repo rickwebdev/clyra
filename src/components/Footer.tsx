@@ -31,11 +31,19 @@ export default function Footer() {
               <li>
                 <Link href="/wordpress-mechanic">Website Rescue</Link>
               </li>
+              <li>
+                <Link href="/shopify-development">Shopify Development</Link>
+              </li>
+              <li>
+                <Link href="/website-performance-optimization">
+                  Website Performance
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div className="footer-section">
-            <h3>Analytics &amp; AI</h3>
+            <h3>Analytics, SEO &amp; AI</h3>
             <ul>
               <li>
                 <Link href="/google-analytics-looker-studio-dashboards">
@@ -43,7 +51,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/ga4-implementation">GA4 Implementation</Link>
+              </li>
+              <li>
                 <Link href="/site-audit">Website Audit</Link>
+              </li>
+              <li>
+                <Link href="/technical-seo">Technical SEO</Link>
+              </li>
+              <li>
+                <Link href="/aeo-ai-search-optimization">
+                  AEO &amp; AI Search
+                </Link>
               </li>
               <li>
                 <Link href="/ai-business-systems">AI Business Systems</Link>

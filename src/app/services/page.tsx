@@ -30,6 +30,11 @@ const serviceClusters = [
       { href: "/redesign-migration", label: "Redesign & Migration" },
       { href: "/migrations", label: "Migration Services Hub" },
       { href: "/wordpress-mechanic", label: "Website Rescue & Repair" },
+      { href: "/shopify-development", label: "Shopify Development" },
+      {
+        href: "/website-performance-optimization",
+        label: "Website Performance Optimization",
+      },
     ],
   },
   {
@@ -41,7 +46,20 @@ const serviceClusters = [
         href: "/google-analytics-looker-studio-dashboards",
         label: "GA4 & Looker Studio Dashboards",
       },
+      { href: "/ga4-implementation", label: "GA4 Implementation" },
       { href: "/site-audit", label: "Website Audit" },
+    ],
+  },
+  {
+    title: "SEO & Discovery",
+    description:
+      "Technical foundations and structured content for traditional search and AI-assisted discovery.",
+    links: [
+      { href: "/technical-seo", label: "Technical SEO" },
+      {
+        href: "/aeo-ai-search-optimization",
+        label: "AEO & AI Search Optimization",
+      },
     ],
   },
   {

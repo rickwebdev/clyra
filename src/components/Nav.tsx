@@ -47,14 +47,39 @@ const links: NavLink[] = [
         label: "Website Rescue",
       },
       {
+        group: "Websites & Growth",
+        href: "/shopify-development",
+        label: "Shopify Development",
+      },
+      {
+        group: "Websites & Growth",
+        href: "/website-performance-optimization",
+        label: "Website Performance",
+      },
+      {
         group: "Analytics & Measurement",
         href: "/google-analytics-looker-studio-dashboards",
         label: "Analytics Dashboards",
       },
       {
         group: "Analytics & Measurement",
+        href: "/ga4-implementation",
+        label: "GA4 Implementation",
+      },
+      {
+        group: "Analytics & Measurement",
         href: "/site-audit",
         label: "Website Audit",
+      },
+      {
+        group: "SEO & Discovery",
+        href: "/technical-seo",
+        label: "Technical SEO",
+      },
+      {
+        group: "SEO & Discovery",
+        href: "/aeo-ai-search-optimization",
+        label: "AEO & AI Search",
       },
       { group: "Proposals", href: "/rfp", label: "Request for Proposal" },
     ],

@@ -402,6 +402,14 @@ export default function WordPressStudioPage() {
                   View Case Studies
                 </Link>
               </div>
+              <p className="bc-guides">
+                Related:{" "}
+                <Link href="/shopify-development">Shopify Development</Link>
+                {" · "}
+                <Link href="/website-performance-optimization">Website Performance</Link>
+                {" · "}
+                <Link href="/technical-seo">Technical SEO</Link>
+              </p>
             </div>
           </div>
         </section>

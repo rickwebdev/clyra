@@ -513,6 +513,12 @@ export default function AnalyticsDashboardsPage() {
                   Book a Strategy Call
                 </Link>
               </div>
+              <p className="bc-guides">
+                Related:{" "}
+                <Link href="/ga4-implementation">GA4 Implementation</Link>
+                {" · "}
+                <Link href="/site-audit">Website Audit</Link>
+              </p>
             </div>
           </div>
         </section>

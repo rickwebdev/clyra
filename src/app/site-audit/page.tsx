@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
@@ -177,6 +178,15 @@ export default function SiteAuditPage() {
                   <span className="font-semibold text-green-400">Completely Free Analysis</span>
                 </div>
               </div>
+
+              <p className="bc-guides" style={{ marginTop: "2rem", textAlign: "center" }}>
+                Related:{" "}
+                <Link href="/technical-seo">Technical SEO</Link>
+                {" · "}
+                <Link href="/website-performance-optimization">Website Performance</Link>
+                {" · "}
+                <Link href="/aeo-ai-search-optimization">AEO &amp; AI Search</Link>
+              </p>
             </div>
           </div>
         </section>

@@ -1070,6 +1070,10 @@ export default function AIContentAutomationPage() {
                   Analytics Dashboards
                 </Link>
                 {" · "}
+                <Link href="/aeo-ai-search-optimization">
+                  AEO &amp; AI Search Optimization
+                </Link>
+                {" · "}
                 <Link href="/ai-business-systems">AI Business Systems</Link>
               </p>
             </div>

@@ -14,6 +14,7 @@ import { useState } from "react";
       { href: "/redesign-migration", label: "Redesign & Migration" },
         { href: "/wordpress-mechanic", label: "WordPress Mechanic" },
         { href: "/google-analytics-looker-studio-dashboards", label: "Analytics & Looker Studio Dashboards" },
+        { href: "/ai-content-automation", label: "AI Content Automation" },
         { href: "/rfp", label: "Request for Proposal" },
     ]
   },

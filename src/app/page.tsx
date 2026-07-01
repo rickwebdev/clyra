@@ -250,6 +250,7 @@ export default function HomePage() {
                     <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> AI automation, chatbots, CRM integration</li>
                     <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Google Ads, retargeting & funnels</li>
                   </ul>
+                  <Link href="/google-analytics-looker-studio-dashboards" className="service-cta">Analytics & reporting dashboards <span className="link-arrow">→</span></Link>
                 </div>
               </div>
               <div className="service-card slide-in-bottom-left">
@@ -266,6 +267,7 @@ export default function HomePage() {
                     <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Audio & post-production</li>
                     <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Content strategy & storytelling</li>
                   </ul>
+                  <Link href="/ai-creative-automation" className="service-cta">AI creative automation <span className="link-arrow">→</span></Link>
                 </div>
               </div>
               {/* New: AI Automation pillar to fill the fourth grid slot */}
@@ -278,11 +280,12 @@ export default function HomePage() {
                 <div className="service-content">
                   <h3 className="service-title">AI Automation</h3>
                   <ul className="service-features">
-                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Lead routing, booking flows, and follow-ups</li>
-                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Chatbots, assistants, and FAQ deflection</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> AI content growth & marketing systems</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Lead routing, onboarding, and follow-ups</li>
                     <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> CRM + email + ads automations</li>
-                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Zapier/Make, webhooks, and custom scripts</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Zapier/Make/n8n, webhooks, and custom scripts</li>
                   </ul>
+                  <Link href="/ai-business-systems" className="service-cta">Explore AI business systems <span className="link-arrow">→</span></Link>
                 </div>
               </div>
             </div>

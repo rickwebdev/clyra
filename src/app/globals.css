@@ -5494,6 +5494,107 @@ p {
   }
 }
 
+.redesign-migration-page .included-panel-wide {
+  max-width: 960px;
+}
+
+/* Workflow flow (horizontal pipeline) */
+.redesign-migration-page .workflow-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.redesign-migration-page .workflow-step-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.redesign-migration-page .workflow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  width: 150px;
+  padding: 1.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.redesign-migration-page .workflow-step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3b82f6, #06b6d4, #10b981, #f59e0b);
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.redesign-migration-page .workflow-step-icon::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.redesign-migration-page .workflow-step-icon .gradient-icon {
+  position: relative;
+  z-index: 2;
+}
+
+.redesign-migration-page .workflow-step-label {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.redesign-migration-page .workflow-arrow {
+  color: #3b82f6;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .redesign-migration-page .workflow-flow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .redesign-migration-page .workflow-step-wrap {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .redesign-migration-page .workflow-step {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .redesign-migration-page .workflow-arrow {
+    transform: rotate(90deg);
+  }
+}
+
 /* WordPress Mechanic Page Specific Styles - SCOPED TO PREVENT GLOBAL IMPACT */
 
 /* Hero Section - Borrow from homepage theme */

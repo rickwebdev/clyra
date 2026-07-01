@@ -32,6 +32,8 @@ import {
   faUsers,
   faLocationDot,
   faBookOpen,
+  faUserCheck,
+  faShareNodes,
 } from "@fortawesome/free-solid-svg-icons";
 
 const problems = [
@@ -178,53 +180,77 @@ const humanControl = [
 
 const useCases = [
   {
-    icon: faSearch,
-    title: "SEO Blog Draft Generation",
-    description:
-      "Consistent, keyword-targeted article drafts for review — the foundation of an organic traffic strategy.",
-  },
-  {
-    icon: faComments,
-    title: "FAQ & AEO Content Libraries",
-    description:
-      "Question-and-answer content structured for featured snippets and AI-assisted search results.",
-  },
-  {
     icon: faChartLine,
     title: "Financial Market Commentary",
     description:
-      "Automated first-draft market summaries and commentary based on live data — for publishers and financial services.",
+      "First-draft market summaries and commentary based on live data — for publishers and financial services.",
   },
   {
     icon: faLocationDot,
-    title: "Local Business Content Ideas",
+    title: "Local Business Blog Content",
     description:
-      "Location-specific content, service area pages, and local SEO articles generated for review.",
+      "Location-specific articles, service area pages, and local SEO content generated for review.",
+  },
+  {
+    icon: faFileLines,
+    title: "Professional Services Articles",
+    description:
+      "Thought-leadership and educational articles for consultants, agencies, law, finance, and healthcare.",
   },
   {
     icon: faBookOpen,
     title: "Product Education Content",
     description:
-      "How-to guides, feature explanations, and product FAQs that help customers find and understand what you offer.",
+      "How-to guides, feature explanations, and product FAQs that help customers understand what you offer.",
+  },
+  {
+    icon: faComments,
+    title: "FAQ & AEO Libraries",
+    description:
+      "Question-and-answer content structured for featured snippets and AI-assisted search results.",
   },
   {
     icon: faEnvelope,
-    title: "Newsletter Draft Generation",
+    title: "Newsletter Content",
     description:
       "Weekly or monthly newsletter sections drafted from your content pipeline — ready to edit and send.",
   },
   {
     icon: faHashtag,
-    title: "Social Media Caption Generation",
+    title: "Social Media Repurposing",
     description:
-      "Platform-specific captions and post ideas pulled from your articles and content calendar.",
+      "Turn each published article into platform-specific captions, posts, and threads for review.",
   },
   {
     icon: faArrowsRotate,
-    title: "Content Refresh Recommendations",
+    title: "Content Refresh Workflows",
     description:
-      "Identify and redraft underperforming content to recover rankings, update accuracy, and add new information.",
+      "Identify and redraft underperforming content to recover rankings, update accuracy, and add information.",
   },
+];
+
+const whatItCanCreate = [
+  "SEO blog drafts",
+  "FAQ libraries",
+  "AEO content",
+  "Newsletter drafts",
+  "LinkedIn posts",
+  "X/Twitter threads",
+  "Social captions",
+  "Meta titles and descriptions",
+  "Internal linking suggestions",
+  "Content refresh recommendations",
+  "Featured image prompts",
+];
+
+const workflowSteps = [
+  { icon: faSearch, label: "Research" },
+  { icon: faBrain, label: "AI Draft" },
+  { icon: faUserCheck, label: "Human Review" },
+  { icon: faFileLines, label: "WordPress Draft" },
+  { icon: faBullseye, label: "SEO Optimization" },
+  { icon: faShareNodes, label: "Social / Newsletter Repurposing" },
+  { icon: faChartLine, label: "Analytics Feedback" },
 ];
 
 const seoAeoFeatures = [
@@ -277,11 +303,11 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "AI Content Automation for Small Businesses | Clyra Studios",
+  title: "AI Content Growth Systems for Consistent Publishing | Clyra Studios",
   description:
-    "Custom AI content automation systems that generate SEO-ready article drafts, FAQ content, and social media ideas for review before publishing. Built for businesses that need consistent content without doing everything manually.",
+    "Clyra Studios builds AI-assisted content growth systems that generate review-ready blog drafts, FAQ content, newsletters, and social posts based on your niche, audience, and voice. AI generates, humans approve — no AI spam.",
   keywords:
-    "AI content automation, AI content generation, automated content creation, AI blog writing, content automation small business, SEO content automation, AI writing system, content workflow automation, automated SEO content, AI article generation, WordPress content automation, FAQ content generation, AEO content, content marketing automation",
+    "AI content growth systems, AI content automation, AI-assisted content workflow, AI blog writing, SEO content system, content workflow automation, AI article drafts, FAQ content generation, AEO content, newsletter automation, content repurposing, WordPress content workflow",
   authors: [{ name: "Clyra Studios" }],
   creator: "Clyra Studios",
   publisher: "Clyra Studios",
@@ -290,9 +316,9 @@ export const metadata: Metadata = {
     canonical: "/ai-content-automation",
   },
   openGraph: {
-    title: "AI Content Automation for Small Businesses | Clyra Studios",
+    title: "AI Content Growth Systems for Consistent Publishing | Clyra Studios",
     description:
-      "Custom AI content systems that generate SEO-ready drafts for human review. Consistent publishing without starting from a blank page every week.",
+      "AI-assisted content workflows that generate review-ready drafts based on your niche, audience, and voice. AI generates, humans approve — consistent publishing without the blank page.",
     url: "https://clyrastudios.com/ai-content-automation",
     siteName: "Clyra Studios",
     images: [
@@ -300,7 +326,7 @@ export const metadata: Metadata = {
         url: "/images/thumbnail.png",
         width: 1200,
         height: 630,
-        alt: "Clyra Studios - AI Content Automation Systems",
+        alt: "Clyra Studios - AI Content Growth Systems",
       },
     ],
     locale: "en_US",
@@ -308,9 +334,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Content Automation for Small Businesses | Clyra Studios",
+    title: "AI Content Growth Systems for Consistent Publishing | Clyra Studios",
     description:
-      "Custom AI content systems that generate SEO-ready drafts for human review. Consistent publishing without starting from a blank page every week.",
+      "AI-assisted content workflows that generate review-ready drafts based on your niche, audience, and voice. AI generates, humans approve.",
     images: ["/images/thumbnail.png"],
     creator: "@clyrastudios",
     site: "@clyrastudios",
@@ -330,9 +356,9 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "AI Content Automation for Small Businesses",
+  name: "AI Content Growth Systems",
   description:
-    "Custom AI-powered content workflow systems that generate SEO-ready draft articles, FAQ content, and marketing ideas for human review before publishing.",
+    "AI-assisted content growth systems that generate review-ready blog drafts, FAQ content, newsletters, and social posts based on your niche, audience, and voice — created for human review before publishing.",
   provider: {
     "@type": "Organization",
     name: "Clyra Studios",
@@ -340,7 +366,7 @@ const structuredData = {
     logo: "https://clyrastudios.com/images/clyra_logo.png",
   },
   areaServed: "US",
-  serviceType: "AI Content Automation",
+  serviceType: "AI Content Growth Systems",
   category: "Content Marketing Automation",
   offers: [
     {
@@ -409,19 +435,20 @@ export default function AIContentAutomationPage() {
             <div className="hero-content">
               <div className="hero-headlines">
                 <h1 className="hero-title">
-                  <span className="title-line">AI Content Automation for</span>
+                  <span className="title-line">AI Content Growth Systems for</span>
                   <span className="title-line highlight">
                     Businesses That Need to Publish Consistently
                   </span>
                 </h1>
                 <p className="hero-description">
-                  We build custom AI content systems that generate SEO-ready
-                  article drafts, FAQ content, and marketing ideas based on your
-                  niche, audience, and existing voice — so you can grow your
-                  content library without starting from a blank page every week.
+                  We build AI-assisted content workflows that help your business
+                  generate review-ready blog drafts, FAQ content, newsletters,
+                  social posts, and content ideas — based on your niche,
+                  audience, and voice. Not a blank page every week. A repeatable
+                  system.
                 </p>
                 <p className="hero-hook">
-                  Draft-first. Human-reviewed. Consistently published.
+                  AI generates. Humans approve. Content ships consistently.
                 </p>
               </div>
 
@@ -551,13 +578,14 @@ export default function AIContentAutomationPage() {
           <div className="container">
             <div className="section-header slide-in-right">
               <h2 className="section-title">
-                A Content Engine Built Around{" "}
+                A Repeatable Content Workflow Built Around{" "}
                 <span className="transform-word">Your Business</span>
               </h2>
               <p className="section-description">
-                Clyra Studios builds an AI-assisted content workflow tailored to
-                your niche, publishing goals, and existing voice. Not a generic
-                tool. A system built for how your business actually works.
+                Clyra designs AI-assisted workflows that turn topics, keywords,
+                data, market news, service offerings, or customer questions into
+                draft content ready for human review. Not a generic tool — a
+                system built for how your business actually works.
               </p>
             </div>
 
@@ -587,6 +615,77 @@ export default function AIContentAutomationPage() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* What It Can Create Section */}
+        <section className="services-section">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball services-ball-1"></div>
+            <div className="section-floating-ball services-ball-2"></div>
+            <div className="section-floating-ball services-ball-3"></div>
+          </div>
+          <div className="container">
+            <div className="section-header slide-in-right">
+              <h2 className="section-title">
+                What It Can <span className="transform-word">Create</span>
+              </h2>
+              <p className="section-description">
+                One connected workflow can produce a wide range of review-ready
+                content — not just blog posts.
+              </p>
+            </div>
+
+            <div className="included-panel included-panel-wide">
+              <div className="included-grid">
+                {whatItCanCreate.map((item, index) => (
+                  <div key={index} className="included-item">
+                    <GradientIcon icon={faCheck} size="sm" className="success" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Workflow Flow Section */}
+        <section className="case-studies-section">
+          <div className="section-floating-elements">
+            <div className="section-floating-ball case-studies-ball-1"></div>
+            <div className="section-floating-ball case-studies-ball-2"></div>
+            <div className="section-floating-ball case-studies-ball-3"></div>
+          </div>
+          <div className="container">
+            <div className="section-header slide-in-right">
+              <h2 className="section-title">The Content Workflow</h2>
+              <p className="section-description">
+                Every piece moves through a clear, human-reviewed pipeline —
+                from research to published content to repurposing and reporting.
+              </p>
+            </div>
+
+            <div className="workflow-flow">
+              {workflowSteps.map((step, index) => (
+                <div key={index} className="workflow-step-wrap">
+                  <div className="workflow-step">
+                    <div className="workflow-step-icon">
+                      <GradientIcon
+                        icon={step.icon}
+                        size="lg"
+                        className={index === 2 ? "success" : "primary"}
+                      />
+                    </div>
+                    <span className="workflow-step-label">{step.label}</span>
+                  </div>
+                  {index < workflowSteps.length - 1 && (
+                    <span className="workflow-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -956,14 +1055,22 @@ export default function AIContentAutomationPage() {
                 </Link>
               </div>
               <p className="bc-guides">
-                Related services:{" "}
-                <Link href="/google-analytics-looker-studio-dashboards">
-                  Analytics &amp; Looker Studio Dashboards
+                Related AI systems:{" "}
+                <Link href="/ai-creative-automation">AI Creative Automation</Link>
+                {" · "}
+                <Link href="/ai-marketing-automation">
+                  AI Marketing Automation
                 </Link>
                 {" · "}
-                <Link href="/wordpress-studio">WordPress Studio</Link>
+                <Link href="/business-process-automation">
+                  Business Process Automation
+                </Link>
                 {" · "}
-                <Link href="/redesign-migration">Redesign &amp; Migration</Link>
+                <Link href="/google-analytics-looker-studio-dashboards">
+                  Analytics Dashboards
+                </Link>
+                {" · "}
+                <Link href="/ai-business-systems">AI Business Systems</Link>
               </p>
             </div>
           </div>

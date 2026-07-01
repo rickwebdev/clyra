@@ -27,6 +27,7 @@ const serviceClusters = [
     links: [
       { href: "/wordpress-studio", label: "WordPress Studio" },
       { href: "/growth-website-system", label: "Growth Website System" },
+      { href: "/managed-websites", label: "Managed Websites" },
       { href: "/redesign-migration", label: "Redesign & Migration" },
       { href: "/migrations", label: "Migration Services Hub" },
       { href: "/wordpress-mechanic", label: "Website Rescue & Repair" },

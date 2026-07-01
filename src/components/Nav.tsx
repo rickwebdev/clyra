@@ -33,6 +33,11 @@ const links: NavLink[] = [
       },
       {
         group: "Websites & Growth",
+        href: "/managed-websites",
+        label: "Managed Websites",
+      },
+      {
+        group: "Websites & Growth",
         href: "/redesign-migration",
         label: "Redesign & Migration",
       },

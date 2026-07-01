@@ -23,6 +23,9 @@ export default function Footer() {
                 <Link href="/growth-website-system">Growth Website System</Link>
               </li>
               <li>
+                <Link href="/managed-websites">Managed Websites</Link>
+              </li>
+              <li>
                 <Link href="/redesign-migration">Redesign &amp; Migration</Link>
               </li>
               <li>

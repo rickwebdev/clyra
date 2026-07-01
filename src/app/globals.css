@@ -5532,6 +5532,148 @@ p {
   margin: 0;
 }
 
+.redesign-migration-page .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.redesign-migration-page .pricing-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.redesign-migration-page .pricing-card-featured {
+  border-color: rgba(77, 160, 255, 0.45);
+  box-shadow: 0 0 32px rgba(77, 160, 255, 0.12);
+}
+
+.redesign-migration-page .pricing-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #4da0ff;
+  background: rgba(77, 160, 255, 0.12);
+  border: 1px solid rgba(77, 160, 255, 0.25);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.redesign-migration-page .pricing-card-title {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.redesign-migration-page .pricing-card-price {
+  color: #ffffff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.redesign-migration-page .pricing-card-price span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #a1a1a6;
+}
+
+.redesign-migration-page .pricing-launch-fee {
+  color: #a1a1a6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.redesign-migration-page .pricing-card-description {
+  color: #a1a1a6;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.redesign-migration-page .pricing-card-cta {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.redesign-migration-page .industries-grid-managed {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.redesign-migration-page .upsell-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.redesign-migration-page .upsell-link-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.redesign-migration-page .upsell-link-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(77, 160, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.managed-websites-promo {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 720px;
+}
+
+.managed-websites-promo-title {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+.managed-websites-promo-description {
+  color: #a1a1a6;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .redesign-migration-page .pricing-grid,
+  .redesign-migration-page .upsell-links-grid,
+  .redesign-migration-page .industries-grid-managed {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .redesign-migration-page .pricing-grid,
+  .redesign-migration-page .upsell-links-grid,
+  .redesign-migration-page .industries-grid-managed {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .redesign-migration-page .human-control-card-description {
   color: #a1a1a6;
   font-size: 0.95rem;

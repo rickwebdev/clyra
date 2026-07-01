@@ -312,7 +312,20 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            
+
+            <div className="managed-websites-promo">
+              <div className="managed-websites-promo-content">
+                <h3 className="managed-websites-promo-title">Need a simple managed website?</h3>
+                <p className="managed-websites-promo-description">
+                  Predictable monthly website plans for local businesses. We build,
+                  host, maintain, and support your site so you can focus on customers.
+                </p>
+                <Link href="/managed-websites" className="btn btn-secondary btn-compact">
+                  View Managed Websites
+                  <span className="btn-arrow">→</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -326,7 +339,11 @@ export default function HomePage() {
           <div className="container">
             <div className="section-header slide-in-right">
               <h2 className="section-title">Industries We Serve</h2>
-              <p className="section-description">Focused expertise for small and mid-size businesses.</p>
+              <p className="section-description">
+                Focused expertise for small and mid-size businesses. Local service
+                businesses can start with our{" "}
+                <Link href="/managed-websites">Managed Websites</Link> plans.
+              </p>
             </div>
             <div className="case-studies-grid">
               {[

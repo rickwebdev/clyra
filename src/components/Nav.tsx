@@ -57,6 +57,26 @@ const links: NavLink[] = [
         label: "Website Performance",
       },
       {
+        group: "Platforms & Engineering",
+        href: "/headless-cms",
+        label: "Headless CMS",
+      },
+      {
+        group: "Platforms & Engineering",
+        href: "/react-nextjs-development",
+        label: "React & Next.js",
+      },
+      {
+        group: "Platforms & Engineering",
+        href: "/api-integrations",
+        label: "API Integrations",
+      },
+      {
+        group: "Platforms & Engineering",
+        href: "/marketing-technology-consulting",
+        label: "MarTech Consulting",
+      },
+      {
         group: "Analytics & Measurement",
         href: "/google-analytics-looker-studio-dashboards",
         label: "Analytics Dashboards",

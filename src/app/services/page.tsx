@@ -38,6 +38,20 @@ const serviceClusters = [
     ],
   },
   {
+    title: "Platforms & Engineering",
+    description:
+      "Custom platforms, headless architectures, API connections, and marketing technology strategy for teams that have outgrown templates.",
+    links: [
+      { href: "/headless-cms", label: "Headless CMS Development" },
+      { href: "/react-nextjs-development", label: "React & Next.js Development" },
+      { href: "/api-integrations", label: "API Integrations" },
+      {
+        href: "/marketing-technology-consulting",
+        label: "Marketing Technology Consulting",
+      },
+    ],
+  },
+  {
     title: "Analytics & Measurement",
     description:
       "Turn marketing and site data into dashboards and decisions you can actually use.",

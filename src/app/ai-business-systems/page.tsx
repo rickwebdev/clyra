@@ -601,6 +601,12 @@ export default function AIBusinessSystemsPage() {
                 <Link href="/fractional-digital-systems-consultant">
                   Ongoing Advisory
                 </Link>
+                {" · "}
+                <Link href="/api-integrations">API Integrations</Link>
+                {" · "}
+                <Link href="/marketing-technology-consulting">
+                  MarTech Consulting
+                </Link>
               </p>
             </div>
           </div>

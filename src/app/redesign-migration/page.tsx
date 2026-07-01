@@ -550,6 +550,10 @@ export default function RedesignMigrationPage() {
                 <Link href="/wix-to-wordpress">Wix → WordPress</Link>,{" "}
                 <Link href="/squarespace-to-wordpress">Squarespace → WordPress</Link>,{" "}
                 <Link href="/webflow-to-wordpress">Webflow → WordPress</Link>
+                {" · "}
+                <Link href="/headless-cms">Headless CMS</Link>
+                {" · "}
+                <Link href="/react-nextjs-development">React &amp; Next.js</Link>
               </p>
               <div className="bc-actions">
                 <Link href="/site-audit" className="btn btn-primary btn-large">

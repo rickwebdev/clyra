@@ -818,6 +818,8 @@ export default function BusinessProcessAutomationPage() {
                 </Link>
                 {" · "}
                 <Link href="/ai-business-systems">AI Business Systems</Link>
+                {" · "}
+                <Link href="/api-integrations">API Integrations</Link>
               </p>
             </div>
           </div>

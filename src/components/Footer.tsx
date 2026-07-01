@@ -39,6 +39,20 @@ export default function Footer() {
                   Website Performance
                 </Link>
               </li>
+              <li>
+                <Link href="/headless-cms">Headless CMS</Link>
+              </li>
+              <li>
+                <Link href="/react-nextjs-development">React &amp; Next.js</Link>
+              </li>
+              <li>
+                <Link href="/api-integrations">API Integrations</Link>
+              </li>
+              <li>
+                <Link href="/marketing-technology-consulting">
+                  MarTech Consulting
+                </Link>
+              </li>
             </ul>
           </div>
 

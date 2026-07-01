@@ -635,6 +635,12 @@ export default function FractionalDigitalSystemsConsultantPage() {
                 <Link href="/business-process-automation">
                   Business Process Automation
                 </Link>
+                {" · "}
+                <Link href="/marketing-technology-consulting">
+                  MarTech Consulting
+                </Link>
+                {" · "}
+                <Link href="/api-integrations">API Integrations</Link>
               </p>
             </div>
           </div>

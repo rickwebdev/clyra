@@ -246,6 +246,16 @@ p {
   filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.5));
 }
 
+.gradient-icon.white {
+  color: #fff;
+  filter: none;
+}
+
+.btn .gradient-icon {
+  flex-shrink: 0;
+  line-height: 1;
+}
+
 .hero-background {
   position: absolute;
   top: 0;
@@ -888,6 +898,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.625rem;
   padding: 1rem 2rem;
   border-radius: 12px;
   font-size: 1rem;
@@ -3507,6 +3518,9 @@ p {
   color: #ffffff;
   margin-top: 1.5rem;
   line-height: 1.55;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .bc-guides {
@@ -5378,6 +5392,64 @@ p {
   margin: 2rem 0;
 }
 
+.redesign-migration-page .trust-signals.audience-signals {
+  justify-content: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.redesign-migration-page .included-panel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.redesign-migration-page .included-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.875rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.redesign-migration-page .included-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.45;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.redesign-migration-page .included-item:nth-child(odd) {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.redesign-migration-page .included-item:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .redesign-migration-page .included-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .redesign-migration-page .included-item:nth-child(odd) {
+    border-right: none;
+  }
+
+  .redesign-migration-page .included-item:nth-last-child(-n+2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .redesign-migration-page .included-item:last-child {
+    border-bottom: none;
+  }
+}
+
 /* WordPress Mechanic Page Specific Styles - SCOPED TO PREVENT GLOBAL IMPACT */
 
 /* Hero Section - Borrow from homepage theme */
@@ -6448,6 +6520,11 @@ p {
   font-size: 0.9rem;
   margin-top: 1rem;
   font-style: italic;
+}
+
+.wordpress-mechanic-page .priority-form .btn-primary {
+  width: 100%;
+  margin-top: 0.25rem;
 }
 
 /* FAQ Section */

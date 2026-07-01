@@ -156,7 +156,7 @@ export default function ContactForm({ formId = "priority-form", className = "" }
           disabled={isSubmitting}
         >
           <GradientIcon icon={faWrench} size="sm" className="white" />
-          {isSubmitting ? 'Sending...' : 'Submit — Get Help Now'}
+          <span>{isSubmitting ? 'Sending...' : 'Submit — Get Help Now'}</span>
         </button>
         <p className="form-note">
           Free diagnostics. Pay only if we fix it.

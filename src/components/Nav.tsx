@@ -13,6 +13,7 @@ import { useState } from "react";
       { href: "/growth-website-system", label: "Growth Website System" },
       { href: "/redesign-migration", label: "Redesign & Migration" },
         { href: "/wordpress-mechanic", label: "WordPress Mechanic" },
+        { href: "/google-analytics-looker-studio-dashboards", label: "Analytics & Looker Studio Dashboards" },
         { href: "/rfp", label: "Request for Proposal" },
     ]
   },

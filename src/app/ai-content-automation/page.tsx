@@ -55,7 +55,7 @@ const problems = [
     icon: faSearch,
     title: "SEO Structure Is Hard to Get Right",
     description:
-      "Good SEO content needs keyword intent, headings, internal links, meta descriptions, and the right structure. It's not just writing — it's a system.",
+      "Good SEO content needs keyword intent, headings, internal links, meta descriptions, and the right structure. It's not just writing. It's a system.",
     impact: "Published content that never gets found",
   },
   {
@@ -85,7 +85,7 @@ const capabilities = [
     icon: faBrain,
     title: "Draft Article Generation",
     description:
-      "AI-generated first drafts based on your content strategy, brand voice, audience, and target keywords. A foundation to review and publish — not a blank page.",
+      "AI-generated first drafts based on your content strategy, brand voice, audience, and target keywords. A foundation to review and publish, not a blank page.",
   },
   {
     icon: faComments,
@@ -97,13 +97,13 @@ const capabilities = [
     icon: faFileLines,
     title: "WordPress Draft Preparation",
     description:
-      "Drafts can be pushed directly into WordPress as unpublished posts — ready for review, editing, and one-click publishing when you approve.",
+      "Drafts can be pushed directly into WordPress as unpublished posts, ready for review, editing, and one-click publishing when you approve.",
   },
   {
     icon: faLightbulb,
     title: "Social & Newsletter Ideas",
     description:
-      "Each piece of content can seed social captions, newsletter sections, and repurposing ideas — so one article becomes multiple touchpoints.",
+      "Each piece of content can seed social captions, newsletter sections, and repurposing ideas, so one article becomes multiple touchpoints.",
   },
   {
     icon: faLayerGroup,
@@ -124,7 +124,7 @@ const process = [
     icon: faGears,
     title: "2. Build the Automation Workflow",
     description:
-      "We connect the right tools — WordPress, AI models, research APIs, automation platforms, and analytics — into a workflow built for your business.",
+      "We connect the right tools (WordPress, AI models, research APIs, automation platforms, and analytics) into a workflow built for your business.",
   },
   {
     icon: faFileLines,
@@ -157,7 +157,7 @@ const humanControl = [
     iconClass: "success",
     title: "You Stay in Control",
     description:
-      "Every draft is created for your review before anything goes live. The system generates — you decide. Nothing publishes automatically unless you explicitly approve it.",
+      "Every draft is created for your review before anything goes live. The system generates. You decide. Nothing publishes automatically unless you explicitly approve it.",
     highlight: "Drafts in. Human decision out.",
   },
   {
@@ -165,7 +165,7 @@ const humanControl = [
     iconClass: "primary",
     title: "Supports Your Expertise, Doesn't Replace It",
     description:
-      "AI generates the structure and first draft. You bring the judgment, accuracy, and context that makes content worth publishing. The system accelerates production — your voice and expertise remain the filter.",
+      "AI generates the structure and first draft. You bring the judgment, accuracy, and context that makes content worth publishing. The system accelerates production. Your voice and expertise remain the filter.",
     highlight: "Speed up production, not decision-making.",
   },
   {
@@ -173,7 +173,7 @@ const humanControl = [
     iconClass: "warning",
     title: "Quality, Accuracy, Brand Voice",
     description:
-      "The goal is to reduce blank-page friction, not to eliminate editorial standards. Review time is shorter because the draft is already structured — but it is still your judgment that makes it publishable.",
+      "The goal is to reduce blank-page friction, not to eliminate editorial standards. Review time is shorter because the draft is already structured, but it is still your judgment that makes it publishable.",
     highlight: "Faster to publish. Never bypassed.",
   },
 ];
@@ -183,7 +183,7 @@ const useCases = [
     icon: faChartLine,
     title: "Financial Market Commentary",
     description:
-      "First-draft market summaries and commentary based on live data — for publishers and financial services.",
+      "First-draft market summaries and commentary based on live data, for publishers and financial services.",
   },
   {
     icon: faLocationDot,
@@ -213,7 +213,7 @@ const useCases = [
     icon: faEnvelope,
     title: "Newsletter Content",
     description:
-      "Weekly or monthly newsletter sections drafted from your content pipeline — ready to edit and send.",
+      "Weekly or monthly newsletter sections drafted from your content pipeline, ready to edit and send.",
   },
   {
     icon: faHashtag,
@@ -298,14 +298,14 @@ const faqs = [
   {
     question: "How much content can it generate?",
     answer:
-      "Volume depends on how the workflow is configured and your review capacity. The system can produce multiple drafts per week — but publishing quality content you have actually reviewed is more valuable than high volume you have not.",
+      "Volume depends on how the workflow is configured and your review capacity. The system can produce multiple drafts per week, but publishing quality content you have actually reviewed is more valuable than high volume you have not.",
   },
 ];
 
 export const metadata: Metadata = {
   title: "AI Content Growth Systems for Consistent Publishing | Clyra Studios",
   description:
-    "Clyra Studios builds AI-assisted content growth systems that generate review-ready blog drafts, FAQ content, newsletters, and social posts based on your niche, audience, and voice. AI generates, humans approve — no AI spam.",
+    "Clyra Studios builds AI-assisted content growth systems that generate review-ready blog drafts, FAQ content, newsletters, and social posts based on your niche, audience, and voice. AI generates, humans approve. No AI spam.",
   keywords:
     "AI content growth systems, AI content automation, AI-assisted content workflow, AI blog writing, SEO content system, content workflow automation, AI article drafts, FAQ content generation, AEO content, newsletter automation, content repurposing, WordPress content workflow",
   authors: [{ name: "Clyra Studios" }],
@@ -318,7 +318,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Content Growth Systems for Consistent Publishing | Clyra Studios",
     description:
-      "AI-assisted content workflows that generate review-ready drafts based on your niche, audience, and voice. AI generates, humans approve — consistent publishing without the blank page.",
+      "AI-assisted content workflows that generate review-ready drafts based on your niche, audience, and voice. AI generates, humans approve: consistent publishing without the blank page.",
     url: "https://clyrastudios.com/ai-content-automation",
     siteName: "Clyra Studios",
     images: [
@@ -358,7 +358,7 @@ const structuredData = {
   "@type": "Service",
   name: "AI Content Growth Systems",
   description:
-    "AI-assisted content growth systems that generate review-ready blog drafts, FAQ content, newsletters, and social posts based on your niche, audience, and voice — created for human review before publishing.",
+    "AI-assisted content growth systems that generate review-ready blog drafts, FAQ content, newsletters, and social posts based on your niche, audience, and voice, created for human review before publishing.",
   provider: {
     "@type": "Organization",
     name: "Clyra Studios",
@@ -443,7 +443,7 @@ export default function AIContentAutomationPage() {
                 <p className="hero-description">
                   We build AI-assisted content workflows that help your business
                   generate review-ready blog drafts, FAQ content, newsletters,
-                  social posts, and content ideas — based on your niche,
+                  social posts, and content ideas, based on your niche,
                   audience, and voice. Not a blank page every week. A repeatable
                   system.
                 </p>
@@ -524,7 +524,7 @@ export default function AIContentAutomationPage() {
               </h2>
               <p className="section-description">
                 Most businesses know they need more content. The problem
-                is not intent — it is time, structure, and the friction
+                is not intent. It is time, structure, and the friction
                 of doing it manually week after week.
               </p>
             </div>
@@ -584,7 +584,7 @@ export default function AIContentAutomationPage() {
               <p className="section-description">
                 Clyra designs AI-assisted workflows that turn topics, keywords,
                 data, market news, service offerings, or customer questions into
-                draft content ready for human review. Not a generic tool — a
+                draft content ready for human review. Not a generic tool: a
                 system built for how your business actually works.
               </p>
             </div>
@@ -633,7 +633,7 @@ export default function AIContentAutomationPage() {
               </h2>
               <p className="section-description">
                 One connected workflow can produce a wide range of review-ready
-                content — not just blog posts.
+                content, not just blog posts.
               </p>
             </div>
 
@@ -661,7 +661,7 @@ export default function AIContentAutomationPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">The Content Workflow</h2>
               <p className="section-description">
-                Every piece moves through a clear, human-reviewed pipeline —
+                Every piece moves through a clear, human-reviewed pipeline,
                 from research to published content to repurposing and reporting.
               </p>
             </div>
@@ -749,7 +749,7 @@ export default function AIContentAutomationPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">What This Helps You Do</h2>
               <p className="section-description">
-                The goal is a repeatable content process — not a one-time
+                The goal is a repeatable content process, not a one-time
                 article, but a system that keeps your pipeline moving.
               </p>
             </div>
@@ -782,7 +782,7 @@ export default function AIContentAutomationPage() {
               </h2>
               <p className="section-description">
                 This is not fully automated spam publishing. It is a
-                human-reviewed content workflow — built to support your
+                human-reviewed content workflow, built to support your
                 expertise, not replace it.
               </p>
             </div>
@@ -1013,7 +1013,7 @@ export default function AIContentAutomationPage() {
                 />
                 <span>
                   Search growth depends on competition, content quality,
-                  publishing frequency, domain authority, and audience demand —
+                  publishing frequency, domain authority, and audience demand:
                   none of which can be controlled by automation alone. The value
                   of this system is in building a repeatable content process and
                   improving it over time. Results vary, and growth is not

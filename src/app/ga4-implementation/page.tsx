@@ -20,7 +20,7 @@ const problems = [
   {
     icon: faTriangleExclamation,
     title: "GA4 Installed But Not Trusted",
-    description: "Data is collecting somewhere — but nobody believes the numbers or knows which reports to use.",
+    description: "Data is collecting somewhere, but nobody believes the numbers or knows which reports to use.",
     impact: "Decisions still made on gut feel",
   },
   {
@@ -38,7 +38,7 @@ const problems = [
   {
     icon: faChartLine,
     title: "No Executive View",
-    description: "Leadership needs one dashboard — not fifteen tabs of GA4 reports nobody opens.",
+    description: "Leadership needs one dashboard, not fifteen tabs of GA4 reports nobody opens.",
     impact: "Reporting doesn't support decisions",
   },
 ];
@@ -49,7 +49,7 @@ const capabilities = [
   { icon: faDiagramProject, title: "Google Tag Manager", description: "Maintainable tagging without editing code for every change." },
   { icon: faMagnifyingGlass, title: "Search Console Connection", description: "Organic search data linked to your measurement stack." },
   { icon: faCartShopping, title: "Ecommerce Tracking", description: "Shopify, WooCommerce, and custom checkout events where applicable." },
-  { icon: faChartLine, title: "Dashboard Handoff", description: "Optional Looker Studio dashboards so data is usable — not trapped in GA4." },
+  { icon: faChartLine, title: "Dashboard Handoff", description: "Optional Looker Studio dashboards so data is usable outside GA4." },
 ];
 
 const processSteps = [
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     question: "Is this the same as dashboard building?",
-    answer: "Implementation comes first — accurate data collection. Dashboards are the next layer; we offer both and often connect them.",
+    answer: "Implementation comes first: accurate data collection. Dashboards are the next layer; we offer both and often connect them.",
   },
   {
     question: "Can you fix a broken GA4 setup?",
@@ -74,14 +74,14 @@ const faqs = [
   },
   {
     question: "Do you set up Google Ads and Meta tracking too?",
-    answer: "Often yes, as part of a connected measurement plan — especially when tied to conversion tracking in GA4.",
+    answer: "Often yes, as part of a connected measurement plan, especially when tied to conversion tracking in GA4.",
   },
 ];
 
 export const metadata: Metadata = {
   title: "GA4 Implementation & Conversion Tracking | Clyra Studios",
   description:
-    "GA4 setup, conversion tracking, Google Tag Manager, and measurement foundations for businesses that need trustworthy analytics — connected to dashboards and growth decisions.",
+    "GA4 setup, conversion tracking, Google Tag Manager, and measurement foundations for businesses that need trustworthy analytics, connected to dashboards and growth decisions.",
   keywords:
     "GA4 implementation, GA4 setup, Google Analytics 4 consultant, conversion tracking, Google Tag Manager setup, ecommerce tracking GA4, GA4 audit",
   metadataBase: new URL("https://clyrastudios.com"),
@@ -138,8 +138,8 @@ export default function GA4ImplementationPage() {
                 </h1>
                 <p className="hero-description">
                   We configure Google Analytics 4, conversion tracking, and tag
-                  management so your business can see what&apos;s working —
-                  then connect that data to dashboards and decisions.
+                  management so your business can see what&apos;s working, then
+                  connect that data to dashboards and decisions.
                 </p>
                 <p className="hero-hook">Measure correctly first. Report second.</p>
               </div>

@@ -23,7 +23,7 @@ const problems = [
     icon: faGaugeHigh,
     title: "Monolithic CMS Limits Performance",
     description:
-      "Traditional CMS themes bundle content, layout, and delivery together — slowing the site and complicating updates.",
+      "Traditional CMS themes bundle content, layout, and delivery together, which slows the site and complicates updates.",
     impact: "Speed and flexibility trade-offs",
   },
   {
@@ -37,7 +37,7 @@ const problems = [
     icon: faTriangleExclamation,
     title: "Headless Without Strategy",
     description:
-      "Decoupling for its own sake adds complexity — without clear use cases, teams inherit more tools and less clarity.",
+      "Decoupling for its own sake adds complexity. Without clear use cases, teams inherit more tools and less clarity.",
     impact: "Cost without business return",
   },
   {
@@ -54,7 +54,7 @@ const capabilities = [
     icon: faDiagramProject,
     title: "Architecture & Platform Selection",
     description:
-      "Sanity, Contentful, Strapi, WordPress headless, or hybrid — chosen for your team, content model, and growth plans.",
+      "Sanity, Contentful, Strapi, WordPress headless, or hybrid, chosen for your team, content model, and growth plans.",
   },
   {
     icon: faDatabase,
@@ -78,7 +78,7 @@ const capabilities = [
     icon: faBolt,
     title: "Performance-First Delivery",
     description:
-      "Static generation, edge caching, and optimized media — paired with our performance optimization work when needed.",
+      "Static generation, edge caching, and optimized media, paired with our performance optimization work when needed.",
   },
   {
     icon: faUsers,
@@ -93,7 +93,7 @@ const processSteps = [
     icon: faMagnifyingGlass,
     title: "1. Discovery & Use Cases",
     description:
-      "Who publishes, what channels need content, and whether headless is the right fit — not just the trendy one.",
+      "Who publishes, what channels need content, and whether headless is the right fit, not just the trendy one.",
   },
   {
     icon: faDiagramProject,
@@ -124,12 +124,12 @@ const faqs = [
   {
     question: "Which headless CMS platforms do you work with?",
     answer:
-      "Sanity, Contentful, Strapi, and WordPress as a headless backend (WPGraphQL). We recommend based on your content model, budget, and editorial needs — not vendor preference alone.",
+      "Sanity, Contentful, Strapi, and WordPress as a headless backend (WPGraphQL). We recommend based on your content model, budget, and editorial needs, not vendor preference alone.",
   },
   {
     question: "Can you migrate from WordPress without starting over?",
     answer:
-      "Often yes — either as a headless WordPress backend or a full migration to a dedicated headless CMS. We preserve URLs, redirects, and SEO foundations as part of the plan.",
+      "Often yes, either as a headless WordPress backend or a full migration to a dedicated headless CMS. We preserve URLs, redirects, and SEO foundations as part of the plan.",
   },
   {
     question: "Do you only build the CMS or the frontend too?",
@@ -146,7 +146,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: "Headless CMS Development & Integration | Clyra Studios",
   description:
-    "Headless CMS architecture, content modeling, and Next.js integration — Sanity, Contentful, Strapi, and WordPress headless for businesses that need flexible, high-performance content systems.",
+    "Headless CMS architecture, content modeling, and Next.js integration: Sanity, Contentful, Strapi, and WordPress headless for businesses that need flexible, high-performance content systems.",
   keywords:
     "headless CMS, headless CMS development, Sanity CMS, Contentful development, Strapi CMS, WordPress headless, WPGraphQL, Next.js CMS integration, content modeling",
   metadataBase: new URL("https://clyrastudios.com"),
@@ -229,9 +229,9 @@ export default function HeadlessCMSPage() {
                   </span>
                 </h1>
                 <p className="hero-description">
-                  When your content needs to power more than one website — or
+                  When your content needs to power more than one website, or
                   your frontend needs to move faster than a traditional CMS
-                  allows — we design headless content systems with clear models,
+                  allows, we design headless content systems with clear models,
                   reliable APIs, and editor workflows your team can actually use.
                 </p>
                 <p className="hero-hook">

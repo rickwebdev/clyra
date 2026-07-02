@@ -3,7 +3,7 @@ export function getGrowthPageJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Growth Website System - Websites That Bring You Clients",
-    "description": "Our Growth Website System turns your site into your best salesperson. Done-for-you strategy, design, and tech—so you get leads while you sleep.",
+    "description": "Our Growth Website System turns your site into a lead-generation asset. Strategy, design, and development built to bring in qualified inquiries.",
     "url": "https://clyrastudios.com/growth-website-system",
     "mainEntity": {
       "@type": "Service",

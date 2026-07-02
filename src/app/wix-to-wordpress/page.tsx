@@ -22,7 +22,7 @@ const problems = [
   {
     icon: faPaintBrush,
     title: "Design You Can't Fully Control",
-    description: "Wix templates box you in — you can't build exactly what you pictured",
+    description: "Wix templates box you in. You can't build exactly what you pictured.",
     impact: "Your site looks like everyone else's"
   },
   {
@@ -74,8 +74,8 @@ const comparison = [
   },
   {
     criteria: "Ownership & portability",
-    builder: "Locked in — hard to export",
-    clyra: "100% yours — host anywhere"
+    builder: "Locked in; hard to export",
+    clyra: "100% yours. Host anywhere."
   },
   {
     criteria: "Long-term cost",
@@ -103,14 +103,14 @@ const process = [
   {
     icon: faBolt,
     title: "Launch & Own",
-    description: "We go live with zero downtime — and you fully own the site, code, and content."
+    description: "We go live with zero downtime, and you fully own the site, code, and content."
   }
 ];
 
 const faqs = [
   {
     question: "Will I lose my SEO if I move from Wix to WordPress?",
-    answer: "No. We preserve your URLs where possible, set up 301 redirects for the rest, and migrate your content and metadata. Most clients maintain — and often improve — their rankings after the faster, cleaner build."
+    answer: "No. We preserve your URLs where possible, set up 301 redirects for the rest, and migrate your content and metadata. Most clients keep their rankings and often improve them after the faster, cleaner build."
   },
   {
     question: "Can you move my existing Wix content automatically?",
@@ -122,11 +122,11 @@ const faqs = [
   },
   {
     question: "Do I keep my domain name?",
-    answer: "Yes. You keep your domain — we simply point it at your new WordPress site. If your domain is registered through Wix, we'll walk you through moving or connecting it."
+    answer: "Yes. You keep your domain. We point it at your new WordPress site. If your domain is registered through Wix, we'll walk you through moving or connecting it."
   },
   {
     question: "Will my new site be easier to edit than Wix?",
-    answer: "Yes. We build on WordPress (or a headless setup) with an editor designed for non-technical owners, so day-to-day updates are simple — without the limits that pushed you off Wix."
+    answer: "Yes. We build on WordPress (or a headless setup) with an editor designed for non-technical owners, so day-to-day updates stay simple without the limits that pushed you off Wix."
   },
   {
     question: "How much does it cost to migrate from Wix?",
@@ -136,7 +136,7 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: "Wix to WordPress Migration | Move Off Wix Without Losing SEO | Clyra Studios",
-  description: "Outgrowing Wix? Clyra Studios migrates your Wix site to WordPress — faster performance, full design control, better SEO, and 100% ownership. Free website review.",
+  description: "Outgrowing Wix? Clyra Studios migrates your Wix site to WordPress for faster performance, full design control, better SEO, and 100% ownership. Free website review.",
   keywords: "wix to wordpress migration, move wix to wordpress, migrate from wix, wix alternatives, wix alternatives for small business, wix seo problems, export wix site, wix to wordpress, leave wix, wix limitations",
   authors: [{ name: "Clyra Studios" }],
   creator: "Clyra Studios",
@@ -264,7 +264,7 @@ export default function WixToWordPressPage() {
                   <span className="title-line highlight">Without Losing Your SEO</span>
                 </h1>
                 <p className="hero-description">
-                  Outgrew Wix? Tried to build it yourself and hit a wall on design, functionality, or speed? Clyra Studios migrates your Wix site to WordPress — clean code, custom design, better SEO, and a site you actually own.
+                  Outgrew Wix? Tried to build it yourself and hit a wall on design, functionality, or speed? Clyra Studios migrates your Wix site to WordPress with clean code, custom design, better SEO, and a site you actually own.
                 </p>
                 <p className="hero-hook">
                   Stop renting a template. Get a fast, custom site built around your business.
@@ -329,7 +329,7 @@ export default function WixToWordPressPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">Why Businesses Move Off <span className="transform-word">Wix</span></h2>
               <p className="section-description">
-                Wix is great to start — until you need real design control, custom functionality, or better SEO. If any of these sound familiar, you&apos;ve outgrown the platform.
+                Wix works well to start. Once you need real design control, custom functionality, or better SEO, you&apos;ve outgrown the platform.
               </p>
             </div>
 
@@ -371,7 +371,7 @@ export default function WixToWordPressPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">Wix vs. a Site You Own</h2>
               <p className="section-description">
-                Here&apos;s how staying on Wix compares to a custom site we build and you own — on WordPress or a headless setup if you need more.
+                Here&apos;s how staying on Wix compares to a custom site we build and you own, on WordPress or a headless setup if you need more.
               </p>
             </div>
 
@@ -397,7 +397,7 @@ export default function WixToWordPressPage() {
                 ))}
               </div>
               <p className="bc-note">
-                Not sure whether WordPress or a headless build is right for you? We figure that out together on a free review — based on how you want to grow.
+                Not sure whether WordPress or a headless build is right for you? We figure that out together on a free review, based on how you want to grow.
               </p>
               <div className="bc-actions">
                 <Link href="/site-audit" className="btn btn-primary btn-large">
@@ -458,7 +458,7 @@ export default function WixToWordPressPage() {
             <div className="cta-content" data-aos="fade-up">
               <h2 className="cta-title">Ready to Leave Wix Behind?</h2>
               <p className="cta-description">
-                Get a free, honest review of your Wix site&apos;s performance, design, and SEO — plus exactly what a migration would look like for you. No pitch, just a plan.
+                Get a free, honest review of your Wix site&apos;s performance, design, and SEO, plus exactly what a migration would look like for you. No pitch, just a plan.
               </p>
               <div className="cta-actions">
                 <Link href="/site-audit" className="btn btn-primary btn-large">

@@ -20,7 +20,7 @@ const problems = [
   {
     icon: faMagnifyingGlass,
     title: "Search Is Changing",
-    description: "Users increasingly get answers from AI-assisted search — not just ten blue links. Structure matters differently now.",
+    description: "Users increasingly get answers from AI-assisted search, not just ten blue links. Structure matters differently now.",
     impact: "Old SEO-only playbooks fall short",
   },
   {
@@ -48,21 +48,21 @@ const capabilities = [
   { icon: faSitemap, title: "Topic Clusters & Internal Linking", description: "Connected content that builds topical authority across your site." },
   { icon: faFileLines, title: "Answer-Focused Page Templates", description: "Service pages, guides, and resources formatted for clarity and extraction." },
   { icon: faShieldHalved, title: "Trust & Entity Signals", description: "Clear about pages, authorship, and business information search systems can understand." },
-  { icon: faBrain, title: "AI-Assisted Content Workflows", description: "Human-reviewed drafts at scale — paired with our AI Content Growth Systems." },
-  { icon: faMagnifyingGlass, title: "Traditional SEO Alignment", description: "AEO builds on technical SEO and content foundations — not instead of them." },
+  { icon: faBrain, title: "AI-Assisted Content Workflows", description: "Human-reviewed drafts at scale, paired with our AI Content Growth Systems." },
+  { icon: faMagnifyingGlass, title: "Traditional SEO Alignment", description: "AEO builds on technical SEO and content foundations, not instead of them." },
 ];
 
 const processSteps = [
-  { icon: faMagnifyingGlass, title: "1. Audit Discovery Surfaces", description: "How you appear in search today — queries, pages, and gaps." },
+  { icon: faMagnifyingGlass, title: "1. Audit Discovery Surfaces", description: "How you appear in search today: queries, pages, and gaps." },
   { icon: faSitemap, title: "2. Map Questions & Topics", description: "Priority questions your audience and AI systems need answered." },
-  { icon: faUserCheck, title: "3. Structure & Publish", description: "Templates, FAQs, and content updates — human-reviewed before launch." },
+  { icon: faUserCheck, title: "3. Structure & Publish", description: "Templates, FAQs, and content updates, human-reviewed before launch." },
   { icon: faRocket, title: "4. Measure & Refine", description: "Track visibility, engagement, and iterate on what earns traction." },
 ];
 
 const faqs = [
   {
     question: "What is AEO?",
-    answer: "Answer Engine Optimization (AEO) focuses on structuring content so it's useful in AI-assisted search and featured answers — clear questions, direct responses, FAQs, and authoritative coverage.",
+    answer: "Answer Engine Optimization (AEO) focuses on structuring content so it's useful in AI-assisted search and featured answers: clear questions, direct responses, FAQs, and authoritative coverage.",
   },
   {
     question: "Does AEO replace SEO?",
@@ -85,7 +85,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: "AEO & AI Search Optimization for Business Websites | Clyra Studios",
   description:
-    "Answer Engine Optimization (AEO) and AI search strategy — FAQ libraries, structured content, topic clusters, and human-reviewed workflows for modern discovery.",
+    "Answer Engine Optimization (AEO) and AI search strategy: FAQ libraries, structured content, topic clusters, and human-reviewed workflows for modern discovery.",
   keywords:
     "AEO, answer engine optimization, AI search optimization, FAQ SEO, AI-assisted search, structured content SEO, topic clusters, featured snippets",
   metadataBase: new URL("https://clyrastudios.com"),
@@ -142,8 +142,8 @@ export default function AEOPage() {
                 </h1>
                 <p className="hero-description">
                   Search isn&apos;t only ten blue links anymore. We help businesses
-                  structure content for traditional SEO and AI-assisted discovery
-                  — clear answers, FAQ libraries, topic depth, and human-reviewed
+                  structure content for traditional SEO and AI-assisted discovery:
+                  clear answers, FAQ libraries, topic depth, and human-reviewed
                   workflows that support real expertise.
                 </p>
                 <p className="hero-hook">Clear answers. Structured authority. Human oversight.</p>

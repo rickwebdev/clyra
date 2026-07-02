@@ -6,14 +6,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "WordPress Migration Services | Clyra Studios",
   description:
-    "Migrate from Wix, Squarespace, Webflow, Shopify, or legacy CMS to WordPress without losing SEO, content, or design. Seamless migration services with redirect preservation.",
+    "Migrate from Wix, Squarespace, Webflow, Shopify, or legacy CMS to WordPress without losing SEO, content, or design. Migration services with redirect preservation.",
   alternates: {
     canonical: "/migrations",
   },
   openGraph: {
     title: "WordPress Migration Services | Clyra Studios",
     description:
-      "Seamless website migrations to WordPress from Wix, Squarespace, Webflow, Shopify, and custom CMS platforms.",
+      "Website migrations to WordPress from Wix, Squarespace, Webflow, Shopify, and custom CMS platforms.",
     url: "https://clyrastudios.com/migrations",
     type: "website",
   },
@@ -35,7 +35,7 @@ export default function MigrationsPage() {
             <div className="inner-page-header">
               <h1 className="inner-page-title">WordPress Migration Services</h1>
               <p className="inner-page-subtitle">
-                Migrate your website to WordPress without losing SEO rankings, content, or design. We specialize in seamless migrations from Wix, Squarespace, Shopify, and Webflow — preserving your visibility while giving you full ownership and future-ready performance. See also our{" "}
+                Migrate your website to WordPress without losing SEO rankings, content, or design. We migrate sites from Wix, Squarespace, Shopify, and Webflow while preserving your visibility and giving you full ownership and faster performance. See also our{" "}
                 <Link href="/redesign-migration" className="underline" style={{ color: "#60a5fa" }}>
                   redesign &amp; migration overview
                 </Link>
@@ -50,7 +50,7 @@ export default function MigrationsPage() {
             {/* Migration Options Section */}
             <h2 className="inner-page-section-title">Popular Migration Options</h2>
             <p className="inner-page-section-description">
-              We specialize in seamless migrations from the most popular platforms. Each migration preserves your SEO, content, and design while unlocking WordPress's full potential.
+              We migrate sites from the most popular platforms. Each project preserves your SEO, content, and design while opening up WordPress's full potential.
             </p>
             
             <div className="inner-page-grid">
@@ -78,7 +78,7 @@ export default function MigrationsPage() {
               <div className="inner-page-card">
                 <h3 className="inner-page-card-title">From Webflow</h3>
                 <p className="inner-page-card-description">
-                  Keep your design freedom while unlocking WordPress's powerful content management, SEO tools, and lower hosting costs.
+                  Keep your design freedom while gaining WordPress's powerful content management, SEO tools, and lower hosting costs.
                 </p>
                 <ul className="inner-page-feature-list">
                   <li className="inner-page-feature-item">Maintain visual design</li>
@@ -118,7 +118,7 @@ export default function MigrationsPage() {
                 <ul className="inner-page-feature-list">
                   <li className="inner-page-feature-item">Rebuild on modern stack</li>
                   <li className="inner-page-feature-item">Preserve content & data</li>
-                  <li className="inner-page-feature-item">Future-proof with plugin ecosystem</li>
+                  <li className="inner-page-feature-item">Built for long-term growth with plugin ecosystem</li>
                   <li className="inner-page-feature-item">Improved security & performance</li>
                 </ul>
                 <p className="inner-page-card-note">
@@ -131,7 +131,7 @@ export default function MigrationsPage() {
             <div className="inner-page-summary-section">
               <h2 className="inner-page-section-title">Our 4-Step Migration Process</h2>
               <p className="inner-page-summary-text">
-                We follow a proven process that ensures zero downtime, preserved SEO rankings, and seamless functionality transfer.
+                We follow a proven process that ensures zero downtime, preserved SEO rankings, and reliable functionality transfer.
               </p>
               
               <div className="inner-page-summary-grid">
@@ -149,7 +149,7 @@ export default function MigrationsPage() {
                 </div>
                 <div className="inner-page-summary-item">
                   <h4>4. Launch & Support</h4>
-                  <p>Test thoroughly, launch seamlessly, and provide ongoing support to ensure everything works perfectly.</p>
+                  <p>Test thoroughly, launch with confidence, and provide ongoing support to ensure everything works perfectly.</p>
                 </div>
               </div>
             </div>
@@ -171,7 +171,7 @@ export default function MigrationsPage() {
                   <p>Average 2-3x performance improvement with optimized WordPress hosting.</p>
                 </div>
                 <div className="inner-page-summary-item">
-                  <h4>Future-Proof Your Business</h4>
+                  <h4>Built for Long-Term Growth</h4>
                   <p>Full ownership and control with WordPress's unlimited customization options.</p>
                 </div>
                 <div className="inner-page-summary-item">
@@ -191,19 +191,19 @@ export default function MigrationsPage() {
               <div className="inner-page-summary-grid">
                 <div className="inner-page-summary-item">
                   <h4>Therapist Practice</h4>
-                  <p>"A therapist moved from Squarespace to WordPress — now patients can book online and her site ranks locally for 'therapist near me.'"</p>
+                  <p>"A therapist moved from Squarespace to WordPress. Now patients can book online and her site ranks locally for 'therapist near me.'"</p>
                 </div>
                 <div className="inner-page-summary-item">
                   <h4>E-commerce Store</h4>
-                  <p>"An e-commerce store migrated from Shopify — saving thousands in transaction fees and boosting organic traffic by 180%."</p>
+                  <p>"An e-commerce store migrated from Shopify, saving thousands in transaction fees and boosting organic traffic by 180%."</p>
                 </div>
                 <div className="inner-page-summary-item">
                   <h4>Restaurant Chain</h4>
-                  <p>"A restaurant moved from Wix to WordPress — online orders increased 300% and site speed improved 4x."</p>
+                  <p>"A restaurant moved from Wix to WordPress. Online orders increased 300% and site speed improved 4x."</p>
                 </div>
                 <div className="inner-page-summary-item">
                   <h4>Professional Services</h4>
-                  <p>"A law firm migrated from custom CMS to WordPress — better security, easier updates, and 150% more qualified leads."</p>
+                  <p>"A law firm migrated from custom CMS to WordPress with better security, easier updates, and 150% more qualified leads."</p>
                 </div>
               </div>
             </div>

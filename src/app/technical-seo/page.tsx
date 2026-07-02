@@ -22,7 +22,7 @@ const problems = [
     icon: faMagnifyingGlass,
     title: "Invisible in Search",
     description:
-      "The site exists but doesn't rank — technical issues, thin content, or poor structure keep you off page one.",
+      "The site exists but doesn't rank. Technical issues, thin content, or poor structure keep you off page one.",
     impact: "Organic traffic never compounds",
   },
   {
@@ -36,7 +36,7 @@ const problems = [
     icon: faFileLines,
     title: "Content Without Structure",
     description:
-      "Pages publish without keyword focus, internal links, or clear hierarchy — so even good writing underperforms.",
+      "Pages publish without keyword focus, internal links, or clear hierarchy, so even good writing underperforms.",
     impact: "Effort without search return",
   },
   {
@@ -51,10 +51,10 @@ const problems = [
 const capabilities = [
   { icon: faCode, title: "Technical SEO Audits", description: "Crawlability, indexation, redirects, schema, and site architecture fixes." },
   { icon: faSitemap, title: "Site Structure & Internal Linking", description: "Logical hierarchy and internal links that help users and search engines navigate." },
-  { icon: faGaugeHigh, title: "Core Web Vitals & Page Speed", description: "Performance issues that affect rankings and user experience — often paired with our performance service." },
+  { icon: faGaugeHigh, title: "Core Web Vitals & Page Speed", description: "Performance issues that affect rankings and user experience, often paired with our performance service." },
   { icon: faFileLines, title: "On-Page Optimization", description: "Titles, meta descriptions, headings, and content structure for target queries." },
   { icon: faLink, title: "Redirect & Migration SEO", description: "Preserve rankings during redesigns and platform migrations." },
-  { icon: faChartLine, title: "Search Console & Analytics Setup", description: "Measurement foundations so you know what's working — tied to GA4 and dashboards." },
+  { icon: faChartLine, title: "Search Console & Analytics Setup", description: "Measurement foundations so you know what's working, tied to GA4 and dashboards." },
 ];
 
 const processSteps = [
@@ -73,7 +73,7 @@ const faqs = [
   {
     question: "Is this different from content marketing?",
     answer:
-      "Yes. Technical SEO focuses on site health, structure, and on-page foundations. Content growth systems handle ongoing publishing — they work best together.",
+      "Yes. Technical SEO focuses on site health, structure, and on-page foundations. Content growth systems handle ongoing publishing. They work best together.",
   },
   {
     question: "Do you work on WordPress and Shopify?",
@@ -95,7 +95,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: "Technical SEO Services for Business Websites | Clyra Studios",
   description:
-    "Technical SEO audits, site structure, Core Web Vitals, on-page optimization, and migration SEO for businesses that need search visibility — part of Clyra's digital growth systems.",
+    "Technical SEO audits, site structure, Core Web Vitals, on-page optimization, and migration SEO for businesses that need search visibility. Part of Clyra's digital growth systems.",
   keywords:
     "technical SEO, technical SEO audit, Core Web Vitals SEO, on-page SEO, site structure SEO, WordPress technical SEO, Shopify SEO, migration SEO",
   metadataBase: new URL("https://clyrastudios.com"),
@@ -156,7 +156,7 @@ export default function TechnicalSEOPage() {
                   <span className="title-line highlight">What&apos;s Blocking Search Growth</span>
                 </h1>
                 <p className="hero-description">
-                  Search visibility starts with technical foundations — crawlability,
+                  Search visibility starts with technical foundations: crawlability,
                   site structure, page speed, on-page optimization, and measurement.
                   We fix what&apos;s broken so your content and marketing can actually
                   compete.

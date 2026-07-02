@@ -34,8 +34,8 @@ export default function SiteAuditPage() {
                 Get Your Free Website Analysis
               </h1>
               <p className="inner-page-subtitle">
-                Whether you have a website that needs improvement or you're looking to build one from scratch, 
-                get expert insights on your digital presence—completely free.
+                Have a site that needs work, or planning to build one? Get expert
+                insights on your digital presence. Completely free.
               </p>
             </div>
           </div>

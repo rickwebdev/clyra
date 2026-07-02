@@ -22,7 +22,7 @@ const problems = [
   {
     icon: faPaintBrush,
     title: "Template-Bound Design",
-    description: "Squarespace is built around fixed templates — deep customization isn't possible",
+    description: "Squarespace is built around fixed templates. Deep customization isn't possible.",
     impact: "Hard to stand out from other Squarespace sites"
   },
   {
@@ -46,7 +46,7 @@ const problems = [
   {
     icon: faLock,
     title: "No Self-Hosting",
-    description: "Squarespace is proprietary — you can't host elsewhere or fully export your design",
+    description: "Squarespace is proprietary. You can't host elsewhere or fully export your design.",
     impact: "You don't truly own your site"
   }
 ];
@@ -74,13 +74,13 @@ const comparison = [
   },
   {
     criteria: "Ownership & hosting",
-    builder: "Proprietary — no self-hosting",
-    clyra: "Open source — host anywhere, 100% yours"
+    builder: "Proprietary; no self-hosting",
+    clyra: "Open source. Host anywhere, 100% yours."
   },
   {
     criteria: "Store fees & cost",
     builder: "Transaction fees on lower tiers",
-    clyra: "WooCommerce — no platform transaction fees"
+    clyra: "WooCommerce with no platform transaction fees"
   }
 ];
 
@@ -103,7 +103,7 @@ const process = [
   {
     icon: faBolt,
     title: "Launch & Own",
-    description: "We launch with zero downtime — and you fully own the site, code, and content."
+    description: "We launch with zero downtime, and you fully own the site, code, and content."
   }
 ];
 
@@ -114,7 +114,7 @@ const faqs = [
   },
   {
     question: "Can my Squarespace content be moved to WordPress?",
-    answer: "Yes. Squarespace allows a partial export of pages and blog posts, and we handle the rest — images, structure, and anything the export misses — so your content lands cleanly in WordPress."
+    answer: "Yes. Squarespace allows a partial export of pages and blog posts. We handle the rest: images, structure, and anything the export misses, so your content lands cleanly in WordPress."
   },
   {
     question: "Why move off Squarespace if my site works?",
@@ -136,7 +136,7 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: "Squarespace to WordPress Migration | Move Off Squarespace, Keep Your SEO | Clyra Studios",
-  description: "Outgrowing Squarespace? Clyra Studios migrates your Squarespace site to WordPress — custom design, more integrations, full SEO control, no transaction fees, and 100% ownership.",
+  description: "Outgrowing Squarespace? Clyra Studios migrates your Squarespace site to WordPress with custom design, more integrations, full SEO control, no transaction fees, and 100% ownership.",
   keywords: "squarespace to wordpress migration, move squarespace to wordpress, migrate from squarespace, squarespace alternatives, squarespace alternatives for small business, squarespace seo, export squarespace site, leave squarespace, squarespace limitations, squarespace transaction fees",
   authors: [{ name: "Clyra Studios" }],
   creator: "Clyra Studios",
@@ -264,7 +264,7 @@ export default function SquarespaceToWordPressPage() {
                   <span className="title-line highlight">Without Losing Your SEO</span>
                 </h1>
                 <p className="hero-description">
-                  Outgrew Squarespace&apos;s templates, integrations, or fees? Clyra Studios migrates your Squarespace site to WordPress — custom design, full SEO control, and a site you actually own.
+                  Outgrew Squarespace&apos;s templates, integrations, or fees? Clyra Studios migrates your Squarespace site to WordPress with custom design, full SEO control, and a site you actually own.
                 </p>
                 <p className="hero-hook">
                   Stop renting a closed platform. Get a fast, custom site built around your business.
@@ -329,7 +329,7 @@ export default function SquarespaceToWordPressPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">Why Businesses Move Off <span className="transform-word">Squarespace</span></h2>
               <p className="section-description">
-                Squarespace is polished for simple sites — but it&apos;s a closed platform. If you need real design control, more integrations, or lower long-term costs, you&apos;ve outgrown it.
+                Squarespace is polished for simple sites, but it&apos;s a closed platform. If you need real design control, more integrations, or lower long-term costs, you&apos;ve outgrown it.
               </p>
             </div>
 
@@ -371,7 +371,7 @@ export default function SquarespaceToWordPressPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">Squarespace vs. a Site You Own</h2>
               <p className="section-description">
-                Here&apos;s how staying on Squarespace compares to a custom site we build and you own — on WordPress or a headless setup if you need more.
+                Here&apos;s how staying on Squarespace compares to a custom site we build and you own, on WordPress or a headless setup if you need more.
               </p>
             </div>
 
@@ -397,7 +397,7 @@ export default function SquarespaceToWordPressPage() {
                 ))}
               </div>
               <p className="bc-note">
-                Not sure whether WordPress or a headless build is right for you? We figure that out together on a free review — based on how you want to grow.
+                Not sure whether WordPress or a headless build is right for you? We figure that out together on a free review, based on how you want to grow.
               </p>
               <div className="bc-actions">
                 <Link href="/site-audit" className="btn btn-primary btn-large">
@@ -458,7 +458,7 @@ export default function SquarespaceToWordPressPage() {
             <div className="cta-content" data-aos="fade-up">
               <h2 className="cta-title">Ready to Leave Squarespace Behind?</h2>
               <p className="cta-description">
-                Get a free, honest review of your Squarespace site&apos;s performance, design, and SEO — plus exactly what a migration would look like for you. No pitch, just a plan.
+                Get a free, honest review of your Squarespace site&apos;s performance, design, and SEO, plus exactly what a migration would look like for you. No pitch, just a plan.
               </p>
               <div className="cta-actions">
                 <Link href="/site-audit" className="btn btn-primary btn-large">

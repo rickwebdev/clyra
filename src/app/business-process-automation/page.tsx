@@ -32,7 +32,7 @@ const problems = [
     icon: faCopy,
     title: "Manual, Repetitive Tasks",
     description:
-      "Copying data between tools, sending the same emails, and updating records by hand — every day, forever.",
+      "Copying data between tools, sending the same emails, and updating records by hand, every day, forever.",
     impact: "Hours lost to work software should handle",
   },
   {
@@ -53,7 +53,7 @@ const problems = [
     icon: faClock,
     title: "Growth Adds More Busywork",
     description:
-      "As volume grows, manual processes don't scale — they just consume more of your team's time.",
+      "As volume grows, manual processes don't scale. They just consume more of your team's time.",
     impact: "You hire for tasks automation could handle",
   },
 ];
@@ -69,7 +69,7 @@ const whatCanBeAutomated = [
     icon: faBell,
     title: "Form Notifications",
     description:
-      "Instant alerts and structured notifications when forms are submitted — to email, Slack, or your CRM.",
+      "Instant alerts and structured notifications when forms are submitted, routed to email, Slack, or your CRM.",
   },
   {
     icon: faDatabase,
@@ -81,7 +81,7 @@ const whatCanBeAutomated = [
     icon: faEnvelopeOpenText,
     title: "Email Workflows",
     description:
-      "Trigger the right emails and sequences based on actions, stages, or timing — without manual sends.",
+      "Trigger the right emails and sequences based on actions, stages, or timing, without manual sends.",
   },
   {
     icon: faUserPlus,
@@ -93,7 +93,7 @@ const whatCanBeAutomated = [
     icon: faFileSignature,
     title: "Proposal Workflows",
     description:
-      "Streamline proposal creation, delivery, reminders, and follow-up so deals keep moving.",
+      "Speed up proposal creation, delivery, reminders, and follow-up so deals keep moving.",
   },
   {
     icon: faTableColumns,
@@ -105,7 +105,7 @@ const whatCanBeAutomated = [
     icon: faPlug,
     title: "API Connections",
     description:
-      "Custom integrations that connect systems without native support — so everything works together.",
+      "Custom integrations that connect systems without native support, so everything works together.",
   },
 ];
 
@@ -154,7 +154,7 @@ const humanControl = [
     iconClass: "success",
     title: "Reliable, Not Fragile",
     description:
-      "We build in error handling, notifications, and fallbacks so you know when something needs attention — automations shouldn't fail silently.",
+      "We build in error handling, notifications, and fallbacks so you know when something needs attention. Automations shouldn't fail silently.",
     highlight: "Built to be monitored.",
   },
   {
@@ -170,7 +170,7 @@ const humanControl = [
     iconClass: "warning",
     title: "Scales With Your Business",
     description:
-      "As volume grows, automated processes handle more without adding manual work — so you spend on growth, not repetitive tasks.",
+      "As volume grows, automated processes handle more without adding manual work, so you spend on growth, not repetitive tasks.",
     highlight: "Handle more, not busier.",
   },
 ];
@@ -228,7 +228,7 @@ const faqs = [
   {
     question: "What platforms do you work with?",
     answer:
-      "Common ones include Airtable, Google Sheets, Notion, HubSpot, Zapier, Make, and n8n — plus custom API and webhook integrations when needed.",
+      "Common ones include Airtable, Google Sheets, Notion, HubSpot, Zapier, Make, and n8n, plus custom API and webhook integrations when needed.",
   },
   {
     question: "What if an automation breaks?",
@@ -238,7 +238,7 @@ const faqs = [
   {
     question: "Is this the same as AI automation?",
     answer:
-      "Not exactly. Business process automation focuses on connecting systems and automating repetitive tasks. AI can be added where it helps — but a lot of valuable automation is simply reliable workflow logic.",
+      "Not exactly. Business process automation focuses on connecting systems and automating repetitive tasks. AI can be added where it helps, but a lot of valuable automation is simply reliable workflow logic.",
   },
   {
     question: "How much time can this actually save?",
@@ -263,7 +263,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Business Process Automation for Small Businesses | Clyra Studios",
     description:
-      "Automate repetitive tasks, internal workflows, and manual processes — lead routing, onboarding, CRM updates, dashboards, and integrations.",
+      "Automate repetitive tasks, internal workflows, and manual processes: lead routing, onboarding, CRM updates, dashboards, and integrations.",
     url: "https://clyrastudios.com/business-process-automation",
     siteName: "Clyra Studios",
     images: [
@@ -281,7 +281,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Business Process Automation for Small Businesses | Clyra Studios",
     description:
-      "Automate repetitive tasks, internal workflows, and manual processes — lead routing, onboarding, CRM updates, dashboards, and integrations.",
+      "Automate repetitive tasks, internal workflows, and manual processes: lead routing, onboarding, CRM updates, dashboards, and integrations.",
     images: ["/images/thumbnail.png"],
     creator: "@clyrastudios",
     site: "@clyrastudios",
@@ -303,7 +303,7 @@ const structuredData = {
   "@type": "Service",
   name: "Business Process Automation",
   description:
-    "Custom business process automation for small businesses — lead routing, CRM workflows, onboarding, email automation, internal dashboards, and API integrations.",
+    "Custom business process automation for small businesses: lead routing, CRM workflows, onboarding, email automation, internal dashboards, and API integrations.",
   provider: {
     "@type": "Organization",
     name: "Clyra Studios",
@@ -379,7 +379,7 @@ export default function BusinessProcessAutomationPage() {
                 </h1>
                 <p className="hero-description">
                   We automate the repetitive business tasks, internal workflows,
-                  and manual processes that eat your team&apos;s time — lead
+                  and manual processes that eat your team&apos;s time: lead
                   routing, onboarding, CRM updates, notifications, dashboards,
                   and the integrations that connect your tools together.
                 </p>
@@ -441,7 +441,7 @@ export default function BusinessProcessAutomationPage() {
                 <span className="transform-word">Slows Growth</span>
               </h2>
               <p className="section-description">
-                Manual processes feel manageable at first — then they quietly
+                Manual processes feel manageable at first, then they quietly
                 become the ceiling on how much your team can handle.
               </p>
             </div>
@@ -542,7 +542,7 @@ export default function BusinessProcessAutomationPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">How Clyra Builds Workflows</h2>
               <p className="section-description">
-                A practical, low-risk process — from mapping what you do today to
+                A practical, low-risk process, from mapping what you do today to
                 a reliable automation you can trust.
               </p>
             </div>
@@ -594,7 +594,7 @@ export default function BusinessProcessAutomationPage() {
               </h2>
               <p className="section-description">
                 Good automation is dependable and connected to what you already
-                use — not a fragile black box.
+                use, not a fragile black box.
               </p>
             </div>
 

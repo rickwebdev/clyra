@@ -106,7 +106,7 @@ const addOnServices = [
   {
     icon: faRocket,
     title: "Site Speed Optimization",
-    description: "Make your site lightning fast"
+    description: "Make your site load faster"
   },
   {
     icon: faShieldAlt,
@@ -148,7 +148,7 @@ const faqs = [
   },
   {
     question: "Will I lose any data?",
-    answer: "No — we always back up your site before making any changes. Your data is completely safe with us."
+    answer: "No. We always back up your site before making any changes. Your data is completely safe with us."
   },
   {
     question: "Do you handle hacked or infected sites?",
@@ -169,7 +169,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Website Broken? WordPress Repair Experts — Clyra Studios",
+  title: "Website Broken? WordPress Repair Experts | Clyra Studios",
   description: "Is your website down, hacked, or showing errors? Clyra Studios offers fast WordPress fixes, updates, and emergency recovery. Get your site back online fast.",
   keywords: "wordpress repair, website broken, wordpress emergency, white screen of death, wordpress hacked, website down, wordpress fix, wordpress maintenance, wordpress support, website recovery, wordpress mechanic, wordpress troubleshooting",
   authors: [{ name: "Clyra Studios" }],
@@ -185,7 +185,7 @@ export const metadata: Metadata = {
     canonical: '/wordpress-mechanic',
   },
   openGraph: {
-    title: "Website Broken? WordPress Repair Experts — Clyra Studios",
+    title: "Website Broken? WordPress Repair Experts | Clyra Studios",
     description: "Is your website down, hacked, or showing errors? Clyra Studios offers fast WordPress fixes, updates, and emergency recovery. Get your site back online fast.",
     url: 'https://clyrastudios.com/wordpress-mechanic',
     siteName: 'Clyra Studios',
@@ -202,7 +202,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Website Broken? WordPress Repair Experts — Clyra Studios',
+    title: 'Website Broken? WordPress Repair Experts | Clyra Studios',
     description: 'Is your website down, hacked, or showing errors? Clyra Studios offers fast WordPress fixes, updates, and emergency recovery. Get your site back online fast.',
     images: ['/images/thumbnail.png'],
     creator: '@clyrastudios',
@@ -352,7 +352,7 @@ export default function WordPressMechanicPage() {
                 Website Broken? <span className="gradient-text">We Can Fix It Today.</span>
               </h1>
               <p className="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
-                Whether your site crashed, got hacked, or just stopped working — we'll get it running again.
+                Whether your site crashed, got hacked, or just stopped working, we'll get it running again.
               </p>
                   <div className="hero-cta" data-aos="fade-up" data-aos-delay="400">
                     <Link href="#priority-form" className="btn btn-primary btn-lg">
@@ -393,7 +393,7 @@ export default function WordPressMechanicPage() {
             <div className="section-header">
               <h2 className="section-title">We're the WordPress Mechanics.</h2>
               <p className="section-subtitle">
-                Think of us like your emergency tech pit crew — we diagnose, repair, and stabilize your website before bigger problems start.
+                Think of us like your emergency tech pit crew. We diagnose, repair, and stabilize your website before bigger problems start.
               </p>
             </div>
             <div className="issues-grid">
@@ -528,7 +528,7 @@ export default function WordPressMechanicPage() {
           </div>
           <div className="container">
             <div className="section-header">
-              <h2 className="section-title">Beyond Repairs — Keep Your Site Running Smoothly</h2>
+              <h2 className="section-title">Beyond Repairs: Keep Your Site Running Smoothly</h2>
               <p className="section-subtitle">
                 Once we fix your immediate problem, let us help you prevent future issues.
               </p>
@@ -564,7 +564,7 @@ export default function WordPressMechanicPage() {
             <div className="cta-content">
               <h2 className="cta-title">Get Back Online Before You Lose Another Sale</h2>
               <p className="cta-subtitle">
-                Priority Queue — Request Immediate Help
+                Priority Queue: Request Immediate Help
               </p>
               <ContactForm formId="priority-form" />
             </div>

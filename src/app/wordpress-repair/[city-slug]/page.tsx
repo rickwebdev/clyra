@@ -579,7 +579,7 @@ export async function generateMetadata({ params }: { params: { 'city-slug': stri
     };
   }
 
-  const title = `WordPress Repair in ${city.name}, ${city.state} — Clyra Studios`;
+  const title = `WordPress Repair in ${city.name}, ${city.state} | Clyra Studios`;
   const description = `Professional WordPress repair services in ${city.name}, ${city.state}. Same-day fixes for crashes, hacks, and performance issues. Serving ${city.name} businesses with emergency WordPress support.`;
 
   return {

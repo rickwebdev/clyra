@@ -35,7 +35,7 @@ export default function ComparisonsPage() {
             <div className="inner-page-header">
               <h1 className="inner-page-title">WordPress vs Wix, Squarespace, Webflow & Shopify: The Complete 2025 Comparison</h1>
               <p className="inner-page-subtitle">
-                Business owners comparing WordPress vs Wix, Squarespace, Webflow, or Shopify often ask the same question: which platform will give me the most control, growth, and long-term value? Here's how WordPress stacks up — and why it remains the best choice for small businesses, startups, and growing brands.
+                Business owners comparing WordPress vs Wix, Squarespace, Webflow, or Shopify often ask the same question: which platform will give me the most control, growth, and long-term value? Here's how WordPress stacks up and why it remains the best choice for small businesses, startups, and growing brands.
               </p>
             </div>
           </div>
@@ -54,14 +54,14 @@ export default function ComparisonsPage() {
                   WordPress gives you full control over your code, hosting, and data. Wix locks you into their platform with limited customization and higher long-term costs.
                 </p>
                 <ul className="inner-page-feature-list">
-                  <li className="inner-page-feature-item">Full code ownership — you can export, migrate, and customize without being trapped in Wix's closed system</li>
-                  <li className="inner-page-feature-item">Better SEO capabilities — WordPress's clean code structure and extensive SEO plugins outperform Wix's limited optimization</li>
-                  <li className="inner-page-feature-item">Unlimited customization — add any functionality with 60,000+ plugins vs Wix's limited app marketplace</li>
-                  <li className="inner-page-feature-item">No platform lock-in — own your content and move to any hosting provider anytime</li>
-                  <li className="inner-page-feature-item">Lower costs long-term — WordPress hosting starts at $3/month vs Wix's premium plans at $23+/month</li>
+                  <li className="inner-page-feature-item">Full code ownership. You can export, migrate, and customize without being trapped in Wix's closed system</li>
+                  <li className="inner-page-feature-item">Better SEO capabilities. WordPress's clean code structure and extensive SEO plugins outperform Wix's limited optimization</li>
+                  <li className="inner-page-feature-item">Unlimited customization. Add any functionality with 60,000+ plugins vs Wix's limited app marketplace</li>
+                  <li className="inner-page-feature-item">No platform lock-in. Own your content and move to any hosting provider anytime</li>
+                  <li className="inner-page-feature-item">Lower costs long-term. WordPress hosting starts at $3/month vs Wix's premium plans at $23+/month</li>
                 </ul>
                 <p className="inner-page-card-note">
-                  <strong>Ready to escape Wix?</strong> <Link href="/wix-to-wordpress" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our seamless WordPress migrations from Wix</Link> preserve your SEO, improve performance, and give you complete site ownership.
+                  <strong>Ready to escape Wix?</strong> <Link href="/wix-to-wordpress" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our WordPress migrations from Wix</Link> preserve your SEO, improve performance, and give you complete site ownership.
                 </p>
               </div>
 
@@ -71,11 +71,11 @@ export default function ComparisonsPage() {
                   WordPress offers unlimited flexibility and growth potential. Squarespace limits your options with restrictive templates and expensive pricing.
                 </p>
                 <ul className="inner-page-feature-list">
-                  <li className="inner-page-feature-item">Unlimited plugins and themes — access 60,000+ plugins vs Squarespace's limited extensions</li>
-                  <li className="inner-page-feature-item">Better performance optimization — WordPress sites load 3x faster with proper hosting vs Squarespace's slower infrastructure</li>
-                  <li className="inner-page-feature-item">Advanced functionality — integrate with any business tool vs Squarespace's closed ecosystem</li>
-                  <li className="inner-page-feature-item">Lower long-term costs — WordPress hosting from $3/month vs Squarespace's $16+/month with transaction fees</li>
-                  <li className="inner-page-feature-item">True ownership — export your content and move anywhere vs being locked into Squarespace forever</li>
+                  <li className="inner-page-feature-item">Unlimited plugins and themes. Access 60,000+ plugins vs Squarespace's limited extensions</li>
+                  <li className="inner-page-feature-item">Better performance optimization. WordPress sites load 3x faster with proper hosting vs Squarespace's slower infrastructure</li>
+                  <li className="inner-page-feature-item">Advanced functionality. Integrate with any business tool vs Squarespace's closed ecosystem</li>
+                  <li className="inner-page-feature-item">Lower long-term costs. WordPress hosting from $3/month vs Squarespace's $16+/month with transaction fees</li>
+                  <li className="inner-page-feature-item">True ownership. Export your content and move anywhere vs being locked into Squarespace forever</li>
                 </ul>
                 <p className="inner-page-card-note">
                   <strong>Outgrowing Squarespace?</strong> <Link href="/squarespace-to-wordpress" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our WordPress migrations from Squarespace</Link> maintain your design while adding unlimited growth potential.
@@ -88,11 +88,11 @@ export default function ComparisonsPage() {
                   WordPress excels at content management and SEO. Webflow is great for design but limited for content marketing and business growth.
                 </p>
                 <ul className="inner-page-feature-list">
-                  <li className="inner-page-feature-item">Superior content management — WordPress's intuitive editor beats Webflow's complex CMS for non-technical users</li>
-                  <li className="inner-page-feature-item">Better SEO out of the box — WordPress's clean code and SEO plugins outperform Webflow's limited optimization</li>
-                  <li className="inner-page-feature-item">More hosting options — choose any hosting provider vs being locked into Webflow's expensive hosting</li>
-                  <li className="inner-page-feature-item">Lower ongoing costs — WordPress hosting from $3/month vs Webflow's $16+/month with limited features</li>
-                  <li className="inner-page-feature-item">Content marketing powerhouse — built-in blog, SEO tools, and content workflows vs Webflow's design-focused approach</li>
+                  <li className="inner-page-feature-item">Superior content management. WordPress's intuitive editor beats Webflow's complex CMS for non-technical users</li>
+                  <li className="inner-page-feature-item">Better SEO out of the box. WordPress's clean code and SEO plugins outperform Webflow's limited optimization</li>
+                  <li className="inner-page-feature-item">More hosting options. Choose any hosting provider vs being locked into Webflow's expensive hosting</li>
+                  <li className="inner-page-feature-item">Lower ongoing costs. WordPress hosting from $3/month vs Webflow's $16+/month with limited features</li>
+                  <li className="inner-page-feature-item">Strong content marketing. Built-in blog, SEO tools, and content workflows vs Webflow's design-focused approach</li>
                 </ul>
                 <p className="inner-page-card-note">
                   <strong>Need better content management?</strong> <Link href="/webflow-to-wordpress" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our WordPress migrations from Webflow</Link> preserve your design while adding powerful content marketing capabilities.
@@ -105,11 +105,11 @@ export default function ComparisonsPage() {
                   WordPress with WooCommerce gives you e-commerce flexibility. Shopify locks you into their ecosystem with high fees and limited customization.
                 </p>
                 <ul className="inner-page-feature-list">
-                  <li className="inner-page-feature-item">No transaction fees — keep 100% of your revenue vs Shopify's 2.9% + 30¢ per transaction</li>
-                  <li className="inner-page-feature-item">Full design control — customize every pixel vs Shopify's restrictive theme limitations</li>
-                  <li className="inner-page-feature-item">Better content marketing — powerful blog, SEO tools, and content workflows vs Shopify's basic blog</li>
-                  <li className="inner-page-feature-item">More payment options — integrate any payment processor vs being limited to Shopify Payments</li>
-                  <li className="inner-page-feature-item">Lower costs long-term — WordPress hosting + WooCommerce vs Shopify's $29+/month + transaction fees</li>
+                  <li className="inner-page-feature-item">No transaction fees. Keep 100% of your revenue vs Shopify's 2.9% + 30¢ per transaction</li>
+                  <li className="inner-page-feature-item">Full design control. Customize every pixel vs Shopify's restrictive theme limitations</li>
+                  <li className="inner-page-feature-item">Better content marketing. Powerful blog, SEO tools, and content workflows vs Shopify's basic blog</li>
+                  <li className="inner-page-feature-item">More payment options. Integrate any payment processor vs being limited to Shopify Payments</li>
+                  <li className="inner-page-feature-item">Lower costs long-term. WordPress hosting + WooCommerce vs Shopify's $29+/month + transaction fees</li>
                 </ul>
                 <p className="inner-page-card-note">
                   <strong>Paying too much in fees?</strong> <Link href="/migrations#shopify" className="underline" style={{color: '#60a5fa', textDecoration: 'underline'}}>Our WordPress migrations from Shopify</Link> eliminate transaction fees while adding unlimited customization.
@@ -147,7 +147,7 @@ export default function ComparisonsPage() {
             <div className="inner-page-cta-section">
               <h2 className="inner-page-cta-title">Ready to Make the Switch?</h2>
               <p className="inner-page-cta-description">
-                If you're ready to move from Wix, Squarespace, Webflow, or Shopify, we specialize in seamless migrations that preserve your SEO, improve performance, and give you full site ownership. Join 100+ businesses who've made the switch and never looked back.
+                If you're ready to move from Wix, Squarespace, Webflow, or Shopify, we handle migrations that preserve your SEO, improve performance, and give you full site ownership. Join 100+ businesses who've made the switch and never looked back.
               </p>
               <div className="inner-page-cta-actions">
                 <Link href="/site-audit" className="btn btn-primary btn-large">

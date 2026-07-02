@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Managed WordPress Hosting Comparison | Clyra Studios",
   description:
-    "Compare managed WordPress hosting options for performance, support, and reliability. Supporting guidance for Clyra clients — not a standalone hosting reseller page.",
+    "Compare managed WordPress hosting options for performance, support, and reliability. Supporting guidance for Clyra clients, not a standalone hosting reseller page.",
   alternates: {
     canonical: "/hosting",
   },
@@ -42,7 +42,7 @@ export default function HostingPage() {
             <div className="inner-page-header">
               <h1 className="inner-page-title">Why Choose DreamHost Managed WordPress Over GoDaddy</h1>
               <p className="inner-page-subtitle">
-                If you're shopping for reliable, high-performance WordPress hosting, you'll hear a lot of names — DreamHost and GoDaddy often come up. But if your goal is scalability, security, performance, and peace of mind (with minimal maintenance), DreamHost's managed WordPress offerings deliver more long-term value.
+                If you're shopping for reliable, high-performance WordPress hosting, you'll hear a lot of names. DreamHost and GoDaddy often come up. But if your goal is scalability, security, performance, and peace of mind (with minimal maintenance), DreamHost's managed WordPress offerings deliver more long-term value.
               </p>
             </div>
           </div>
@@ -325,7 +325,7 @@ export default function HostingPage() {
               <div className="inner-page-card text-center" data-aos="fade-up" data-aos-delay="600">
                 <h2 className="inner-page-card-title mb-4">Ready to Make the Switch?</h2>
                 <p className="inner-page-card-description mb-6 text-lg">
-                  If you're building a serious WordPress site — one that needs to scale, stay secure, and perform under load — DreamHost's managed WordPress (DreamPress) is a smarter long-term choice than GoDaddy's more generic or constrained options.
+                  If you're building a serious WordPress site, one that needs to scale, stay secure, and perform under load, DreamHost's managed WordPress (DreamPress) is a smarter long-term choice than GoDaddy's more generic or constrained options.
                 </p>
                 
                 <div className="space-y-4">

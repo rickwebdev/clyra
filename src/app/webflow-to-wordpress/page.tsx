@@ -21,13 +21,13 @@ const problems = [
   {
     icon: faDatabase,
     title: "CMS Item Limits",
-    description: "Webflow caps CMS items per plan — growing content can force pricier tiers",
+    description: "Webflow caps CMS items per plan. Growing content can force pricier tiers.",
     impact: "Your content outgrows the plan"
   },
   {
     icon: faLock,
     title: "Hosting Lock-In",
-    description: "Static export leaves out the CMS and e-commerce — dynamic sites must stay on Webflow",
+    description: "Static export leaves out the CMS and e-commerce. Dynamic sites must stay on Webflow.",
     impact: "You can't freely move your full site"
   },
   {
@@ -64,7 +64,7 @@ const comparison = [
   {
     criteria: "Hosting & portability",
     builder: "Dynamic sites locked to Webflow",
-    clyra: "Open source — host anywhere, 100% yours"
+    clyra: "Open source. Host anywhere, 100% yours."
   },
   {
     criteria: "Content editing",
@@ -102,22 +102,22 @@ const process = [
   {
     icon: faBolt,
     title: "Launch & Own",
-    description: "We launch with zero downtime — and you fully own the site, code, and content."
+    description: "We launch with zero downtime, and you fully own the site, code, and content."
   }
 ];
 
 const faqs = [
   {
     question: "Will I lose SEO moving from Webflow to WordPress?",
-    answer: "No. We preserve URLs where possible, set 301 redirects for the rest, and migrate your content and metadata, so rankings carry over — usually with a performance boost."
+    answer: "No. We preserve URLs where possible, set 301 redirects for the rest, and migrate your content and metadata. Rankings carry over, usually with a performance boost."
   },
   {
     question: "Can you move my Webflow CMS collections to WordPress?",
-    answer: "Yes. We migrate your Webflow CMS collections into WordPress content types, so your structured content comes across — without Webflow's per-plan item caps."
+    answer: "Yes. We migrate your Webflow CMS collections into WordPress content types, so your structured content comes across without Webflow's per-plan item caps."
   },
   {
-    question: "I like Webflow's design — will my site still look as good?",
-    answer: "Absolutely. Webflow is a strong design tool, and we rebuild your design faithfully (or improve it) on WordPress — while removing the CMS limits, hosting lock-in, and editing friction."
+    question: "I like Webflow's design. Will my site still look as good?",
+    answer: "Absolutely. Webflow is a strong design tool, and we rebuild your design faithfully (or improve it) on WordPress while removing the CMS limits, hosting lock-in, and editing friction."
   },
   {
     question: "Do I keep my domain?",
@@ -135,7 +135,7 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: "Webflow to WordPress Migration | Move Off Webflow, Keep Your SEO | Clyra Studios",
-  description: "Hitting Webflow's CMS limits, hosting lock-in, or rising costs? Clyra Studios migrates your Webflow site to WordPress — unlimited content, easier editing, full SEO control, and 100% ownership.",
+  description: "Hitting Webflow's CMS limits, hosting lock-in, or rising costs? Clyra Studios migrates your Webflow site to WordPress with unlimited content, easier editing, full SEO control, and 100% ownership.",
   keywords: "webflow to wordpress migration, move webflow to wordpress, migrate from webflow, webflow alternatives, webflow cms limits, webflow vs wordpress, export webflow site, leave webflow, webflow limitations, webflow hosting cost",
   authors: [{ name: "Clyra Studios" }],
   creator: "Clyra Studios",
@@ -263,7 +263,7 @@ export default function WebflowToWordPressPage() {
                   <span className="title-line highlight">Without Losing Your SEO</span>
                 </h1>
                 <p className="hero-description">
-                  Hitting Webflow&apos;s CMS limits, hosting lock-in, or rising costs? Clyra Studios migrates your Webflow site to WordPress — unlimited content, easier editing for your team, and a site you actually own.
+                  Hitting Webflow&apos;s CMS limits, hosting lock-in, or rising costs? Clyra Studios migrates your Webflow site to WordPress with unlimited content, easier editing for your team, and a site you actually own.
                 </p>
                 <p className="hero-hook">
                   Keep the great design. Lose the limits, lock-in, and climbing bills.
@@ -328,7 +328,7 @@ export default function WebflowToWordPressPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">Why Businesses Move Off <span className="transform-word">Webflow</span></h2>
               <p className="section-description">
-                Webflow is a great design tool — but as content and traffic grow, CMS limits, hosting lock-in, and rising costs start to bite. If that&apos;s you, WordPress removes the ceiling.
+                Webflow is a strong design tool, but as content and traffic grow, CMS limits, hosting lock-in, and rising costs start to bite. If that&apos;s you, WordPress removes the ceiling.
               </p>
             </div>
 
@@ -370,7 +370,7 @@ export default function WebflowToWordPressPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">Webflow vs. a Site You Own</h2>
               <p className="section-description">
-                Webflow&apos;s design tooling is strong — here&apos;s where a custom site we build and you own pulls ahead, on WordPress or a headless setup.
+                Webflow&apos;s design tooling is strong. Here&apos;s where a custom site we build and you own pulls ahead, on WordPress or a headless setup.
               </p>
             </div>
 
@@ -396,7 +396,7 @@ export default function WebflowToWordPressPage() {
                 ))}
               </div>
               <p className="bc-note">
-                Not sure whether WordPress or a headless build is right for you? We figure that out together on a free review — based on how you want to grow.
+                Not sure whether WordPress or a headless build is right for you? We figure that out together on a free review, based on how you want to grow.
               </p>
               <div className="bc-actions">
                 <Link href="/site-audit" className="btn btn-primary btn-large">
@@ -457,7 +457,7 @@ export default function WebflowToWordPressPage() {
             <div className="cta-content" data-aos="fade-up">
               <h2 className="cta-title">Ready to Move Beyond Webflow?</h2>
               <p className="cta-description">
-                Get a free, honest review of your Webflow site&apos;s performance, content setup, and SEO — plus exactly what a migration would look like for you. No pitch, just a plan.
+                Get a free, honest review of your Webflow site&apos;s performance, content setup, and SEO, plus exactly what a migration would look like for you. No pitch, just a plan.
               </p>
               <div className="cta-actions">
                 <Link href="/site-audit" className="btn btn-primary btn-large">

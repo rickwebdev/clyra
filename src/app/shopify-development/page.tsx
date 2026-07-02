@@ -25,7 +25,7 @@ const problems = [
     icon: faCartShopping,
     title: "Outgrowing a Basic Store Setup",
     description:
-      "Default themes and DIY configuration work until they don't — checkout friction, messy catalogs, and conversion leaks start costing real revenue.",
+      "Default themes and DIY configuration work until they don't. Then checkout friction, messy catalogs, and conversion leaks start costing real revenue.",
     impact: "Sales stall before marketing spend pays off",
   },
   {
@@ -39,14 +39,14 @@ const problems = [
     icon: faGears,
     title: "Disconnected Store & Marketing",
     description:
-      "Your store, email, ads, analytics, and content don't connect — so you can't see what's actually driving purchases.",
+      "Your store, email, ads, analytics, and content don't connect, so you can't see what's actually driving purchases.",
     impact: "Hard to optimize what you can't measure",
   },
   {
     icon: faPalette,
     title: "Brand & UX That Don't Convert",
     description:
-      "A store can look fine and still lose sales — unclear product pages, weak mobile UX, and checkout drop-off kill growth.",
+      "A store can look fine and still lose sales. Unclear product pages, weak mobile UX, and checkout drop-off kill growth.",
     impact: "Traffic without conversion",
   },
 ];
@@ -56,7 +56,7 @@ const capabilities = [
     icon: faStore,
     title: "Custom Shopify Store Builds",
     description:
-      "New stores designed around your products, brand, and conversion goals — not a generic theme with your logo dropped in.",
+      "New stores designed around your products, brand, and conversion goals, not a generic theme with your logo dropped in.",
   },
   {
     icon: faCartShopping,
@@ -80,7 +80,7 @@ const capabilities = [
     icon: faMagnifyingGlass,
     title: "Shopify SEO Foundations",
     description:
-      "Technical and on-page SEO setup so collections and products can compete in search — paired with our technical SEO work when needed.",
+      "Technical and on-page SEO setup so collections and products can compete in search, paired with our technical SEO work when needed.",
   },
   {
     icon: faMobileScreen,
@@ -95,7 +95,7 @@ const processSteps = [
     icon: faMagnifyingGlass,
     title: "1. Discovery & Store Strategy",
     description:
-      "Products, audience, margins, fulfillment, and growth goals — so the build matches how you actually sell.",
+      "Products, audience, margins, fulfillment, and growth goals, so the build matches how you actually sell.",
   },
   {
     icon: faPalette,
@@ -159,19 +159,19 @@ const faqs = [
   {
     question: "Will this guarantee more sales?",
     answer:
-      "No. A better store removes friction and supports growth, but revenue depends on product-market fit, traffic, pricing, fulfillment, and marketing — not the platform alone.",
+      "No. A better store removes friction and supports growth, but revenue depends on product-market fit, traffic, pricing, fulfillment, and marketing, not the platform alone.",
   },
   {
     question: "Can you connect analytics and marketing tools?",
     answer:
-      "Yes. GA4, Looker Studio dashboards, email platforms, ads tracking, and automation workflows are common additions — we build the store as part of a connected system.",
+      "Yes. GA4, Looker Studio dashboards, email platforms, ads tracking, and automation workflows are common additions. We build the store as part of a connected system.",
   },
 ];
 
 export const metadata: Metadata = {
   title: "Shopify Development for Growing Product Brands | Clyra Studios",
   description:
-    "Custom Shopify store development, theme customization, app integrations, and conversion-focused ecommerce builds. Part of Clyra's digital growth systems — not just a theme install.",
+    "Custom Shopify store development, theme customization, app integrations, and conversion-focused ecommerce builds. Part of Clyra's digital growth systems, not just a theme install.",
   keywords:
     "Shopify development, Shopify store build, custom Shopify theme, Shopify agency, ecommerce development, Shopify conversion optimization, Shopify integrations, Shopify SEO setup",
   metadataBase: new URL("https://clyrastudios.com"),
@@ -247,7 +247,7 @@ export default function ShopifyDevelopmentPage() {
                 </h1>
                 <p className="hero-description">
                   We build and improve Shopify stores as part of broader digital
-                  growth systems — custom themes, conversion-focused UX, app
+                  growth systems: custom themes, conversion-focused UX, app
                   integrations, tracking, and the connections to analytics and
                   marketing that help you understand what drives revenue.
                 </p>
@@ -290,7 +290,7 @@ export default function ShopifyDevelopmentPage() {
                 When a Shopify Store <span className="transform-word">Holds You Back</span>
               </h2>
               <p className="section-description">
-                Shopify is the right platform for many brands — but default setups
+                Shopify is the right platform for many brands, but default setups
                 often stop supporting growth before marketing does.
               </p>
             </div>
@@ -428,7 +428,7 @@ export default function ShopifyDevelopmentPage() {
               <h2 className="cta-title">Ready to Build a Shopify Store That Supports Growth?</h2>
               <p className="cta-description">
                 Tell us about your products, current setup, and goals. We&apos;ll
-                recommend the right build — and what to connect next.
+                recommend the right build and what to connect next.
               </p>
               <div className="cta-actions">
                 <Link href="/strategy-call" className="btn btn-primary btn-large">

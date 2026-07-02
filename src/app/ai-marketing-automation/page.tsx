@@ -70,7 +70,7 @@ const outputs = [
     icon: faEnvelope,
     title: "Newsletter Drafts",
     description:
-      "Assemble newsletter drafts from your latest content and updates — ready to edit and send.",
+      "Assemble newsletter drafts from your latest content and updates, ready to edit and send.",
   },
   {
     icon: faBriefcase,
@@ -150,7 +150,7 @@ const humanControl = [
     iconClass: "primary",
     title: "One Input, Many Outputs",
     description:
-      "A single approved piece becomes social posts, a newsletter, and platform content — without manual copy-paste for each channel.",
+      "A single approved piece becomes social posts, a newsletter, and platform content, without manual copy-paste for each channel.",
     highlight: "Write once. Distribute everywhere.",
   },
   {
@@ -158,7 +158,7 @@ const humanControl = [
     iconClass: "warning",
     title: "Consistent Brand Voice",
     description:
-      "Repurposed content is shaped around your tone and each platform's format, so it reads naturally — not like recycled filler.",
+      "Repurposed content is shaped around your tone and each platform's format, so it reads naturally, not like recycled filler.",
     highlight: "On-brand across every channel.",
   },
 ];
@@ -231,7 +231,7 @@ const faqs = [
   {
     question: "How is this different from just scheduling posts?",
     answer:
-      "Schedulers post what you manually create. This system generates the repurposed drafts, routes them for approval, organizes the calendar, and then distributes — connecting content, email, and CRM into one flow.",
+      "Schedulers post what you manually create. This system generates the repurposed drafts, routes them for approval, organizes the calendar, and then distributes, connecting content, email, and CRM into one flow.",
   },
 ];
 
@@ -251,7 +251,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Marketing Automation Workflows | Clyra Studios",
     description:
-      "Turn approved content into multi-channel marketing output — social, newsletters, email, and scheduled distribution, with human approval built in.",
+      "Turn approved content into multi-channel marketing output: social, newsletters, email, and scheduled distribution, with human approval built in.",
     url: "https://clyrastudios.com/ai-marketing-automation",
     siteName: "Clyra Studios",
     images: [
@@ -269,7 +269,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Marketing Automation Workflows | Clyra Studios",
     description:
-      "Turn approved content into multi-channel marketing output — social, newsletters, email, and scheduled distribution, with human approval built in.",
+      "Turn approved content into multi-channel marketing output: social, newsletters, email, and scheduled distribution, with human approval built in.",
     images: ["/images/thumbnail.png"],
     creator: "@clyrastudios",
     site: "@clyrastudios",
@@ -368,7 +368,7 @@ export default function AIMarketingAutomationPage() {
                 <p className="hero-description">
                   We build AI marketing automation workflows that repurpose your
                   approved content into social posts, newsletters, email
-                  campaigns, and scheduled distribution — so your best content
+                  campaigns, and scheduled distribution, so your best content
                   works across every channel instead of being published once.
                 </p>
                 <p className="hero-hook">
@@ -490,7 +490,7 @@ export default function AIMarketingAutomationPage() {
               </h2>
               <p className="section-description">
                 A single approved piece of content can become a full week of
-                multi-channel marketing — all created for your review.
+                multi-channel marketing, all created for your review.
               </p>
             </div>
 
@@ -536,7 +536,7 @@ export default function AIMarketingAutomationPage() {
               <h2 className="section-title">How the Workflow Works</h2>
               <p className="section-description">
                 Approved content moves through a connected, human-reviewed
-                pipeline — from repurposing to distribution to reporting.
+                pipeline, from repurposing to distribution to reporting.
               </p>
             </div>
 
@@ -788,7 +788,7 @@ export default function AIMarketingAutomationPage() {
               </h2>
               <p className="cta-description">
                 Let&apos;s build a marketing workflow that turns your approved
-                content into consistent, multi-channel output — without the
+                content into consistent, multi-channel output, without the
                 manual grind.
               </p>
               <div className="cta-actions">

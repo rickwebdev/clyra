@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
 export const metadata: Metadata = {
-  title: "Clyra Studios | Digital Growth Systems — Websites, Analytics & AI",
+  title: "Clyra Studios | Digital Growth Systems: Websites, Analytics & AI",
   description: "Clyra Studios helps businesses build, improve, automate, measure, and grow digital platforms. Websites, analytics dashboards, AI systems, and automation for small and mid-size businesses.",
   keywords: "digital growth systems, website development, WordPress, analytics dashboards, AI automation, business process automation, SEO, Looker Studio, GA4, marketing automation",
   authors: [{ name: "Clyra Studios" }],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Clyra Studios | Digital Growth Systems — Websites, Analytics & AI",
+    title: "Clyra Studios | Digital Growth Systems: Websites, Analytics & AI",
     description: "Build, improve, automate, measure, and grow digital platforms. Websites, analytics, AI systems, and automation for modern businesses.",
     url: 'https://clyrastudios.com',
     siteName: 'Clyra Studios',
@@ -138,7 +138,7 @@ const structuredData = {
     {
       "@type": "Service", 
       "name": "WordPress Migration",
-      "description": "Seamless platform migrations with SEO preservation and zero downtime",
+      "description": "Platform migrations with SEO preservation and minimal downtime",
       "provider": {
         "@type": "Organization",
         "name": "Clyra Studios"
@@ -264,7 +264,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         {/* Service-Specific Meta Tags */}
         <meta name="service:wordpress-rescue" content="24-hour emergency WordPress site recovery and security fixes" />
-        <meta name="service:wordpress-migration" content="Seamless platform migrations with SEO preservation and zero downtime" />
+        <meta name="service:wordpress-migration" content="Platform migrations with SEO preservation and minimal downtime" />
         <meta name="service:wordpress-seo" content="Technical SEO optimization, Core Web Vitals improvement, and AI Engine Optimization" />
         <meta name="service:wordpress-automation" content="CRM integration, booking systems, and marketing automation for SMBs" />
         

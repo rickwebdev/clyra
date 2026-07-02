@@ -22,11 +22,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-  title: "Clyra Studios | Digital Growth Systems — Websites, Analytics & AI",
+  title: "Clyra Studios | Digital Growth Systems: Websites, Analytics & AI",
   description:
-    "Clyra Studios helps businesses build, improve, automate, measure, and grow digital platforms — websites, analytics dashboards, AI systems, and automation.",
+    "Clyra Studios helps businesses build, improve, automate, measure, and grow digital platforms: websites, analytics dashboards, AI systems, and automation.",
   openGraph: {
-    title: "Clyra Studios | Digital Growth Systems — Websites, Analytics & AI",
+    title: "Clyra Studios | Digital Growth Systems: Websites, Analytics & AI",
     description:
       "Build, improve, automate, measure, and grow digital platforms. Websites, analytics, AI systems, and automation for modern businesses.",
     type: "website",
@@ -53,35 +53,35 @@ const testimonials = [
     industry: "Hospitality"
   },
   {
-    quote: "The process was seamless. The video presentations made everything simple to understand, and the final site completely elevated our professional image online.",
+    quote: "The process was smooth from start to finish. The video presentations made everything simple to understand, and the final site gave us a much more professional presence online.",
     author: "Small Business Owner",
     company: "",
     role: "",
     industry: "Professional Services"
   },
   {
-    quote: "This felt like agency-level service without the agency price tag. Everything was so well thought out — I finally feel like my website reflects the quality of my work.",
+    quote: "This felt like agency-level service without the agency price tag. Everything was so well thought out. I finally feel like my website reflects the quality of my work.",
     author: "Healthcare Professional",
     company: "",
     role: "",
     industry: "Healthcare"
   },
   {
-    quote: "I was impressed by how quickly they turned things around. The whole process was clear, collaborative, and actually enjoyable — which is not how I usually feel about tech projects.",
+    quote: "I was impressed by how quickly they turned things around. The whole process was clear, collaborative, and actually enjoyable, which is not how I usually feel about tech projects.",
     author: "Entrepreneur",
     company: "",
     role: "",
     industry: "Startups"
   },
   {
-    quote: "The ROI was immediate. They didn't just build us a website — they transformed our entire client onboarding process. The automation systems they set up have saved us 15 hours per week and increased our close rate by 40%.",
+    quote: "The ROI was immediate. They didn't just build us a website. They transformed our entire client onboarding process. The automation systems they set up have saved us 15 hours per week and increased our close rate by 40%.",
     author: "Marketing Agency Owner",
     company: "",
     role: "",
     industry: "Digital Services"
   },
   {
-    quote: "Finally, a developer who gets e-commerce. They didn't just migrate my store — they optimized the entire customer journey. My conversion rate doubled and cart abandonment dropped by 35% in the first month.",
+    quote: "Finally, a developer who gets e-commerce. They didn't just migrate my store. They optimized the entire customer journey. My conversion rate doubled and cart abandonment dropped by 35% in the first month.",
     author: "E-commerce Store Owner",
     company: "",
     role: "",
@@ -293,7 +293,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Featured Offer — Growth Website System (landing-style) */}
+        {/* Featured Offer: Growth Website System (landing-style) */}
         <section className="case-studies-section growth-section">
           <div className="section-floating-elements">
             <div className="section-floating-ball growth-ball-1"></div>
@@ -374,7 +374,7 @@ export default function HomePage() {
           <div className="container">
             <div className="section-header slide-in-right">
               <h2 className="section-title">Recent Projects & Studio Highlights</h2>
-              <p className="section-description">Web, Motion, Branding — selected work and in-progress explorations.</p>
+              <p className="section-description">Web, Motion, Branding: selected work and in-progress explorations.</p>
             </div>
             <div className="case-studies-grid">
               {["Web", "Motion", "Branding"].map((cat, idx) => (
@@ -474,7 +474,7 @@ export default function HomePage() {
           </div>
           <div className="container">
             <div className="cta-content" data-aos="fade-up">
-              <h2 className="cta-title">Ready to grow your business online? Let’s build something powerful together.</h2>
+              <h2 className="cta-title">Ready to grow your business online? Let&apos;s talk about what we can build together.</h2>
               <p className="cta-description"></p>
               <div className="cta-actions">
                 <Link href="/strategy-call" className="btn btn-primary btn-large">

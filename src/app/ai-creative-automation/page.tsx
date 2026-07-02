@@ -31,7 +31,7 @@ const problems = [
     title: "Design Is a Bottleneck",
     description:
       "Every blog post, social update, and campaign needs visuals. Waiting on design slows down everything else.",
-    impact: "Content ships late — or without images at all",
+    impact: "Content ships late, or without images at all",
   },
   {
     icon: faShareNodes,
@@ -44,7 +44,7 @@ const problems = [
     icon: faPalette,
     title: "Off-Brand AI Output",
     description:
-      "Generic AI image tools produce random visuals that ignore your colors, fonts, and style — unusable without heavy rework.",
+      "Generic AI image tools produce random visuals that ignore your colors, fonts, and style, leaving them unusable without heavy rework.",
     impact: "More cleanup than time saved",
   },
   {
@@ -79,7 +79,7 @@ const outputs = [
     icon: faRectangleAd,
     title: "Ad Creative",
     description:
-      "Multiple ad variations for testing — sized and styled for each platform, based on your brand system.",
+      "Multiple ad variations for testing, sized and styled for each platform, based on your brand system.",
   },
   {
     icon: faEnvelopeOpenText,
@@ -103,7 +103,7 @@ const outputs = [
     icon: faChartSimple,
     title: "Infographic Drafts",
     description:
-      "First-draft infographic layouts from your data and content — ready for design refinement.",
+      "First-draft infographic layouts from your data and content, ready for design refinement.",
   },
   {
     icon: faPalette,
@@ -119,7 +119,7 @@ const humanControl = [
     iconClass: "success",
     title: "Brand-Aligned, Not Random",
     description:
-      "The workflow is built around your colors, fonts, logos, and style — so output looks like your brand, not a generic AI tool.",
+      "The workflow is built around your colors, fonts, logos, and style, so output looks like your brand, not a generic AI tool.",
     highlight: "On-brand by design.",
   },
   {
@@ -192,7 +192,7 @@ const faqs = [
   {
     question: "Is this just random AI image generation?",
     answer:
-      "No. This is a workflow for producing branded, review-ready creative assets. It is built around your brand system — colors, fonts, logos, and style — so output is usable, not random.",
+      "No. This is a workflow for producing branded, review-ready creative assets. It is built around your brand system (colors, fonts, logos, and style) so output is usable, not random.",
   },
   {
     question: "Will the visuals actually match my brand?",
@@ -212,7 +212,7 @@ const faqs = [
   {
     question: "Can this work alongside my existing designer?",
     answer:
-      "Yes. It is often most valuable as a way to hand designers stronger starting points and handle high-volume, repetitive assets — freeing them for higher-value work.",
+      "Yes. It is often most valuable as a way to hand designers stronger starting points and handle high-volume, repetitive assets, freeing them for higher-value work.",
   },
 ];
 
@@ -232,7 +232,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Creative Automation for Branded Visual Content | Clyra Studios",
     description:
-      "AI-assisted creative workflows for branded visuals, social graphics, ad creative, and marketing assets — with human review and brand consistency built in.",
+      "AI-assisted creative workflows for branded visuals, social graphics, ad creative, and marketing assets, with human review and brand consistency built in.",
     url: "https://clyrastudios.com/ai-creative-automation",
     siteName: "Clyra Studios",
     images: [
@@ -250,7 +250,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Creative Automation for Branded Visual Content | Clyra Studios",
     description:
-      "AI-assisted creative workflows for branded visuals, social graphics, ad creative, and marketing assets — with human review and brand consistency built in.",
+      "AI-assisted creative workflows for branded visuals, social graphics, ad creative, and marketing assets, with human review and brand consistency built in.",
     images: ["/images/thumbnail.png"],
     creator: "@clyrastudios",
     site: "@clyrastudios",
@@ -272,7 +272,7 @@ const structuredData = {
   "@type": "Service",
   name: "AI Creative Automation",
   description:
-    "AI-assisted creative automation systems for producing branded, review-ready visual content — social graphics, blog images, ad creative, thumbnails, and brand-consistent visual systems.",
+    "AI-assisted creative automation systems for producing branded, review-ready visual content: social graphics, blog images, ad creative, thumbnails, and brand-consistent visual systems.",
   provider: {
     "@type": "Organization",
     name: "Clyra Studios",
@@ -348,7 +348,7 @@ export default function AICreativeAutomationPage() {
                 </h1>
                 <p className="hero-description">
                   Generate branded visuals and design assets faster with
-                  AI-assisted creative workflows — featured images, social
+                  AI-assisted creative workflows for featured images, social
                   graphics, ad creative, thumbnails, and more, built around your
                   brand system and approved by a human before anything ships.
                 </p>
@@ -414,7 +414,7 @@ export default function AICreativeAutomationPage() {
                 <span className="transform-word">Slows Teams Down</span>
               </h2>
               <p className="section-description">
-                Visuals are required everywhere — but producing enough
+                Visuals are required everywhere, but producing enough
                 on-brand creative, consistently, is where most small teams get
                 stuck.
               </p>
@@ -472,7 +472,7 @@ export default function AICreativeAutomationPage() {
               </h2>
               <p className="section-description">
                 A connected creative workflow can produce a full range of
-                branded assets — all created for your review.
+                branded assets, all created for your review.
               </p>
             </div>
 
@@ -521,7 +521,7 @@ export default function AICreativeAutomationPage() {
               </h2>
               <p className="section-description">
                 This is not random AI image generation. It is a workflow for
-                producing branded, review-ready creative — with human approval
+                producing branded, review-ready creative, with human approval
                 at the end.
               </p>
             </div>
@@ -720,7 +720,7 @@ export default function AICreativeAutomationPage() {
               </h2>
               <p className="cta-description">
                 Let&apos;s build a creative workflow that keeps every channel
-                supplied with on-brand visuals — without the production
+                supplied with on-brand visuals, without the production
                 bottleneck.
               </p>
               <div className="cta-actions">

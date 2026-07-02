@@ -89,7 +89,7 @@ export default function ThanksQualifiedPage() {
                 </div>
               </div>
               <h1 className="hero-title mb-4">
-                You're a great fit — let's schedule your strategy call
+                You&apos;re a great fit. Let&apos;s schedule your strategy call
               </h1>
               <p className="hero-description text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
                 Based on your application, book a 20-minute call to align on goals, scope, and timeline.

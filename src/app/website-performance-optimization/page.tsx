@@ -20,7 +20,7 @@ const problems = [
   {
     icon: faClock,
     title: "Slow Pages Lose Visitors",
-    description: "Every extra second of load time increases bounce rates and reduces conversions — especially on mobile.",
+    description: "Every extra second of load time increases bounce rates and reduces conversions, especially on mobile.",
     impact: "Traffic without engagement",
   },
   {
@@ -38,7 +38,7 @@ const problems = [
   {
     icon: faServer,
     title: "Hosting & Caching Misconfigured",
-    description: "The site may be well-built but poorly served — caching, CDN, and server response times matter.",
+    description: "The site may be well-built but poorly served. Caching, CDN, and server response times matter.",
     impact: "Fast code, slow delivery",
   },
 ];
@@ -48,12 +48,12 @@ const capabilities = [
   { icon: faImage, title: "Image & Media Optimization", description: "Compression, modern formats, lazy loading, and delivery improvements." },
   { icon: faBolt, title: "Script & Plugin Audit", description: "Remove or defer what's slowing the site without breaking functionality." },
   { icon: faServer, title: "Caching & CDN Guidance", description: "Hosting, caching layers, and delivery configuration recommendations." },
-  { icon: faMobileScreen, title: "Mobile Performance", description: "Most users are on phones — we optimize for real mobile conditions." },
+  { icon: faMobileScreen, title: "Mobile Performance", description: "Most users are on phones. We optimize for real mobile conditions." },
   { icon: faChartLine, title: "Before/After Measurement", description: "Baseline and post-fix reporting so improvements are visible." },
 ];
 
 const processSteps = [
-  { icon: faMagnifyingGlass, title: "1. Performance Audit", description: "Lab and field data — PageSpeed, Search Console, and real-user metrics." },
+  { icon: faMagnifyingGlass, title: "1. Performance Audit", description: "Lab and field data from PageSpeed, Search Console, and real-user metrics." },
   { icon: faGaugeHigh, title: "2. Prioritize Fixes", description: "Highest-impact issues first, aligned with your platform and constraints." },
   { icon: faBolt, title: "3. Implement Optimizations", description: "Images, scripts, caching, and template-level improvements." },
   { icon: faRocket, title: "4. Validate & Monitor", description: "Re-test Core Web Vitals and document what changed." },
@@ -62,7 +62,7 @@ const processSteps = [
 const faqs = [
   {
     question: "Will this guarantee better rankings?",
-    answer: "No. Speed is a ranking factor among many. Performance work improves UX and removes a common SEO barrier — it doesn't guarantee position changes.",
+    answer: "No. Speed is a ranking factor among many. Performance work improves UX and removes a common SEO barrier. It doesn't guarantee position changes.",
   },
   {
     question: "Do you work on WordPress and Shopify?",
@@ -138,8 +138,8 @@ export default function WebsitePerformancePage() {
                 </h1>
                 <p className="hero-description">
                   Slow websites lose visitors, conversions, and search potential.
-                  We audit and fix performance bottlenecks — images, scripts,
-                  caching, and Core Web Vitals — so your site feels fast on real
+                  We audit and fix performance bottlenecks (images, scripts,
+                  caching, and Core Web Vitals) so your site feels fast on real
                   devices.
                 </p>
                 <p className="hero-hook">Measure. Fix. Prove the difference.</p>

@@ -125,7 +125,7 @@ export default function ContactPage() {
                 </h3>
                 <p className="inner-page-cta-description">
                   For website builds, redesigns, migrations, AI systems, or
-                  multi-channel campaigns — submit a request for proposal with
+                  multi-channel campaigns, submit a request for proposal with
                   your goals, timeline, and budget. We respond within 24 hours
                   with a clear plan and next steps.
                 </p>

@@ -42,7 +42,7 @@ const builds = [
   {
     icon: faChartLine,
     title: "GA4 Reporting",
-    description: "Traffic, engagement, and conversions from Google Analytics 4 — made readable.",
+    description: "Traffic, engagement, and conversions from Google Analytics 4, made readable.",
   },
   {
     icon: faMagnifyingGlassChart,
@@ -52,7 +52,7 @@ const builds = [
   {
     icon: faBullhorn,
     title: "Google Ads Reporting",
-    description: "Spend, ROAS, and campaign performance in one place — no more tab-hopping.",
+    description: "Spend, ROAS, and campaign performance in one place, with no more tab-hopping.",
   },
   {
     icon: faRectangleAd,
@@ -110,7 +110,7 @@ const questions = [
   {
     icon: faDollarSign,
     title: "Which pages make money?",
-    description: "See which content and products drive real results — and which quietly underperform.",
+    description: "See which content and products drive real results, and which quietly underperform.",
   },
   {
     icon: faArrowTrendDown,
@@ -138,7 +138,7 @@ const included = [
 const faqs = [
   {
     question: "Do I need GA4 already set up?",
-    answer: "Ideally, yes — but it's not a dealbreaker. If GA4 isn't configured, or isn't configured correctly, we can handle the setup and cleanup as part of the project so your dashboard is built on accurate data.",
+    answer: "Ideally, yes, but it's not a dealbreaker. If GA4 isn't configured, or isn't configured correctly, we can handle the setup and cleanup as part of the project so your dashboard is built on accurate data.",
   },
   {
     question: "Can you connect Google Ads?",
@@ -150,11 +150,11 @@ const faqs = [
   },
   {
     question: "Do you integrate Google Search Console?",
-    answer: "Absolutely. Search Console data — rankings, clicks, impressions, and top queries — is one of the most valuable sources for tracking SEO performance over time.",
+    answer: "Absolutely. Search Console data (rankings, clicks, impressions, and top queries) is one of the most valuable sources for tracking SEO performance over time.",
   },
   {
     question: "Can you build dashboards for my clients?",
-    answer: "Yes. Agencies frequently white-label these dashboards for their own clients — a clean, branded reporting view each client can log into and understand without a walkthrough.",
+    answer: "Yes. Agencies frequently white-label these dashboards for their own clients: a clean, branded reporting view each client can log into and understand without a walkthrough.",
   },
   {
     question: "Do the dashboards update automatically?",
@@ -168,7 +168,7 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: "GA4 & Looker Studio Dashboards | Custom Analytics Dashboards | Clyra Studios",
-  description: "Stop digging through spreadsheets. Clyra Studios builds clean, executive-level GA4 and Looker Studio dashboards that turn your marketing data into decisions — leads, SEO, ads, and ecommerce in one view.",
+  description: "Stop digging through spreadsheets. Clyra Studios builds clean, executive-level GA4 and Looker Studio dashboards that turn your marketing data into decisions: leads, SEO, ads, and ecommerce in one view.",
   keywords: "GA4 dashboard, Looker Studio dashboard, Google Analytics consultant, executive marketing dashboard, custom analytics dashboard, marketing reporting dashboard, Google Data Studio, GA4 reporting, Search Console dashboard, Google Ads reporting dashboard, Meta Ads reporting, ecommerce dashboard, lead generation dashboard, marketing attribution dashboard",
   authors: [{ name: "Clyra Studios" }],
   creator: "Clyra Studios",
@@ -217,7 +217,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Google Analytics & Looker Studio Dashboard Development",
-  "description": "Custom GA4 and Looker Studio dashboard development — executive KPI dashboards, SEO and ads reporting, lead generation, ecommerce, and marketing attribution, built to turn marketing data into decisions.",
+  "description": "Custom GA4 and Looker Studio dashboard development: executive KPI dashboards, SEO and ads reporting, lead generation, ecommerce, and marketing attribution, built to turn marketing data into decisions.",
   "provider": {
     "@type": "Organization",
     "name": "Clyra Studios",
@@ -295,7 +295,7 @@ export default function AnalyticsDashboardsPage() {
                   <span className="title-line highlight">Looker Studio Dashboards</span>
                 </h1>
                 <p className="hero-description">
-                  Stop digging through spreadsheets. We build clean, executive-level dashboards that turn your marketing data into something you can actually use — leads, ecommerce, SEO, and ad performance, all surfacing the metrics that matter.
+                  Stop digging through spreadsheets. We build clean, executive-level dashboards that turn your marketing data into something you can actually use: leads, ecommerce, SEO, and ad performance, all surfacing the metrics that matter.
                 </p>
                 <p className="hero-hook">
                   One dashboard. Every important metric. Zero guesswork.
@@ -360,7 +360,7 @@ export default function AnalyticsDashboardsPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">What We <span className="transform-word">Build</span></h2>
               <p className="section-description">
-                From a single executive KPI view to a fully connected reporting system — every dashboard is built around the questions your business actually asks.
+                From a single executive KPI view to a fully connected reporting system, every dashboard is built around the questions your business actually asks.
               </p>
             </div>
 
@@ -425,7 +425,7 @@ export default function AnalyticsDashboardsPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">Why <span className="transform-word">Clyra Studios</span>?</h2>
               <p className="section-description">
-                Most dashboards dump hundreds of numbers onto a screen. Ours answer business questions — that&apos;s the difference between reporting and decision-making.
+                Most dashboards dump hundreds of numbers onto a screen. Ours answer business questions. That&apos;s the difference between reporting and decision-making.
               </p>
             </div>
 

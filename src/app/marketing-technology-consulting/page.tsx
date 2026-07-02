@@ -22,14 +22,14 @@ const problems = [
     icon: faGears,
     title: "Too Many Overlapping Tools",
     description:
-      "CRM, email, ads, analytics, automation, and CMS — each bought for a reason, none designed to work together.",
+      "CRM, email, ads, analytics, automation, and CMS: each bought for a reason, none designed to work together.",
     impact: "Stack sprawl and wasted spend",
   },
   {
     icon: faChartLine,
     title: "Data Without Decisions",
     description:
-      "Dashboards exist but teams still argue about numbers — tracking gaps and disconnected attribution undermine trust.",
+      "Dashboards exist but teams still argue about numbers. Tracking gaps and disconnected attribution undermine trust.",
     impact: "Measurement theater",
   },
   {
@@ -43,7 +43,7 @@ const problems = [
     icon: faTriangleExclamation,
     title: "Vendor-Led Strategy",
     description:
-      "Platform sales demos drive decisions instead of business requirements — leading to expensive misfit tools.",
+      "Platform sales demos drive decisions instead of business requirements, leading to expensive misfit tools.",
     impact: "Buy first, regret later",
   },
 ];
@@ -59,7 +59,7 @@ const capabilities = [
     icon: faSitemap,
     title: "Tool Selection & Roadmaps",
     description:
-      "Unbiased recommendations for CRM, email, analytics, CMS, and automation — aligned to team size and budget.",
+      "Unbiased recommendations for CRM, email, analytics, CMS, and automation, aligned to team size and budget.",
   },
   {
     icon: faDiagramProject,
@@ -71,19 +71,19 @@ const capabilities = [
     icon: faWandMagicSparkles,
     title: "AI & Automation Fit",
     description:
-      "Where AI-assisted workflows belong in your stack — and where simpler tools are the better answer.",
+      "Where AI-assisted workflows belong in your stack, and where simpler tools are the better answer.",
   },
   {
     icon: faChartLine,
     title: "Analytics & Reporting Strategy",
     description:
-      "GA4, dashboards, and KPI definitions that leadership can use — paired with our implementation services.",
+      "GA4, dashboards, and KPI definitions that leadership can use, paired with our implementation services.",
   },
   {
     icon: faUsers,
     title: "Fractional Advisory",
     description:
-      "Ongoing guidance as your stack evolves — often through our Fractional Digital Systems Consultant offering.",
+      "Ongoing guidance as your stack evolves, often through our Fractional Digital Systems Consultant offering.",
   },
 ];
 
@@ -98,7 +98,7 @@ const processSteps = [
     icon: faCompass,
     title: "2. Assess & Recommend",
     description:
-      "Gap analysis, consolidation opportunities, and a prioritized roadmap — not a shopping list.",
+      "Gap analysis, consolidation opportunities, and a prioritized roadmap, not a shopping list.",
   },
   {
     icon: faDiagramProject,
@@ -118,17 +118,17 @@ const faqs = [
   {
     question: "What is marketing technology consulting?",
     answer:
-      "Strategic guidance on your marketing and growth technology stack — which tools to use, how they connect, what to measure, and how to phase changes without disrupting the business.",
+      "Strategic guidance on your marketing and growth technology stack: which tools to use, how they connect, what to measure, and how to phase changes without disrupting the business.",
   },
   {
     question: "Are you vendor-neutral?",
     answer:
-      "Yes. We recommend based on your requirements, team capabilities, and budget — not reseller incentives. We implement on platforms we know well, including WordPress, Shopify, HubSpot ecosystems, and common analytics tools.",
+      "Yes. We recommend based on your requirements, team capabilities, and budget, not reseller incentives. We implement on platforms we know well, including WordPress, Shopify, HubSpot ecosystems, and common analytics tools.",
   },
   {
     question: "Do you only advise or also implement?",
     answer:
-      "Both. Many engagements start with assessment and roadmap, then continue into GA4 setup, integrations, website builds, or automation — depending on what you need.",
+      "Both. Many engagements start with assessment and roadmap, then continue into GA4 setup, integrations, website builds, or automation, depending on what you need.",
   },
   {
     question: "How is this different from the Fractional Digital Systems Consultant?",
@@ -138,14 +138,14 @@ const faqs = [
   {
     question: "Can you help us reduce tool costs?",
     answer:
-      "Often yes — by identifying overlap, unused licenses, and workflows that a simpler stack can handle. Savings depend on what you're paying for today.",
+      "Often yes, by identifying overlap, unused licenses, and workflows that a simpler stack can handle. Savings depend on what you're paying for today.",
   },
 ];
 
 export const metadata: Metadata = {
   title: "Marketing Technology Consulting | Clyra Studios",
   description:
-    "Marketing technology consulting for businesses that need a clear MarTech stack strategy — tool selection, data flows, analytics, automation, and implementation roadmaps.",
+    "Marketing technology consulting for businesses that need a clear MarTech stack strategy: tool selection, data flows, analytics, automation, and implementation roadmaps.",
   keywords:
     "marketing technology consulting, MarTech consulting, marketing stack audit, CRM selection, marketing automation strategy, analytics strategy, digital growth consulting",
   metadataBase: new URL("https://clyrastudios.com"),
@@ -228,7 +228,7 @@ export default function MarTechConsultingPage() {
                   </span>
                 </h1>
                 <p className="hero-description">
-                  Your marketing tools should work as a system — not a pile of
+                  Your marketing tools should work as a system, not a pile of
                   subscriptions. We help businesses assess, simplify, and plan
                   their MarTech stack: CRM, analytics, automation, CMS, and the
                   connections between them.

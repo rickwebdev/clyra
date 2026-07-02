@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Selected Work & Project Examples | Clyra Studios",
   description:
-    "Selected Clyra Studios client work, internal product examples, and founder experience. Honest project examples — not a fabricated agency portfolio.",
+    "Selected Clyra Studios client work, internal product examples, and founder experience. Honest project examples, not a fabricated agency portfolio.",
   alternates: {
     canonical: "/case-studies",
   },
@@ -23,7 +23,7 @@ const workCategories = [
   {
     title: "Clyra Studios Client Work",
     description:
-      "Selective client engagements across website builds, migrations, analytics setup, and automation workflows. Clyra is an early-stage studio — we share real work as it becomes available to publish.",
+      "Selective client engagements across website builds, migrations, analytics setup, and automation workflows. Clyra is an early-stage studio. We share real work as it becomes available to publish.",
     items: [
       "Website builds and platform migrations",
       "Analytics dashboards and reporting setup",
@@ -35,9 +35,9 @@ const workCategories = [
   {
     title: "Internal Product & Systems",
     description:
-      "Examples of systems Clyra builds and uses internally — the same approach we bring to client work.",
+      "Examples of systems Clyra builds and uses internally, using the same approach we bring to client work.",
     items: [
-      "This website — Next.js, SEO, and service architecture",
+      "This website: Next.js, SEO, and service architecture",
       "AI content and marketing workflow systems",
       "Analytics and reporting integrations",
       "Automation between content, CRM, and publishing tools",
@@ -47,7 +47,7 @@ const workCategories = [
   {
     title: "Founder Experience",
     description:
-      "Additional project history and technical depth from founder Rick Owadally — separate from Clyra Studios client engagements. Enterprise and agency work referenced here was completed through founder experience, not implied as Clyra agency portfolio.",
+      "Additional project history and technical depth from founder Rick Owadally, separate from Clyra Studios client engagements. Enterprise and agency work referenced here was completed through founder experience, not implied as Clyra agency portfolio.",
     items: [
       "WordPress, Next.js, and headless CMS builds",
       "E-commerce and migration projects",
@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
                 Selected Work &amp; Project Examples
               </h1>
               <p className="inner-page-subtitle">
-                Clyra is a growing digital growth systems consultancy — not a
+                Clyra is a growing digital growth systems consultancy, not a
                 large agency with hundreds of case studies. Here&apos;s how we
                 frame our work honestly: client engagements, internal systems,
                 and founder experience.

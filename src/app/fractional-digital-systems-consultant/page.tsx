@@ -28,7 +28,7 @@ const signals = [
     icon: faSitemap,
     title: "Too Many Disconnected Pieces",
     description:
-      "Website, analytics, SEO, email, automation, ads — each handled by a different tool or person, with no one owning how they fit together.",
+      "Website, analytics, SEO, email, automation, ads: each handled by a different tool or person, with no one owning how they fit together.",
     impact: "No single view of your digital operation",
   },
   {
@@ -59,7 +59,7 @@ const included = [
     icon: faGlobe,
     title: "Website Strategy",
     description:
-      "Ongoing guidance on your site's structure, performance, conversion, and roadmap — not just a one-time build.",
+      "Ongoing guidance on your site's structure, performance, conversion, and roadmap, not just a one-time build.",
   },
   {
     icon: faChartLine,
@@ -71,7 +71,7 @@ const included = [
     icon: faMagnifyingGlassChart,
     title: "SEO / AEO Direction",
     description:
-      "Strategic direction for search and AI-assisted discovery — priorities, content focus, and technical fixes.",
+      "Strategic direction for search and AI-assisted discovery: priorities, content focus, and technical fixes.",
   },
   {
     icon: faGears,
@@ -83,7 +83,7 @@ const included = [
     icon: faScrewdriverWrench,
     title: "Tool Selection",
     description:
-      "Objective guidance on which tools and platforms fit your needs — without vendor bias.",
+      "Objective guidance on which tools and platforms fit your needs, without vendor bias.",
   },
   {
     icon: faHandshakeAngle,
@@ -122,7 +122,7 @@ const cadence = [
     icon: faLightbulb,
     title: "Proactive Recommendations",
     description:
-      "You get suggestions before problems grow — not just answers when you ask.",
+      "You get suggestions before problems grow, not just answers when you ask.",
   },
 ];
 
@@ -139,17 +139,17 @@ const faqs = [
   {
     question: "How is this different from hiring a developer or agency?",
     answer:
-      "A developer builds what you ask. An agency runs campaigns. A fractional digital systems consultant sits above both — owning strategy, prioritization, tool selection, and how all the pieces connect over time, then implementing or coordinating the work.",
+      "A developer builds what you ask. An agency runs campaigns. A fractional digital systems consultant sits above both, owning strategy, prioritization, tool selection, and how all the pieces connect over time, then implementing or coordinating the work.",
   },
   {
     question: "What does a typical month look like?",
     answer:
-      "Regular strategy sessions, a review of analytics and progress, a prioritized set of improvements, and hands-on implementation or coordination — all guided by a living roadmap tied to your goals.",
+      "Regular strategy sessions, a review of analytics and progress, a prioritized set of improvements, and hands-on implementation or coordination, all guided by a living roadmap tied to your goals.",
   },
   {
     question: "Do you implement, or just advise?",
     answer:
-      "Both. The advisory keeps direction clear, and Clyra can implement across websites, content systems, analytics, SEO, and automation — or coordinate other vendors when that's the better fit.",
+      "Both. The advisory keeps direction clear, and Clyra can implement across websites, content systems, analytics, SEO, and automation, or coordinate other vendors when that's the better fit.",
   },
   {
     question: "Is there a minimum commitment?",
@@ -166,7 +166,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: "Fractional Digital Systems Consultant | Clyra Studios",
   description:
-    "Ongoing digital systems consulting for businesses that need help with websites, analytics, SEO, AI, automation, integrations, and marketing technology — strategy plus implementation.",
+    "Ongoing digital systems consulting for businesses that need help with websites, analytics, SEO, AI, automation, integrations, and marketing technology: strategy plus implementation.",
   keywords:
     "fractional digital consultant, digital systems consultant, fractional CTO, fractional head of growth, ongoing web strategy, digital strategy retainer, marketing technology consultant, SEO and automation advisory, small business technical partner",
   authors: [{ name: "Clyra Studios" }],
@@ -219,7 +219,7 @@ const structuredData = {
   "@type": "Service",
   name: "Fractional Digital Systems Consultant",
   description:
-    "Ongoing digital systems consulting and implementation for businesses — website strategy, analytics review, SEO/AEO direction, automation planning, tool selection, and roadmap planning.",
+    "Ongoing digital systems consulting and implementation for businesses: website strategy, analytics review, SEO/AEO direction, automation planning, tool selection, and roadmap planning.",
   provider: {
     "@type": "Organization",
     name: "Clyra Studios",
@@ -295,13 +295,13 @@ export default function FractionalDigitalSystemsConsultantPage() {
                 </h1>
                 <p className="hero-description">
                   Ongoing technical strategy, implementation, and advisory
-                  support for businesses that need a digital partner — across
+                  support for businesses that need a digital partner, across
                   websites, analytics, SEO, AI, automation, and the tools that
                   connect them. More than a developer. A partner who owns the
                   bigger picture.
                 </p>
                 <p className="hero-hook">
-                  Strategy, implementation, and a roadmap — every month.
+                  Strategy, implementation, and a roadmap, every month.
                 </p>
               </div>
 
@@ -359,7 +359,7 @@ export default function FractionalDigitalSystemsConsultantPage() {
               </h2>
               <p className="section-description">
                 If any of these sound familiar, you likely need ongoing
-                strategic support — not another one-off project.
+                strategic support, not another one-off project.
               </p>
             </div>
 
@@ -413,7 +413,7 @@ export default function FractionalDigitalSystemsConsultantPage() {
               </h2>
               <p className="section-description">
                 A single partner across the systems that run your digital
-                presence — strategy and implementation together.
+                presence: strategy and implementation together.
               </p>
             </div>
 
@@ -461,7 +461,7 @@ export default function FractionalDigitalSystemsConsultantPage() {
                 <span className="transform-word">Systems Planning</span>
               </h2>
               <p className="section-description">
-                A steady rhythm of review, prioritization, and progress — so
+                A steady rhythm of review, prioritization, and progress, so
                 your digital systems keep improving instead of stalling.
               </p>
             </div>

@@ -31,21 +31,21 @@ const serviceCards = [
     icon: faPalette,
     title: "AI Creative Automation",
     description:
-      "Branded, review-ready visuals at scale — featured images, social graphics, ad creative, thumbnails, and brand-consistent design systems.",
+      "Branded, review-ready visuals at scale: featured images, social graphics, ad creative, thumbnails, and brand-consistent design systems.",
     href: "/ai-creative-automation",
   },
   {
     icon: faShareNodes,
     title: "AI Marketing Automation",
     description:
-      "Turn approved content into multi-channel output — social posts, newsletters, email campaigns, and scheduled distribution.",
+      "Turn approved content into multi-channel output: social posts, newsletters, email campaigns, and scheduled distribution.",
     href: "/ai-marketing-automation",
   },
   {
     icon: faGears,
     title: "Business Process Automation",
     description:
-      "Automate repetitive tasks and connect your tools — lead routing, onboarding, CRM updates, dashboards, and API integrations.",
+      "Automate repetitive tasks and connect your tools: lead routing, onboarding, CRM updates, dashboards, and API integrations.",
     href: "/business-process-automation",
   },
 ];
@@ -55,7 +55,7 @@ const principles = [
     icon: faPuzzlePiece,
     title: "Solve Real Workflow Problems",
     description:
-      "We start with the bottleneck, not the buzzword. AI is only worth adding where it removes friction or unlocks capacity you actually need.",
+      "We start with the bottleneck, not the buzzword. AI is only worth adding where it removes friction or adds capacity you actually need.",
   },
   {
     icon: faUserCheck,
@@ -92,19 +92,19 @@ const whyClyra = [
     icon: faDiagramProject,
     title: "Systems Thinking, Not One-Off Tools",
     description:
-      "We design how your website, content, marketing, and operations connect — so each piece reinforces the others.",
+      "We design how your website, content, marketing, and operations connect, so each piece reinforces the others.",
   },
   {
     icon: faBrain,
     title: "Technical Depth",
     description:
-      "Full-stack development plus automation and AI integration experience — we build the connections, not just recommend them.",
+      "Full-stack development plus automation and AI integration experience. We build the connections, not just recommend them.",
   },
   {
     icon: faShieldHalved,
     title: "Honest About What AI Can Do",
     description:
-      "We position AI as a practical tool with real limits — no promises of automated riches or guaranteed results.",
+      "We position AI as a practical tool with real limits: no promises of automated riches or guaranteed results.",
   },
   {
     icon: faUserCheck,
@@ -118,17 +118,17 @@ const faqs = [
   {
     question: "What are AI business systems?",
     answer:
-      "Custom systems that connect your website, content, analytics, CRM, and workflows — using AI and automation where it genuinely helps. Rather than one tool, it's an integrated set of workflows built around how your business operates.",
+      "Custom systems that connect your website, content, analytics, CRM, and workflows, using AI and automation where it genuinely helps. Rather than one tool, it's an integrated set of workflows built around how your business operates.",
   },
   {
     question: "Do I have to buy all four services?",
     answer:
-      "No. Each service stands on its own. Many businesses start with one — often content or process automation — and expand as they see value. The umbrella approach just means the pieces are designed to connect later.",
+      "No. Each service stands on its own. Many businesses start with one, often content or process automation, and expand as they see value. The umbrella approach just means the pieces are designed to connect later.",
   },
   {
     question: "Is this just AI hype?",
     answer:
-      "No. We're deliberately practical about where AI adds value and where it doesn't. A lot of high-value automation is reliable workflow logic, not AI. We use AI where it meaningfully reduces friction or unlocks capacity.",
+      "No. We're deliberately practical about where AI adds value and where it doesn't. A lot of high-value automation is reliable workflow logic, not AI. We use AI where it meaningfully reduces friction or adds capacity.",
   },
   {
     question: "Will everything run automatically without oversight?",
@@ -160,7 +160,7 @@ export const metadata: Metadata = {
     title:
       "AI Business Systems for Websites, Marketing and Automation | Clyra Studios",
     description:
-      "Custom AI systems that connect your website, content, analytics, CRM, and workflows — practical, connected, and human-reviewed.",
+      "Custom AI systems that connect your website, content, analytics, CRM, and workflows. Practical, connected, and human-reviewed.",
     url: "https://clyrastudios.com/ai-business-systems",
     siteName: "Clyra Studios",
     images: [
@@ -179,7 +179,7 @@ export const metadata: Metadata = {
     title:
       "AI Business Systems for Websites, Marketing and Automation | Clyra Studios",
     description:
-      "Custom AI systems that connect your website, content, analytics, CRM, and workflows — practical, connected, and human-reviewed.",
+      "Custom AI systems that connect your website, content, analytics, CRM, and workflows. Practical, connected, and human-reviewed.",
     images: ["/images/thumbnail.png"],
     creator: "@clyrastudios",
     site: "@clyrastudios",
@@ -201,7 +201,7 @@ const structuredData = {
   "@type": "Service",
   name: "AI Business Systems",
   description:
-    "Custom AI business systems connecting website, content, analytics, CRM, and workflows — including AI content growth, creative automation, marketing automation, and business process automation.",
+    "Custom AI business systems connecting website, content, analytics, CRM, and workflows, including AI content growth, creative automation, marketing automation, and business process automation.",
   provider: {
     "@type": "Organization",
     name: "Clyra Studios",
@@ -307,7 +307,7 @@ export default function AIBusinessSystemsPage() {
                   Custom AI systems that connect your website, content,
                   analytics, CRM, and workflows into one operation. We build
                   practical, human-reviewed systems that solve real business
-                  problems — not generic AI tools looking for a use case.
+                  problems, not generic AI tools looking for a use case.
                 </p>
                 <p className="hero-hook">
                   Connected systems. Human oversight. Real workflow value.
@@ -367,7 +367,7 @@ export default function AIBusinessSystemsPage() {
                 <span className="transform-word">Real Workflow Problems</span>
               </h2>
               <p className="section-description">
-                The value of AI isn&apos;t the technology — it&apos;s what it
+                The value of AI isn&apos;t the technology. It&apos;s what it
                 removes from your plate. We build around a few clear principles.
               </p>
             </div>
@@ -503,7 +503,7 @@ export default function AIBusinessSystemsPage() {
                   <Link href="/google-analytics-looker-studio-dashboards">
                     GA4 &amp; Looker Studio dashboards
                   </Link>{" "}
-                  to close the loop — so analytics feed back into what you
+                  to close the loop, so analytics feed back into what you
                   create next.
                 </span>
               </div>
@@ -523,7 +523,7 @@ export default function AIBusinessSystemsPage() {
               <h2 className="section-title">Why Clyra Studios</h2>
               <p className="section-description">
                 A technical partner that builds useful systems for real business
-                workflows — not a generic AI agency.
+                workflows, not a generic AI agency.
               </p>
             </div>
 
@@ -573,7 +573,7 @@ export default function AIBusinessSystemsPage() {
               </h2>
               <p className="cta-description">
                 Tell us where your business is spending time and losing momentum.
-                We&apos;ll recommend which system — or combination — will deliver
+                We&apos;ll recommend which system, or combination, will deliver
                 the most value first.
               </p>
               <div className="cta-actions">

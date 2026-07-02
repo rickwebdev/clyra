@@ -60,12 +60,12 @@ export async function POST(request: NextRequest) {
     const toEmail = process.env.RESEND_TO_EMAIL || 'rick.clyrastudios@gmail.com';
 
     const subject = isGrowth
-      ? `Growth Website System Application — ${name}`
+      ? `Growth Website System Application: ${name}`
       : isAudit
-        ? `Site Audit Request — ${name}`
+        ? `Site Audit Request: ${name}`
         : isRfp
-          ? `RFP Request — ${name}`
-          : `WordPress Repair Request — ${name}`;
+          ? `RFP Request: ${name}`
+          : `WordPress Repair Request: ${name}`;
 
     const html = `
         <h2>${isGrowth ? 'New Growth Website System Application' : isAudit ? 'New Site Audit Request' : isRfp ? 'New Request for Proposal' : 'New WordPress Repair Request'}</h2>

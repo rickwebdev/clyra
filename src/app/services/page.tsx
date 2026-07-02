@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Digital Growth Systems & Services | Clyra Studios",
   description:
-    "Clyra Studios helps businesses build, improve, automate, measure, and grow digital platforms — websites, analytics dashboards, AI systems, migrations, and ongoing advisory.",
+    "Clyra Studios helps businesses build, improve, automate, measure, and grow digital platforms: websites, analytics dashboards, AI systems, migrations, and ongoing advisory.",
   alternates: {
     canonical: "/services",
   },
@@ -99,7 +99,7 @@ const serviceClusters = [
   {
     title: "Creative Production",
     description:
-      "Supporting creative production through trusted collaborators — video, motion, 3D, and social assets that complement your website and marketing systems. Clyra is not a creative agency; we coordinate production when it supports the broader system.",
+      "Supporting creative production through trusted collaborators: video, motion, 3D, and social assets that complement your website and marketing systems. Clyra is not a creative agency; we coordinate production when it supports the broader system.",
     links: [
       { href: "/ai-creative-automation", label: "AI Creative Automation" },
     ],
@@ -124,7 +124,7 @@ export default function ServicesPage() {
               <h1 className="inner-page-title">Digital Growth Systems</h1>
               <p className="inner-page-subtitle">
                 Clyra helps businesses build, improve, automate, measure, and
-                grow digital platforms. Technology supports the work — business
+                grow digital platforms. Technology supports the work. Business
                 outcomes lead the conversation.
               </p>
             </div>

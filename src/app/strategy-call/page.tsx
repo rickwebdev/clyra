@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Book a Strategy Call | Clyra Studios",
     description:
-      "Discuss your digital platform goals with Clyra Studios — websites, analytics, AI, and automation.",
+      "Discuss your digital platform goals with Clyra Studios: websites, analytics, AI, and automation.",
     url: "https://clyrastudios.com/strategy-call",
     type: "website",
   },
@@ -49,7 +49,7 @@ export default function StrategyCallPage() {
               </h1>
               <p className="inner-page-subtitle">
                 Get personalized recommendations for your website in a focused 15-minute conversation. 
-                No sales pitch—just actionable insights to help your business grow.
+                No sales pitch. Just actionable insights to help your business grow.
               </p>
             </div>
           </div>

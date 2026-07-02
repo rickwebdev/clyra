@@ -105,8 +105,8 @@ const comparison = [
   },
   {
     criteria: "Ownership & portability",
-    builder: "Locked in — hard to export or move",
-    clyra: "100% yours — export and host anywhere"
+    builder: "Locked in. Hard to export or move",
+    clyra: "100% yours. Export and host anywhere"
   },
   {
     criteria: "Building it yourself",
@@ -143,7 +143,7 @@ const features = [
     icon: faCogs,
     title: "AI-Ready Frameworks",
     description: "Integrated chat, lead automation, analytics, and tracking",
-    highlight: "Future-proof technology"
+    highlight: "Built for what's next"
   },
   {
     icon: faUsers,
@@ -177,11 +177,11 @@ const transformations = [
 const faqs = [
   {
     question: "Can you work with any platform?",
-    answer: "Yes — Wix, Webflow, WordPress, Shopify, or custom stacks. We specialize in platform migrations and can work with whatever you're currently using."
+    answer: "Yes. Wix, Webflow, WordPress, Shopify, or custom stacks. We specialize in platform migrations and can work with whatever you're currently using."
   },
   {
     question: "Do I have to rebuild my whole site?",
-    answer: "Not always. Many clients start with performance and SEO fixes. We can optimize your existing site or do a complete rebuild — whatever makes the most sense for your goals."
+    answer: "Not always. Many clients start with performance and SEO fixes. We can optimize your existing site or do a complete rebuild, depending on what makes the most sense for your goals."
   },
   {
     question: "How long does a migration take?",
@@ -202,7 +202,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Wix, Squarespace & Webflow Redesign + Migration Services | Clyra Studios — High-Performance Web Development",
+  title: "Wix, Squarespace & Webflow Redesign + Migration Services | Clyra Studios",
   description: "Clyra Studios transforms Wix, Squarespace, and Webflow sites into fast, SEO-optimized, high-performance websites you own. Fix, redesign, or migrate with clean code and modern UX.",
   keywords: "wix website redesign, webflow redesign service, wix to wordpress migration, website optimization service, custom web development agency, performance web design company, SEO website rebuild, wix optimization, webflow migration, website performance audit, conversion optimization, custom website design",
   authors: [{ name: "Clyra Studios" }],
@@ -358,7 +358,7 @@ export default function RedesignMigrationPage() {
                   <span className="title-line highlight">High-Performance Website You Actually Own</span>
                 </h1>
                 <p className="hero-description">
-                  Clyra Studios builds fast, SEO-optimized websites that convert. Whether you need your current site fixed, redesigned, or migrated to a stronger platform, we deliver clean code, modern UX, and measurable results — without the agency bloat.
+                  Clyra Studios builds fast, SEO-optimized websites that convert. Whether you need your current site fixed, redesigned, or migrated to a stronger platform, we deliver clean code, modern UX, and measurable results without the agency bloat.
                 </p>
                 
                 <p className="hero-hook">
@@ -422,7 +422,7 @@ export default function RedesignMigrationPage() {
           </div>
           <div className="container">
             <div className="section-header slide-in-right">
-              <h2 className="section-title">Your Website Isn't Broken — <span className="transform-word">It's Just Holding You Back</span></h2>
+              <h2 className="section-title">Your Website Isn't Broken. <span className="transform-word">It's Just Holding You Back</span></h2>
               <p className="section-description">
                 If your site loads slowly, ranks poorly, or feels stuck on a drag-and-drop platform, you're not alone. 
                 Most business owners outgrow their first site within two years. You're paying for hosting and getting zero return.
@@ -467,7 +467,7 @@ export default function RedesignMigrationPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">Clyra Studios Builds High-Performance Websites That Grow With You</h2>
               <p className="section-description">
-                We redesign or rebuild your existing site into something faster, smarter, and built to scale — 
+                We redesign or rebuild your existing site into something faster, smarter, and built to scale,
                 whether that means cleaning up your Wix setup or migrating you to WordPress or a custom stack.
               </p>
             </div>
@@ -517,7 +517,7 @@ export default function RedesignMigrationPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">Outgrowing Your Website Builder?</h2>
               <p className="section-description">
-                You started on Wix, Squarespace, or Webflow — maybe even tried to build it yourself — and hit a wall on design, functionality, or ownership. Here&apos;s how a site we build and you own compares to staying on a drag-and-drop builder.
+                You started on Wix, Squarespace, or Webflow, maybe even tried to build it yourself, and hit a wall on design, functionality, or ownership. Here&apos;s how a site we build and you own compares to staying on a drag-and-drop builder.
               </p>
             </div>
 
@@ -543,7 +543,7 @@ export default function RedesignMigrationPage() {
                 ))}
               </div>
               <p className="bc-note">
-                Not sure whether WordPress or a headless build is right for you? That&apos;s exactly what we figure out together on a free review — based on how you want to grow, not a one-size-fits-all template.
+                Not sure whether WordPress or a headless build is right for you? That&apos;s exactly what we figure out together on a free review, based on how you want to grow, not a one-size-fits-all template.
               </p>
               <p className="bc-guides">
                 Platform-specific guides:{" "}
@@ -576,7 +576,7 @@ export default function RedesignMigrationPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">Why Businesses Choose Clyra Studios</h2>
               <p className="section-description">
-                We deliver agency-level results with startup-level agility. No bloated teams, no unnecessary complexity — just clean code and measurable results.
+                We deliver strong results with startup-level agility. No bloated teams, no unnecessary complexity. Just clean code and measurable results.
               </p>
             </div>
             
@@ -661,9 +661,9 @@ export default function RedesignMigrationPage() {
           </div>
           <div className="container">
             <div className="section-header slide-in-right">
-              <h2 className="section-title">Agency-Level Expertise. Independent Speed.</h2>
+              <h2 className="section-title">Senior-Level Expertise. Independent Speed.</h2>
               <p className="section-description">
-                Clyra Studios is led by Rick Owadally — a creative technologist and full-stack developer with over 15 years of experience delivering digital projects for healthcare, enterprise, and creative clients.
+                Clyra Studios is led by Rick Owadally, a creative technologist and full-stack developer with over 15 years of experience delivering digital projects for healthcare, enterprise, and creative clients.
               </p>
             </div>
             
@@ -709,7 +709,7 @@ export default function RedesignMigrationPage() {
               <h2 className="cta-title">Let's Fix What's Holding Your Website Back</h2>
               <p className="cta-description">
                 Get a free, honest review of your website's performance, design, and SEO. 
-                No pitches — just actionable insights that could transform your business.
+                No pitches. Just actionable insights that could improve your business.
               </p>
               <div className="cta-actions">
                 <Link href="/site-audit" className="btn btn-primary btn-large">

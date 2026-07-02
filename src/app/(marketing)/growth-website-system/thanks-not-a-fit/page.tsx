@@ -18,7 +18,7 @@ export default function ThanksNotAFitPage() {
                 <GradientIcon icon={faTimesCircle} size="xl" className="danger mx-auto" />
               </div>
               <h1 className="hero-title">
-                Thanks for applying — here's your best next step
+                Thanks for applying. Here&apos;s your best next step
               </h1>
               <p className="hero-description">
                 Our Growth Website System is reserved for teams ready to invest $3,000 or more. 

@@ -43,7 +43,7 @@ const problems = [
     icon: faTriangleExclamation,
     title: "Disconnected from the CMS",
     description:
-      "A beautiful frontend that editors can't update — or a CMS that developers fight on every release.",
+      "A beautiful frontend that editors can't update, or a CMS that developers fight on every release.",
     impact: "Two teams, one bottleneck",
   },
 ];
@@ -65,7 +65,7 @@ const capabilities = [
     icon: faSitemap,
     title: "CMS & API Integration",
     description:
-      "Headless CMS, WordPress, Shopify, and custom APIs — content flows in without hard-coding every page.",
+      "Headless CMS, WordPress, Shopify, and custom APIs so content flows in without hard-coding every page.",
   },
   {
     icon: faGaugeHigh,
@@ -77,7 +77,7 @@ const capabilities = [
     icon: faWandMagicSparkles,
     title: "SEO-Ready Rendering",
     description:
-      "Server-rendered metadata, structured data, and clean URLs — paired with our technical SEO work.",
+      "Server-rendered metadata, structured data, and clean URLs, paired with our technical SEO work.",
   },
   {
     icon: faBolt,
@@ -145,7 +145,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: "React & Next.js Development for Business Websites | Clyra Studios",
   description:
-    "Custom React and Next.js development for high-performance marketing sites, headless frontends, and content-driven web applications — part of Clyra's digital growth systems.",
+    "Custom React and Next.js development for high-performance marketing sites, headless frontends, and content-driven web applications, part of Clyra's digital growth systems.",
   keywords:
     "Next.js development, React development, Next.js agency, custom React website, headless frontend, Next.js marketing site, App Router development, performance-focused React",
   metadataBase: new URL("https://clyrastudios.com"),
@@ -229,7 +229,7 @@ export default function ReactNextjsPage() {
                 </h1>
                 <p className="hero-description">
                   When templates and page builders aren&apos;t enough, we build
-                  custom React and Next.js frontends — performance-first,
+                  custom React and Next.js frontends: performance-first,
                   SEO-ready, and connected to the CMS and APIs your business
                   actually runs on.
                 </p>

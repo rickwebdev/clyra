@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "WordPress Studio | Websites, SEO & Digital Growth | Clyra Studios",
   description:
-    "Clyra WordPress Studio builds, rescues, migrates, and optimizes websites as part of broader digital growth systems — SEO, analytics, AI, and automation included.",
+    "Clyra WordPress Studio builds, rescues, migrates, and optimizes websites as part of broader digital growth systems, including SEO, analytics, AI, and automation.",
   alternates: {
     canonical: "/wordpress-studio",
   },
@@ -84,14 +84,14 @@ const servicePillars = [
     title: "Website Rescue & Recovery",
     problem: "Site hacked, broken, or holding back your business?",
     solution: "Emergency response, security fixes, and complete rebuilds",
-    expectedResult: "24-hour rescue response, bulletproof security, 300% faster performance",
+    expectedResult: "24-hour rescue response, hardened security, 300% faster performance",
     timeframe: "1-3 weeks",
     image: "/images/cards/E-commerce Migration Success.png"
   },
   {
     title: "Platform Migration Services",
     problem: "Stuck on Wix, Squarespace, or outdated platform?",
-    solution: "Seamless WordPress migration with SEO preservation",
+    solution: "WordPress migration with SEO preservation",
     expectedResult: "Zero downtime, improved rankings, full site ownership",
     timeframe: "2-4 weeks",
     image: "/images/cards/Security Breach Recovery.png"
@@ -123,35 +123,35 @@ const testimonials = [
     industry: "Hospitality"
   },
   {
-    quote: "The process was seamless. The video presentations made everything simple to understand, and the final site completely elevated our professional image online.",
+    quote: "The process was straightforward. The video presentations made everything simple to understand, and the final site strengthened our professional image online.",
     author: "Small Business Owner",
     company: "",
     role: "",
     industry: "Professional Services"
   },
   {
-    quote: "This felt like agency-level service without the agency price tag. Everything was so well thought out — I finally feel like my website reflects the quality of my work.",
+    quote: "This felt like working with a real agency without the agency price tag. Everything was so well thought out. I finally feel like my website reflects the quality of my work.",
     author: "Healthcare Professional",
     company: "",
     role: "",
     industry: "Healthcare"
   },
   {
-    quote: "I was impressed by how quickly they turned things around. The whole process was clear, collaborative, and actually enjoyable — which is not how I usually feel about tech projects.",
+    quote: "I was impressed by how quickly they turned things around. The whole process was clear, collaborative, and actually enjoyable, which is not how I usually feel about tech projects.",
     author: "Entrepreneur",
     company: "",
     role: "",
     industry: "Startups"
   },
   {
-    quote: "The ROI was immediate. They didn't just build us a website — they transformed our entire client onboarding process. The automation systems they set up have saved us 15 hours per week and increased our close rate by 40%.",
+    quote: "The ROI was immediate. They didn't just build us a website. They rebuilt our entire client onboarding process. The automation systems they set up have saved us 15 hours per week and increased our close rate by 40%.",
     author: "Marketing Agency Owner",
     company: "",
     role: "",
     industry: "Digital Services"
   },
   {
-    quote: "Finally, a developer who gets e-commerce. They didn't just migrate my store — they optimized the entire customer journey. My conversion rate doubled and cart abandonment dropped by 35% in the first month.",
+    quote: "Finally, a developer who gets e-commerce. They didn't just migrate my store. They optimized the entire customer journey. My conversion rate doubled and cart abandonment dropped by 35% in the first month.",
     author: "E-commerce Store Owner",
     company: "",
     role: "",
@@ -184,7 +184,7 @@ export default function WordPressStudioPage() {
                   <span className="title-line">WordPress Studio and Support</span>
                 </h1>
                 <p className="hero-description">
-             We transform websites into lead-generating assets. <br/>Our studio specializes in custom WordPress development, seamless <br />migrations from Wix and Squarespace, and SEO-focused rebuilds <br />that deliver performance, security, and growth.</p>
+             We transform websites into lead-generating assets. <br/>Our studio specializes in custom WordPress development, careful <br />migrations from Wix and Squarespace, and SEO-focused rebuilds <br />that deliver performance, security, and growth.</p>
                 
                 {/* Hook Line */}
                 <p className="hero-hook">
@@ -216,7 +216,7 @@ export default function WordPressStudioPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">WordPress Solutions That <span className="transform-word">Transform</span> Your Business</h2>
               <p className="section-description">
-                We don't just build websites - we rescue broken sites, migrate platforms seamlessly, 
+                We don't just build websites - we rescue broken sites, migrate platforms without losing SEO or design, 
                 and optimize for growth. Here's how we help SMBs turn their web presence into a competitive advantage.
               </p>
             </div>

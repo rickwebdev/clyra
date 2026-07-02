@@ -21,7 +21,7 @@ const problems = [
     icon: faGears,
     title: "Manual Data Handoffs",
     description:
-      "Teams copy leads, orders, and customer data between systems — slow, error-prone, and impossible to scale.",
+      "Teams copy leads, orders, and customer data between systems. It's slow, error-prone, and impossible to scale.",
     impact: "Hours lost every week",
   },
   {
@@ -42,7 +42,7 @@ const problems = [
     icon: faShieldHalved,
     title: "Security & Reliability Ignored",
     description:
-      "API keys in spreadsheets, no error handling, and no documentation — a liability waiting to surface.",
+      "API keys in spreadsheets, no error handling, and no documentation: a liability waiting to surface.",
     impact: "Risk hidden in workflows",
   },
 ];
@@ -64,7 +64,7 @@ const capabilities = [
     icon: faBolt,
     title: "Automation Platforms",
     description:
-      "Zapier, Make, n8n, and custom middleware — chosen for maintainability, not novelty.",
+      "Zapier, Make, n8n, and custom middleware, chosen for maintainability, not novelty.",
   },
   {
     icon: faLink,
@@ -76,7 +76,7 @@ const capabilities = [
     icon: faShieldHalved,
     title: "Error Handling & Monitoring",
     description:
-      "Retries, logging, alerts, and documentation so integrations fail visibly — not quietly.",
+      "Retries, logging, alerts, and documentation so integrations fail visibly, not quietly.",
   },
   {
     icon: faGears,
@@ -122,7 +122,7 @@ const faqs = [
   {
     question: "Is this the same as business process automation?",
     answer:
-      "Overlapping but different emphasis. API integrations focus on connecting systems and data. Business process automation covers broader workflow design — often including integrations as one layer.",
+      "Overlapping but different emphasis. API integrations focus on connecting systems and data. Business process automation covers broader workflow design, often including integrations as one layer.",
   },
   {
     question: "Do you use no-code tools or custom code?",
@@ -132,7 +132,7 @@ const faqs = [
   {
     question: "Can you fix broken integrations?",
     answer:
-      "Yes. Rescue engagements are common — auditing what's broken, stabilizing flows, and documenting what was inherited.",
+      "Yes. Rescue engagements are common: auditing what's broken, stabilizing flows, and documenting what was inherited.",
   },
   {
     question: "How do you handle API security?",
@@ -144,7 +144,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: "API Integrations & System Connections | Clyra Studios",
   description:
-    "Custom API integrations connecting websites, CRMs, email, payments, and operations tools — reliable data flows for businesses that need their stack to work as one system.",
+    "Custom API integrations connecting websites, CRMs, email, payments, and operations tools. Reliable data flows for businesses that need their stack to work as one system.",
   keywords:
     "API integration services, webhook integration, CRM integration, Zapier development, Make automation, HubSpot integration, Shopify API integration, custom API development",
   metadataBase: new URL("https://clyrastudios.com"),
@@ -229,7 +229,7 @@ export default function APIIntegrationsPage() {
                 <p className="hero-description">
                   Your website shouldn&apos;t be an island. We build reliable
                   API connections between your site, CRM, email, payments, and
-                  operations tools — so leads, customers, and data move where
+                  operations tools, so leads, customers, and data move where
                   they need to without manual copy-paste.
                 </p>
                 <p className="hero-hook">

@@ -14,7 +14,67 @@ type NavLink = {
   href: string;
   label: string;
   submenu?: SubmenuItem[];
+  dropdownColumns?: string[][];
 };
+
+function groupSubmenuItems(
+  submenu: SubmenuItem[],
+): { group: string; items: SubmenuItem[] }[] {
+  const groups: { group: string; items: SubmenuItem[] }[] = [];
+
+  for (const item of submenu) {
+    const groupName = item.group || "More";
+    const existing = groups.find((g) => g.group === groupName);
+    if (existing) {
+      existing.items.push(item);
+    } else {
+      groups.push({ group: groupName, items: [item] });
+    }
+  }
+
+  return groups;
+}
+
+function renderColumnSubmenu(
+  submenu: SubmenuItem[],
+  columns: string[][],
+  pathname: string,
+) {
+  const grouped = groupSubmenuItems(submenu);
+
+  return (
+    <li className="dropdown-menu-columns-wrap">
+      <div className="dropdown-menu-grid">
+        {columns.map((columnGroups, columnIndex) => (
+          <div key={columnIndex} className="dropdown-column">
+            {columnGroups.map((groupName) => {
+              const group = grouped.find((g) => g.group === groupName);
+              if (!group) return null;
+
+              return (
+                <div key={groupName} className="dropdown-group">
+                  <span className="dropdown-group-label">{groupName}</span>
+                  <ul className="dropdown-group-links">
+                    {group.items.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          className={`dropdown-link ${pathname === item.href ? "active" : ""}`}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        ))}
+      </div>
+    </li>
+  );
+}
 
 const links: NavLink[] = [
   {
@@ -108,6 +168,10 @@ const links: NavLink[] = [
       },
       { group: "Proposals", href: "/rfp", label: "Request for Proposal" },
     ],
+    dropdownColumns: [
+      ["Websites & Growth", "Analytics & Measurement"],
+      ["Platforms & Engineering", "SEO & Discovery", "Proposals"],
+    ],
   },
   {
     href: "/ai-business-systems",
@@ -184,6 +248,7 @@ const links: NavLink[] = [
         label: "vs CRMs",
       },
     ],
+    dropdownColumns: [["AI Services"], ["Clyra Intelligence · Beta"]],
   },
   {
     href: "/case-studies",
@@ -276,9 +341,15 @@ export default function Nav() {
                     <span className="dropdown-arrow">▼</span>
                   </button>
                   <ul
-                    className={`dropdown-menu ${activeDropdown === link.label ? "active" : ""}`}
+                    className={`dropdown-menu ${link.dropdownColumns ? "dropdown-menu--columns" : ""} ${activeDropdown === link.label ? "active" : ""}`}
                   >
-                    {renderSubmenuItems(link.submenu, pathname)}
+                    {link.dropdownColumns
+                      ? renderColumnSubmenu(
+                          link.submenu,
+                          link.dropdownColumns,
+                          pathname,
+                        )
+                      : renderSubmenuItems(link.submenu, pathname)}
                   </ul>
                 </div>
               ) : (

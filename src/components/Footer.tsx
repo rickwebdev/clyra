@@ -128,6 +128,18 @@ export default function Footer() {
           </div>
 
           <div className="footer-section">
+            <h3>AI Lab</h3>
+            <ul>
+              <li>
+                <Link href="/ai-lab">Interactive Demos</Link>
+              </li>
+              <li>
+                <Link href="/site-audit">Website Audit Demo</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
             <h3>Company</h3>
             <ul>
               <li>

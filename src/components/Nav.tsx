@@ -250,6 +250,7 @@ const links: NavLink[] = [
     ],
     dropdownColumns: [["AI Services"], ["Clyra Intelligence · Beta"]],
   },
+  { href: "/ai-lab", label: "AI Lab" },
   {
     href: "/case-studies",
     label: "Resources",

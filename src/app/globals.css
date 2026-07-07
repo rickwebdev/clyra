@@ -8349,3 +8349,96 @@ p {
     transition-delay: 0.8s;
   }
 }
+
+/* Clyra Intelligence product pages */
+.ci-status-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #93c5fd;
+  background: rgba(77, 160, 255, 0.12);
+  border: 1px solid rgba(77, 160, 255, 0.28);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.ci-example-callout {
+  background: rgba(77, 160, 255, 0.08);
+  border: 1px solid rgba(77, 160, 255, 0.22);
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin-top: 2rem;
+}
+
+.ci-example-callout p {
+  color: #d1d5db;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ci-example-callout strong {
+  color: #ffffff;
+}
+
+.ci-architecture {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ci-architecture-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.ci-architecture-node {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.ci-architecture-node h4 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+
+.ci-architecture-node p {
+  color: #a1a1a6;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.ci-architecture-node.ci-architecture-core {
+  border-color: rgba(77, 160, 255, 0.4);
+  background: rgba(77, 160, 255, 0.1);
+  grid-column: 1 / -1;
+}
+
+.ci-architecture-arrow {
+  text-align: center;
+  color: #4da0ff;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .ci-architecture-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ci-architecture-node.ci-architecture-core {
+    grid-column: auto;
+  }
+}

@@ -96,6 +96,38 @@ export default function Footer() {
           </div>
 
           <div className="footer-section">
+            <h3>Clyra Intelligence</h3>
+            <ul>
+              <li>
+                <Link href="/ai-client-intelligence">AI Client Intelligence</Link>
+              </li>
+              <li>
+                <Link href="/ai-proposal-assistant">AI Proposal Assistant</Link>
+              </li>
+              <li>
+                <Link href="/ai-scope-guard">AI Scope Guard</Link>
+              </li>
+              <li>
+                <Link href="/ai-client-memory">AI Client Memory</Link>
+              </li>
+              <li>
+                <Link href="/ai-agency-operating-system">
+                  Agency Operating System
+                </Link>
+              </li>
+              <li>
+                <Link href="/clyra-intelligence-features">Features</Link>
+              </li>
+              <li>
+                <Link href="/clyra-intelligence-use-cases">Use Cases</Link>
+              </li>
+              <li>
+                <Link href="/clyra-intelligence-comparison">vs CRMs</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
             <h3>Company</h3>
             <ul>
               <li>

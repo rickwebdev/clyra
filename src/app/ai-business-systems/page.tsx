@@ -17,9 +17,17 @@ import {
   faDiagramProject,
   faPuzzlePiece,
   faShieldHalved,
+  faHandshake,
 } from "@fortawesome/free-solid-svg-icons";
 
 const serviceCards = [
+  {
+    icon: faHandshake,
+    title: "Clyra Intelligence",
+    description:
+      "An AI-powered client intelligence platform in development. Client memory, proposal intelligence, scope guard, and relationship history for agencies and consultants.",
+    href: "/ai-client-intelligence",
+  },
   {
     icon: faPenNib,
     title: "AI Content Growth Systems",
@@ -415,9 +423,9 @@ export default function AIBusinessSystemsPage() {
             <div className="section-header slide-in-right">
               <h2 className="section-title">The AI Systems We Build</h2>
               <p className="section-description">
-                Four connected services. Start with one, or combine them into a
-                system that runs your content, creative, marketing, and
-                operations.
+                Connected services for content, creative, marketing, operations,
+                and client intelligence. Start with one, or combine them into a
+                system that runs how your business works.
               </p>
             </div>
 
@@ -590,6 +598,8 @@ export default function AIBusinessSystemsPage() {
               </div>
               <p className="bc-guides">
                 Explore each system:{" "}
+                <Link href="/ai-client-intelligence">Clyra Intelligence</Link>
+                {" · "}
                 <Link href="/ai-content-automation">Content Growth</Link>
                 {" · "}
                 <Link href="/ai-creative-automation">Creative</Link>

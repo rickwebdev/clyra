@@ -809,6 +809,8 @@ export default function BusinessProcessAutomationPage() {
               </div>
               <p className="bc-guides">
                 Related AI systems:{" "}
+                <Link href="/ai-client-intelligence">Clyra Intelligence</Link>
+                {" · "}
                 <Link href="/ai-marketing-automation">
                   AI Marketing Automation
                 </Link>

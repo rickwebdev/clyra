@@ -113,14 +113,75 @@ const links: NavLink[] = [
     href: "/ai-business-systems",
     label: "AI Systems",
     submenu: [
-      { href: "/ai-business-systems", label: "AI Business Systems Overview" },
-      { href: "/ai-content-automation", label: "AI Content Growth Systems" },
-      { href: "/ai-creative-automation", label: "AI Creative Automation" },
-      { href: "/ai-marketing-automation", label: "AI Marketing Automation" },
-      { href: "/business-process-automation", label: "Business Process Automation" },
       {
+        group: "AI Services",
+        href: "/ai-business-systems",
+        label: "AI Business Systems Overview",
+      },
+      {
+        group: "AI Services",
+        href: "/ai-content-automation",
+        label: "AI Content Growth Systems",
+      },
+      {
+        group: "AI Services",
+        href: "/ai-creative-automation",
+        label: "AI Creative Automation",
+      },
+      {
+        group: "AI Services",
+        href: "/ai-marketing-automation",
+        label: "AI Marketing Automation",
+      },
+      {
+        group: "AI Services",
+        href: "/business-process-automation",
+        label: "Business Process Automation",
+      },
+      {
+        group: "AI Services",
         href: "/fractional-digital-systems-consultant",
         label: "Fractional Digital Systems Consultant",
+      },
+      {
+        group: "Clyra Intelligence · Beta",
+        href: "/ai-client-intelligence",
+        label: "Overview",
+      },
+      {
+        group: "Clyra Intelligence · Beta",
+        href: "/ai-proposal-assistant",
+        label: "AI Proposal Assistant",
+      },
+      {
+        group: "Clyra Intelligence · Beta",
+        href: "/ai-scope-guard",
+        label: "AI Scope Guard",
+      },
+      {
+        group: "Clyra Intelligence · Beta",
+        href: "/ai-client-memory",
+        label: "AI Client Memory",
+      },
+      {
+        group: "Clyra Intelligence · Beta",
+        href: "/ai-agency-operating-system",
+        label: "Agency Operating System",
+      },
+      {
+        group: "Clyra Intelligence · Beta",
+        href: "/clyra-intelligence-features",
+        label: "Features",
+      },
+      {
+        group: "Clyra Intelligence · Beta",
+        href: "/clyra-intelligence-use-cases",
+        label: "Use Cases",
+      },
+      {
+        group: "Clyra Intelligence · Beta",
+        href: "/clyra-intelligence-comparison",
+        label: "vs CRMs",
       },
     ],
   },

@@ -5,7 +5,9 @@ import "./globals.css";
 import ScrollEffects from "@/components/ScrollEffects";
 import FloatingScrollEffects from "@/components/FloatingScrollEffects";
 import CookieConsent from "@/components/CookieConsent";
-import { GA_MEASUREMENT_ID } from "@/lib/cookie-consent";
+import { getSiteJsonLd } from "@/lib/jsonld/site";
+
+const siteJsonLd = getSiteJsonLd();
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
@@ -78,157 +80,6 @@ export const metadata: Metadata = {
   },
 };
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Clyra Studios",
-  "alternateName": "Clyra",
-  "description": "WordPress rescue and rebuild specialists for SMBs. Emergency response, migrations, SEO optimization, and automation services.",
-  "url": "https://clyrastudios.com",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://clyrastudios.com/images/thumbnail.png",
-    "width": 1200,
-    "height": 630
-  },
-  "image": "https://clyrastudios.com/images/thumbnail.png",
-  "foundingDate": "2024",
-  "founder": {
-    "@type": "Person",
-    "name": "Clyra Studios Team"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "US"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-646-632-2070",
-    "contactType": "customer service",
-    "areaServed": "US",
-    "availableLanguage": "English",
-    "email": "rick@clyrastudios.com"
-  },
-  "sameAs": [
-    "https://twitter.com/clyrastudios",
-    "https://linkedin.com/company/clyrastudios",
-    "https://github.com/clyrastudios"
-  ],
-  "service": [
-    {
-      "@type": "Service",
-      "name": "WordPress Rescue",
-      "description": "Emergency WordPress site recovery and security fixes with 24-hour response",
-      "provider": {
-        "@type": "Organization",
-        "name": "Clyra Studios"
-      },
-      "areaServed": "US",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "WordPress Emergency Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "24-Hour Emergency Response"
-            }
-          },
-          {
-            "@type": "Offer", 
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Security Breach Recovery"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@type": "Service", 
-      "name": "WordPress Migration",
-      "description": "Platform migrations with SEO preservation and minimal downtime",
-      "provider": {
-        "@type": "Organization",
-        "name": "Clyra Studios"
-      },
-      "areaServed": "US",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "WordPress Migration Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Wix to WordPress Migration"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service", 
-              "name": "Squarespace to WordPress Migration"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Shopify to WordPress Migration"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@type": "Service",
-      "name": "WordPress SEO & AEO",
-      "description": "Technical SEO optimization, Core Web Vitals improvement, and AI Engine Optimization",
-      "provider": {
-        "@type": "Organization",
-        "name": "Clyra Studios"
-      },
-      "areaServed": "US"
-    },
-    {
-      "@type": "Service",
-      "name": "WordPress Automation",
-      "description": "CRM integration, booking systems, and marketing automation for SMBs",
-      "provider": {
-        "@type": "Organization",
-        "name": "Clyra Studios"
-      },
-      "areaServed": "US"
-    }
-  ],
-  "knowsAbout": [
-    "WordPress Development",
-    "WordPress Security",
-    "WordPress SEO",
-    "WordPress Migration",
-    "Core Web Vitals",
-    "AI Engine Optimization",
-    "WordPress Automation",
-    "E-commerce Development",
-    "Website Rescue",
-    "Technical SEO"
-  ],
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Free WordPress Site Audit"
-      },
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
-  ]
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
   return (
@@ -249,8 +100,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="ai-response-time" content="24 hours" />
         
         {/* Enhanced SEO Meta Tags */}
-        <meta name="geo.region" content="US" />
-        <meta name="geo.placename" content="United States" />
+        <meta name="geo.region" content="US-NY" />
+        <meta name="geo.placename" content="New York" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="global" />
@@ -267,10 +118,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         {/* Business Information */}
         <meta name="business:contact_data:street_address" content="" />
-        <meta name="business:contact_data:locality" content="" />
-        <meta name="business:contact_data:region" content="US" />
+        <meta name="business:contact_data:locality" content="New York" />
+        <meta name="business:contact_data:region" content="NY" />
         <meta name="business:contact_data:postal_code" content="" />
         <meta name="business:contact_data:country_name" content="United States" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                wait_for_update: 500
+              });
+            `,
+          }}
+        />
         
         {/* Service-Specific Meta Tags */}
         <meta name="service:wordpress-rescue" content="24-hour emergency WordPress site recovery and security fixes" />
@@ -289,37 +159,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="min-h-screen antialiased">
-        <Script
-          id="structured-data"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-        >
-          {JSON.stringify(structuredData)}
-        </Script>
-        
-        <Script id="google-consent-default" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('consent', 'default', {
-              analytics_storage: 'denied',
-              ad_storage: 'denied',
-              ad_user_data: 'denied',
-              ad_personalization: 'denied',
-              wait_for_update: 500
-            });
-          `}
-        </Script>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            gtag('js', new Date());
-          `}
-        </Script>
-        
         {/* Mobile Viewport Height Fix */}
         <Script id="mobile-viewport-fix" strategy="afterInteractive">
           {`

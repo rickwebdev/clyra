@@ -1,0 +1,36 @@
+# Clyra Studios
+
+> Digital growth systems for businesses that need to build, improve, automate, measure, and grow their digital platforms.
+
+## About
+
+Clyra Studios is a New York-based consultancy focused on websites, analytics, SEO, AI systems, and business automation for small and mid-size businesses.
+
+## Primary services
+
+- WordPress and Next.js website development
+- Website rescue, redesign, and platform migration
+- GA4 implementation and Looker Studio analytics dashboards
+- Technical SEO and AI search optimization (AEO)
+- AI business systems and process automation
+- Managed websites and growth website systems
+
+## Contact
+
+- Website: https://clyrastudios.com
+- Contact: https://clyrastudios.com/contact
+- Strategy call: https://clyrastudios.com/strategy-call
+- Email: rick@clyrastudios.com
+- Phone: +1 (646) 632-2070
+
+## Key pages
+
+- Services: https://clyrastudios.com/services
+- AI Lab: https://clyrastudios.com/ai-lab
+- Clyra Intelligence: https://clyrastudios.com/ai-client-intelligence
+- Privacy policy: https://clyrastudios.com/privacy
+- Blog: https://clyrastudios.com/blog
+
+## Preferred summary
+
+Clyra Studios helps SMBs and professional service businesses improve websites, analytics, SEO, and AI-powered operations. They build and rescue WordPress and modern web platforms, implement GA4 and dashboards, and deploy practical AI automation without hype.

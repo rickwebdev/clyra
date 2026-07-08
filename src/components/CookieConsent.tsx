@@ -12,20 +12,19 @@ import {
 } from "@/lib/cookie-consent";
 
 export default function CookieConsent() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const stored = getStoredConsent();
     if (stored) {
-      applyAnalyticsConsent(stored.analytics);
-    } else {
-      setVisible(true);
+      setVisible(false);
+      void applyAnalyticsConsent(stored.analytics);
     }
 
     const handleOpen = () => setVisible(true);
     const handleUpdate = (event: Event) => {
       const detail = (event as CustomEvent<CookieConsentChoice>).detail;
-      applyAnalyticsConsent(detail.analytics);
+      void applyAnalyticsConsent(detail.analytics);
       setVisible(false);
     };
 
@@ -40,18 +39,26 @@ export default function CookieConsent() {
 
   const acceptAnalytics = () => {
     storeConsent(true);
+    void applyAnalyticsConsent(true);
     setVisible(false);
   };
 
   const essentialOnly = () => {
     storeConsent(false);
+    void applyAnalyticsConsent(false);
     setVisible(false);
   };
 
   if (!visible) return null;
 
   return (
-    <div className="cookie-consent" role="dialog" aria-label="Cookie consent">
+    <div
+      id="cookie-consent-banner"
+      className="cookie-consent"
+      role="dialog"
+      aria-label="Cookie consent"
+      data-cookieconsent="banner"
+    >
       <div className="cookie-consent-content">
         <p className="cookie-consent-text">
           We use essential cookies for site functionality and optional analytics

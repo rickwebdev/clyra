@@ -43,17 +43,69 @@ declare global {
   }
 }
 
-export function applyAnalyticsConsent(granted: boolean) {
-  if (typeof window.gtag !== "function") return;
-  window.gtag("consent", "update", {
-    analytics_storage: granted ? "granted" : "denied",
+export const GA_MEASUREMENT_ID = "G-CC56KCXVC7";
+
+let gaScriptLoaded = false;
+
+function ensureGtagStub() {
+  window.dataLayer = window.dataLayer || [];
+  if (typeof window.gtag !== "function") {
+    window.gtag = function gtag(...args: unknown[]) {
+      window.dataLayer!.push(args);
+    };
+  }
+}
+
+function loadGoogleAnalyticsScript(): Promise<void> {
+  if (gaScriptLoaded) {
+    return Promise.resolve();
+  }
+
+  return new Promise((resolve, reject) => {
+    ensureGtagStub();
+    window.gtag!("js", new Date());
+
+    const existing = document.querySelector<HTMLScriptElement>(
+      `script[data-ga-id="${GA_MEASUREMENT_ID}"]`,
+    );
+    if (existing) {
+      gaScriptLoaded = true;
+      resolve();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    script.async = true;
+    script.dataset.gaId = GA_MEASUREMENT_ID;
+    script.onload = () => {
+      gaScriptLoaded = true;
+      resolve();
+    };
+    script.onerror = () => reject(new Error("Failed to load Google Analytics"));
+    document.head.appendChild(script);
+  });
+}
+
+export async function applyAnalyticsConsent(granted: boolean) {
+  ensureGtagStub();
+
+  if (!granted) {
+    window.gtag!("consent", "update", {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+    });
+    return;
+  }
+
+  await loadGoogleAnalyticsScript();
+  window.gtag!("consent", "update", {
+    analytics_storage: "granted",
     ad_storage: "denied",
     ad_user_data: "denied",
     ad_personalization: "denied",
   });
-  if (granted) {
-    window.gtag("config", "G-CC56KCXVC7");
-  }
+  window.gtag!("config", GA_MEASUREMENT_ID);
 }
-
-export const GA_MEASUREMENT_ID = "G-CC56KCXVC7";

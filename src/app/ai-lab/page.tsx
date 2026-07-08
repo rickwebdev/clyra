@@ -259,19 +259,12 @@ export default function AILabPage() {
             <div className="ai-lab-grid">
               {solutions.map((solution) => (
                 <article key={solution.id} className="ai-lab-card" id={solution.id}>
-                  <div className="ai-lab-card-header">
-                    <div className="ai-lab-card-icon">
-                      <GradientIcon
-                        icon={solution.icon}
-                        size="xl"
-                        className="primary"
-                      />
-                    </div>
-                    <span
-                      className={`ai-lab-status-badge ai-lab-status-badge--${solution.status}`}
-                    >
-                      {solution.status === "live" ? "Live" : "Beta"}
-                    </span>
+                  <div className="ai-lab-card-icon">
+                    <GradientIcon
+                      icon={solution.icon}
+                      size="xl"
+                      className="primary"
+                    />
                   </div>
                   <h3 className="ai-lab-card-title">{solution.title}</h3>
                   <p className="ai-lab-card-description">{solution.description}</p>

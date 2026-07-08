@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
-import ClyraIntelligenceBadge from "@/components/ClyraIntelligenceBadge";
 import {
   faCheck,
   faClockRotateLeft,
@@ -173,7 +172,6 @@ export default function AIProposalAssistantPage() {
           <div className="container">
             <div className="hero-content">
               <div className="hero-headlines">
-                <ClyraIntelligenceBadge />
                 <h1 className="hero-title">
                   <span className="title-line">Proposals That Remember</span>
                   <span className="title-line highlight">What You Already Quoted</span>
@@ -331,7 +329,7 @@ export default function AIProposalAssistantPage() {
               </div>
               <div className="dreamhost-pro">
                 <h3 className="text-white font-semibold mb-3">
-                  AI Proposal Assistant (In Development)
+                  AI Proposal Assistant
                 </h3>
                 <ul className="space-y-2">
                   {[

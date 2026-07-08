@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
-import ClyraIntelligenceBadge from "@/components/ClyraIntelligenceBadge";
 import {
   faCheck,
   faXmark,
@@ -259,7 +258,6 @@ export default function ClyraIntelligenceComparisonPage() {
           <div className="container">
             <div className="hero-content">
               <div className="hero-headlines">
-                <ClyraIntelligenceBadge />
                 <h1 className="hero-title">
                   <span className="title-line">Traditional CRMs Store Data.</span>
                   <span className="title-line highlight">
@@ -274,7 +272,7 @@ export default function ClyraIntelligenceComparisonPage() {
                   tool is actually designed to do.
                 </p>
                 <p className="hero-hook">
-                  Built from agency workflows. Currently in private beta.
+                  Built from agency workflows.
                 </p>
               </div>
               <div className="hero-actions">

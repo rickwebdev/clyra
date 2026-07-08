@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
-import ClyraIntelligenceBadge from "@/components/ClyraIntelligenceBadge";
 import {
   faTimeline,
   faFileContract,
@@ -223,7 +222,6 @@ export default function ClyraIntelligenceFeaturesPage() {
           <div className="container">
             <div className="hero-content">
               <div className="hero-headlines">
-                <ClyraIntelligenceBadge />
                 <h1 className="hero-title">
                   <span className="title-line">Client Intelligence Modules</span>
                   <span className="title-line highlight">
@@ -374,7 +372,7 @@ export default function ClyraIntelligenceFeaturesPage() {
         <section className="cta-section">
           <div className="container">
             <div className="cta-content">
-              <h2 className="cta-title">Interested in the Private Beta?</h2>
+              <h2 className="cta-title">Want to Learn More?</h2>
               <p className="cta-description">
                 Clyra Intelligence is in development. If client context, scope
                 protection, or proposal consistency are problems in your workflow,

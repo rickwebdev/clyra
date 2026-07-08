@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
-import ClyraIntelligenceBadge from "@/components/ClyraIntelligenceBadge";
 import {
   faCheck,
   faComments,
@@ -169,7 +168,6 @@ export default function AIScopeGuardPage() {
           <div className="container">
             <div className="hero-content">
               <div className="hero-headlines">
-                <ClyraIntelligenceBadge />
                 <h1 className="hero-title">
                   <span className="title-line">Catch Scope Creep</span>
                   <span className="title-line highlight">Before It Costs You</span>
@@ -330,7 +328,7 @@ export default function AIScopeGuardPage() {
               </div>
               <div className="dreamhost-pro">
                 <h3 className="text-white font-semibold mb-3">
-                  AI Scope Guard (In Development)
+                  AI Scope Guard
                 </h3>
                 <ul className="space-y-2">
                   {[

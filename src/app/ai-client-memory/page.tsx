@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
-import ClyraIntelligenceBadge from "@/components/ClyraIntelligenceBadge";
 import {
   faBrain,
   faBullseye,
@@ -291,7 +290,6 @@ export default function AIClientMemoryPage() {
           </div>
           <div className="container">
             <div className="hero-content">
-              <ClyraIntelligenceBadge />
               <div className="hero-headlines">
                 <h1 className="hero-title">
                   <span className="title-line">AI Client Memory</span>
@@ -306,7 +304,7 @@ export default function AIClientMemoryPage() {
                   unprepared again.
                 </p>
                 <p className="hero-hook">
-                  Built from real agency workflows. Currently in private beta.
+                  Built from real agency workflows.
                 </p>
               </div>
 

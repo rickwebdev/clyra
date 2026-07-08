@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
-import ClyraIntelligenceBadge from "@/components/ClyraIntelligenceBadge";
 import {
   faBullhorn,
   faCode,
@@ -225,7 +224,6 @@ export default function ClyraIntelligenceUseCasesPage() {
           <div className="container">
             <div className="hero-content">
               <div className="hero-headlines">
-                <ClyraIntelligenceBadge />
                 <h1 className="hero-title">
                   <span className="title-line">Built for Agencies and Consultants</span>
                   <span className="title-line highlight">

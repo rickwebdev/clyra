@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
-import ClyraIntelligenceBadge from "@/components/ClyraIntelligenceBadge";
 import {
   faBrain,
   faChartLine,
@@ -243,7 +242,6 @@ export default function AIClientIntelligencePage() {
           </div>
           <div className="container">
             <div className="hero-content">
-              <ClyraIntelligenceBadge />
               <div className="hero-headlines">
                 <h1 className="hero-title">
                   <span className="title-line">Never Lose</span>
@@ -262,7 +260,7 @@ export default function AIClientIntelligencePage() {
               </div>
               <div className="hero-actions">
                 <Link href="/contact" className="btn btn-primary btn-large">
-                  Request Private Beta Access
+                  Get in Touch
                   <span className="btn-arrow">→</span>
                 </Link>
                 <Link
@@ -422,7 +420,7 @@ export default function AIClientIntelligencePage() {
               </p>
               <div className="cta-actions">
                 <Link href="/contact" className="btn btn-primary btn-large">
-                  Request Private Beta Access
+                  Get in Touch
                   <span className="btn-arrow">→</span>
                 </Link>
                 <Link href="/strategy-call" className="btn btn-secondary btn-large">

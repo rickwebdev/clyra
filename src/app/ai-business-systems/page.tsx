@@ -25,7 +25,7 @@ const serviceCards = [
     icon: faHandshake,
     title: "Clyra Intelligence",
     description:
-      "An AI-powered client intelligence platform in development. Client memory, proposal intelligence, scope guard, and relationship history for agencies and consultants.",
+      "An AI-powered client intelligence platform for agencies and consultants. Client memory, proposal intelligence, scope guard, and relationship history.",
     href: "/ai-client-intelligence",
   },
   {

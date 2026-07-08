@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
-import ClyraIntelligenceBadge from "@/components/ClyraIntelligenceBadge";
 import {
   faBrain,
   faCheck,
@@ -242,7 +241,6 @@ export default function AIAgencyOperatingSystemPage() {
           </div>
           <div className="container">
             <div className="hero-content">
-              <ClyraIntelligenceBadge />
               <div className="hero-headlines">
                 <h1 className="hero-title">
                   <span className="title-line">AI Agency Operating System</span>
@@ -257,7 +255,7 @@ export default function AIAgencyOperatingSystemPage() {
                   understands context.
                 </p>
                 <p className="hero-hook">
-                  Built from real agency workflows. Currently in private beta.
+                  Built from real agency workflows.
                 </p>
               </div>
 

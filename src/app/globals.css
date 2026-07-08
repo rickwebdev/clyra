@@ -5080,10 +5080,6 @@ p {
   color: #ffffff;
   margin-bottom: 0.75rem;
   line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .blog-card-excerpt {
@@ -5358,6 +5354,92 @@ p {
   line-height: 1.4;
 }
 
+.blog-post {
+  overflow: visible;
+}
+
+/* Blog post tables — wider layout + always-visible themed scrollbar */
+.blog-post .prose table {
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  display: block;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable;
+  scrollbar-width: auto;
+  scrollbar-color: #3b82f6 rgba(255, 255, 255, 0.14);
+  padding-bottom: 0.75rem;
+  box-shadow: inset -18px 0 20px -18px rgba(59, 130, 246, 0.18);
+}
+
+.blog-post .prose table::-webkit-scrollbar {
+  height: 12px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.blog-post .prose table::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  margin-top: 0.25rem;
+}
+
+.blog-post .prose table::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #2563eb, #3b82f6, #06b6d4, #10b981);
+  border-radius: 999px;
+  min-width: 4rem;
+  border: 2px solid rgba(15, 23, 42, 0.35);
+}
+
+.blog-post .prose table::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #1d4ed8, #2563eb, #0891b2, #059669);
+}
+
+.blog-post .prose table::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(90deg, #1e40af, #1d4ed8, #0e7490, #047857);
+}
+
+@media (min-width: 768px) {
+  .blog-post .prose table {
+    width: calc(100% + 5rem);
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+  }
+}
+
+.blog-post .prose thead {
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.blog-post .prose th,
+.blog-post .prose td {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  min-width: 6.5rem;
+}
+
+.blog-post .prose th {
+  color: #ffffff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.blog-post .prose td {
+  color: #d1d5db;
+}
+
+.blog-post .prose tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
 .prose p {
   margin-bottom: 1.5rem;
   font-size: 1.125rem;
@@ -5395,6 +5477,160 @@ p {
   color: #e5e7eb;
 }
 
+/* Blog callouts — blockquotes + section lead paragraphs */
+.blog-post .prose blockquote,
+.blog-post .prose :is(h2, h3) + p,
+.blog-post .prose :is(h2, h3) + p + p,
+.blog-post .prose p:has(strong:first-child):not(:last-child) {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 1.15rem 1.4rem 1.15rem 1.65rem;
+  border-radius: 10px;
+  font-style: normal;
+  color: #e5e7eb;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+.blog-post .prose blockquote::before,
+.blog-post .prose :is(h2, h3) + p::before,
+.blog-post .prose :is(h2, h3) + p + p::before,
+.blog-post .prose p:has(strong:first-child):not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4, #10b981);
+}
+
+.blog-post .prose blockquote::after,
+.blog-post .prose :is(h2, h3) + p::after,
+.blog-post .prose :is(h2, h3) + p + p::after,
+.blog-post .prose p:has(strong:first-child):not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+/* Variant A — blue */
+.blog-post .prose blockquote:nth-of-type(odd),
+.blog-post .prose :is(h2, h3) + p,
+.blog-post .prose p:has(strong:first-child):not(:last-child):nth-of-type(odd) {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.16) 0%,
+    rgba(59, 130, 246, 0.05) 55%,
+    rgba(15, 23, 42, 0.2) 100%
+  );
+  border-color: rgba(59, 130, 246, 0.28);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.08);
+}
+
+.blog-post .prose blockquote:nth-of-type(odd)::after,
+.blog-post .prose :is(h2, h3) + p::after,
+.blog-post .prose p:has(strong:first-child):not(:last-child):nth-of-type(odd)::after {
+  background: linear-gradient(180deg, #3b82f6, #2563eb);
+}
+
+/* Variant B — cyan/teal */
+.blog-post .prose blockquote:nth-of-type(even),
+.blog-post .prose :is(h2, h3) + p + p,
+.blog-post .prose p:has(strong:first-child):not(:last-child):nth-of-type(even) {
+  background: linear-gradient(
+    135deg,
+    rgba(6, 182, 212, 0.14) 0%,
+    rgba(16, 185, 129, 0.07) 55%,
+    rgba(15, 23, 42, 0.2) 100%
+  );
+  border-color: rgba(6, 182, 212, 0.26);
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.07);
+}
+
+.blog-post .prose blockquote:nth-of-type(even)::after,
+.blog-post .prose :is(h2, h3) + p + p::after,
+.blog-post .prose p:has(strong:first-child):not(:last-child):nth-of-type(even)::after {
+  background: linear-gradient(180deg, #06b6d4, #10b981);
+}
+
+.blog-post .prose blockquote p {
+  margin: 0;
+}
+
+.blog-post .prose blockquote p + p {
+  margin-top: 0.75rem;
+}
+
+/* Checklist blocks — bold header + nested sub-bullets only */
+.blog-post .prose ul:not(:has(> li:not(:has(> ul)))):not(:has(> li:not(:has(strong)))) {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.blog-post .prose ul:not(:has(> li:not(:has(> ul)))):not(:has(> li:not(:has(strong)))) > li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 1.15rem 1.35rem 1.15rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid #3b82f6;
+  background: transparent;
+}
+
+.blog-post .prose ul:not(:has(> li:not(:has(> ul)))):not(:has(> li:not(:has(strong)))) > li:last-child {
+  border-bottom: none;
+}
+
+.blog-post .prose ul:not(:has(> li:not(:has(> ul)))):not(:has(> li:not(:has(strong)))) > li:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+  border-left-color: #06b6d4;
+}
+
+.blog-post .prose ul:not(:has(> li:not(:has(> ul)))):not(:has(> li:not(:has(strong)))) > li > strong {
+  color: #f9fafb;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.blog-post .prose ul:not(:has(> li:not(:has(> ul)))):not(:has(> li:not(:has(strong)))) > li > ul {
+  list-style: none;
+  margin: 0.55rem 0 0;
+  padding: 0;
+}
+
+.blog-post .prose ul:not(:has(> li:not(:has(> ul)))):not(:has(> li:not(:has(strong)))) > li > ul > li {
+  position: relative;
+  margin-bottom: 0.35rem;
+  padding-left: 0.85rem;
+  color: #9ca3af;
+  font-size: 0.975rem;
+  line-height: 1.55;
+}
+
+.blog-post .prose ul:not(:has(> li:not(:has(> ul)))):not(:has(> li:not(:has(strong)))) > li > ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #64748b;
+}
+
+.blog-post .prose ul:not(:has(> li:not(:has(> ul)))):not(:has(> li:not(:has(strong)))) > li > ul > li:last-child {
+  margin-bottom: 0;
+}
+
 .prose code {
   background: rgba(255, 255, 255, 0.1);
   padding: 0.25rem 0.5rem;
@@ -5429,8 +5665,8 @@ p {
   font-weight: 600;
 }
 
-/* Cost comparison styling */
-.prose p:has(strong:first-child) {
+/* Cost comparison styling — legacy; prefer blockquotes for new posts */
+.prose p:has(strong:first-child):not(:last-child) {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -5439,7 +5675,7 @@ p {
 }
 
 /* Call-to-action styling */
-.prose p:last-child {
+.blog-post .prose p:last-child {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
   border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 12px;
@@ -5450,7 +5686,7 @@ p {
   font-weight: 500;
 }
 
-.prose p:last-child strong {
+.blog-post .prose p:last-child strong {
   color: #60a5fa;
   font-weight: 700;
 }

@@ -1,25 +1,10 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-
-type Post = { slug: string; title: string; date: string; excerpt?: string };
+import { getPosts } from "@/lib/cms";
 
 export default async function BlogIndex() {
-  const dir = path.join(process.cwd(), "src/content/blog");
-  const files = fs.readdirSync(dir).filter(f => f.endsWith(".mdx"));
-  const posts: Post[] = files.map(file => {
-    const raw = fs.readFileSync(path.join(dir, file), "utf8");
-    const { data } = matter(raw);
-    return {
-      slug: file.replace(/\.mdx?$/, ""),
-      title: data.title ?? file,
-      date: data.date ?? "",
-      excerpt: data.excerpt ?? ""
-    };
-  });
+  const posts = await getPosts();
 
   return (
     <>

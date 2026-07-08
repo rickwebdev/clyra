@@ -2602,6 +2602,104 @@ p {
   font-size: 0.875rem;
 }
 
+.footer-bottom p {
+  margin: 0 0 0.75rem;
+}
+
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-legal-links a,
+.footer-legal-button {
+  color: #a1a1a6;
+  text-decoration: none;
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover,
+.footer-legal-button:hover {
+  color: #fff;
+}
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 1rem;
+  background: rgba(10, 10, 12, 0.96);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.cookie-consent-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cookie-consent-text {
+  flex: 1 1 420px;
+  margin: 0;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.cookie-consent-text a {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.cookie-consent-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.privacy-policy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.privacy-policy-section {
+  margin-bottom: 3rem;
+}
+
+.privacy-policy-section .inner-page-section-title {
+  text-align: left;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.privacy-policy-section .inner-page-section-description {
+  text-align: left;
+  margin: 0 0 1rem;
+  max-width: none;
+}
+
+.privacy-policy-section a {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
 /* Desktop Hero Layout - Reset order to original */
 @media (min-width: 769px) {
   .hero-section {

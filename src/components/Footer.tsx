@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CookieSettingsButton from "@/components/CookieSettingsButton";
 
 export default function Footer() {
   return (
@@ -179,6 +180,9 @@ export default function Footer() {
                 <Link href="/contact">Contact</Link>
               </li>
               <li>
+                <Link href="/privacy">Privacy Policy</Link>
+              </li>
+              <li>
                 <a
                   href="https://rickthewebdev.com"
                   target="_blank"
@@ -192,7 +196,12 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          © {new Date().getFullYear()} Clyra Studios
+          <p>© {new Date().getFullYear()} Clyra Studios</p>
+          <div className="footer-legal-links">
+            <Link href="/privacy">Privacy Policy</Link>
+            <span aria-hidden="true">·</span>
+            <CookieSettingsButton />
+          </div>
         </div>
       </div>
     </footer>

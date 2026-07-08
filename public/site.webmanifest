@@ -9,21 +9,15 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/thumbnail.png",
-      "sizes": "1200x630",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/thumbnail.png",
-      "sizes": "192x192",
+      "src": "/images/favicon.png",
+      "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/thumbnail.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
   ],
   "categories": ["business", "productivity", "utilities"],
   "lang": "en-US",

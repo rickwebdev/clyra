@@ -4,6 +4,8 @@ import Script from "next/script";
 import "./globals.css";
 import ScrollEffects from "@/components/ScrollEffects";
 import FloatingScrollEffects from "@/components/FloatingScrollEffects";
+import CookieConsent from "@/components/CookieConsent";
+import { GA_MEASUREMENT_ID } from "@/lib/cookie-consent";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
@@ -66,6 +68,14 @@ export const metadata: Metadata = {
     yandex: 'your-yandex-verification-code',
     yahoo: 'your-yahoo-verification-code',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/images/favicon.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/images/favicon.png',
+  },
 };
 
 const structuredData = {
@@ -93,7 +103,7 @@ const structuredData = {
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-555-0123",
+    "telephone": "+1-646-632-2070",
     "contactType": "customer service",
     "areaServed": "US",
     "availableLanguage": "English",
@@ -274,7 +284,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Clyra Studios" />
         
-        {/* Favicon - Next.js automatically serves /public/favicon.ico */}
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000000" />
         <link rel="manifest" href="/site.webmanifest" />
@@ -288,17 +297,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {JSON.stringify(structuredData)}
         </Script>
         
-        {/* Google Analytics */}
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500
+            });
+          `}
+        </Script>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-CC56KCXVC7"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-CC56KCXVC7');
           `}
         </Script>
         
@@ -348,6 +366,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Script>
         <ScrollEffects />
         <FloatingScrollEffects />
+        <CookieConsent />
         {children}
       </body>
     </html>

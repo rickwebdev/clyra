@@ -131,10 +131,25 @@ export default function Footer() {
             <h3>AI Lab</h3>
             <ul>
               <li>
-                <Link href="/ai-lab">Interactive Demos</Link>
+                <Link href="/ai-lab">AI Lab Overview</Link>
               </li>
               <li>
-                <Link href="/site-audit">Website Audit Demo</Link>
+                <Link href="/ai-lab/virtual-assistant">AI Virtual Assistant</Link>
+              </li>
+              <li>
+                <Link href="/ai-lab/quote-builder">AI Quote Builder</Link>
+              </li>
+              <li>
+                <Link href="/ai-lab/customer-intake">AI Customer Intake</Link>
+              </li>
+              <li>
+                <Link href="/ai-lab/proposal-assistant">AI Proposal Assistant</Link>
+              </li>
+              <li>
+                <Link href="/ai-lab/knowledge-assistant">AI Knowledge Assistant</Link>
+              </li>
+              <li>
+                <Link href="/site-audit">AI Website Audit</Link>
               </li>
             </ul>
           </div>

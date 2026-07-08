@@ -11,8 +11,10 @@ import {
   faBriefcase,
   faCalculator,
   faClipboardList,
+  faComments,
   faFileContract,
   faGears,
+  faHeadset,
   faMagnifyingGlass,
   faPuzzlePiece,
   faStethoscope,
@@ -37,6 +39,20 @@ type LabSolution = {
 
 const solutions: LabSolution[] = [
   {
+    id: "virtual-assistant",
+    icon: faHeadset,
+    title: "AI Virtual Assistant",
+    description:
+      "Answer customer questions, qualify leads, and route booking requests using your approved services, policies, and scheduling rules.",
+    status: "beta",
+    primaryCta: {
+      label: "Request Demo Access",
+      href: "/contact?demo=virtual-assistant",
+    },
+    learnMoreHref: "/ai-lab/virtual-assistant",
+    futureRoute: "/ai-lab/virtual-assistant",
+  },
+  {
     id: "quote-builder",
     icon: faCalculator,
     title: "AI Quote Builder",
@@ -47,7 +63,7 @@ const solutions: LabSolution[] = [
       label: "Request Demo Access",
       href: "/contact?demo=quote-builder",
     },
-    learnMoreHref: "/business-process-automation",
+    learnMoreHref: "/ai-lab/quote-builder",
     futureRoute: "/ai-lab/quote-builder",
   },
   {
@@ -61,7 +77,7 @@ const solutions: LabSolution[] = [
       label: "Request Demo Access",
       href: "/contact?demo=customer-intake",
     },
-    learnMoreHref: "/business-process-automation",
+    learnMoreHref: "/ai-lab/customer-intake",
     futureRoute: "/ai-lab/customer-intake",
   },
   {
@@ -72,7 +88,7 @@ const solutions: LabSolution[] = [
       "Analyze website performance, SEO, accessibility, and conversion issues, then generate clear recommendations.",
     status: "live",
     primaryCta: { label: "Try Live Demo", href: "/site-audit" },
-    learnMoreHref: "/technical-seo",
+    learnMoreHref: "/site-audit",
     futureRoute: "/site-audit",
   },
   {
@@ -86,7 +102,7 @@ const solutions: LabSolution[] = [
       label: "Request Demo Access",
       href: "/contact?demo=proposal-assistant",
     },
-    learnMoreHref: "/ai-proposal-assistant",
+    learnMoreHref: "/ai-lab/proposal-assistant",
     futureRoute: "/ai-lab/proposal-assistant",
   },
   {
@@ -100,7 +116,7 @@ const solutions: LabSolution[] = [
       label: "Request Demo Access",
       href: "/contact?demo=knowledge-assistant",
     },
-    learnMoreHref: "/ai-client-intelligence",
+    learnMoreHref: "/ai-lab/knowledge-assistant",
     futureRoute: "/ai-lab/knowledge-assistant",
   },
 ];
@@ -228,9 +244,10 @@ export default function AILabPage() {
                   <span className="title-line highlight">Real Business Problems</span>
                 </h1>
                 <p className="hero-description">
-                  Try practical AI systems built for quoting, customer intake,
-                  website audits, proposals, and internal knowledge. Each solution
-                  can be customized around your business, workflows, data, and team.
+                  Try practical AI systems built for virtual assistance, quoting,
+                  customer intake, website audits, proposals, and internal knowledge.
+                  Each solution can be customized around your business, workflows,
+                  data, and team.
                 </p>
               </div>
               <div className="hero-actions">
@@ -346,6 +363,18 @@ export default function AILabPage() {
               </div>
               <p className="bc-guides">
                 Related:{" "}
+                <Link href="/ai-lab/virtual-assistant">AI Virtual Assistant</Link>
+                {" · "}
+                <Link href="/ai-lab/quote-builder">AI Quote Builder</Link>
+                {" · "}
+                <Link href="/ai-lab/customer-intake">AI Customer Intake</Link>
+                {" · "}
+                <Link href="/ai-lab/proposal-assistant">AI Proposal Assistant</Link>
+                {" · "}
+                <Link href="/ai-lab/knowledge-assistant">AI Knowledge Assistant</Link>
+              </p>
+              <p className="bc-guides" style={{ marginTop: "0.75rem" }}>
+                Services:{" "}
                 <Link href="/ai-business-systems">AI Business Systems</Link>
                 {" · "}
                 <Link href="/business-process-automation">

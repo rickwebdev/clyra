@@ -8951,3 +8951,96 @@ p {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.ai-lab-tag-list--centered {
+  justify-content: center;
+}
+
+.ai-lab-workflow-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.ai-lab-workflow-step {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.ai-lab-workflow-step-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3b82f6, #06b6d4, #10b981);
+  background-size: 300% 300%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.ai-lab-workflow-step-icon::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ai-lab-workflow-step-icon .gradient-icon {
+  position: relative;
+  z-index: 2;
+}
+
+.ai-lab-workflow-step-title {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.ai-lab-workflow-step-description {
+  color: #a1a1a6;
+  line-height: 1.65;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.ai-lab-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.ai-lab-dialog-turn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.ai-lab-dialog-turn p {
+  color: #d1d5db;
+  line-height: 1.65;
+  margin: 0.35rem 0 0;
+}
+
+.ai-lab-dialog-speaker {
+  display: block;
+  color: #93c5fd;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}

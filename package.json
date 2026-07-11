@@ -7,8 +7,6 @@
   },
   "scripts": {
     "dev": "next dev",
-    "predev": "postcss src/app/globals.css -o public/site-deferred.css",
-    "prebuild": "postcss src/app/globals.css -o public/site-deferred.css",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -56,7 +54,6 @@
     "eslint": "^9",
     "eslint-config-next": "^15.0.5",
     "postcss": "^8.5.6",
-    "postcss-cli": "^11.0.1",
     "tailwindcss": "^3.4.18",
     "typescript": "^5"
   }

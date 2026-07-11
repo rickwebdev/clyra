@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import Script from "next/script";
-import "./critical.css";
+import "./globals.css";
 import ScrollEffects from "@/components/ScrollEffects";
 import FloatingScrollEffects from "@/components/FloatingScrollEffects";
 import CookieConsent from "@/components/CookieConsent";
@@ -156,24 +156,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000000" />
-        <link rel="preload" href="/site-deferred.css" as="style" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function () {
-                var href = '/site-deferred.css';
-                if (document.querySelector('link[data-deferred-styles="true"]')) return;
-                var link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = href;
-                link.media = 'print';
-                link.setAttribute('data-deferred-styles', 'true');
-                link.onload = function () { this.media = 'all'; };
-                document.head.appendChild(link);
-              })();
-            `,
-          }}
-        />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="min-h-screen antialiased">
@@ -224,9 +206,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ScrollEffects />
         <FloatingScrollEffects />
         <CookieConsent />
-        <noscript>
-          <link rel="stylesheet" href="/site-deferred.css" />
-        </noscript>
         {children}
       </body>
     </html>

@@ -1,4 +1,9 @@
 import createMDX from '@next/mdx';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const modernPolyfill = path.join(__dirname, 'src/lib/modern-polyfill.js');
 const withMDX = createMDX({ extension: /\.mdx?$/ });
 
 /** @type {import('next').NextConfig} */
@@ -13,6 +18,16 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
+  },
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '../build/polyfills/polyfill-module': modernPolyfill,
+        'next/dist/build/polyfills/polyfill-module': modernPolyfill,
+      };
+    }
+    return config;
   },
   async headers() {
     return [

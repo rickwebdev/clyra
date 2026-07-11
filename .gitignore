@@ -19,6 +19,7 @@
 
 # production
 /build
+public/site-deferred.css
 
 # misc
 .DS_Store

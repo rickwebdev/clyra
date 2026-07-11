@@ -2825,6 +2825,10 @@ p {
   .trust-signals {
     display: none;
   }
+
+  .redesign-migration-page .managed-hero-signals {
+    display: grid;
+  }
   
   .hero-title {
     font-size: clamp(2rem, 8vw, 3rem);
@@ -5945,6 +5949,18 @@ p {
   box-shadow: 0 0 32px rgba(77, 160, 255, 0.12);
 }
 
+.redesign-migration-page .pricing-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.redesign-migration-page .pricing-badge-slot {
+  min-height: 1.75rem;
+  display: flex;
+  align-items: center;
+}
+
 .redesign-migration-page .pricing-badge {
   display: inline-block;
   font-size: 0.75rem;
@@ -5956,7 +5972,7 @@ p {
   border: 1px solid rgba(77, 160, 255, 0.25);
   border-radius: 999px;
   padding: 0.35rem 0.75rem;
-  margin-bottom: 0.75rem;
+  margin: 0;
 }
 
 .redesign-migration-page .pricing-card-title {
@@ -5995,6 +6011,10 @@ p {
   margin-top: auto;
   width: 100%;
   justify-content: center;
+}
+
+.redesign-migration-page .pricing-card .service-features {
+  flex: 1;
 }
 
 .redesign-migration-page .industries-grid-managed {
@@ -6150,6 +6170,52 @@ p {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(77, 160, 255, 0.3);
   transform: translateY(-2px);
+}
+
+.redesign-migration-page .managed-hero-signals {
+  margin: 1.25rem auto 1.75rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 920px;
+  animation-delay: 0.5s;
+}
+
+.redesign-migration-page .managed-hero-signals .trust-item {
+  padding: 0.75rem 1rem;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+.redesign-migration-page .managed-hero-trust-line {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.managed-contact-link {
+  color: #93c5fd;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.managed-contact-link:hover {
+  color: #ffffff;
+}
+
+.managed-website-form {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .redesign-migration-page .managed-hero-signals {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .redesign-migration-page .managed-hero-signals .trust-item {
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .managed-websites-promo {

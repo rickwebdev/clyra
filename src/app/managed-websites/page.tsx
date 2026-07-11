@@ -1,269 +1,289 @@
 import Link from "next/link";
-import Script from "next/script";
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
+import ManagedWebsiteCta, {
+  ManagedWebsiteEmailLink,
+  ManagedWebsitePhoneLink,
+} from "@/components/ManagedWebsiteCta";
+import ManagedWebsiteForm from "@/components/ManagedWebsiteForm";
 import {
   faBolt,
   faBriefcase,
   faBroom,
   faCar,
   faCheck,
+  faClipboardList,
+  faComments,
   faGavel,
   faHardHat,
+  faHeadset,
   faLeaf,
   faMagnifyingGlass,
   faMobileScreen,
+  faPaintRoller,
+  faPenToSquare,
+  faPhone,
   faRocket,
   faScissors,
   faShieldHalved,
   faStethoscope,
   faStore,
-  faTriangleExclamation,
+  faBug,
+  faCamera,
+  faHouseChimney,
   faUtensils,
   faWind,
   faWrench,
-  faChartLine,
-  faHeadset,
-  faTimesCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-const problems = [
+const valueBenefits = [
   {
     icon: faStore,
-    title: "Relying Only on Social or Listings",
+    title: "Look Professional",
     description:
-      "Many local businesses depend on Facebook, Google Business Profile, or word of mouth alone. That works until a competitor looks more professional online.",
-    impact: "Trust goes to whoever shows up best",
+      "Give customers confidence that they are hiring a legitimate, established business.",
   },
   {
-    icon: faTriangleExclamation,
-    title: "Outdated Sites Hurt Credibility",
+    icon: faPhone,
+    title: "Get More Calls and Inquiries",
     description:
-      "An old template, broken layout, or missing information makes customers question whether you are still in business or take your work seriously.",
-    impact: "First impressions cost calls",
-  },
-  {
-    icon: faMobileScreen,
-    title: "Poor Mobile Experience Loses Leads",
-    description:
-      "Most local searches happen on phones. Slow loads, tiny text, and hard-to-find contact info send people to the next result.",
-    impact: "Clicks without conversions",
+      "Make it easy for customers to call, request a quote, or contact your business.",
   },
   {
     icon: faMagnifyingGlass,
-    title: "Missing SEO Basics Means Invisibility",
+    title: "Show Up on Google",
     description:
-      "Without proper titles, local structure, and technical foundations, your business may never show up when nearby customers search.",
-    impact: "Invisible in your own market",
+      "Give your business a strong website foundation for local search visibility.",
   },
   {
     icon: faShieldHalved,
-    title: "Unmanaged Sites Break Down",
+    title: "Never Worry About Your Website",
     description:
-      "Unpatched plugins, expired SSL, broken forms, and neglected updates turn a website into a liability instead of an asset.",
-    impact: "Risk grows while leads slip away",
+      "Clyra handles hosting, updates, security, maintenance, and support.",
   },
 ];
 
-const solutionIncludes = [
-  "Modern responsive website",
-  "Managed hosting",
-  "SSL and security",
-  "Performance optimization",
-  "Contact forms and click-to-call",
-  "Basic local SEO setup",
-  "Google Analytics setup",
-  "Search Console setup",
-  "Content updates",
-  "Ongoing support",
+const heroHighlights = [
+  { icon: faPenToSquare, label: "Professional website" },
+  { icon: faMobileScreen, label: "Mobile friendly" },
+  { icon: faComments, label: "Easy customer contact" },
+  { icon: faHeadset, label: "Fully handled by Clyra" },
 ];
 
 const plans = [
   {
-    name: "Essential Website",
+    name: "Launch",
     price: "$149",
     launchFee: "$499",
     description:
-      "Best for businesses that need a clean, professional online presence.",
+      "For new or small businesses that need a clean, professional website online quickly.",
     features: [
-      "1 to 5 page website",
-      "Managed hosting",
-      "SSL",
-      "Mobile optimization",
-      "Contact form",
-      "Click-to-call",
-      "Basic SEO setup",
-      "Google Analytics setup",
-      "Monthly maintenance",
-      "Minor content updates",
+      "1 to 5 pages",
+      "Hosting and SSL included",
+      "Contact form and click-to-call",
+      "Mobile-friendly design",
+      "Basic search setup",
+      "1 included update request per month",
+      "Email support",
+      "1 round of revisions at launch",
+      "Month-to-month after launch",
+      "Domain registration billed separately",
+      "Cancel anytime with 30 days notice",
     ],
     featured: false,
   },
   {
-    name: "Growth Website",
+    name: "Grow",
     price: "$299",
     launchFee: "$799",
     description:
-      "Best for businesses that want better local visibility and ongoing improvements.",
+      "For growing local businesses that want more pages, better visibility, and regular updates.",
     features: [
-      "Everything in Essential",
       "Up to 10 pages",
-      "Monthly content updates",
+      "Everything in Launch",
+      "3 included update requests per month",
       "Local SEO improvements",
       "Google Business Profile guidance",
-      "Performance reporting",
-      "Priority support",
-      "Quarterly strategy review",
+      "Priority email support",
+      "2 rounds of revisions at launch",
+      "Quarterly performance check-in",
+      "Month-to-month after launch",
+      "Cancel anytime with 30 days notice",
     ],
     featured: true,
   },
   {
-    name: "Growth Partner",
+    name: "Pro",
     price: "$499",
     launchFee: "$1,200+",
     description:
-      "Best for businesses that want ongoing marketing, SEO, content, analytics, and growth support.",
+      "For businesses that want ongoing marketing support, content help, and growth guidance.",
     features: [
-      "Everything in Growth",
+      "Everything in Grow",
       "Service area landing pages",
-      "AI-assisted blog and content creation",
-      "Looker Studio dashboard",
-      "Conversion optimization",
+      "Monthly content updates",
+      "Analytics reporting",
+      "5 included update requests per month",
       "Monthly strategy call",
-      "Automation recommendations",
-      "Advanced SEO improvements",
+      "Conversion recommendations",
+      "Priority support",
+      "Custom scope for larger needs",
+      "Month-to-month after launch",
+      "Cancel anytime with 30 days notice",
     ],
     featured: false,
   },
 ];
 
+const processSteps = [
+  {
+    icon: faClipboardList,
+    title: "1. Tell Us About Your Business",
+    description:
+      "Complete a short questionnaire and send your logo, services, contact details, and photos.",
+  },
+  {
+    icon: faPenToSquare,
+    title: "2. We Build Your Website",
+    description:
+      "Clyra creates the copy, layout, pages, forms, and mobile experience.",
+  },
+  {
+    icon: faComments,
+    title: "3. You Review It",
+    description:
+      "Review the website and request the revisions included with your plan.",
+  },
+  {
+    icon: faRocket,
+    title: "4. We Launch and Manage It",
+    description:
+      "We connect your domain, launch the website, host it, and keep it running.",
+  },
+];
+
 const industries = [
-  { name: "Plumbers", icon: faWrench },
-  { name: "Electricians", icon: faBolt },
-  { name: "HVAC", icon: faWind },
+  { name: "Painters", icon: faPaintRoller },
   { name: "Contractors", icon: faHardHat },
   { name: "Landscapers", icon: faLeaf },
+  { name: "Electricians", icon: faBolt },
+  { name: "Plumbers", icon: faWrench },
+  { name: "HVAC", icon: faWind },
+  { name: "Cleaning Companies", icon: faBroom },
   { name: "Restaurants", icon: faUtensils },
   { name: "Salons", icon: faScissors },
   { name: "Medical Offices", icon: faStethoscope },
   { name: "Law Firms", icon: faGavel },
   { name: "Auto Shops", icon: faCar },
-  { name: "Cleaning Companies", icon: faBroom },
   { name: "Professional Services", icon: faBriefcase },
+  { name: "Roofers", icon: faHouseChimney },
+  { name: "Pest Control", icon: faBug },
+  { name: "Photographers", icon: faCamera },
 ];
 
-const processSteps = [
-  {
-    icon: faMagnifyingGlass,
-    title: "1. Free Website Review",
-    description:
-      "We review your current website, Google visibility, and online presence.",
-  },
-  {
-    icon: faChartLine,
-    title: "2. Build Plan",
-    description:
-      "We recommend the right website structure, pages, and monthly plan.",
-  },
-  {
-    icon: faRocket,
-    title: "3. Launch",
-    description:
-      "We build, optimize, connect analytics, and launch your new site.",
-  },
-  {
-    icon: faHeadset,
-    title: "4. Manage & Improve",
-    description:
-      "We keep the site updated, secure, fast, and improving over time.",
-  },
-];
-
-const upsellLinks = [
-  { href: "/growth-website-system", label: "Growth Website System" },
-  { href: "/wordpress-studio", label: "WordPress Studio" },
-  { href: "/redesign-migration", label: "Redesign & Migration" },
-  { href: "/technical-seo", label: "Technical SEO" },
-  { href: "/ga4-implementation", label: "GA4 Implementation" },
-  {
-    href: "/google-analytics-looker-studio-dashboards",
-    label: "Analytics Dashboards",
-  },
-  { href: "/ai-business-systems", label: "AI Business Systems" },
-  { href: "/business-process-automation", label: "Business Process Automation" },
-  {
-    href: "/fractional-digital-systems-consultant",
-    label: "Fractional Digital Systems Consultant",
-  },
+const addOns = [
+  { label: "Additional pages", href: "/contact" },
+  { label: "Logo refresh", href: "/contact" },
+  { label: "Google Business Profile setup", href: "/technical-seo" },
+  { label: "Local SEO", href: "/technical-seo" },
+  { label: "Online booking", href: "/contact" },
+  { label: "Quote request forms", href: "/contact" },
+  { label: "Analytics dashboard", href: "/google-analytics-looker-studio-dashboards" },
+  { label: "WordPress or CMS upgrade", href: "/wordpress-studio" },
 ];
 
 const faqs = [
   {
     question: "What is a managed website?",
     answer:
-      "A managed website is a professional site that Clyra Studios builds, hosts, maintains, and supports for one predictable monthly price. You get the website, technical upkeep, SEO foundations, analytics setup, and help when you need updates.",
+      "It is a professional business website that Clyra builds, hosts, maintains, and supports for you. You get the design, contact tools, hosting, security, updates, and help when you need changes. You focus on your business. We handle the website.",
   },
   {
-    question: "Do I own my website?",
+    question: "Do I own my domain?",
     answer:
-      "Yes. Your business owns the site, content, and domain. We manage the technical side so you do not have to. Plan details and ownership terms are outlined clearly before launch.",
+      "Yes. Your domain should be registered in your name or your business name. Clyra can help you connect an existing domain or guide you through purchasing one. Domain registration is billed separately from the monthly plan.",
   },
   {
-    question: "Is there a setup fee?",
+    question: "Can I use a domain I already own?",
     answer:
-      "Most plans include a recommended launch fee to cover the initial build, setup, and onboarding. Essential starts at $499, Growth at $799, and Growth Partner at $1,200 or more depending on scope.",
+      "Yes. If you already own a domain, we connect it during launch. We will walk you through the simple DNS steps or handle the connection for you.",
   },
   {
-    question: "Can I cancel?",
+    question: "Can I make changes later?",
     answer:
-      "Yes. Monthly plans are designed to be flexible. We will explain terms upfront so you know what is included, what happens at cancellation, and how content or site files are handled.",
+      "Yes. Every plan includes a set number of update requests each month. Send us the change by email and we handle it. Larger updates or new pages can be added as needed.",
+  },
+  {
+    question: "How quickly can the website launch?",
+    answer:
+      "Most Launch and Grow websites launch in 2 to 4 weeks after we receive your content and questionnaire. Timeline depends on how quickly you provide photos, services, and feedback during review.",
+  },
+  {
+    question: "Do I need to provide the website copy?",
+    answer:
+      "You provide the basics: services, service area, contact details, photos, and any offers you want highlighted. Clyra writes and organizes the website copy as part of the build.",
+  },
+  {
+    question: "Is hosting included?",
+    answer:
+      "Yes. Hosting, SSL, security basics, and performance monitoring are included in every plan. You do not need a separate hosting account.",
+  },
+  {
+    question: "Is this WordPress?",
+    answer:
+      "The standard managed website is a fast, secure, professionally built static website. WordPress and other CMS platforms are available separately when you need frequent publishing, ecommerce, memberships, or more complex functionality.",
+  },
+  {
+    question: "What happens if I cancel?",
+    answer:
+      "Plans are month-to-month after launch with 30 days notice to cancel. We explain what is included, what happens at cancellation, and how your content is handled before you start. You keep ownership of your domain and business content.",
+  },
+  {
+    question: "Can I move the website later?",
+    answer:
+      "Your business owns the content, branding, and domain. If you outgrow the managed plan or want a custom build, Clyra can help you transition to a larger project. We are upfront about what transfers and what is tied to our managed hosting.",
   },
   {
     question: "Can you redesign my existing website?",
     answer:
-      "Yes. Many local businesses come to us with an outdated site or no site at all. We can rebuild on a managed plan or recommend a larger redesign if your goals outgrow the monthly offering.",
+      "Yes. Many businesses come to us with an outdated site or no site at all. We can rebuild on a managed plan or recommend a custom project if your goals need more than the monthly offering.",
   },
   {
-    question: "Do you handle hosting?",
+    question: "Can you help me show up on Google?",
     answer:
-      "Yes. Managed hosting is included. We handle SSL, security basics, performance, and the technical maintenance that keeps your site online and working.",
+      "Yes. All plans include basic search setup: proper page titles, structure, mobile-friendly design, and local foundations. Grow and Pro add ongoing local SEO improvements. We do not guarantee rankings, but we build the foundation Google expects.",
   },
   {
-    question: "Can I request updates?",
+    question: "Are there setup fees?",
     answer:
-      "Yes. Every plan includes support for content and site updates. Higher tiers include more frequent updates, reporting, and strategic guidance.",
+      "Yes. Each plan has a one-time launch fee that covers the initial build and onboarding: Launch $499, Grow $799, and Pro $1,200 or more depending on scope.",
   },
   {
-    question: "Is SEO included?",
+    question: "Is there a contract?",
     answer:
-      "Yes. All plans include SEO foundations such as proper page structure, titles, local setup basics, and technical health. Growth and Growth Partner add ongoing local SEO improvements and advanced work.",
+      "No long-term contract is required. After launch, plans are month-to-month. Launch fees cover the initial build. Cancellation terms are explained clearly before you start.",
   },
   {
-    question: "Can this grow into a larger website later?",
+    question: "What types of businesses is this for?",
     answer:
-      "Absolutely. Managed Websites are a strong starting point. When you need custom development, deeper SEO, automation, or analytics systems, we can expand into our Growth Website System or other Clyra services.",
-  },
-  {
-    question: "Do you work with WordPress?",
-    answer:
-      "Yes. WordPress is our primary platform for managed local business websites because it is flexible, reliable, and easy to grow over time. We also support more advanced WordPress and custom builds when needed.",
+      "Local service businesses, trades, solo owners, new businesses, and professional practices that want a professional website without managing the technical side. Painters, contractors, landscapers, cleaners, restaurants, salons, medical offices, and similar businesses are a strong fit.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Managed Websites for Local Businesses | Clyra Studios",
+  title: "Professional Websites for Small Businesses | Clyra Studios",
   description:
-    "Professional websites, hosting, maintenance, SEO foundations, analytics, and support for local businesses. Clyra Studios builds and manages your website for one predictable monthly price.",
+    "Clyra builds, hosts, and manages professional websites for small businesses. Get a fast, mobile-friendly business website without dealing with technical maintenance.",
   keywords:
-    "managed websites, local business websites, small business website plans, website management, website hosting and maintenance, monthly website plans, managed WordPress for small business",
+    "professional websites for small businesses, affordable small business websites, managed websites for small businesses, business website service, website design for local businesses",
   metadataBase: new URL("https://clyrastudios.com"),
   alternates: { canonical: "/managed-websites" },
   openGraph: {
-    title: "Managed Websites for Local Businesses | Clyra Studios",
+    title: "Professional Websites for Small Businesses | Clyra Studios",
     description:
-      "Professional websites fully managed for one predictable monthly price. Built for local service businesses and professional practices.",
+      "Clyra builds, hosts, and manages professional websites for small businesses. Get online without builders, plugins, or technical headaches.",
     url: "https://clyrastudios.com/managed-websites",
     type: "website",
   },
@@ -272,15 +292,18 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Managed Websites",
+  name: "Managed Business Websites",
   description:
-    "Professional managed website plans for local businesses including hosting, maintenance, SEO foundations, analytics, and support.",
+    "Professional website design, hosting, maintenance, and support for small businesses and local service companies.",
   provider: {
     "@type": "Organization",
     name: "Clyra Studios",
     url: "https://clyrastudios.com",
+    telephone: "+1-646-632-2070",
+    email: "rick@clyrastudios.com",
   },
   areaServed: "US",
+  serviceType: "Website design and management",
   offers: plans.map((plan) => ({
     "@type": "Offer",
     name: plan.name,
@@ -308,20 +331,16 @@ const faqStructuredData = {
 export default function ManagedWebsitesPage() {
   return (
     <>
-      <Script
-        id="managed-websites-data"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(structuredData)}
-      </Script>
-      <Script
-        id="managed-websites-faq"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(faqStructuredData)}
-      </Script>
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
       <Nav />
       <main className="redesign-migration-page">
         <section className="hero-section">
@@ -336,34 +355,71 @@ export default function ManagedWebsitesPage() {
           <div className="container">
             <div className="hero-content">
               <div className="hero-headlines">
+                <p className="hero-hook">Websites for Small Businesses</p>
                 <h1 className="hero-title">
-                  <span className="title-line">Professional Websites,</span>
-                  <span className="title-line highlight">Fully Managed for You</span>
+                  <span className="title-line">Need a Website</span>
+                  <span className="title-line highlight">for Your Business?</span>
                 </h1>
+                <div className="trust-signals managed-hero-signals">
+                  {heroHighlights.map((item) => (
+                    <div key={item.label} className="trust-item">
+                      <GradientIcon icon={item.icon} size="sm" className="primary" />
+                      <span className="trust-text">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
                 <p className="hero-description">
-                  Get a modern, fast, Google-friendly website without dealing with
-                  hosting, updates, security, or technical headaches. Clyra Studios
-                  builds, launches, and manages your site so your business can focus
-                  on getting more calls, leads, and customers.
+                  We design it, launch it, host it, and keep it updated. You get
+                  a professional website without dealing with builders, plugins,
+                  hosting, or technical headaches.
                 </p>
-                <p className="hero-hook">
-                  Professional websites, hosting, and support for one predictable
-                  monthly price.
-                </p>
-                <p className="hero-description" style={{ marginTop: "1rem" }}>
-                  Built for local businesses, contractors, restaurants, healthcare
-                  practices, and professional services.
+                <p className="hero-hook managed-hero-trust-line">
+                  Fast launch. Professional design. Hosting and support included.
                 </p>
               </div>
               <div className="hero-actions">
-                <Link href="/site-audit" className="btn btn-primary btn-large">
-                  Request a Free Website Review
+                <ManagedWebsiteCta
+                  href="#get-website"
+                  className="btn btn-primary btn-large"
+                  ctaLabel="get_my_website_hero"
+                >
+                  Get My Website
                   <span className="btn-arrow">→</span>
-                </Link>
-                <Link href="#pricing" className="btn btn-secondary btn-large">
-                  View Monthly Plans
-                </Link>
+                </ManagedWebsiteCta>
+                <ManagedWebsiteCta
+                  href="#pricing"
+                  className="btn btn-secondary btn-large"
+                  event="managed_website_view_plans"
+                  ctaLabel="view_plans_hero"
+                >
+                  View Plans
+                </ManagedWebsiteCta>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="case-studies-section">
+          <div className="container">
+            <div className="section-header slide-in-right">
+              <h2 className="section-title">
+                Everything You Need to Get Your Business Online
+              </h2>
+            </div>
+            <div className="services-grid">
+              {valueBenefits.map((benefit, i) => (
+                <div key={i} className="service-card">
+                  <div className="service-image">
+                    <div className="service-icon">
+                      <GradientIcon icon={benefit.icon} size="xl" className="primary" />
+                    </div>
+                  </div>
+                  <div className="service-content">
+                    <h3 className="service-title">{benefit.title}</h3>
+                    <p className="service-description">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -372,32 +428,23 @@ export default function ManagedWebsitesPage() {
           <div className="container">
             <div className="section-header slide-in-right">
               <h2 className="section-title">
-                Your Website Should Help Customers{" "}
-                <span className="transform-word">Trust You Before They Call</span>
+                Still Relying on Facebook or Google Alone?
               </h2>
               <p className="section-description">
-                For many local businesses, the website is the first real impression.
-                When it looks outdated, loads slowly, or is hard to use on mobile,
-                customers move on before you ever get the chance to earn their trust.
+                Social profiles are useful, but they do not replace a professional
+                website. Your website gives customers one trusted place to learn
+                about your services, see your work, and contact you.
               </p>
             </div>
-            <div className="services-grid">
-              {problems.map((p, i) => (
-                <div key={i} className="service-card">
-                  <div className="service-image">
-                    <div className="service-icon">
-                      <GradientIcon icon={p.icon} size="xl" className="danger" />
-                    </div>
-                  </div>
-                  <div className="service-content">
-                    <h3 className="service-title">{p.title}</h3>
-                    <p className="service-description">{p.description}</p>
-                    <div className="impact-badge">
-                      <span className="impact-text">{p.impact}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="hero-actions" style={{ justifyContent: "center" }}>
+              <ManagedWebsiteCta
+                href="#get-website"
+                className="btn btn-primary btn-large"
+                ctaLabel="get_my_website_social"
+              >
+                Get My Website
+                <span className="btn-arrow">→</span>
+              </ManagedWebsiteCta>
             </div>
           </div>
         </section>
@@ -405,41 +452,37 @@ export default function ManagedWebsitesPage() {
         <section className="case-studies-section">
           <div className="container">
             <div className="section-header slide-in-right">
-              <h2 className="section-title">A Website Plan That Handles the Tech for You</h2>
+              <h2 className="section-title">How It Works</h2>
               <p className="section-description">
-                Clyra Studios provides a managed website system for local businesses
-                and small businesses that need a professional online presence without
-                becoming their own web department. Your monthly plan includes the
-                website build, hosting, maintenance, SEO foundation, analytics, and
-                support.
+                A simple process designed for busy business owners. You share
+                the basics. Clyra handles the rest.
               </p>
             </div>
-            <div className="included-grid">
-              {solutionIncludes.map((item) => (
-                <div key={item} className="included-item">
-                  <GradientIcon icon={faCheck} size="sm" className="success" />
-                  <span>{item}</span>
+            <div className="services-grid">
+              {processSteps.map((step, i) => (
+                <div key={i} className="service-card">
+                  <div className="service-image">
+                    <div className="service-icon">
+                      <GradientIcon icon={step.icon} size="xl" className="primary" />
+                    </div>
+                  </div>
+                  <div className="service-content">
+                    <h3 className="service-title">{step.title}</h3>
+                    <p className="service-description">{step.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
-            <p className="bc-guides" style={{ marginTop: "2rem" }}>
-              Need more than a monthly plan? Explore{" "}
-              <Link href="/growth-website-system">Growth Website System</Link>
-              {" · "}
-              <Link href="/wordpress-studio">WordPress Studio</Link>
-              {" · "}
-              <Link href="/technical-seo">Technical SEO</Link>
-            </p>
           </div>
         </section>
 
         <section className="services-section" id="pricing">
           <div className="container">
             <div className="section-header slide-in-right">
-              <h2 className="section-title">Simple Monthly Website Plans</h2>
+              <h2 className="section-title">Simple Monthly Plans</h2>
               <p className="section-description">
-                Predictable managed website plans for local businesses that want a
-                professional site without surprise costs or technical busywork.
+                Predictable pricing for a professional business website with
+                hosting, maintenance, and support included.
               </p>
             </div>
             <div className="pricing-grid">
@@ -449,16 +492,18 @@ export default function ManagedWebsitesPage() {
                   className={`pricing-card ${plan.featured ? "pricing-card-featured" : ""} float-in-${i % 2 === 0 ? "left" : "right"}`}
                 >
                   <div className="pricing-card-header">
-                    {plan.featured && (
-                      <span className="pricing-badge">Most Popular</span>
-                    )}
+                    <div className="pricing-badge-slot">
+                      {plan.featured && (
+                        <span className="pricing-badge">Recommended</span>
+                      )}
+                    </div>
                     <h3 className="pricing-card-title">{plan.name}</h3>
                     <div className="pricing-card-price">
                       {plan.price}
                       <span>/month</span>
                     </div>
                     <p className="pricing-launch-fee">
-                      Recommended launch fee: <strong>{plan.launchFee}</strong>
+                      One-time launch fee: <strong>{plan.launchFee}</strong>
                     </p>
                     <p className="pricing-card-description">{plan.description}</p>
                   </div>
@@ -470,17 +515,23 @@ export default function ManagedWebsitesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/site-audit" className="btn btn-primary btn-large pricing-card-cta">
-                    Request a Free Website Review
-                  </Link>
+                  <ManagedWebsiteCta
+                    href="#get-website"
+                    className="btn btn-primary btn-large pricing-card-cta"
+                    ctaLabel={`get_started_${plan.name.toLowerCase()}`}
+                  >
+                    Get Started
+                  </ManagedWebsiteCta>
                 </div>
               ))}
             </div>
-            <p className="section-description" style={{ marginTop: "2rem", textAlign: "center" }}>
-              Custom builds, ecommerce, booking systems, CRM integrations, and advanced
-              automation may require a custom quote.{" "}
-              <Link href="/contact">Contact us</Link> or{" "}
-              <Link href="/rfp">submit an RFP</Link> for larger projects.
+            <p
+              className="section-description"
+              style={{ marginTop: "2rem", textAlign: "center" }}
+            >
+              Already have a website?{" "}
+              <Link href="/site-audit">Request a Free Website Review</Link> and
+              we will tell you what to improve.
             </p>
           </div>
         </section>
@@ -488,41 +539,48 @@ export default function ManagedWebsitesPage() {
         <section className="case-studies-section">
           <div className="container">
             <div className="section-header slide-in-right">
-              <h2 className="section-title">Better Than Renting a DIY Website</h2>
+              <h2 className="section-title">You Do Not Have to Build It Yourself</h2>
               <p className="section-description">
-                DIY builders can work for simple projects, but most local businesses
-                need more than a template and a monthly login.
+                DIY builders work for some people, but most business owners do not
+                want to become their own web department.
               </p>
             </div>
+            <div className="included-grid">
+              {[
+                "No learning Wix or Squarespace",
+                "No fighting with templates",
+                "No plugin updates or security patches",
+                "No hosting setup or DNS confusion",
+                "No technical maintenance on your plate",
+                "A real person handles your website",
+              ].map((item) => (
+                <div key={item} className="included-item">
+                  <GradientIcon icon={faCheck} size="sm" className="success" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="services-section">
+          <div className="container">
+            <div className="section-header slide-in-right">
+              <h2 className="section-title">Which Option Fits Your Business?</h2>
+            </div>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="godaddy-con">
+              <div className="dreamhost-pro">
                 <h3 className="text-white font-semibold mb-3">
-                  DIY Builders and Cheap Templates
+                  Managed Business Website
                 </h3>
                 <ul className="space-y-2">
                   {[
-                    "Limited ownership and portability",
-                    "Weak SEO and local visibility",
-                    "Generic design that looks like everyone else",
-                    "No strategic support when something breaks",
-                    "You manage hosting, updates, and fixes yourself",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <GradientIcon icon={faTimesCircle} size="sm" className="danger" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="dreamhost-pro">
-                <h3 className="text-white font-semibold mb-3">Clyra Managed Websites</h3>
-                <ul className="space-y-2">
-                  {[
-                    "Professionally built for your business",
-                    "Fully managed hosting and maintenance",
-                    "Faster performance and mobile-ready design",
-                    "SEO foundation and analytics included",
-                    "Support from a real developer and digital systems consultant",
+                    "Fast launch",
+                    "Fixed monthly pricing",
+                    "Hosting and maintenance included",
+                    "Clyra handles updates",
+                    "Best for local service businesses",
+                    "No technical management required",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <GradientIcon icon={faCheck} size="sm" className="success" />
@@ -531,7 +589,41 @@ export default function ManagedWebsitesPage() {
                   ))}
                 </ul>
               </div>
+              <div className="godaddy-con">
+                <h3 className="text-white font-semibold mb-3">
+                  Custom Website Project
+                </h3>
+                <ul className="space-y-2">
+                  {[
+                    "Fully custom strategy and design",
+                    "Advanced functionality",
+                    "CMS or ecommerce when needed",
+                    "Larger initial investment",
+                    "Best for established and growing organizations",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <GradientIcon icon={faCheck} size="sm" className="primary" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
+            <div className="hero-actions" style={{ justifyContent: "center", marginTop: "2rem" }}>
+              <ManagedWebsiteCta
+                href="/contact"
+                className="btn btn-secondary btn-large"
+                ctaLabel="not_sure_contact"
+              >
+                Not sure which option fits? Talk to Clyra
+              </ManagedWebsiteCta>
+            </div>
+            <p className="bc-guides" style={{ marginTop: "1.5rem", textAlign: "center" }}>
+              Need a CMS, ecommerce, or advanced features? See{" "}
+              <Link href="/growth-website-system">Growth Website System</Link>
+              {" · "}
+              <Link href="/wordpress-studio">WordPress Studio</Link>
+            </p>
           </div>
         </section>
 
@@ -544,11 +636,11 @@ export default function ManagedWebsitesPage() {
           <div className="container">
             <div className="section-header slide-in-right">
               <h2 className="section-title">
-                Built for Local Businesses That Need More Calls, Leads, and Trust
+                Built for Local Service Businesses
               </h2>
               <p className="section-description">
-                Managed website plans for service businesses, trades, hospitality,
-                healthcare, legal, and professional practices.
+                Painters, contractors, landscapers, cleaners, restaurants, salons,
+                medical offices, and other businesses that need more calls and trust.
               </p>
             </div>
             <div className="managed-industries-grid">
@@ -567,43 +659,18 @@ export default function ManagedWebsitesPage() {
           </div>
         </section>
 
-        <section className="case-studies-section">
-          <div className="container">
-            <div className="section-header slide-in-right">
-              <h2 className="section-title">How It Works</h2>
-            </div>
-            <div className="services-grid">
-              {processSteps.map((s, i) => (
-                <div key={i} className="service-card">
-                  <div className="service-image">
-                    <div className="service-icon">
-                      <GradientIcon icon={s.icon} size="xl" className="primary" />
-                    </div>
-                  </div>
-                  <div className="service-content">
-                    <h3 className="service-title">{s.title}</h3>
-                    <p className="service-description">{s.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="services-section">
           <div className="container">
             <div className="section-header slide-in-right">
-              <h2 className="section-title">Need More Than a Managed Website?</h2>
+              <h2 className="section-title">Popular Add-Ons</h2>
               <p className="section-description">
-                For businesses ready to go deeper, Clyra Studios also provides
-                advanced WordPress development, SEO, analytics dashboards,
-                automation, AI systems, and fractional digital consulting.
+                Start with the plan that fits today. Add services as your business grows.
               </p>
             </div>
             <div className="upsell-links-grid">
-              {upsellLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="upsell-link-card">
-                  {link.label}
+              {addOns.map((addon) => (
+                <Link key={addon.label} href={addon.href} className="upsell-link-card">
+                  {addon.label}
                   <span className="link-arrow">→</span>
                 </Link>
               ))}
@@ -627,35 +694,64 @@ export default function ManagedWebsitesPage() {
           </div>
         </section>
 
+        <section className="services-section" id="get-website">
+          <div className="container">
+            <div className="section-header slide-in-right">
+              <h2 className="section-title">
+                Your Business Deserves a Professional Website
+              </h2>
+              <p className="section-description">
+                Tell us about your business and we will recommend the simplest,
+                most affordable way to get your website online.
+              </p>
+            </div>
+            <ManagedWebsiteForm />
+            <p className="bc-guides" style={{ marginTop: "1.5rem", textAlign: "center" }}>
+              Prefer to talk first? Call{" "}
+              <ManagedWebsitePhoneLink className="managed-contact-link">
+                (646) 632-2070
+              </ManagedWebsitePhoneLink>
+              {" · "}
+              Email{" "}
+              <ManagedWebsiteEmailLink className="managed-contact-link">
+                rick@clyrastudios.com
+              </ManagedWebsiteEmailLink>
+            </p>
+          </div>
+        </section>
+
         <section className="cta-section">
           <div className="container">
             <div className="cta-content">
               <h2 className="cta-title">
-                Ready for a Website You Don&apos;t Have to Worry About?
+                Ready to Get Your Business Online?
               </h2>
               <p className="cta-description">
-                We&apos;ll review your current website or online presence and
-                recommend the simplest path to a faster, cleaner, more professional
-                site.
+                No builders. No plugins. No technical headaches. Just a
+                professional website handled by Clyra.
               </p>
               <div className="cta-actions">
-                <Link href="/site-audit" className="btn btn-primary btn-large">
-                  Request a Free Website Review
+                <ManagedWebsiteCta
+                  href="#get-website"
+                  className="btn btn-primary btn-large"
+                  ctaLabel="get_my_website_footer"
+                >
+                  Get My Website
                   <span className="btn-arrow">→</span>
-                </Link>
-                <Link href="/strategy-call" className="btn btn-secondary btn-large">
-                  Book a Strategy Call
-                </Link>
+                </ManagedWebsiteCta>
+                <ManagedWebsiteCta
+                  href="/strategy-call"
+                  className="btn btn-secondary btn-large"
+                  ctaLabel="talk_to_clyra"
+                >
+                  Talk to Clyra
+                </ManagedWebsiteCta>
               </div>
               <p className="bc-guides">
-                Related:{" "}
-                <Link href="/growth-website-system">Growth Website System</Link>
+                Already have a site?{" "}
+                <Link href="/site-audit">Free Website Review</Link>
                 {" · "}
-                <Link href="/wordpress-studio">WordPress Studio</Link>
-                {" · "}
-                <Link href="/site-audit">Website Audit</Link>
-                {" · "}
-                <Link href="/services">All Services</Link>
+                <Link href="/growth-website-system">Custom Website Projects</Link>
               </p>
             </div>
           </div>

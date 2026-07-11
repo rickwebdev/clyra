@@ -54,6 +54,9 @@ export async function POST(request: NextRequest) {
     const isRfp =
       formType === 'rfp' ||
       (typeof issue === 'string' && issue.includes('Form Type: rfp'));
+    const isManaged =
+      formType === 'managed-website' ||
+      (typeof issue === 'string' && issue.includes('Form Type: managed-website'));
 
     const fromEmail =
       process.env.RESEND_FROM_EMAIL || 'rick@clyrastudios.com';
@@ -65,10 +68,12 @@ export async function POST(request: NextRequest) {
         ? `Site Audit Request: ${name}`
         : isRfp
           ? `RFP Request: ${name}`
+          : isManaged
+            ? `Managed Website Inquiry: ${name}`
           : `WordPress Repair Request: ${name}`;
 
     const html = `
-        <h2>${isGrowth ? 'New Growth Website System Application' : isAudit ? 'New Site Audit Request' : isRfp ? 'New Request for Proposal' : 'New WordPress Repair Request'}</h2>
+        <h2>${isGrowth ? 'New Growth Website System Application' : isAudit ? 'New Site Audit Request' : isRfp ? 'New Request for Proposal' : isManaged ? 'New Managed Website Inquiry' : 'New WordPress Repair Request'}</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
@@ -77,7 +82,7 @@ export async function POST(request: NextRequest) {
         <p><strong>Issue Description:</strong></p>
         <p>${issue.replace(/\n/g, '<br>')}</p>
         <hr>
-        <p><em>This request came from the ${isGrowth ? 'Growth Website System apply page' : isAudit ? 'Site Audit page' : isRfp ? 'RFP page' : 'WordPress Mechanic landing page'}.</em></p>
+        <p><em>This request came from the ${isGrowth ? 'Growth Website System apply page' : isAudit ? 'Site Audit page' : isRfp ? 'RFP page' : isManaged ? 'Managed Websites page' : 'WordPress Mechanic landing page'}.</em></p>
       `;
 
     const { error } = await resend.emails.send({

@@ -1,6 +1,9 @@
 "use client";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { config } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
 
 interface GradientIconProps {
   icon: IconDefinition;
@@ -17,8 +20,11 @@ const sizeClasses = {
 
 export default function GradientIcon({ icon, size = 'md', className = '' }: GradientIconProps) {
   return (
-    <div className={`gradient-icon ${sizeClasses[size]} ${className}`}>
+    <span
+      className={`gradient-icon ${sizeClasses[size]} ${className}`}
+      suppressHydrationWarning
+    >
       <FontAwesomeIcon icon={icon} />
-    </div>
+    </span>
   );
 }

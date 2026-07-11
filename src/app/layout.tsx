@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Manrope } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -80,17 +80,18 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#000000",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <head>
-        <link rel="canonical" href="https://clyrastudios.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="author" content="Clyra Studios" />
-        <meta name="robots" content="index, follow" />
-        
         {/* AEO & AI Search Optimization */}
         <meta name="ai-content-type" content="business-services" />
         <meta name="ai-topic" content="WordPress development, website rescue, migration services" />
@@ -124,9 +125,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="business:contact_data:country_name" content="United States" />
         <script
           type="application/ld+json"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
         <script
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -155,7 +158,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-title" content="Clyra Studios" />
         
         <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="theme-color" content="#000000" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="min-h-screen antialiased">

@@ -12,13 +12,15 @@ import {
 } from "@/lib/cookie-consent";
 
 export default function CookieConsent() {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const stored = getStoredConsent();
     if (stored) {
-      setVisible(false);
       void applyAnalyticsConsent(stored.analytics);
+      setVisible(false);
+    } else {
+      setVisible(true);
     }
 
     const handleOpen = () => setVisible(true);

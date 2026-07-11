@@ -94,8 +94,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* AEO & AI Search Optimization */}
         <meta name="ai-content-type" content="business-services" />
-        <meta name="ai-topic" content="WordPress development, website rescue, migration services" />
-        <meta name="ai-expertise" content="WordPress rescue, WordPress migration, WordPress SEO, WordPress security, WordPress automation" />
+        <meta name="ai-topic" content="digital growth systems, managed websites, website development, analytics, migration services" />
+        <meta name="ai-expertise" content="managed websites, website design, WordPress development, analytics dashboards, SEO, AI automation" />
         <meta name="ai-target-audience" content="small business owners, restaurants, therapists, law firms, e-commerce stores" />
         <meta name="ai-service-area" content="United States" />
         <meta name="ai-response-time" content="24 hours" />

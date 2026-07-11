@@ -272,60 +272,118 @@ const faqs = [
   },
 ];
 
+const SITE_URL = "https://clyrastudios.com";
+const PAGE_URL = `${SITE_URL}/managed-websites`;
+
+function parsePrice(value: string): string {
+  return value.replace(/[^0-9]/g, "");
+}
+
 export const metadata: Metadata = {
-  title: "Professional Websites for Small Businesses | Clyra Studios",
+  title: "Managed Websites for Small Businesses | Build, Host & Manage | Clyra Studios",
   description:
     "Clyra builds, hosts, and manages professional websites for small businesses. Get a fast, mobile-friendly business website without dealing with technical maintenance.",
   keywords:
     "professional websites for small businesses, affordable small business websites, managed websites for small businesses, business website service, website design for local businesses",
-  metadataBase: new URL("https://clyrastudios.com"),
+  metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/managed-websites" },
   openGraph: {
-    title: "Professional Websites for Small Businesses | Clyra Studios",
+    title: "Managed Websites for Small Businesses | Build, Host & Manage | Clyra Studios",
     description:
       "Clyra builds, hosts, and manages professional websites for small businesses. Get online without builders, plugins, or technical headaches.",
-    url: "https://clyrastudios.com/managed-websites",
+    url: PAGE_URL,
+    siteName: "Clyra Studios",
+    images: [
+      {
+        url: "/images/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "Clyra Studios Managed Websites for Small Businesses",
+      },
+    ],
+    locale: "en_US",
     type: "website",
   },
-};
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Managed Business Websites",
-  description:
-    "Professional website design, hosting, maintenance, and support for small businesses and local service companies.",
-  provider: {
-    "@type": "Organization",
-    name: "Clyra Studios",
-    url: "https://clyrastudios.com",
-    telephone: "+1-646-632-2070",
-    email: "rick@clyrastudios.com",
+  twitter: {
+    card: "summary_large_image",
+    title: "Managed Websites for Small Businesses | Clyra Studios",
+    description:
+      "Professional websites built, hosted, and managed for local service businesses. Launch, Grow, and Pro plans with no long-term contract.",
+    images: ["/images/thumbnail.png"],
+    creator: "@clyrastudios",
+    site: "@clyrastudios",
   },
-  areaServed: "US",
-  serviceType: "Website design and management",
-  offers: plans.map((plan) => ({
-    "@type": "Offer",
-    name: plan.name,
-    price: plan.price.replace(/[^0-9]/g, ""),
-    priceCurrency: "USD",
-    priceSpecification: {
-      "@type": "UnitPriceSpecification",
-      price: plan.price.replace(/[^0-9]/g, ""),
-      priceCurrency: "USD",
-      unitText: "MONTH",
-    },
-  })),
 };
 
-const faqStructuredData = {
+const pageStructuredData = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: { "@type": "Answer", text: f.answer },
-  })),
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${PAGE_URL}/#webpage`,
+      url: PAGE_URL,
+      name: "Managed Websites for Small Businesses",
+      description:
+        "Professional website design, hosting, maintenance, and support for small businesses and local service companies.",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": `${PAGE_URL}/#service` },
+      breadcrumb: { "@id": `${PAGE_URL}/#breadcrumb` },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${PAGE_URL}/#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Managed Websites", item: PAGE_URL },
+      ],
+    },
+    {
+      "@type": "Service",
+      "@id": `${PAGE_URL}/#service`,
+      name: "Managed Business Websites",
+      url: PAGE_URL,
+      description:
+        "Professional website design, hosting, maintenance, and support for small businesses and local service companies. Fast static websites by default with optional WordPress or custom CMS upgrades.",
+      provider: { "@id": `${SITE_URL}/#organization` },
+      areaServed: { "@type": "Country", name: "United States" },
+      serviceType: "Website design and management",
+      offers: plans.map((plan) => ({
+        "@type": "Offer",
+        name: `${plan.name} Plan`,
+        url: PAGE_URL,
+        price: parsePrice(plan.price),
+        priceCurrency: "USD",
+        description: `${plan.price}/month plus one-time launch fee of ${plan.launchFee}.`,
+        priceSpecification: [
+          {
+            "@type": "UnitPriceSpecification",
+            name: "Monthly plan",
+            price: parsePrice(plan.price),
+            priceCurrency: "USD",
+            unitText: "MONTH",
+          },
+          {
+            "@type": "UnitPriceSpecification",
+            name: "One-time launch fee",
+            price: parsePrice(plan.launchFee),
+            priceCurrency: "USD",
+            billingDuration: "P0M",
+          },
+        ],
+      })),
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}/#faq`,
+      isPartOf: { "@id": `${PAGE_URL}/#webpage` },
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    },
+  ],
 };
 
 export default function ManagedWebsitesPage() {
@@ -334,12 +392,7 @@ export default function ManagedWebsitesPage() {
       <script
         type="application/ld+json"
         suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageStructuredData) }}
       />
       <Nav />
       <main className="redesign-migration-page">

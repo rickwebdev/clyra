@@ -46,8 +46,7 @@ const sections = [
     title: "Cookies and Tracking",
     body: [
       "Essential cookies and local storage are used for basic site functionality, including remembering your cookie preference.",
-      "Analytics cookies are used only if you choose Accept Analytics in our cookie banner. We use Google Analytics with Consent Mode. Analytics storage remains denied until you opt in.",
-      "We do not use advertising or retargeting pixels on this site at this time.",
+      "Analytics and marketing cookies are used only if you choose Accept Analytics & Marketing in our cookie banner. We use Google Analytics with Consent Mode and Meta Pixel for ad measurement. Tracking remains denied until you opt in.",
       "You can change your cookie preference at any time using Cookie Settings in the site footer.",
     ],
   },
@@ -55,6 +54,7 @@ const sections = [
     title: "Third-Party Services",
     body: [
       "Google Analytics for website usage measurement when you consent to analytics cookies.",
+      "Meta (Facebook) Pixel for ad performance measurement and conversion tracking when you consent to marketing cookies.",
       "Calendly for scheduling strategy calls when you choose to book a meeting.",
       "Hosting and infrastructure providers that process technical data required to deliver the website.",
       "These providers process data according to their own privacy policies and our agreements with them where applicable.",

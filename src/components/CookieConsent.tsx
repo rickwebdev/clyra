@@ -64,13 +64,14 @@ export default function CookieConsent() {
       <div className="cookie-consent-content">
         <p className="cookie-consent-text">
           We use essential cookies for site functionality and optional analytics
-          cookies to understand how visitors use our site. You can accept
-          analytics cookies or continue with essential cookies only. See our{" "}
-          <Link href="/privacy">Privacy Policy</Link> for details.
+          and marketing cookies to understand site usage and measure ad
+          performance. You can accept these cookies or continue with essential
+          cookies only. See our <Link href="/privacy">Privacy Policy</Link> for
+          details.
         </p>
         <div className="cookie-consent-actions">
           <button type="button" className="btn btn-primary" onClick={acceptAnalytics}>
-            Accept Analytics
+            Accept Analytics & Marketing
           </button>
           <button type="button" className="btn btn-secondary" onClick={essentialOnly}>
             Essential Only

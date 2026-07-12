@@ -88,6 +88,7 @@ function loadGoogleAnalyticsScript(): Promise<void> {
 }
 
 export async function applyAnalyticsConsent(granted: boolean) {
+  const { applyMetaPixelConsent } = await import("@/lib/meta-pixel");
   ensureGtagStub();
 
   if (!granted) {
@@ -100,12 +101,17 @@ export async function applyAnalyticsConsent(granted: boolean) {
     return;
   }
 
-  await loadGoogleAnalyticsScript();
   window.gtag!("consent", "update", {
     analytics_storage: "granted",
-    ad_storage: "denied",
-    ad_user_data: "denied",
-    ad_personalization: "denied",
+    ad_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted",
   });
-  window.gtag!("config", GA_MEASUREMENT_ID);
+
+  await Promise.all([
+    loadGoogleAnalyticsScript().then(() => {
+      window.gtag!("config", GA_MEASUREMENT_ID);
+    }),
+    applyMetaPixelConsent(true),
+  ]);
 }

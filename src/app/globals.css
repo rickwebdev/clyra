@@ -7643,79 +7643,6 @@ p {
   margin-top: 0.25rem;
 }
 
-/* FAQ Section */
-.wordpress-mechanic-page .faq-list {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.wordpress-mechanic-page .faq-item {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.wordpress-mechanic-page .faq-item:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-.wordpress-mechanic-page .faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 1.5rem;
-  text-align: left;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.3s ease;
-}
-
-.wordpress-mechanic-page .faq-question:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.wordpress-mechanic-page .faq-question span {
-  flex: 1;
-  margin-right: 1rem;
-}
-
-.wordpress-mechanic-page .faq-question::after {
-  content: '?';
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
-  color: #fff;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-}
-
-.wordpress-mechanic-page .faq-answer {
-  padding: 0 1.5rem 1.5rem;
-  color: #D1D5DB;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-.wordpress-mechanic-page .faq-answer p {
-  margin: 0;
-}
-
 /* Final CTA Section */
 .wordpress-mechanic-page .cta-content {
   text-align: center;
@@ -8334,32 +8261,6 @@ p {
 .wordpress-mechanic-page .form-textarea {
   min-height: 120px;
   resize: vertical;
-}
-
-/* FAQ Section */
-.wordpress-mechanic-page .faq-list {
-  max-width: 800px;
-  margin: 3rem auto 0;
-  position: relative;
-  z-index: 2;
-}
-
-.wordpress-mechanic-page .faq-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1.5rem 0;
-  margin-bottom: 1.5rem;
-}
-
-.wordpress-mechanic-page .faq-question {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 0.5rem;
-}
-
-.wordpress-mechanic-page .faq-answer {
-  color: #D1D5DB;
-  line-height: 1.6;
 }
 
 /* CTA Section */

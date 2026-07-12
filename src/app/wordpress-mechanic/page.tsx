@@ -572,7 +572,7 @@ export default function WordPressMechanicPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="section">
+        <section className="faq-section">
           <div className="section-floating-elements">
             <div className="section-floating-ball faq-ball-1"></div>
             <div className="section-floating-ball faq-ball-2"></div>
@@ -585,16 +585,11 @@ export default function WordPressMechanicPage() {
                 Common questions about our WordPress repair services.
               </p>
             </div>
-            <div className="faq-list">
+            <div className="faq-grid">
               {faqs.map((faq, index) => (
                 <div key={index} className="faq-item">
-                  <button className="faq-question">
-                    <span>{faq.question}</span>
-                    <GradientIcon icon={faQuestionCircle} size="sm" className="primary" />
-                  </button>
-                  <div className="faq-answer">
-                    <p>{faq.answer}</p>
-                  </div>
+                  <h3 className="faq-question">{faq.question}</h3>
+                  <p className="faq-answer">{faq.answer}</p>
                 </div>
               ))}
             </div>

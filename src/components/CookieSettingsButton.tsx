@@ -8,6 +8,7 @@ export default function CookieSettingsButton() {
       type="button"
       className="footer-legal-button"
       onClick={openConsentBanner}
+      aria-label="Open cookie settings"
     >
       Cookie Settings
     </button>

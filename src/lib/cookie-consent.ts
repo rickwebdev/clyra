@@ -1,3 +1,11 @@
+import { logConsentDiagnostics } from "@/lib/consent-diagnostics";
+import {
+  applyMetaPixelConsent,
+  isMarketingConsentGranted,
+  META_PIXEL_ID,
+  trackMetaPageView,
+} from "@/lib/meta-pixel";
+
 export const COOKIE_CONSENT_KEY = "clyra_cookie_consent";
 export const CONSENT_UPDATE_EVENT = "clyra:consent-update";
 export const CONSENT_OPEN_EVENT = "clyra:consent-open";
@@ -7,6 +15,21 @@ export type CookieConsentChoice = {
   analytics: boolean;
   updatedAt: string;
 };
+
+export const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "G-CC56KCXVC7";
+
+let gaScriptLoaded = false;
+let gaConfigured = false;
+let analyticsConsentGranted = false;
+let lastGaPageViewPath = "";
+let googleConsentUpdated: "granted" | "denied" | null = null;
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 
 export function getStoredConsent(): CookieConsentChoice | null {
   if (typeof window === "undefined") return null;
@@ -36,22 +59,16 @@ export function openConsentBanner() {
   window.dispatchEvent(new CustomEvent(CONSENT_OPEN_EVENT));
 }
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-    dataLayer?: unknown[];
-  }
+export function isAnalyticsConsentGranted(): boolean {
+  return analyticsConsentGranted;
 }
 
-export const GA_MEASUREMENT_ID = "G-CC56KCXVC7";
-
-let gaScriptLoaded = false;
-
 function ensureGtagStub() {
-  window.dataLayer = window.dataLayer || [];
+  const dataLayer = (window.dataLayer =
+    window.dataLayer || []) as unknown as Record<string, unknown>[];
   if (typeof window.gtag !== "function") {
     window.gtag = function gtag(...args: unknown[]) {
-      window.dataLayer!.push(args);
+      dataLayer.push(args as unknown as Record<string, unknown>);
     };
   }
 }
@@ -87,8 +104,60 @@ function loadGoogleAnalyticsScript(): Promise<void> {
   });
 }
 
-export async function applyAnalyticsConsent(granted: boolean) {
-  const { applyMetaPixelConsent } = await import("@/lib/meta-pixel");
+export async function ensureGoogleTagLoaded(): Promise<void> {
+  if (!GA_MEASUREMENT_ID) return;
+
+  await loadGoogleAnalyticsScript();
+
+  if (!gaConfigured) {
+    ensureGtagStub();
+    window.gtag!("config", GA_MEASUREMENT_ID, {
+      send_page_view: false,
+    });
+    gaConfigured = true;
+  }
+}
+
+function trackGaPageView(path?: string): boolean {
+  if (!analyticsConsentGranted || !window.gtag) return false;
+
+  const pagePath =
+    path ?? `${window.location.pathname}${window.location.search}`;
+  if (lastGaPageViewPath === pagePath) return false;
+
+  lastGaPageViewPath = pagePath;
+  window.gtag("event", "page_view", {
+    page_path: pagePath,
+    page_location: window.location.href,
+    page_title: document.title,
+  });
+  return true;
+}
+
+export function trackConsentPageView(path?: string): void {
+  const pagePath =
+    path ?? `${window.location.pathname}${window.location.search}`;
+  const gaFired = trackGaPageView(pagePath);
+  const metaFired = trackMetaPageView(pagePath);
+
+  logConsentDiagnostics("page-view", {
+    storedConsent: getStoredConsent(),
+    googleConsentDefault: "denied",
+    googleConsentUpdated,
+    gaInitialized: gaConfigured,
+    metaInitialized: Boolean(window.fbq),
+    marketingConsentGranted: isMarketingConsentGranted(),
+    gaPageViewFired: gaFired,
+    metaPageViewFired: metaFired,
+    path: pagePath,
+  });
+}
+
+export async function applyConsentChoice(granted: boolean): Promise<void> {
+  analyticsConsentGranted = granted;
+  googleConsentUpdated = granted ? "granted" : "denied";
+
+  await ensureGoogleTagLoaded();
   ensureGtagStub();
 
   if (!granted) {
@@ -97,6 +166,18 @@ export async function applyAnalyticsConsent(granted: boolean) {
       ad_storage: "denied",
       ad_user_data: "denied",
       ad_personalization: "denied",
+    });
+    await applyMetaPixelConsent(false);
+    lastGaPageViewPath = "";
+    logConsentDiagnostics("consent-denied", {
+      storedConsent: getStoredConsent(),
+      googleConsentDefault: "denied",
+      googleConsentUpdated: "denied",
+      gaInitialized: gaConfigured,
+      metaInitialized: Boolean(window.fbq),
+      marketingConsentGranted: false,
+      gaPageViewFired: false,
+      metaPageViewFired: false,
     });
     return;
   }
@@ -108,10 +189,49 @@ export async function applyAnalyticsConsent(granted: boolean) {
     ad_personalization: "granted",
   });
 
-  await Promise.all([
-    loadGoogleAnalyticsScript().then(() => {
-      window.gtag!("config", GA_MEASUREMENT_ID);
-    }),
-    applyMetaPixelConsent(true),
-  ]);
+  await applyMetaPixelConsent(true);
+  trackConsentPageView();
+
+  logConsentDiagnostics("consent-granted", {
+    storedConsent: getStoredConsent(),
+    googleConsentDefault: "denied",
+    googleConsentUpdated: "granted",
+    gaInitialized: gaConfigured,
+    metaInitialized: Boolean(window.fbq),
+    marketingConsentGranted: isMarketingConsentGranted(),
+    gaPageViewFired: true,
+    metaPageViewFired: true,
+  });
+}
+
+export async function restoreStoredConsent(): Promise<CookieConsentChoice | null> {
+  await ensureGoogleTagLoaded();
+
+  const stored = getStoredConsent();
+  if (stored) {
+    await applyConsentChoice(stored.analytics);
+    return stored;
+  }
+
+  ensureFbqStubForDeniedState();
+  logConsentDiagnostics("no-stored-consent", {
+    storedConsent: null,
+    googleConsentDefault: "denied",
+    googleConsentUpdated: null,
+    gaInitialized: gaConfigured,
+    metaInitialized: false,
+    marketingConsentGranted: false,
+    gaPageViewFired: false,
+    metaPageViewFired: false,
+  });
+  return null;
+}
+
+async function ensureFbqStubForDeniedState() {
+  if (!META_PIXEL_ID) return;
+  await applyMetaPixelConsent(false);
+}
+
+export async function applyAnalyticsConsent(granted: boolean) {
+  await applyConsentChoice(granted);
 }

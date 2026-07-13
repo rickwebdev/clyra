@@ -1,10 +1,12 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
 import { Inter, Manrope } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import ScrollEffects from "@/components/ScrollEffects";
 import FloatingScrollEffects from "@/components/FloatingScrollEffects";
 import CookieConsent from "@/components/CookieConsent";
+import ConsentAnalytics from "@/components/ConsentAnalytics";
 import { getSiteJsonLd } from "@/lib/jsonld/site";
 
 const siteJsonLd = getSiteJsonLd();
@@ -128,22 +130,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
-        <script
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                analytics_storage: 'denied',
-                ad_storage: 'denied',
-                ad_user_data: 'denied',
-                ad_personalization: 'denied',
-                wait_for_update: 500
-              });
-            `,
-          }}
-        />
         
         {/* Service-Specific Meta Tags */}
         <meta name="service:wordpress-rescue" content="24-hour emergency WordPress site recovery and security fixes" />
@@ -161,6 +147,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="min-h-screen antialiased">
+        <Script id="gtag-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = window.gtag || gtag;
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500,
+              security_storage: 'granted',
+              functionality_storage: 'granted'
+            });
+          `}
+        </Script>
         {/* Mobile Viewport Height Fix */}
         <Script id="mobile-viewport-fix" strategy="afterInteractive">
           {`
@@ -207,6 +209,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Script>
         <ScrollEffects />
         <FloatingScrollEffects />
+        <Suspense fallback={null}>
+          <ConsentAnalytics />
+        </Suspense>
         <CookieConsent />
         {children}
       </body>

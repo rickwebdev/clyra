@@ -1,4 +1,4 @@
-import { trackMetaEvent } from "@/lib/meta-pixel";
+import { isMarketingConsentGranted, trackMetaEvent } from "@/lib/meta-pixel";
 
 declare global {
   interface Window {
@@ -14,7 +14,7 @@ export function trackEvent(
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event, page: "managed-websites", ...params });
 
-  if (event === "managed_website_form_submit") {
+  if (event === "managed_website_form_submit" && isMarketingConsentGranted()) {
     trackMetaEvent("Lead", {
       content_name: "managed_website_form",
       ...params,

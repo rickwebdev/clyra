@@ -3300,10 +3300,66 @@ p {
 }
 
 @media (max-width: 768px) {
+  .redesign-migration-page .case-studies-grid {
+    gap: 1.25rem;
+  }
+
+  .redesign-migration-page .case-study-content {
+    padding: 1.5rem 1.5rem 1.75rem;
+  }
+
+  .redesign-migration-page .case-study-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .redesign-migration-page .case-study-header .service-icon {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .redesign-migration-page .case-study-header .service-icon .gradient-icon {
+    font-size: 1.5rem;
+  }
+
+  .redesign-migration-page .case-study-title {
+    margin-bottom: 0;
+    line-height: 1.35;
+  }
+
+  .redesign-migration-page .service-features {
+    margin-bottom: 1.25rem;
+  }
+
+  .redesign-migration-page .feature-item {
+    align-items: flex-start;
+    line-height: 1.45;
+    gap: 0.65rem;
+  }
+
+  .redesign-migration-page .migrations-path-links {
+    margin-top: 0.75rem;
+    line-height: 1.7;
+  }
+
+  .redesign-migration-page .case-studies-section .container,
+  .redesign-migration-page .services-section .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .redesign-migration-page .migrations-outcome-list {
+    padding: 0 0.25rem;
+  }
+
   .redesign-migration-page .migrations-outcome-row {
     grid-template-columns: auto 1fr;
     gap: 0.35rem 0.65rem;
-    padding: 1.1rem 0;
+    padding: 1.15rem 0.25rem;
   }
 
   .redesign-migration-page .migrations-outcome-icon {

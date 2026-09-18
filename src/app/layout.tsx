@@ -67,11 +67,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
-  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -114,10 +109,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:alt" content="Clyra Studios - WordPress Rescue & Rebuild Specialists" />
+        <meta property="og:image:alt" content="Clyra Studios - Digital Growth Systems" />
         
         {/* Twitter Card Enhancement */}
-        <meta name="twitter:image:alt" content="Clyra Studios - WordPress Rescue & Rebuild Specialists" />
+        <meta name="twitter:image:alt" content="Clyra Studios - Digital Growth Systems" />
         
         {/* Business Information */}
         <meta name="business:contact_data:street_address" content="" />

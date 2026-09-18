@@ -67,7 +67,7 @@ export function getGrowthPageJsonLd() {
         "@type": "Offer",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "priceRange": "$5,000–$12,500"
+          "priceRange": "$5,000–$15,000+"
         },
         "availability": "https://schema.org/InStock",
         "validFrom": "2024-01-01"

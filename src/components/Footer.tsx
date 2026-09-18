@@ -97,6 +97,32 @@ export default function Footer() {
           </div>
 
           <div className="footer-section">
+            <h3>Growth &amp; Acquisition</h3>
+            <ul>
+              <li>
+                <Link href="/growth-opportunity-audit">
+                  Growth Opportunity Audit
+                </Link>
+              </li>
+              <li>
+                <Link href="/local-lead-generation">Local Lead Generation</Link>
+              </li>
+              <li>
+                <Link href="/google-ads-management">Google Ads Management</Link>
+              </li>
+              <li>
+                <Link href="/local-seo">Local SEO</Link>
+              </li>
+              <li>
+                <Link href="/growth-website-system">Growth Website System</Link>
+              </li>
+              <li>
+                <Link href="/managed-websites">Managed Websites</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
             <h3>Clyra Intelligence</h3>
             <ul>
               <li>

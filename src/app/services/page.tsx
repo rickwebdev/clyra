@@ -78,6 +78,20 @@ const serviceClusters = [
     ],
   },
   {
+    title: "Growth & Acquisition",
+    description:
+      "Customer acquisition systems for service businesses: opportunity research, local SEO, paid search, landing pages, and outcome-focused optimization. Media spend stays separate from management fees.",
+    links: [
+      {
+        href: "/growth-opportunity-audit",
+        label: "Growth Opportunity Audit",
+      },
+      { href: "/local-lead-generation", label: "Local Lead Generation" },
+      { href: "/google-ads-management", label: "Google Ads Management" },
+      { href: "/local-seo", label: "Local SEO" },
+    ],
+  },
+  {
     title: "AI Systems",
     description:
       "Practical AI-assisted workflows for content, creative, marketing, and business operations.",

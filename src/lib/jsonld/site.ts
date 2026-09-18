@@ -48,6 +48,10 @@ export function getSiteJsonLd() {
           "Marketing Automation",
           "Technical SEO",
           "AEO",
+          "Local SEO",
+          "Google Ads Management",
+          "Local Lead Generation",
+          "Customer Acquisition",
         ],
       },
       {

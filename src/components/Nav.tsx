@@ -166,11 +166,31 @@ const links: NavLink[] = [
         href: "/aeo-ai-search-optimization",
         label: "AEO & AI Search",
       },
+      {
+        group: "Growth & Acquisition",
+        href: "/growth-opportunity-audit",
+        label: "Growth Opportunity Audit",
+      },
+      {
+        group: "Growth & Acquisition",
+        href: "/local-lead-generation",
+        label: "Local Lead Generation",
+      },
+      {
+        group: "Growth & Acquisition",
+        href: "/google-ads-management",
+        label: "Google Ads Management",
+      },
+      {
+        group: "Growth & Acquisition",
+        href: "/local-seo",
+        label: "Local SEO",
+      },
       { group: "Proposals", href: "/rfp", label: "Request for Proposal" },
     ],
     dropdownColumns: [
       ["Websites & Growth", "Analytics & Measurement"],
-      ["Platforms & Engineering", "SEO & Discovery", "Proposals"],
+      ["Platforms & Engineering", "SEO & Discovery", "Growth & Acquisition", "Proposals"],
     ],
   },
   {

@@ -74,14 +74,14 @@ const testimonials = [
     industry: "Startups"
   },
   {
-    quote: "The ROI was immediate. They didn't just build us a website. They transformed our entire client onboarding process. The automation systems they set up have saved us 15 hours per week and increased our close rate by 40%.",
+    quote: "They rebuilt our site and connected the tools we actually use day to day. Follow-up is clearer, and the site finally matches how we sell.",
     author: "Marketing Agency Owner",
     company: "",
     role: "",
     industry: "Digital Services"
   },
   {
-    quote: "Finally, a developer who gets e-commerce. They didn't just migrate my store. They optimized the entire customer journey. My conversion rate doubled and cart abandonment dropped by 35% in the first month.",
+    quote: "They understood the store side of the project—not just the theme. Checkout felt smoother and we had cleaner tracking after launch.",
     author: "E-commerce Store Owner",
     company: "",
     role: "",
@@ -246,9 +246,9 @@ export default function HomePage() {
                     <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> SEO & content optimization</li>
                     <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Analytics dashboards & funnel tracking</li>
                     <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> AI automation, chatbots, CRM integration</li>
-                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Google Ads, retargeting & funnels</li>
+                    <li className="feature-item"><GradientIcon icon={faCheck} size="sm" className="success" /> Google Ads, local SEO & lead systems</li>
                   </ul>
-                  <Link href="/google-analytics-looker-studio-dashboards" className="service-cta">Analytics & reporting dashboards <span className="link-arrow">→</span></Link>
+                  <Link href="/local-lead-generation" className="service-cta">Growth &amp; acquisition <span className="link-arrow">→</span></Link>
                 </div>
               </div>
               <div className="service-card slide-in-bottom-left">
@@ -509,14 +509,14 @@ export default function HomePage() {
               <div className="faq-item" data-aos="fade-up" data-aos-delay="0">
                 <h3 className="faq-question">How much does a WordPress site rebuild cost?</h3>
                 <p className="faq-answer">
-                  WordPress rebuilds typically range from $3,000-$15,000 depending on complexity. Restaurant sites with online ordering start around $5,000, while therapist practices with booking systems average $4,000-$7,000. We provide detailed quotes after our free site audit. Most clients see ROI within 3-6 months through improved conversions and reduced maintenance costs.
+                  WordPress rebuilds typically range from $3,000-$15,000 depending on complexity. Restaurant sites with online ordering start around $5,000, while therapist practices with booking systems average $4,000-$7,000. We provide detailed quotes after reviewing your goals and current site. Timeline and return depend on traffic, offer, and how the site supports conversion—not a fixed ROI clock.
                 </p>
               </div>
               
               <div className="faq-item" data-aos="fade-up" data-aos-delay="100">
                 <h3 className="faq-question">Will I lose my SEO rankings during migration?</h3>
                 <p className="faq-answer">
-                  No - we preserve all your SEO value during migration. We maintain your URLs, meta data, and implement proper redirects. In fact, most clients see improved rankings within 30-60 days due to better site structure, Core Web Vitals, and technical SEO optimization. We've moved clients from page 4 to page 1 rankings.
+                  We work to preserve SEO value during migration: careful URL mapping, metadata continuity, and proper redirects. Rankings can still fluctuate while search engines reprocess the site. Outcomes depend on competition, content quality, and technical health after launch—not a guaranteed jump from page 4 to page 1.
                 </p>
               </div>
               

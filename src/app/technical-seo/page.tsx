@@ -86,9 +86,14 @@ const faqs = [
       "Traditional SEO and AI-assisted search (AEO) overlap on structure, clarity, and authoritative content. We offer dedicated AEO work when that's the priority.",
   },
   {
+    question: "Is this the same as Local SEO or Google Ads?",
+    answer:
+      "No. Technical SEO focuses on site health, structure, and on-page foundations. Local SEO covers Google Business Profile and Local Pack competitiveness. Google Ads is paid search management. Those are separate Growth & Acquisition services that often build on technical foundations.",
+  },
+  {
     question: "Can you start with an audit?",
     answer:
-      "Yes. Our website audit is a common entry point. Technical SEO engagements often begin there or expand from it.",
+      "Yes. Our website audit is a common entry point for technical issues. For acquisition strategy grounded in business economics and market demand, see the Growth Opportunity Audit.",
   },
 ];
 
@@ -248,11 +253,13 @@ export default function TechnicalSEOPage() {
               </div>
               <p className="bc-guides">
                 Related:{" "}
+                <Link href="/local-seo">Local SEO</Link>
+                {" · "}
+                <Link href="/growth-opportunity-audit">Growth Opportunity Audit</Link>
+                {" · "}
                 <Link href="/aeo-ai-search-optimization">AEO &amp; AI Search</Link>
                 {" · "}
                 <Link href="/website-performance-optimization">Performance Optimization</Link>
-                {" · "}
-                <Link href="/ai-content-automation">AI Content Growth Systems</Link>
                 {" · "}
                 <Link href="/ga4-implementation">GA4 Implementation</Link>
               </p>

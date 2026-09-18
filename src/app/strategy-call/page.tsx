@@ -64,7 +64,7 @@ export default function StrategyCallPage() {
               {/* Calendly Widget - Lazy with placeholder */}
               <div className="full-width-form-container">
                 <CalendlyEmbed 
-                  url="https://calendly.com/rickthewebdev/30-minute-meeting-clone?embed_domain=localhost&embed_type=Inline"
+                  url="https://calendly.com/rickthewebdev/30-minute-meeting-clone?embed_domain=clyrastudios.com&embed_type=Inline"
                   height={680}
                 />
               </div>

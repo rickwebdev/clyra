@@ -81,6 +81,11 @@ const faqs = [
       "Managed Websites is a lower-friction monthly plan for local businesses that need a professionally managed site with hosting and support. The Growth Website System is a premium custom build with strategy, conversion architecture, integrations, and measurable growth systems.",
   },
   {
+    question: "How is this different from Growth & Acquisition services?",
+    answer:
+      "The Growth Website System builds the conversion platform—site, SEO foundations, analytics, and integrations. Growth & Acquisition services (opportunity audit, local SEO, Google Ads, lead generation) generate and optimize ongoing demand into that platform. Many clients use both over time; they are not the same engagement.",
+  },
+  {
     question: "How much does it cost?",
     answer:
       "Typical projects range from $5,000 to $15,000+. Minimum engagement is $3,000. Scope depends on pages, integrations, design complexity, and automation needs.",
@@ -401,22 +406,24 @@ export default function GrowthWebsiteSystemPage() {
         <section className="case-studies-section">
           <div className="container">
             <div className="section-header slide-in-right">
-              <h2 className="section-title">Expected Results</h2>
+              <h2 className="section-title">What Strong Systems Aim For</h2>
               <p className="section-description">
-                Results vary by industry, offer, traffic, and sales process. These
-                ranges reflect typical outcomes we design toward, not guarantees.
+                Results vary widely by industry, offer, traffic, sales process, and market
+                competition. The ranges below are illustrative planning targets for a
+                well-fitted professional services site—not promises or guarantees of lead
+                volume or pipeline.
               </p>
             </div>
             <div className="growth-results-grid">
               <div className="growth-result-card">
-                <div className="growth-result-number">10-20+</div>
-                <p className="growth-result-label">qualified inquiries per month*</p>
-                <p className="growth-result-note">*Typical range for professional services</p>
+                <div className="growth-result-number">Clear CTAs</div>
+                <p className="growth-result-label">inquiry paths matched to intent</p>
+                <p className="growth-result-note">Forms, calls, and booking where they belong</p>
               </div>
               <div className="growth-result-card">
-                <div className="growth-result-number">$15k-$30k</div>
-                <p className="growth-result-label">in new pipeline opportunities*</p>
-                <p className="growth-result-note">*Often within the first 90 days for the right fit</p>
+                <div className="growth-result-number">Measurable</div>
+                <p className="growth-result-label">tracking from visit to inquiry</p>
+                <p className="growth-result-note">GA4/CRM-ready foundations at launch</p>
               </div>
             </div>
             <div className="growth-trust-pills">
@@ -468,6 +475,10 @@ export default function GrowthWebsiteSystemPage() {
               <Link href="/wordpress-studio">WordPress Studio</Link>
               {" · "}
               <Link href="/technical-seo">Technical SEO</Link>
+              {" · "}
+              <Link href="/local-lead-generation">Local Lead Generation</Link>
+              {" · "}
+              <Link href="/growth-opportunity-audit">Growth Opportunity Audit</Link>
               {" · "}
               <Link href="/ga4-implementation">GA4 Implementation</Link>
               {" · "}
@@ -538,9 +549,10 @@ export default function GrowthWebsiteSystemPage() {
             <div className="growth-guarantee-card">
               <GradientIcon icon={faShieldHalved} size="xl" className="success" />
               <p className="growth-guarantee-copy">
-                If you do not see measurable speed and conversion improvements within
-                30 days of launch, we optimize at no additional cost until those
-                foundations are in place.
+                If you do not see measurable speed improvements on key templates within
+                30 days of launch, we optimize those performance foundations at no
+                additional cost. Conversion outcomes also depend on traffic, offer, and
+                sales follow-up—we partner on UX fixes, not guaranteed lead volume.
               </p>
               <div className="growth-guarantee-badge">
                 <GradientIcon icon={faCheckCircle} size="sm" className="success" />

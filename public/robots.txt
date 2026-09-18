@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://clyrastudios.com/sitemap.xml
+Sitemap: https://clyrastudios.com/sitemap-index.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

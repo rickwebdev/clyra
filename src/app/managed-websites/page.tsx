@@ -104,11 +104,10 @@ const plans = [
       "Up to 10 pages",
       "Everything in Launch",
       "3 included update requests per month",
-      "Local SEO improvements",
-      "Google Business Profile guidance",
+      "Local search foundations & GBP guidance",
       "Priority email support",
       "2 rounds of revisions at launch",
-      "Quarterly performance check-in",
+      "Quarterly website performance check-in",
       "Month-to-month after launch",
       "Cancel anytime with 30 days notice",
     ],
@@ -119,17 +118,17 @@ const plans = [
     price: "$499",
     launchFee: "$1,200+",
     description:
-      "For businesses that want ongoing marketing support, content help, and growth guidance.",
+      "For businesses that want more pages, content help, and website guidance—without a full acquisition retainer.",
     features: [
       "Everything in Grow",
-      "Service area landing pages",
-      "Monthly content updates",
-      "Analytics reporting",
+      "Additional service or area pages (scoped)",
+      "Monthly website content updates",
+      "Basic analytics reporting",
       "5 included update requests per month",
-      "Monthly strategy call",
-      "Conversion recommendations",
+      "Monthly website check-in call",
+      "Conversion UX recommendations for your site",
       "Priority support",
-      "Custom scope for larger needs",
+      "Custom scope for larger website needs",
       "Month-to-month after launch",
       "Cancel anytime with 30 days notice",
     ],
@@ -186,8 +185,11 @@ const industries = [
 const addOns = [
   { label: "Additional pages", href: "/contact" },
   { label: "Logo refresh", href: "/contact" },
-  { label: "Google Business Profile setup", href: "/technical-seo" },
-  { label: "Local SEO", href: "/technical-seo" },
+  { label: "Google Business Profile setup", href: "/local-seo" },
+  { label: "Local SEO", href: "/local-seo" },
+  { label: "Google Ads management", href: "/google-ads-management" },
+  { label: "Lead generation systems", href: "/local-lead-generation" },
+  { label: "Growth Opportunity Audit", href: "/growth-opportunity-audit" },
   { label: "Online booking", href: "/contact" },
   { label: "Quote request forms", href: "/contact" },
   { label: "Analytics dashboard", href: "/google-analytics-looker-studio-dashboards" },
@@ -253,7 +255,7 @@ const faqs = [
   {
     question: "Can you help me show up on Google?",
     answer:
-      "Yes. All plans include basic search setup: proper page titles, structure, mobile-friendly design, and local foundations. Grow and Pro add ongoing local SEO improvements. We do not guarantee rankings, but we build the foundation Google expects.",
+      "Yes. All plans include basic search setup: proper page titles, structure, mobile-friendly design, and local foundations. Grow includes Google Business Profile guidance and light local search foundations on your website. Ongoing competitive Local SEO, Google Ads, and full lead-generation systems are separate Growth & Acquisition services. We do not guarantee rankings.",
   },
   {
     question: "Are there setup fees?",
@@ -805,6 +807,8 @@ export default function ManagedWebsitesPage() {
                 <Link href="/site-audit">Free Website Review</Link>
                 {" · "}
                 <Link href="/growth-website-system">Custom Website Projects</Link>
+                {" · "}
+                <Link href="/local-lead-generation">Need more leads?</Link>
               </p>
             </div>
           </div>

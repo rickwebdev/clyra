@@ -35,7 +35,10 @@ export default function SiteAuditPage() {
               </h1>
               <p className="inner-page-subtitle">
                 Have a site that needs work, or planning to build one? Get expert
-                insights on your digital presence. Completely free.
+                insights on performance, SEO foundations, security, and conversion UX.
+                Completely free. Looking for a business-economics-led acquisition plan
+                instead? See our{" "}
+                <Link href="/growth-opportunity-audit">Growth Opportunity Audit</Link>.
               </p>
             </div>
           </div>
@@ -181,11 +184,13 @@ export default function SiteAuditPage() {
 
               <p className="bc-guides" style={{ marginTop: "2rem", textAlign: "center" }}>
                 Related:{" "}
+                <Link href="/growth-opportunity-audit">Growth Opportunity Audit</Link>
+                {" · "}
                 <Link href="/technical-seo">Technical SEO</Link>
                 {" · "}
-                <Link href="/website-performance-optimization">Website Performance</Link>
+                <Link href="/local-seo">Local SEO</Link>
                 {" · "}
-                <Link href="/aeo-ai-search-optimization">AEO &amp; AI Search</Link>
+                <Link href="/website-performance-optimization">Website Performance</Link>
               </p>
             </div>
           </div>

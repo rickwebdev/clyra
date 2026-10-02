@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -398,9 +398,7 @@ const structuredData = {
 export default function MigrationsPage() {
   return (
     <>
-      <Script id="migrations-structured-data" type="application/ld+json" strategy="beforeInteractive">
-        {JSON.stringify(structuredData)}
-      </Script>
+      <JsonLd data={structuredData} />
       <Nav />
       <main className="redesign-migration-page">
         <section className="hero-section">

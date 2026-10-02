@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -148,7 +148,7 @@ const faqs = [
   },
   {
     question: "Will I lose any data?",
-    answer: "No. We always back up your site before making any changes. Your data is completely safe with us."
+    answer: "We always back up your site before making any changes, so there is a restore point if anything goes wrong during the repair."
   },
   {
     question: "Do you handle hacked or infected sites?",
@@ -294,16 +294,21 @@ const structuredData = {
   }
 };
 
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function WordPressMechanicPage() {
   return (
     <>
-      <Script
-        id="wordpress-mechanic-structured-data"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(structuredData)}
-      </Script>
+      <JsonLd data={structuredData} />
+      <JsonLd data={faqStructuredData} />
       <Nav />
       
       <main className="wordpress-mechanic-page">

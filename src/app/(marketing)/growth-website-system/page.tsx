@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import GradientIcon from "@/components/GradientIcon";
@@ -193,20 +193,8 @@ function GrowthCtaBlock({
 export default function GrowthWebsiteSystemPage() {
   return (
     <>
-      <Script
-        id="growth-website-system-data"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(structuredData)}
-      </Script>
-      <Script
-        id="growth-website-system-faq"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(faqStructuredData)}
-      </Script>
+      <JsonLd data={structuredData} />
+      <JsonLd data={faqStructuredData} />
 
       <Nav />
       <main className="redesign-migration-page growth-website-system-page">

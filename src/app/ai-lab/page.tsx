@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import type { Metadata } from "next";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import Nav from "@/components/Nav";
@@ -215,13 +215,7 @@ const structuredData = {
 export default function AILabPage() {
   return (
     <>
-      <Script
-        id="ai-lab-structured-data"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(structuredData)}
-      </Script>
+      <JsonLd data={structuredData} />
       <Nav />
       <main className="redesign-migration-page ai-lab-page">
         <section className="hero-section">

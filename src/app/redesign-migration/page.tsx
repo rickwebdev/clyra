@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -197,7 +197,7 @@ const faqs = [
   },
   {
     question: "How much does a website redesign cost?",
-    answer: "Redesigns typically range from $3,000-$15,000 depending on complexity. We provide detailed quotes after our free audit. Most clients see ROI within 3-6 months."
+    answer: "Redesigns typically range from $3,000-$15,000 depending on complexity. We provide detailed quotes after our free audit."
   }
 ];
 
@@ -327,16 +327,21 @@ const structuredData = {
   }
 };
 
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function RedesignMigrationPage() {
   return (
     <>
-      <Script
-        id="redesign-structured-data"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(structuredData)}
-      </Script>
+      <JsonLd data={structuredData} />
+      <JsonLd data={faqStructuredData} />
       <Nav />
       
       <main className="redesign-migration-page">

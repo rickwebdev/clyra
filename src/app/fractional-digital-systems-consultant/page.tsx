@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -257,20 +257,8 @@ const faqStructuredData = {
 export default function FractionalDigitalSystemsConsultantPage() {
   return (
     <>
-      <Script
-        id="fractional-structured-data"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(structuredData)}
-      </Script>
-      <Script
-        id="fractional-faq-data"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(faqStructuredData)}
-      </Script>
+      <JsonLd data={structuredData} />
+      <JsonLd data={faqStructuredData} />
       <Nav />
 
       <main className="redesign-migration-page">

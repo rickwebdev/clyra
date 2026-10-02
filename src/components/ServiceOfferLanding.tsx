@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Script from "next/script";
+import JsonLd from "@/components/JsonLd";
 import type { ReactNode } from "react";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import Nav from "@/components/Nav";
@@ -99,20 +99,8 @@ export default function ServiceOfferLanding({
 
   return (
     <>
-      <Script
-        id={`${schemaId}-service`}
-        type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(structuredData)}
-      </Script>
-      <Script
-        id={`${schemaId}-faq`}
-        type="application/ld+json"
-        strategy="beforeInteractive"
-      >
-        {JSON.stringify(faqStructuredData)}
-      </Script>
+      <JsonLd data={structuredData} />
+      <JsonLd data={faqStructuredData} />
       <Nav />
       <main className="redesign-migration-page">
         <section className="hero-section">

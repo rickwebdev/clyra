@@ -68,9 +68,9 @@ export default function ContactPage() {
                     assistance.
                   </p>
                   <div className="contact-phone-number">
-                    <strong>+1 (646) 632-2070</strong>
+                    <strong>+1 (347) 541-9474</strong>
                   </div>
-                  <a href="tel:+16466322070" className="contact-option-cta">
+                  <a href="tel:+13475419474" className="contact-option-cta">
                     <GradientIcon icon={faPhone} size="sm" className="mr-2" />
                     Call Now
                   </a>

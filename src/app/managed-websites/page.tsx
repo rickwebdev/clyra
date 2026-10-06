@@ -764,7 +764,7 @@ export default function ManagedWebsitesPage() {
             <p className="bc-guides" style={{ marginTop: "1.5rem", textAlign: "center" }}>
               Prefer to talk first? Call{" "}
               <ManagedWebsitePhoneLink className="managed-contact-link">
-                (646) 632-2070
+                (347) 541-9474
               </ManagedWebsitePhoneLink>
               {" · "}
               Email{" "}

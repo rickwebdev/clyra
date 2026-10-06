@@ -160,7 +160,7 @@ export default function StrategyCallPage() {
                   Email Us
                 </a>
                 <a 
-                  href="tel:+1-555-0123" 
+                  href="tel:+13475419474" 
                   className="btn btn-secondary"
                 >
                   <GradientIcon icon={faPhone} size="sm" className="mr-2" />

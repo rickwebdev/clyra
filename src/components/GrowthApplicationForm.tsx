@@ -482,7 +482,7 @@ export default function GrowthApplicationForm({ formId = "growth-application", c
         {submitStatus === 'error' && (
           <div className="form-status error">
             <GradientIcon icon={faExclamationTriangle} size="sm" className="danger" />
-            <span>Sorry, there was an error submitting your application. Please call us directly at (646) 632-2070.</span>
+            <span>Sorry, there was an error submitting your application. Please call us directly at (347) 541-9474.</span>
           </div>
         )}
 

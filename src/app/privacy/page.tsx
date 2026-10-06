@@ -157,7 +157,7 @@ export default function PrivacyPage() {
                       </p>
                       <p className="inner-page-section-description">
                         Phone:{" "}
-                        <a href="tel:+16466322070">+1 (646) 632-2070</a>
+                        <a href="tel:+13475419474">+1 (347) 541-9474</a>
                       </p>
                       <p className="inner-page-section-description">
                         Website: <Link href="/contact">Contact page</Link>

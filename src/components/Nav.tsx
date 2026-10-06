@@ -384,8 +384,8 @@ export default function Nav() {
             </li>
           ))}
           <li className="nav-phone">
-            <a href="tel:+16466322070" className="phone-number">
-              +1 (646) 632-2070
+            <a href="tel:+13475419474" className="phone-number">
+              +1 (347) 541-9474
             </a>
           </li>
         </ul>
@@ -445,8 +445,8 @@ export default function Nav() {
             </Link>
           </li>
           <li className="mobile-phone">
-            <a href="tel:+16466322070" className="mobile-phone-number">
-              +1 (646) 632-2070
+            <a href="tel:+13475419474" className="mobile-phone-number">
+              +1 (347) 541-9474
             </a>
           </li>
         </ul>

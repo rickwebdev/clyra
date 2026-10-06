@@ -329,7 +329,7 @@ export default function ManagedWebsiteForm() {
             />
             <span>
               Something went wrong. Please call{" "}
-              <a href="tel:+16466322070">(646) 632-2070</a> or email{" "}
+              <a href="tel:+13475419474">(347) 541-9474</a> or email{" "}
               <a href="mailto:rick@clyrastudios.com">rick@clyrastudios.com</a>.
             </span>
           </div>

@@ -619,9 +619,9 @@ export default function WordPressMechanicPage() {
                   <GradientIcon icon={faWrench} size="sm" className="primary" />
                   Book Emergency Repair
                 </Link>
-                <Link href="tel:+16466322070" className="btn btn-outline-white btn-lg">
+                <Link href="tel:+13475419474" className="btn btn-outline-white btn-lg">
                   <GradientIcon icon={faPhone} size="sm" className="white" />
-                  Call (646) 632-2070
+                  Call (347) 541-9474
                 </Link>
               </div>
               <p className="cta-note">

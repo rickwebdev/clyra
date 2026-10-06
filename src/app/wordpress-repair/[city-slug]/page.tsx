@@ -476,11 +476,11 @@ export default function CityPage({ params }: { params: { 'city-slug': string } }
                 {city.ctaButton}
               </Link>
               <Link 
-                href="tel:+16466322070" 
+                href="tel:+13475419474" 
                 className="btn btn-outline-white btn-lg"
               >
                 <GradientIcon icon={faPhone} size="sm" className="white" />
-                Call (646) 632-2070
+                Call (347) 541-9474
               </Link>
             </div>
           </div>
@@ -537,11 +537,11 @@ export default function CityPage({ params }: { params: { 'city-slug': string } }
                 {city.ctaButton}
               </Link>
               <Link 
-                href="tel:+16466322070" 
+                href="tel:+13475419474" 
                 className="btn btn-outline-white btn-lg"
               >
                 <GradientIcon icon={faPhone} size="sm" className="white" />
-                Call (646) 632-2070
+                Call (347) 541-9474
               </Link>
             </div>
             <p className="cta-note">

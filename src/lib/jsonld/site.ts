@@ -19,7 +19,7 @@ export function getSiteJsonLd() {
         image: `${SITE_URL}/images/thumbnail.png`,
         foundingDate: "2024",
         email: "rick@clyrastudios.com",
-        telephone: "+1-646-632-2070",
+        telephone: "+1-347-541-9474",
         address: {
           "@type": "PostalAddress",
           addressLocality: "New York",
@@ -28,7 +28,7 @@ export function getSiteJsonLd() {
         },
         contactPoint: {
           "@type": "ContactPoint",
-          telephone: "+1-646-632-2070",
+          telephone: "+1-347-541-9474",
           contactType: "customer service",
           email: "rick@clyrastudios.com",
           areaServed: "US",
@@ -62,7 +62,7 @@ export function getSiteJsonLd() {
           "New York-based digital growth studio for website development, analytics, SEO, and AI automation.",
         url: SITE_URL,
         image: `${SITE_URL}/images/thumbnail.png`,
-        telephone: "+1-646-632-2070",
+        telephone: "+1-347-541-9474",
         email: "rick@clyrastudios.com",
         priceRange: "$$",
         address: {

@@ -198,56 +198,66 @@ p {
   z-index: 1;
 }
 
-/* Gradient Icons */
+/* Gradient Icons
+   Use solid colors (not background-clip:text). SVG icons use fill:currentColor,
+   and transparent -webkit-text-fill-color made FA icons invisible sitewide. */
 .gradient-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  line-height: 1;
   filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.3));
 }
 
+.gradient-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
 .gradient-icon.primary {
-  background: linear-gradient(135deg, #4DA0FF, #06B6D4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #4da0ff;
+  -webkit-text-fill-color: #4da0ff;
+  background: none;
   filter: drop-shadow(0 0 8px rgba(77, 160, 255, 0.4));
 }
 
 .gradient-icon.success {
-  background: linear-gradient(135deg, #00C896, #38E8B0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #00c896;
+  -webkit-text-fill-color: #00c896;
+  background: none;
   filter: drop-shadow(0 0 8px rgba(0, 200, 150, 0.4));
 }
 
 .gradient-icon.warning {
-  background: linear-gradient(135deg, #F7B500, #FFDD55);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #f7b500;
+  -webkit-text-fill-color: #f7b500;
+  background: none;
   filter: drop-shadow(0 0 8px rgba(247, 181, 0, 0.4));
 }
 
 .gradient-icon.danger {
   color: #ef4444;
+  -webkit-text-fill-color: #ef4444;
   filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.5));
 }
 
 .gradient-icon.secondary {
   color: #06b6d4;
+  -webkit-text-fill-color: #06b6d4;
   filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.5));
 }
 
 .gradient-icon.cyan {
   color: #06b6d4;
+  -webkit-text-fill-color: #06b6d4;
   filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.5));
 }
 
 .gradient-icon.white {
   color: #fff;
+  -webkit-text-fill-color: #fff;
   filter: none;
 }
 
@@ -9022,6 +9032,17 @@ p {
 .ai-lab-card-icon .gradient-icon {
   position: relative;
   z-index: 2;
+  font-size: 1.75rem;
+  color: #22d3ee;
+  -webkit-text-fill-color: #22d3ee;
+  background: none;
+  filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.45));
+}
+
+.ai-lab-card-icon .gradient-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }
 
 .ai-lab-card-title {
@@ -9229,6 +9250,17 @@ p {
 .ai-lab-workflow-step-icon .gradient-icon {
   position: relative;
   z-index: 2;
+  font-size: 1.25rem;
+  color: #22d3ee;
+  -webkit-text-fill-color: #22d3ee;
+  background: none;
+  filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.45));
+}
+
+.ai-lab-workflow-step-icon .gradient-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }
 
 .ai-lab-workflow-step-title {

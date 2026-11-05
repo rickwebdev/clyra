@@ -2,7 +2,9 @@
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
+// Keep FA from injecting a duplicate <style> tag; we import styles.css above.
 config.autoAddCss = false;
 
 interface GradientIconProps {
